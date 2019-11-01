@@ -1,0 +1,6 @@
+<command> & - puts command to background
+jobs -l - lists running processes with its PID
+fg - brings to foreground
+bg - bring to background 
+kill - kills process
+kill -9 - really kills process

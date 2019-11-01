@@ -1,0 +1,1 @@
+cat keeps reading until it gets EOF (End Of File) if it has more then one than it waits for the last EOF

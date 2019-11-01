@@ -1,0 +1,33 @@
+
+files act like a pointer to where the information really is. That's why most of them are size 0.
+MAKEDIV 
+
+lsmod = cat /proc/modules
+lspci = cat /proc/pci
+By alternating files in proc I can read or change kernel parameters (sysctl) while system in running 
+
+watch -n 0 cat interrupts
+for seeing interrupts
+
+ps a
+for seeing processes
+
+
+sudo dd if=/dev/sda bs=512 count=1 | hexdump -C
+
+dd - disk destroyer :)
+if - input file 
+sda - master hard-disk
+bs - read bs BYTES, sector is typicly 512 bytes
+count - do it count times
+hexdump - filter to good format
+-C - HEX+ASCII style filter
+
+memory - watch -n 0 cat meminfo
+cpu - watch -n 0 cat cpuinfo
+partitions - cat partitions 
+
+loop or lofi (loop fille interface) - makes file accesible as block device
+
+i have sda (sda1 1TB HDD) and sdb (with couple logical partitions SSD)
+
