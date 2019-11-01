@@ -6,6 +6,9 @@ import daos.InvoiceDao;
 public class InvApp {
 
 	public static void main(String[] args) {
+		
+		//InvoicesGui invoicesGui = new InvoicesGui();
+		
 		ElementDao elementDao = ElementDao.getInstance();
 		InvoiceDao invoiceDao = InvoiceDao.getInstance();
 		
@@ -14,7 +17,7 @@ public class InvApp {
 		invoiceDao.addElementToInvoice(0, elementDao.createElement("black coffee", 1, 1.50f, 0.23f));
 		invoiceDao.addElementToInvoice(0, elementDao.createElement("damn good coffee", 1, 2.50f, 0.23f));
 		invoiceDao.addElementToInvoice(0, elementDao.createElement("chesses", 5, 5.00f, 0.23f));
-		invoiceDao.addElementToInvoice(0, elementDao.createElement("rifle", 3, 100.00f, 0.0f));
+		invoiceDao.addElementToInvoice(0, elementDao.createElement("american rifle", 3, 100.00f, 0.0f));
 		invoiceDao.showInvoice(0);
 		
 		invoiceDao.createInvoice("1-11-2019", "Norma", "Nadine and Ed");
