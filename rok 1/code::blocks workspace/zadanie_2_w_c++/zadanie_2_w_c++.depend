@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1553676727 source:/home/gabriel/Desktop/zadanie_2_w_c++/main.cpp
+	<iostream>
+	<cmath>
+	<string>
+
