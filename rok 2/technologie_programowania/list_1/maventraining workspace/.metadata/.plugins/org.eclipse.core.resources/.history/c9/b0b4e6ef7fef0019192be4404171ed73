@@ -1,0 +1,5 @@
+package pt.trainings.maven.scratch;
+
+public class GreetingsTest {
+
+}

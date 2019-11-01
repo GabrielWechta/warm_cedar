@@ -1,0 +1,11 @@
+package pt.trainings.maven.scratch;
+
+public class HelloWorld {
+
+	public static void main(String[] args) {
+		Greeting greetings = new Greetings();
+		greetings.sayHello(args[0]);
+		System.out.println(greetings.sayHello(args.length > 0 ? args[0] : null));
+	}
+
+}
