@@ -1,0 +1,65 @@
+1. SHOW TABLES;
+2. SELECT owner, name FROM pet;
+3. SELECT birth FROM pet WHERE species = 'dog';
+4. SELECT name, owner FROM pet WHERE species = 'dog' AND MONTH(birth) <= 6;
+5. SELECT species FROM pet WHERE sex = 'm' GROUP BY species;
+6. SELECT name, date FROM event WHERE type ='birthday';
+	/zakladamy ze zycie to najlepszy prezent jaki mozna komus dac
+7. SELECT owner FROM pet WHERE name LIKE '%ffy;
+8. SELECT owner, name FROM pet WHERE death IS NULL;
+9. SELECT owner FROM pet GROUP BY owner HAVING COUNT(*) >=2;
+10. CREATE VIEW view3 AS SELECT name FROM event WHERE name NOT IN (SELECT name FROM event WHERE type = 'birthday');
+
+SELECT owner, pet.name FROM pet INNER JOIN view3 ON pet.name = view3.name WHERE species = 'dog' GROUP BY pet.name, pet.owner ORDER BY pet.name DESC;
+11. SELECT name FROM pet WHERE YEAR(birth) BETWEEN ('1992' AND '1994') AND MONTH(birth) <= 6; // fix
+12. SELECT name FROM pet ORDER BY birth ASC LIMIT 2;
+13. SELECT DISTINCT name FROM pet WHERE birth IN (SELECT MAX(birth) FROM pet);
+14. SELECT DISTINCT owner FROM pet INNER JOIN event ON event.name = pet.name 
+WHERE date > (SELECT date FROM event WHERE name = 'Slim');
+15. 
+
+CREATE VIEW for15_2 AS SELECT DISTINCT owner, birth
+FROM pet
+WHERE owner NOT IN (SELECT DISTINCT pet.owner FROM pet INNER JOIN event ON pet.name = event.name WHERE event.type = 'birthday');
+
+CREATE VIEW last AS SELECT owner FROM for15_2 ORDER BY birth;
+
+SELECT DISTINCT owner FROM last;
+
+16. SELECT L.owner, R.owner FROM pet AS L INNER JOIN pet AS R ON L.species = R.species
+WHERE L.owner > R.owner GROUP BY L.owner, R.owner;
+17. ALTER TABLE event ADD COLUMN perfromer VARCHAR(100) AFTER date;
+18. UPDATE event
+SET performer = "MD. House"
+WHERE type = 'vet';
+
+UPDATE event 
+SET performer = "George Clooney"
+WHERE type = 'litter';
+
+UPDATE event
+INNER JOIN pet ON event.name = pet.name 
+SET performer = owner
+WHERE type <> 'vet' AND type <> 'litter'
+19. UPDATE pet
+SET owner = 'Diane'
+WHERE species = 'cat'
+20. SELECT species, COUNT(*) AS mnogosc FROM pet
+GROUP BY species 
+ORDER BY mnogosc DESC;
+21. DELETE FROM pet
+WHERE death IS NOT NULL;
+22. ALTER TABLE pet
+DROP COLUMN death;
+23.
+INSERT INTO pet 
+VALUES ('Doggy', 'Thomas', 'dog', 'm', '1999-10-21'),
+('Pulp', 'Thomas', 'dog', 'm', '1999-1-21'),
+('Szynkoster', 'Arthur', 'hamster', 'f', '1989-10-21'),
+('Goat1', 'Jhon', 'goat', 'm', '1999-10-21'),
+('Goat2', 'Jhon', 'goat', 'm', '1999-10-21'),
+('Goat3', 'Jhon', 'goat', 'm', '1999-10-21'),
+('Ship', 'Jhon', 'sheep', 'f', '1999-10-11');
+
+...
+
