@@ -6,6 +6,6 @@ get_value() {
 
 while true; do
 	get_value
-	echo -en "${value}%\r\c"
+	echo "${value}%\r\c"
 	sleep 1
 done
