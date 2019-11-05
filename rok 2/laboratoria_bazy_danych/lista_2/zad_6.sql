@@ -1,2 +1,1 @@
-Insert INTO osoba (imie, dataUrodzenia, plec) (Select Distinct owner, dataUrodzenia, plec FROM zwierzak);
-
+ALTER TABLE inne AUTO_INCREMENT = 7000;

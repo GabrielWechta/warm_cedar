@@ -1,0 +1,8 @@
+DELIMITER $$
+CREATE TRIGGER destroyHobby AFTER DELETE ON hobby
+FOR EACH ROW 
+BEGIN
+	DELETE FROM hobby WHERE OLD.id = hobby.id AND typ = "sport";
+END$$
+DELIMITER ;
+
