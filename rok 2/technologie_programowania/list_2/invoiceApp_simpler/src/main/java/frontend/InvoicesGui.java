@@ -1,5 +1,6 @@
 package frontend;
 
+import java.awt.BorderLayout;
 import java.awt.CardLayout;
 import java.awt.FlowLayout;
 
@@ -7,41 +8,41 @@ import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
+
+import daos.InvoiceDao;
 
 public class InvoicesGui extends JFrame {
+    int invoice_id = -1;
 
 	public InvoicesGui() {
+		
+		InvoiceDao invoiceDao = InvoiceDao.getInstance();
+		
 		setSize(400, 150);
 		setTitle("Make Your Own Invoice");
 		setLocationRelativeTo(null);
 
 		JPanel panel = new JPanel();
 		panel.setSize(1000, 900);
-		panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
-
-		addMakeInvoiceButtonToPanel(panel);
-		addShowInvoicesButtonToPanel(panel);
-
+		panel.setLayout(new FlowLayout());
+	    JButton showButton = new JButton("show invoices");
+	    
+	    JTextArea inputAre = new JTextArea();
+	    
+	    try {
+		    showButton.addActionListener(e -> {
+				String input = inputAre.getText();
+		    	invoice_id = Integer.parseInt(input);
+		    	invoiceDao.showInvoice(invoice_id);});
+		} catch (NumberFormatException e1) {
+			System.out.println("wrong id format, type again");
+		}
+	    
+	    panel.add(inputAre);
+	    panel.add(showButton);
 		add(panel);
 		
 		setVisible(true);
-	}
-
-	private void addShowInvoicesButtonToPanel(JPanel panel) {
-		JButton button = new JButton("Show Invoices");
-		button.setSize(200, 100);
-		button.addActionListener(e -> {});
-		panel.add(button);		
-	}
-
-	public void addMakeInvoiceButtonToPanel(JPanel panel) {
-		JButton button = new JButton("Make Invoice");
-		button.setSize(200, 100);
-		button.addActionListener(e -> createInvoiceWindow());
-		panel.add(button);
-	}
-
-	public void createInvoiceWindow() {
-		InvoiceWindow invoiceWindow = new InvoiceWindow();
 	}
 }

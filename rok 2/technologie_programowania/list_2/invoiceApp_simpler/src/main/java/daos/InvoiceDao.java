@@ -30,10 +30,14 @@ public final class InvoiceDao {
 	}
 
 	public void showInvoice(int id) {
-		Invoice invoice = listOfInvoices.get(id);
-		System.out.println(invoice.getId() + " : " + invoice.getSeller() + " : " + invoice.getBuyer());
-		invoice.describeListOfElements();
-
+		Invoice invoice;
+		try {
+			invoice = listOfInvoices.get(id-1);
+			System.out.println(invoice.getId() + " : " + invoice.getSeller() + " : " + invoice.getBuyer());
+			invoice.describeListOfElements();
+		} catch (Exception e) {
+			System.out.println("invoice with that id does not exist");
+		}
 	}
 
 	public void addElementToInvoice(int id, Element element) {

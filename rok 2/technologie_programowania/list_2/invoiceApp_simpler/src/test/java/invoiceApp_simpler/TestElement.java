@@ -28,7 +28,6 @@ public class TestElement {
 		element.calculateBruttoPrice(0.0f, 0.0f);
 		Assert.assertTrue(0.0f == element.getBruttoPrice());
 		element.calculateBruttoPrice(20.0f, 0.0f);
-		System.out.println(element.getBruttoPrice());
 		Assert.assertTrue(20.00f == element.getBruttoPrice());
 	}
 }
