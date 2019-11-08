@@ -1,11 +1,11 @@
 #!/bin/bash
-value=0
-get_value() {
-	value=$(cat /proc/loadavg | cut -d ' ' -f 4 | cut -d '/' -f 2)
+burden=0
+get_burden() {
+	burden=$(cat /proc/loadavg | cut -d ' ' -f 4 | cut -d '/' -f 2)
 }
 while true; do
-get_value
+get_burden
 
-echo -en "$value\r"
+echo -en "$burden\r"
 sleep 1
 done
