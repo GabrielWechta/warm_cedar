@@ -1,0 +1,1 @@
+GRANT SELECT, INSERT, ALTER ON Hobby.* TO 'Gabriel11'@'localhost' IDENTIFIED BY '111052';

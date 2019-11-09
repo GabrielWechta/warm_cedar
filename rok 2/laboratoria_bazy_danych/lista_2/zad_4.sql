@@ -6,3 +6,4 @@ Update zwierzak
     -> inner join osoba on zwierzak.owner = osoba.imie
     -> Set zwierzak.ID = osoba.id ;
 
+ALTER TABLE zwierzak DELETE COLUMN imie;

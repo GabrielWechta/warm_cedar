@@ -15,3 +15,4 @@ zmodyfikowałem tabele zwierzak tak aby przedstawiala się następująco
 następnie 
 Insert INTO osoba (imie, dataUrodzenia, plec) (Select Distinct owner, dataUrodzenia, plec FROM zwierzak);
 
+następnie prawie-losowo bazując na mojej znajmości imion Agnielskich uzupełniłem 'plec'
