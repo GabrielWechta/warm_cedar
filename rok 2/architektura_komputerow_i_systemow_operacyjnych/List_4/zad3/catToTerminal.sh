@@ -1,9 +1,9 @@
 #!/bin/bash
 
-url=https://cdn2.thecatapi.com/images/bo4.jpg
-
-curl ${url} > catpicture
-
-catimg catpicture -r 2
-
-rm catpicture
+url=https://api.thecatapi.com/v1/images/search
+curl ${url} > kitty
+catlink=$(jq '.[].url' kitty -r)
+curl ${catlink} > kittyimage
+catimg -r 2 kittyimage
+rm kittyimage
+rm kitty
