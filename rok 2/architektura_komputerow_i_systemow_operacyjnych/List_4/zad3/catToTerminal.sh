@@ -7,3 +7,5 @@ curl ${catlink} > kittyimage
 catimg -r 2 kittyimage
 rm kittyimage
 rm kitty
+
+
