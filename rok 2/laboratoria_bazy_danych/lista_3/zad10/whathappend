@@ -1,0 +1,11 @@
+robienie backupu ~$ mysqldump -u root -p Hobby > dumpHobby.sql
+dla odważnych ~$ mysql> DROP DATABASE Hobby;
+przywracanie bazy ~$ mysql -u root -p < dumpHobby.sql
+
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+differential backups - każdy liczy różnicę pomiędzy ostatnim full backupem 
+
+incremental backup - każdy liczy różnicę pomiędzy ostatnim backupem (również incremental) 
+	+lżejszy
+	+szybciej się robi
+	-restoring zajmuje więcej czasu 
