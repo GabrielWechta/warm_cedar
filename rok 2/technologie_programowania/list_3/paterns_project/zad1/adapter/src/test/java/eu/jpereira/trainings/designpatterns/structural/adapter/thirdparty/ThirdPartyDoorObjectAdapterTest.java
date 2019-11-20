@@ -27,7 +27,6 @@ public class ThirdPartyDoorObjectAdapterTest extends DoorTest{
 	@Override
 	protected Door createDoorUnderTest() {
 		return new ThirdPartyDoorObjectAdapter ();
-		//return new ThirdPartyDoorObjectAdapter();
 	}
 
 	@Override

@@ -9,23 +9,19 @@ import eu.jpereira.trainings.designpatterns.structural.adapter.thirdparty.except
 import eu.jpereira.trainings.designpatterns.structural.adapter.thirdparty.exceptions.CannotChangeStateOfLockedDoor;
 import eu.jpereira.trainings.designpatterns.structural.adapter.thirdparty.exceptions.CannotUnlockDoorException;
 
-public class ThirdPartyDoorObjectAdapter implements Door {
+public class ThirdPartyDoorAdapter extends ThirdPartyDoor implements Door {
 
-	ThirdPartyDoor thirdPartyDoor;
-	
-
-	public ThirdPartyDoorObjectAdapter() {
-		this.thirdPartyDoor = new ThirdPartyDoor();
+	public ThirdPartyDoorAdapter() {
 	}
 
 	@Override
 	public void changeCode(String oldCode, String newCode, String newCodeConfirmation)
 			throws IncorrectDoorCodeException, CodeMismatchException {
 		if (newCode.equals(newCodeConfirmation)) {
-			if (oldCode.equals(thirdPartyDoor.DEFAULT_CODE)) {
+			if (oldCode.equals(this.DEFAULT_CODE)) {
 				try {
-					thirdPartyDoor.unlock(oldCode);
-					thirdPartyDoor.setNewLockCode(newCode);
+					unlock(oldCode);
+					setNewLockCode(newCode);
 				} catch (CannotChangeCodeForUnlockedDoor e) {
 					e.printStackTrace();
 				} catch (CannotUnlockDoorException e) {
@@ -42,7 +38,7 @@ public class ThirdPartyDoorObjectAdapter implements Door {
 	@Override
 	public void close() {
 		try {
-			thirdPartyDoor.setState(DoorState.CLOSED);
+			setState(DoorState.CLOSED);
 		} catch (CannotChangeStateOfLockedDoor e) {
 			e.printStackTrace();
 		}
@@ -50,7 +46,7 @@ public class ThirdPartyDoorObjectAdapter implements Door {
 
 	@Override
 	public boolean isOpen() {
-		if (thirdPartyDoor.getState() == DoorState.OPEN)
+		if (getState() == DoorState.OPEN)
 			return true;
 		else
 			return false;
@@ -58,10 +54,10 @@ public class ThirdPartyDoorObjectAdapter implements Door {
 
 	@Override
 	public void open(String code) throws IncorrectDoorCodeException {
-		if (code.equals(thirdPartyDoor.DEFAULT_CODE)) {
+		if (code.equals(this.DEFAULT_CODE)) {
 			try {
-				thirdPartyDoor.unlock(code);
-				thirdPartyDoor.setState(DoorState.OPEN);
+				unlock(code);
+				setState(DoorState.OPEN);
 			} catch (CannotChangeStateOfLockedDoor e) {
 				e.printStackTrace();
 			} catch (CannotUnlockDoorException e) {
@@ -75,12 +71,11 @@ public class ThirdPartyDoorObjectAdapter implements Door {
 	@Override
 	public boolean testCode(String code) {
 		try {
-			thirdPartyDoor.unlock(code);
-			if (thirdPartyDoor.getLockStatus() == LockStatus.UNLOCKED)
+			unlock(code);
+			if (getLockStatus() == LockStatus.UNLOCKED)
 				return true;
 		} catch (CannotUnlockDoorException e) {
 		}
 		return false;
 	}
-
 }

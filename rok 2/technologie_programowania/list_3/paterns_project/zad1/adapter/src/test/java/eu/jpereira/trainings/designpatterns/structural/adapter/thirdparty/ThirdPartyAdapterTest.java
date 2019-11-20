@@ -15,10 +15,8 @@
  */
 package eu.jpereira.trainings.designpatterns.structural.adapter.thirdparty;
 
-import static org.junit.Assert.*;
 import eu.jpereira.trainings.designpatterns.structural.adapter.DoorTest;
 import eu.jpereira.trainings.designpatterns.structural.adapter.model.Door;
-import eu.jpereira.trainings.designpatterns.structural.adapter.model.SimpleDoor;
 
 /**
  * @author windows
@@ -29,14 +27,12 @@ public class ThirdPartyAdapterTest extends DoorTest {
 
 	@Override
 	protected Door createDoorUnderTest() {
-		return new SimpleDoor();
-		//return new ThirdPartyDoorAdaper();
+		return new ThirdPartyDoorAdapter();
 	}
 
 	@Override
 	protected String getDefaultDoorCode() {
-		return SimpleDoor.DEFAULT_DOOR_CODE;
-		//return ThirdPartyDoor.DEFAULT_CODE;
+		return ThirdPartyDoor.DEFAULT_CODE;
 	}
 
 }
