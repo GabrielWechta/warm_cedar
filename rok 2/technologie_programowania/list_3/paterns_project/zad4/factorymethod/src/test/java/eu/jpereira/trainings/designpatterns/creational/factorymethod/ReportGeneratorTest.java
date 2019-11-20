@@ -49,8 +49,6 @@ public class ReportGeneratorTest extends AbstractReportingTest{
 		ReportData reportData = createDummyReportData();
 		ReportGenerator generator = new ReportGenerator();
 		Report generatedReport = generator.generateReport(reportData, "HTML");
-		System.out.println(reportData.getName());
-		System.out.println(generatedReport.getReportContent());
 		assertEquals("HTML Report. Name: "+reportData.getName(), generatedReport.getReportContent());
 	}
 	

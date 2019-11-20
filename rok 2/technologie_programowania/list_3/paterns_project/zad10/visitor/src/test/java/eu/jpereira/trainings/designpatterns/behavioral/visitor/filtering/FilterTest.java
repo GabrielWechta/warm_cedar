@@ -31,14 +31,13 @@ import eu.jpereira.trainings.designpatterns.behavioral.visitor.event.filtering.H
 import eu.jpereira.trainings.designpatterns.behavioral.visitor.event.filtering.TemperatureAlarmFilter;
 
 /**
- * @author jpereira
- * TODO:
+ * @author jpereira TODO:
  * 
- * Open package eu.jpereira.trainings.designpatterns.behavioral.visitor.event.filtering and analyze it
- * Open {@link Alarm} and analyze how it's related with the Visitor patterns
- * Open {@link AlarmMemoryStore} and analyze it
- * Open {@link HumidityAlarmFilter} and complete the steps
- * Run the tests
+ *         Open package
+ *         eu.jpereira.trainings.designpatterns.behavioral.visitor.event.filtering
+ *         and analyze it Open {@link Alarm} and analyze how it's related with
+ *         the Visitor patterns Open {@link AlarmMemoryStore} and analyze it
+ *         Open {@link HumidityAlarmFilter} and complete the steps Run the tests
  * 
  * 
  */
@@ -54,66 +53,58 @@ public class FilterTest {
 		// add some alarms to the store by the interface used by Observables
 		int testThreshold = 350;
 		int count = 0;
-		for (int i=0; i< 1000; i++ ) {
+		for (int i = 0; i < 1000; i++) {
 			int temp = new Random().nextInt(1000);
-			if ( temp > testThreshold ) {
+			if (temp > testThreshold) {
 				count++;
 			}
 			TemperatureAlarm alarm = new TemperatureAlarm(appliance);
 			alarm.setTemperatureValue(new Long(temp));
 			store.onApplianceEvent(alarm);
-			
-		}// only allow alarms
+
+		} // only allow alarms
 		assertEquals(1000, store.getAlarmCount());
-		
-		//Create an temperature Filter
+
+		// Create an temperature Filter
 		TemperatureAlarmFilter filter = new TemperatureAlarmFilter();
 		filter.setTemperatureThreshold(new Long(testThreshold));
-		
+
 		store.filter(filter);
 		assertEquals(count, filter.getResults().size());
-		System.out.println("Produced "+count+" alarms with temp higher than "+testThreshold);
-		System.out.println("Filtered :"+filter.getResults().size()+" Results");
-		
-		
+		System.out.println("Produced " + count + " alarms with temp higher than " + testThreshold);
+		System.out.println("Filtered :" + filter.getResults().size() + " Results");
+
 	}
-	
 
 	@Test
 	public void testHumidityFilterFilter() {
 		AlarmMemoryStore store = createMemoryStore();
-		// Create a dummy appliance
 		Appliance appliance = mock(Appliance.class);
-		// Create a dummy alarms
 
-		// add some alarms to the store by the interface used by Observables
 		int testThreshold = 30;
 		int count = 0;
-		for (int i=0; i< 1000; i++ ) {
+		for (int i = 0; i < 1000; i++) {
 			int humidity = new Random().nextInt(100);
-			if ( humidity > testThreshold ) {
+			if (humidity > testThreshold) {
 				count++;
 			}
 			HumidityAlarm alarm = new HumidityAlarm(appliance);
 			alarm.setHumidityValue(new Float(humidity));
 			store.onApplianceEvent(alarm);
-			
-		}// only allow alarms
+
+		}
 		assertEquals(1000, store.getAlarmCount());
-		
-		//Create an HumidictyFilter Filter
+
 		HumidityAlarmFilter filter = new HumidityAlarmFilter();
 		filter.setHumidityThreshold(new Float(testThreshold));
-		
+
 		store.filter(filter);
 		assertEquals(count, filter.getResults().size());
-		System.out.println("Produced "+count+" alarms with temp higher than "+testThreshold);
-		System.out.println("Filtered :"+filter.getResults().size()+" Results");
-		
-		
+		System.out.println("Produced " + count + " alarms with temp higher than " + testThreshold);
+		System.out.println("Filtered :" + filter.getResults().size() + " Results");
+
 	}
-	
-	
+
 	/**
 	 * @return
 	 */

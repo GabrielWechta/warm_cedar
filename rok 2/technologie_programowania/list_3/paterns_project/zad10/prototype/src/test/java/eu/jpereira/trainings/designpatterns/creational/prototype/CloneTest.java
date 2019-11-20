@@ -42,7 +42,7 @@ public class CloneTest {
 		//Get all windows
 		List<VehiclePart> parts = firstVehicle.getParts(VehiclePartEnumeration.WINDOW);
 		assertEquals(8, parts.size());
-		 
+		//ze skopiowanej
 		List<VehiclePart> parts2 = secVehicle.getParts(VehiclePartEnumeration.TIRE);
 		assertEquals(3, parts2.size());
 	}
