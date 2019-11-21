@@ -23,8 +23,9 @@ SHOW INDEX FROM nazwaHobby; #View
 
 |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
-CREATE INDEX Name_index ON osoba (imie);
-CREATE INDEX BirthDate_index ON osoba (dataUrodzenia);
-CREATE INDEX IdAndName_index ON sport (id, nazwa);
-CREATE INDEX NameAndId_index ON inne (nazwa, id);
-CREATE INDEX PersonAndIdAndType_index ON hobby (osoba,id,typ);
+CREATE INDEX Name_index USING BTREE ON osoba (imie);
+CREATE INDEX BirthDate_index USING BTREE ON osoba (dataUrodzenia);
+CREATE INDEX IdAndName_index USING HASH ON sport (id, nazwa);
+CREATE INDEX NameAndId_index USING BTREE ON inne (nazwa, id);
+CREATE INDEX NameAndId2_index USING HASH ON inne (nazwa, id);
+CREATE INDEX PersonAndIdAndType_index USING HASH ON hobby (osoba,id,typ);

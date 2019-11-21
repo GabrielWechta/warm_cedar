@@ -53,13 +53,15 @@ SELECT nazwa FROM hobbiesAndMultiplicity WHERE mnogosc IN (SELECT MAX(mnogosc) F
 | NULL | UNION RESULT | <union9,10,11> | NULL       | ALL    | NULL                    | NULL    | NULL    | NULL           | NULL |     NULL | Using temporary                 |
 +----+--------------+----------------+------------+--------+-------------------------+---------+---------+----------------+------+----------+---------------------------------+
 
-SELECT DISTINCT imie FROM osoba INNER JOIN zwierzak ON osoba.id = zwierzak.ID WHERE osoba.dataUrodzenia = (SELECT MIN(dataUrodzenia) FROM osoba);
-+----+-------------+----------+------------+------+------------------------------------+-----------------+---------+----------------+------+----------+------------------------------+
-| id | select_type | table    | partitions | type | possible_keys                      | key             | key_len | ref            | rows | filtered | Extra                        |
-+----+-------------+----------+------------+------+------------------------------------+-----------------+---------+----------------+------+----------+------------------------------+
-|  1 | PRIMARY     | osoba    | NULL       | ref  | PRIMARY,Name_index,BirthDate_index | BirthDate_index | 3       | const          |    1 |   100.00 | Using where; Using temporary |
-|  1 | PRIMARY     | zwierzak | NULL       | ref  | ID                                 | ID              | 5       | Hobby.osoba.id |    1 |   100.00 | Using index; Distinct        |
-|  2 | SUBQUERY    | NULL     | NULL       | NULL | NULL                               | NULL            | NULL    | NULL           | NULL |     NULL | Select tables optimized away |
-+----+-------------+----------+------------+------+------------------------------------+-----------------+---------+----------------+------+----------+------------------------------+
+SELECT DISTINCT imie FROM osoba INNER JOIN zwierzak ON osoba.id = zwierzak.ID WHERE osoba.dataUrodzenia = (SELECT MIN(osoba.dataUrodzenia) FROM osoba INNER JOIN zwierzak ON osoba.id = zwierzak.ID);
++----+-------------+----------+------------+--------+--------------------------------+-------------+---------+-------------------+------+----------+------------------------------+
+| id | select_type | table    | partitions | type   | possible_keys                  | key         | key_len | ref               | rows | filtered | Extra                        |
++----+-------------+----------+------------+--------+--------------------------------+-------------+---------+-------------------+------+----------+------------------------------+
+|  1 | PRIMARY     | osoba    | NULL       | ref    | PRIMARY,Name_index,Birth_index | Birth_index | 3       | const             |    1 |   100.00 | Using where; Using temporary |
+|  1 | PRIMARY     | zwierzak | NULL       | ref    | ID                             | ID          | 5       | Hobby.osoba.id    |    1 |   100.00 | Using index                  |
+|  2 | SUBQUERY    | zwierzak | NULL       | index  | ID                             | ID          | 5       | NULL              |    5 |   100.00 | Using where; Using index     |
+|  2 | SUBQUERY    | osoba    | NULL       | eq_ref | PRIMARY                        | PRIMARY     | 4       | Hobby.zwierzak.ID |    1 |   100.00 | NULL                         |
++----+-------------+----------+------------+--------+--------------------------------+-------------+---------+-------------------+------+----------+------------------------------+
+
 
 

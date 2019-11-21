@@ -38,6 +38,8 @@ public class ReportAssemblerTest {
 		Report report = jsonReportBuilder.getReport();
 		String expected = "sale:{customer:{name:\"Bob\",phone:\"1232232\"},items:[{name:\"Computer\",quantity:2,price:99.9},{name:\"Printer\",quantity:1,price:79.8}]}";
 		assertEquals(expected, report.getAsString());
+		assertEquals("sss", report.getAsString());
+		assertEquals(expected, report.getAsString());
 	}
 
 	@Test
