@@ -110,6 +110,7 @@ void executeAsync(char** buf,int nr){
 
     if (child == 0) {
         tokenize_buffer(argv,&pc,buf[i]," ");
+        signal(SIGINT, SIG_IGN);
         // print_params(argv);
         execvp(argv[0],argv);
 		perror("invalid input ");
@@ -171,7 +172,7 @@ void handle_sigchld(int sig) {
 }
 
 void handle_sigint(int sig) {
-    printf(" killing process %d\n",getpid());
+    printf(" killing last process \n");
 }
 
 
