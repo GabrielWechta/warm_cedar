@@ -1,0 +1,9 @@
+musi być dla 32 bitóœ
+
+2. wiersz razy kolumna
+	watek ma brac peirwszy wolny, jedna zmienna wspoldzielona, globaalna, ona bedzie mi mowila ktory jest wolny 
+
+3. ala ftp
+	za pomoca gniazd i selecta
+4. szyfrowanie z biblioteki openssl 
+5. dla 64 tego jest inne convention 

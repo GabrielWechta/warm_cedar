@@ -1,0 +1,9 @@
+       "The only signals that can be sent to process ID 1,  the  init  process,
+       are  those  for  which  init  has explicitly installed signal handlers.
+       This is done to assure the system is not brought down accidentally.
+
+       POSIX.1 requires that kill(-1,sig) send sig to all processes  that  the
+       calling process may send signals to, except possibly for some implemen‐
+       tation-defined system processes.  Linux  allows  a  process  to  signal
+       itself,  but on Linux the call kill(-1,sig) does not signal the calling
+       process."

@@ -1,0 +1,3 @@
+use MDBHobby
+show collections 
+
