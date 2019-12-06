@@ -22,12 +22,15 @@ db.createCollection("osoba")
   }
 ]
 ###############################################################################
-db.sport.update(
-    {idenx: 1}, 
-    {
-    $set: {sport_name : "Squash"}
-    }
-)
+[
+  {
+    "index": 10,
+    "sport_name": "Squash",
+    "place": "inside",
+    "multiplicity": "singiel",
+    "for_true_men": true
+  }
+]
 ####################################ZWIERZETA############################################
 [
   '{{repeat(10)}}',
@@ -46,24 +49,28 @@ db.sport.update(
     expected_life: '{{integer(10,110)}}'
   	}
 ]
-#################################################################################
+#####################################ZWIERZE Z NIEZDECYDOWANA RASA############################################
+[
   {
-    index: 10,
-    type_name: [
-       '{{repeat(2)}}',
+    "index": 10,
+    "type_name": " Smallus Birdus",
+    "race_name": [
       {
-        type: 'Smallus Birdus {{integer(1,20)}}'
+        "type": "Smallus Birdus 13"
+      },
+      {
+        "type": "Smallus Birdus 3"
       }
     ],
-    race_name: 'Aestate Tenuis',
-    		min_weight: '{{integer(1,9)}}',
-   		max_weight: '{{integer(10,1120)}}',
-    	color_range: function (tags) {
- 		var colors = [['black', 'white'], ['pink', 'red'],['colorful', 'notcolorful'],					 		 ['white_clean','grey_dirty']];
-      return colors[tags.integer(0, colors.length - 1)];},
-    expected_life: '{{integer(10,110)}}'
-  	}
-
+    "min_weight": 9,
+    "max_weight": 297,
+    "color_range": [
+      "white_clean",
+      "grey_dirty"
+    ],
+    "expected_life": 38
+  }
+]
 ##################################OSOBA###########################################
 [
   '{{repeat(10)}}',
