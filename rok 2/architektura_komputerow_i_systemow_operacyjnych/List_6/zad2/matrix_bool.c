@@ -59,10 +59,9 @@ void* threadRun(void* arg){
     while(rowsDone < rows){
         pthread_mutex_lock(t->lock);
         n = rowsDone++;
-        printf("Watek %d robi\n",t->id);
         pthread_mutex_unlock(t->lock);
         if(n >= rows) continue;
-
+                printf("Watek %d robi %d\n",t->id, n);
         if(n<rowsDone) calculateRow(n);
     }
 }

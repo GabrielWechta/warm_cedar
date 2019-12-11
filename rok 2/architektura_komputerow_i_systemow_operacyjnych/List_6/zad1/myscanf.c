@@ -72,7 +72,7 @@ char* myReadString(){
 
     while(*a != '\0'){
 
-                printf("wszedlem do case");
+                write(1,"wszedlem do case", 17);
 
         if(*a == '%') {
 
@@ -143,7 +143,7 @@ char* myReadString(){
     // printf("%d", hex);
     int myint, myhex, mybin;
     char* mystr = malloc(100 * sizeof(char));// = myReadString();
-    func("%d, %x, %s", &myint, &myhex, &mystr);
+    func("%d%x%s", &myint, &myhex, &mystr);
     printf("\nmy: %d, %x, %s\n", myint, myhex, mystr);
     return 0;
  }

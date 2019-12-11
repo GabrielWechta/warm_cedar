@@ -4,6 +4,7 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/socket.h>
+#include <sys/wait.h>
 #include <sys/time.h>
 #include <netinet/in.h>
 #include <netdb.h>
@@ -12,6 +13,25 @@
 void error(const char * msg){
     perror(msg);
     exit(0);    
+}
+
+void executeBasic(char** argv){
+   if(strstr(argv[0],"cd")){
+	   chdir(argv[1]);
+       char* a[]={"pwd",NULL};
+       executeBasic(a);
+	}
+   else{
+      if(fork()>0){
+         wait(NULL);
+      }
+      else{
+         execvp(argv[0],argv);
+         perror("invalid input\n");
+         exit(1);
+      }
+   }
+
 }
 
 void removeWhiteSpace(char* buf){
@@ -161,6 +181,18 @@ int main(int argc, char* argv[]){
         else if (strcmp(params[0], "put") == 0){
             printf("PUT\n");
             putProtocol(sockfd, params[1]);
+        }
+        else if(strcmp(params[0], "lls") == 0){
+            char* a[]={"ls",NULL};
+            executeBasic(a);
+        }
+        else if(strcmp(params[0], "lpwd") == 0){
+            char* a[]={"pwd",NULL};
+            executeBasic(a);
+        }
+        else if(strcmp(params[0], "lcd") == 0){
+            char* a[]={"cd",params[1],NULL};
+            executeBasic(a);
         }
         else {
             n = write(sockfd, buffer, strlen(buffer));
