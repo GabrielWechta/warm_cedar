@@ -11,7 +11,7 @@ int rows = 0, columns = 0;
 int rowsDone = 0;
 
 
-typedef struct Thread_struct {
+typedef struct {
     pthread_mutex_t* lock;
     int id;
 } Thread_struct;
@@ -45,7 +45,7 @@ bool getValueAt(int row, int col){
 }
 
 void calculateRow(int row){
-    for(int i = 0; i < columns; i++){
+    for(int i = 0; i < rows; i++){
         matrixK[row][i] = getValueAt(row,i);
     }
     //sleep(1);
@@ -59,7 +59,9 @@ void* threadRun(void* arg){
     while(rowsDone < rows){
         pthread_mutex_lock(t->lock);
         n = rowsDone++;
+        printf("Watek %d robi\n",t->id);
         pthread_mutex_unlock(t->lock);
+        if(n >= rows) continue;
 
         if(n<rowsDone) calculateRow(n);
     }
@@ -75,11 +77,20 @@ int main(int argc, char* argv[]){
     rows = atoi(argv[1]);
     columns = atoi(argv[2]);
     int number_of_threads = atoi(argv[3]);
+    printf("%d, %d, %d\n",rows, columns, number_of_threads);
 
     if(rows > 0 && rows < 100 && columns > 0 && columns < 100){
         srandom(time(NULL));
-        populateMatrix(rows, columns, matrixA);
-        populateMatrix(columns, rows, matrixB);
+        for(int i = 0; i < rows; i++){
+            for(int j = 0; j < columns; j++){
+
+                matrixA[i][j] = (random() %2);
+                matrixB[j][i] = (random() %2);
+            }
+        }
+
+        // populateMatrix(rows, columns, matrixA);
+        // populateMatrix(columns, rows, matrixB);
 
         pthread_t* tid = malloc(sizeof(pthread_t)* number_of_threads);
         pthread_mutex_t lock;
@@ -89,16 +100,37 @@ int main(int argc, char* argv[]){
         for(int i = 0; i < number_of_threads; i++){
             ts_table[i].id = i;
             ts_table[i].lock = &lock;
-            pthread_create(tid +1, NULL, threadRun, ts_table+1);
+
+            pthread_create(tid +i, NULL, threadRun, ts_table+i);
         }
 
         for(int i = 0; i < number_of_threads; i++){
             pthread_join(tid[i],NULL);
         }
 
-        displayMatrix(rows, columns,matrixA);
-        displayMatrix(columns, rows,matrixB);
-        displayMatrix(rows, columns,matrixK);
+        for(int i = 0; i < rows; i++){
+            for(int j = 0; j < columns; j++){
+
+                printf("%d\t", matrixA[i][j]);
+            }
+            printf("\n");
+        }        
+        printf("\n");
+        for(int i = 0; i < columns; i++){
+            for(int j = 0; j < rows; j++){
+
+                printf("%d\t", matrixB[i][j]);
+            }
+            printf("\n");
+        }
+        printf("\n");
+        for(int i = 0; i < rows; i++){
+            for(int j = 0; j < rows; j++){
+
+                printf("%d\t", matrixK[i][j]);
+            }
+            printf("\n");
+        }
 
     }
     else{
