@@ -1,0 +1,38 @@
+
+                opt f-g-h+l+o+
+                org $1000
+START	LDA #40
+	LDX #20
+	JSR MULU
+
+MULU 	EOR #$FF
+	STA BTA
+	STX BTB
+	LDX #0
+	STX BTB+1
+	STX RSL
+	STX RSL+1
+	LDX #8
+
+MUL_LOP	LSR BTA
+	BCS MUL_NXT
+	LDA BTB
+	ADC RSL
+	STA RSL
+	LDA BTB+1
+	ADC RSL+1
+	STA RSL+1
+
+MUL_NXT	ASL BTB
+	ROL BTB+1
+	DEX
+	BNE MUL_LOP
+	LDA RSL
+	LDX RSL+1
+	RTS
+
+BTA	DTA B(0)
+BTB	DTA A(0)
+RSL	DTA A(0)
+
+	end of file

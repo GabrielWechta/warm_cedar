@@ -254,8 +254,8 @@ int main (int argc, char *argv[])
                close_conn = FALSE;
                
                //receive all incoming data on this socket
-               do
-               {
+               //do
+              // {
                   bzero(buffer,255);
                   if(logged[i] == TRUE){
                         rc = recv(i, buffer, sizeof(buffer), 0);
@@ -342,8 +342,7 @@ int main (int argc, char *argv[])
                   }
 
 
-
-               } while (TRUE);
+               //} while (TRUE);
 
                if (close_conn)
                {
