@@ -1,1 +1,0 @@
-play(jane, mary, badminton).

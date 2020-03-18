@@ -1,11 +1,11 @@
 import os
 import hashlib
-from itertools import chain
+import sys
 
-BLOCK_SIZE = 65536
+arguments = sys.argv  # main arguments
+BLOCK_SIZE = 65536  # for reading from file
 list = []
-
-# os.chdir("/home/gabriel/Desktop/studia/rok 2/kurs_pythona")
+os.chdir(arguments[1])  # change directory to that given in argument
 
 for root, dirs, files in os.walk(".", topdown=True):
     for name in files:
@@ -16,25 +16,20 @@ for root, dirs, files in os.walk(".", topdown=True):
             while len(fb) > 0:
                 file_hash.update(fb)
                 fb = f.read(BLOCK_SIZE)
-        list.append((file_name, file_hash.hexdigest()))
+        list.append((file_name, file_hash.hexdigest(), os.stat(file_name).st_size))
 
-sorted_list = sorted(list, key=lambda tup: tup[1])
+sorted_list = sorted(list, key=lambda tup: tup[1])  # sorting by hash, because it's more unlikely to repeat then size
 
-flag = False # flag is False when if is supposed to print also current line
+flag = False  # flag is False when if is supposed to print also current line
 
 for i in range(len(sorted_list) - 1):
-    x, y = sorted_list[i]
-    x2, y2 = sorted_list[i + 1]
-    if y == y2:
-        if flag == False:
+    x, y, z = sorted_list[i]
+    x2, y2, z2 = sorted_list[i + 1]
+    if y == y2 and z == z2:
+        if flag is False:
             print(x)
             flag = True
         print(x2)
-    else:
+    elif (y != y2 or z != z) and flag is True:
         print("*****************")
         flag = False
-
-print(sorted_list)
-
-# for key in dictionary.keys():
-#     if dictionary[key] == dictionary[next(key)]: print(key)
