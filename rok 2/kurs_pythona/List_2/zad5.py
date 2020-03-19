@@ -50,12 +50,6 @@ def is_Prime(n):
 
 
 def multiplicative_inverse(a, b):
-    """Returns a tuple (r, i, j) such that r = gcd(a, b) = ia + jb
-    """
-    # r = gcd(a,b) i = multiplicitive inverse of a mod b
-    #      or      j = multiplicitive inverse of b mod a
-    # Neg return values for i or j are made positive mod b or a respectively
-    # Iterateive Version is faster and uses much less stack space
     x = 0
     y = 1
     lx = 1
@@ -93,7 +87,26 @@ def generate_keypair(p, q):
     return (e, n), (d, n)
 
 
+def encrypt(private_key, plaintext):
+    key, n = private_key
+    cipher = [(ord(char) ** key) % n for char in plaintext]
+
+    return cipher
+
+
+def decrypt(public_key, encrypted_text):
+    fixed_encrypted_text = []
+    key, n = public_key
+    encrypted_text = encrypted_text.split("_")
+    for string in encrypted_text:
+        fixed_encrypted_text.append(int(string))
+    plain = [chr((char ** key) % n) for char in fixed_encrypted_text]
+
+    return ''.join(plain)
+
+
 if __name__ == '__main__':
+
     arguments = sys.argv
     if arguments[1] == "--gen-keys":
 
@@ -110,25 +123,37 @@ if __name__ == '__main__':
             if is_Prime(q):
                 break
 
-        # Now both p and q are prime
-
-        print(p, q, sep=" and ")
-
         public, private = generate_keypair(p, q)
 
         with open("key.pub", 'w') as public_file:
-            public_file.write(str(public))
+            key, n = public
+            public_file.write(str(key) + "\n" + str(n))
+            public_file.close()
 
         with open("key.prv", 'w') as private_file:
-            private_file.write(str(private))
+            key, n = private
+            private_file.write(str(key) + "\n" + str(n))
+            private_file.close()
 
     elif arguments[1] == "--encrypt":
-            x = 1
+
+        with open("key.prv", 'r') as private_file:
+            key = private_file.readline()
+            key = int(key[:-1])
+            n = int(private_file.readline())
+            private = (key, n)
+            encrypted = encrypt(private, arguments[2])  # dances with output structure
+            fixed_encrypted = str(encrypted).replace(", ", "_")
+            print(fixed_encrypted[1:-1])
+
     elif arguments[1] == "--decrypt":
-            x = 1
+
+        with open("key.pub", 'r') as public_file:
+            key = public_file.readline()
+            key = int(key[:-1])
+            n = int(public_file.readline())
+            public = (key, n)
+            print(decrypt(public, arguments[2]))
+
     else:
         print("Please use '--gen-keys', '--encrypt' or '--decrypt' options")
-
-
-
-

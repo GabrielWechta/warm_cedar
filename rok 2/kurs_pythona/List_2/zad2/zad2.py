@@ -1,5 +1,6 @@
 import base64
 import sys
+import os
 
 BASE64_LIST = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U',
                'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
@@ -53,6 +54,7 @@ def my_base64_decode(ascii_string):
 
 arguments = sys.argv
 if arguments[1] == "--encode":
+    #print(os.getcwd())
     with open(arguments[2], 'rb') as binary_file_to_code:
         content = binary_file_to_code.read()
     with open(arguments[3], 'w') as file_to_write:
