@@ -1,0 +1,27 @@
+Zadanie 3
+
+METODA:
+Do rozwiązania używam Tabu Search z drobnym updatem my_set, tweak jest oparty o swap dwóch elementów cyklu.
+
+1. Tabu Search
+- modyfikacja zwykłego TS polega na dodaniu:
+
+            if (my_set.count(w) == 0 && (pathLength(w, maze) < pathLength(r, maze) || my_set.count(r) != 0)) {
+                int length = pathLength(w, maze);
+                r = w.substr(0, length);
+                my_set.clear();
+            }
+Jeżeli uda mi się znaleźć krótszą trasę, czyszczę set, ponieważ tweak modyfikuje jedynie kolejność ruchów, a r jest już krótsze od wszystkich elementów my_set. Dzięki temu udaje mi sie zaoszczędzić czas na iterowniu po my_set.
+
+2. Tweak
+- wybiera dwa losowe wskaźniki i robi swap.
+
+REPREZENTACJA ROZWIĄZANIA:
+- wynikami, które optymalizuję, są stringi U,D,R,L, prowadzace do ostatniego '0' przed wyjściem. Poniewaz łatwo policzyć długość tej trasy (długosć stringa) i brać substringi, skracając tym samym trasę.
+- ponownie pojawia sie vector<vector<char>> z powodu uczulenia c++ na tablica dwuwymiarowe jako argumenty funkcji.
+
+FUNCKJA KOSZTU:
+- if path reaches end -> path.length
+	else -> inf
+
+- nie interesują mnie trasy, które nie kończą się wyjściem z labirytnu, ponieważ optymalizuję trasę która na pewno kończy się wyjściem i szukam jej podzbiorów, które kończą się szybciej.

@@ -1,0 +1,17 @@
+Zadanie 2
+
+METODA:
+Do rozwiązania używam Tabu Search, tweak jest oparty o swap dwóch elementów cyklu.
+
+1. Tabu Search
+- jest ordynarny, ze wszystkimi swoim krągłościami i zaletami.
+
+2. Tweak
+- wybiera dwa losowe wskaźniki (poza 0 i n-1) i robi swap.
+
+REPREZENTACJA ROZWIĄZANIA:
+- vector (tym razem standardowa implementacja vectora ze standardowej biblioteki) intów.
+- c++ niestety nie lubi jako argumentów funckji tablic 2D więc do reprezentacji grafu używam vector<vector<int>> 
+
+FUNCKJA KOSZTU:
+- suma odległości między miastami.
