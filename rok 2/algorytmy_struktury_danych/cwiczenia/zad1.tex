@@ -1,0 +1,35 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc} % `utf8` option to match Editor encoding
+\usepackage[T1]{fontenc}
+\usepackage[ruled,vlined]{algorithm2e}
+
+\begin{document}
+\section{Lista 2, Zadanie 8}
+Algorytm ma przygotować tablicę B będącą tablicą sum prefiksowych. Zakładam, że algorytm następnie ma czekać na input i, j dany przynajmniej kilkakrotnie, w przeciwnym razie bezcelowe byłoby tworzenie dodadtkowej tablicy, wystraczyłoby policzyć sumę od A[i] do A[j] i zwrócić. Natomiast w przypadku gdy nasz algorytm ma działać na kształ funkcji generującej pamiętającej swój stan, jest sens generować tablicę B. 
+
+\begin{algorithm}[H]
+ \KwData{ tablica liczb A o długości N; indeksy i, j}
+ \KwResult{ suma elementów tablicy A od i do j włącznie}
+ \medskip
+ B[1] = 0\\
+ \For{ k from 1 to N}{
+ 	B[k+1] = B[k] + A[k]
+ }
+  \medskip
+  read i,j\\
+ \Return B[j+1] - B[i]
+ \caption{Suma częściowa}
+\end{algorithm}
+
+\subsection{Złożoność czasowa}
+FAZA I: Polegająca na generowaniu tablicy ma złożoność $T(n) = O(n)$, ponieważ pętla raz przechodzi po wszytskich elementach tablicy A.\\\\
+Faza II: Polegająca na zwróceniu opowiedzi ma złożoność $T(n) = O(1)$ ponieważ są to już stałe operacje na wskażnikach i wartośćiach tablicy B.
+
+\subsection{Rozmiar tablicy B}
+Tablica B zajmuje $(N+1) \cdot sizeof(datatype(B))$. $N+1$ ponieważ ustawaimy B[1].
+
+\subsection{Czas odpowiedzi}
+Po wygenerowaniu tablicy B, czas odpowiedzi na pytanie jest $O(1)$.
+
+\end{document}

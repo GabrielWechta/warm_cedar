@@ -1,0 +1,80 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc} % `utf8` option to match Editor encoding
+\usepackage[T1]{fontenc}
+\usepackage[ruled,vlined]{algorithm2e}
+\usepackage{tikz}
+\usetikzlibrary{trees}
+
+\begin{document}
+\section{Lista 3, Zadanie 9}
+Zadanie polega na przeanalizowaniu i określeniu całkowitej złożoności algorytmów rekurencyjnych, dla których określony jest podział na ilość pod-problemów, rozmiar pod-problemu i koszt scalania.
+
+\subsection{Algorytm A}
+$T(n) = 5T(\frac{n}{2}) + O(nlog(n))$\\
+
+Jako, że mamy bardzo elegancko zadane współczynniki możemy skorzystać \textit{Twierdzenia o Rekurencji Uniwersalnej}.
+U nas: 
+\begin{align*}
+	&a = 5\\
+	&b = 2\\
+	&\log_2 5 \approx 2.32
+\end{align*}
+$d$ z calą pewnością jest mniejsze od $2.32$ zatem $T(n) = O(n^{\log_2 5})$
+
+\subsection{Algorytm B}
+$T(n) = 2T(n-1)+ O(n)$\\
+
+W tym przypadku nie jest już tak fajnie. Algortym nie dzieli problemu na problemy k-razy mniejsze a na o 1 mniejsze. Przez to nie możemy skorzystać z \textit{Twierdzenia o Rekurencji Uniwersalnej}.\\
+Przeanalizujmy koszt algorytmu na kolejnych poziomach drzewa binarnego. (Wartości więzłów są kosztami).\\
+
+\begin{tikzpicture}[level distance=1.5cm,
+  level 1/.style={sibling distance=4.5cm},
+  level 2/.style={sibling distance=3cm},
+  level 3/.style={sibling distance=1cm}]
+  \node {n}
+    child {node {n-1}
+      child {node {n-2}
+      	child {node{...}
+      		child {node{1}}
+      		child {node{1}}
+      		}
+      	child {node{...}}
+      }
+      child {node {n-2}
+      	child {node{...}}
+      	child {node{...}}}
+    }
+    child {node {n-1}
+    child {node {n-2}
+      child {node{...}}
+      child {node{...}}}
+      child {node {n-2}
+      child {node{...}}
+      child {node{...}}}
+    };
+\end{tikzpicture}
+
+Drzewo jest pełne i kończy się na liściu o wartości 1. Nietrudno zauważyć, że wysokosć drzewa to $n$.\\
+A więc na $k$-tym poziomie drzewa koszt poziomu wynosi $2^k(n-k)$
+W takim razie $T(n) = \sum_{k = 0}^{n} 2^k(n-k) = 2^{n+1} - n -2 = O(2^n)$. Niedobrze.
+
+\subsection{Algorytm C}
+$T(n) = 9T(\frac{n}{3}) + O(nlog(n^2))$\\
+
+Ponownie możemy zastosować \textit{Twierdzenie o Rekurencji Uniwersalnej}.
+U nas: 
+\begin{align*}
+	&a = 9\\
+	&b = 3\\
+	&\log_3 9 = 2\\
+	&d = 2
+\end{align*}
+Bardzo porządny algorytm. $d = \log_3 9$, bo $2 = 2$ zatem $T(n) = O(n^2\log(n))$
+
+\subsection{Wybór}
+Algorytm B nie wchodzi w grę, jego złożoność obliczeniowa rośnie szybciej niż ceny alkoholu przed wprowadzeniem prohibicji.\\
+Porównując algorytm A i C, ze złożonościami $O(n^{\log_2 5}) \approx O(n^{2.32})$ i $O(n^2\log(n))$ możemy skorzystać z tego, że dowolny wielomian rośnie szybciej niż logarytm innymi słowy $n^{2.32} > n^2log(n)$ już dla stosunkowo niedużych $n$-ów. Wybrałbym więc algorytm C.
+\end{document}
+
+\end{document}
