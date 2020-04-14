@@ -5,6 +5,7 @@ plik radix_stats.xlsx zawiera porównanie radixSort dla liczb o długościach (i
 
 //notes:
 output do pliku ma format:
+(aby dostać output do pliku nalezy użyć flagi --stat jak w poprzednim zadaniu)
 
 n;o_c;ram;dur
 
