@@ -1,0 +1,23 @@
+Zadanie 1
+
+METODA:
+Korzystam z algorytmu Simulated Annealing z książki (S. Luke, Essentials of Metaheuristics), moja implementacja jest dość prostotorowa, bez fantastycznych fanaberii. W zasadzie różni się tylko jednym elementem, w Essentials of Metaheuristics główna pętla programu przerwyana jest gdy: mamy idealne rozwiazanie ; skonczy sie czas ; temperatura spadnie do <= 0. Ja nie uwzlgledniam ostatniego wyrazu alternatywy, aby nie martwić się błędami związanymi z dzieleniem przez zero.
+
+1.Simulated Annealing
+- temperatura na początku ustalona jest na 100. Wydaje się to być rozsądne dla zakresu wartości w funkcji salomon(), dając dobre wartości dla e^(Q(s) - Q(r)).
+- testowałem trzy metody wychładzania:
+	1. dekramentacja o 0.01 - niezależne od czasu, ale algorytm zawsze zdążył zejść do najmniejszej temperatury. (Na moim procesorze nawet dla time = 1 [s])
+	2. temperatura = temperatura*0.99 - tak samo jak wyżej.
+	3. temperature = const_temperature/(1 + iteration/(total_time*5) - eksperymentalnie wyznaczone 5. Dobre wyniki
+
+Zarówno 1 i 2, i 3 dawały podobne wyniki.
+
+2. Bounded Uniform Convolution (with p = 1)
+- do funckji tweak() użyłem szumu z zakresu (-1, 1) z jednakowym prawdopodobieństwem.
+
+REPREZENTACJA ROZWIĄZANIA:
+- pięć liczb zmiennoprzecinkowych oddzielonych spacją.
+
+FUNCKJA KOSZTU:
+- jest naturalnym minimum funkcji salomona.
+
