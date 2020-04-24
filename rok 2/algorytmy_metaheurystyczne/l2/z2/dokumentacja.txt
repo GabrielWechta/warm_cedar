@@ -1,0 +1,26 @@
+Zadanie 2
+
+METODA:
+Korzystam z algorytmu Simulated Annealing z książki (S. Luke, Essentials of Metaheuristics).
+Całość mojego rozwiązania opiera się na fakcie, na który trafiłem rozwiązując listę zadań z Algorytmów i Struktru Danych mianowicie, że średnia arytmetyczna zbioru minimalizuje sumę kwadratów odległości. Zastanawiałem się czy założyć, że tego nie wiem i rozwiązać zadanie opierając się tylko o dobór sąsiedztwa. Pozstanowiłem, że lepiej będzie zastosować tę wiedzę i sprawdzać przypadki skrajne. 
+
+1.Simulated Annealing
+- temperatura na początku ustalona jest na 100, spada w tempie geometrycnzym, mnożona jest przez czynnik 0.95 tak długo jak jest większa od 0.1. Następnie biorąc pod uwagę różnicę w jakości rozwiązań algorytm szuka już w zasadzie tylko lokalnie, z bardzo małym prawdopodobieństwem eksploracji.
+
+2.Nawiązując do tego co napisałem wcześniej, znając złote własności średniej arytemtycznej, macierz-odpowiedź generowana jest w następujący sposób:
+	1. Zliczana jest suma prostokątnych pod-macierzy o rozmiarach (k_x, k_y) zaczynając od lewgo górnego rogu, założyłem że jedyne niepełne bloki mogą być na wschodnim i południowym obżerzu.
+	2. Następnie liczona jest średnia ( = suma / #elementów pod-macierzy ).
+	3. Funkcja ClosestValue() znajduje najbliższą wartość średniej z dostępnych.
+	4. Pod-macierz w macierzy-odpowiedzi zostaje zapełniona wyliczoną wartością.
+
+3. Pierwszy sprawdzany (initial) kandydat jest najbardziej prawdopodobny do zostania najlepszym ponieważ upychamy w nim najwięcej, njamniejszych kwadratów. Innymi słowy średnia arytmetyczna dotyczy najmniejszego zbioru. W pewien sposób uodparnia nas to na słabe wyniki dla małych czasów.
+
+4. Przesukiwanie okolicy polega na modyfikacji rozmiaru prostokątów. Modyfikacji wartości bloków nie uwzględniłem ponieważ na stan mojej wiedzy teraz byłoby to bezcelowe. Algorytm szuka sąsiedztwa na zasadzie zwiększania lub zmniejszania boków bloków obecnego rozwiązania.
+
+REPREZENTACJA ROZWIĄZANIA:
+- stdout dystans pomiędzy M i M'.
+- stderr M'.
+
+FUNCKJA KOSZTU:
+- zadana w zadaniu.
+
