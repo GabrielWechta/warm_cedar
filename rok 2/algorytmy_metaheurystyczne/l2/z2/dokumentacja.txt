@@ -2,7 +2,7 @@ Zadanie 2
 
 METODA:
 Korzystam z algorytmu Simulated Annealing z książki (S. Luke, Essentials of Metaheuristics).
-Całość mojego rozwiązania opiera się na fakcie, na który trafiłem rozwiązując listę zadań z Algorytmów i Struktru Danych mianowicie, że średnia arytmetyczna zbioru minimalizuje sumę kwadratów odległości. Zastanawiałem się czy założyć, że tego nie wiem i rozwiązać zadanie opierając się tylko o dobór sąsiedztwa. Pozstanowiłem, że lepiej będzie zastosować tę wiedzę i sprawdzać przypadki skrajne. 
+Całość mojego rozwiązania opiera się na fakcie, na który trafiłem rozwiązując listę zadań z Algorytmów i Struktru Danych mianowicie, że średnia arytmetyczna zbioru minimalizuje sumę kwadratów odległości. Zastanawiałem się czy założyć, że tego nie wiem i rozwiązać zadanie opierając się tylko o dobór sąsiedztwa. Pozstanowiłem, że lepiej będzie zastosować tę wiedzę i sprawdzać przypadki skrajne, mniej dydaktycznie, bardziej inżyniersko.
 
 1.Simulated Annealing
 - temperatura na początku ustalona jest na 100, spada w tempie geometrycnzym, mnożona jest przez czynnik 0.95 tak długo jak jest większa od 0.1. Następnie biorąc pod uwagę różnicę w jakości rozwiązań algorytm szuka już w zasadzie tylko lokalnie, z bardzo małym prawdopodobieństwem eksploracji.
