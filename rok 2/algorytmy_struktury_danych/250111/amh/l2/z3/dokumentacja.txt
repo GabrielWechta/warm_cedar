@@ -1,0 +1,23 @@
+Zadanie 3
+
+METODA:
+Korzystam z algorytmu Simulated Annealing z książki (S. Luke, Essentials of Metaheuristics), oraz algorytmu BFS do przeszukiwania macierzy (Maze Exit Algorithm).
+
+1. Simulated Annealing
+- w tym zadaniu eksperymentowałem ze stałą, którą odejmuje od temperatury.
+- temperatura na początku ustalona jest na 10, spada w tempie liniowym, odejmowany od niej jest czynnik coolness tak długo jak jest większa od 0.1. Czynnik coolness ustalony jest wedlug wzoru
+	coolnes = #spodziewanych_interwałów * (temperature) / time
+- #spodziewanych_interwałów liczona jest na podstawie zmierzenia czasu jednej iteracji i podzieleniu całkowitego czasu na wykonanie programu przez czas właśnie jednej iteracji.
+
+2. Do znalezienia initial_candidate używam BFS.
+
+
+3. Procedura tweak polega na wylosowaniu dwóch różnych indeksów w stringu zawierającym odpowiedź i wykonaniu na nich swap'a, następnie jakość rozwiązania opiera się na rzeczywistej długosci trasy od agenta do wyjscia. (Liczymy na to, że po swap'ie trasa natrafiła na wyjście wcześniej).
+
+REPREZENTACJA ROZWIĄZANIA:
+- stdout długość trasy.
+- stderr trasa.
+
+FUNCKJA KOSZTU:
+- długość trasy.
+
