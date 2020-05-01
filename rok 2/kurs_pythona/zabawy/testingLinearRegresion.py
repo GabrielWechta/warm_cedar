@@ -1,12 +1,17 @@
 import numpy as np
-from sklearn.linear_model import LinearRegression
+from matplotlib import pyplot as plt
 
-x = np.array([5, 15, 25, 35, 45, 55]).reshape((-1, 1))
-y = np.array([5, 20, 14, 32, 22, 38])
-print(x)
-print(y)
-model = LinearRegression().fit(x, y)
-r_sq = model.score(x, y)
-print('coefficient of determination:', r_sq)
-y_pred = model.predict(x)
-print('predicted response:', y_pred, sep='\n')
+# plt.plot([0, 1], [1, 0])
+# plt.gcf().set_size_inches([10, 8])
+x = np.linspace(0, 10, 100)
+plt.subplot(2, 1, 1)
+plt.plot(x, np.sin(x))
+plt.subplot(2, 1, 2)
+plt.plot(x, np.cos(x))
+# plt.plot(x, x, label="linear")
+# plt.plot(x, x ** 3, label="quadritc")
+# plt.xlabel("x label")
+# plt.ylabel("y label")
+# plt.title("Simple Plot")
+# plt.legend()
+plt.show()
