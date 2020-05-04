@@ -21,8 +21,8 @@ users = ratings[ratings.movieId == 1].userId
 cropped = ratings[(ratings.userId.isin(users)) & ratings.movieId <= 10000]
 movies = pd.DataFrame([[u, m] for u in users for m in range(2, 10001)], columns=["userId", "movieId"])
 full_ratings = movies.merge(ratings, 'left', ['userId', 'movieId']).fillna(0).drop(columns="timestamp")
-
 x = np.array([full_ratings[full_ratings.userId == user].rating for user in users])
+print(x.shape)
 y = np.array(ratings[ratings.movieId == 1].rating).reshape(-1, 1)
 
 first_m = np.array([10, 1000, 10000])
