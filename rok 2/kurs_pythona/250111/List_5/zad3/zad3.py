@@ -6,15 +6,17 @@ import pandas as pd
 np.seterr(divide='ignore', invalid='ignore')
 pd.set_option('display.max_columns', None)
 
-ratings_data = pd.read_csv("ratings.csv")
-movie_names = pd.read_csv("movies.csv")
+ratings_data = pd.read_csv("zad3/ratingsBIG.csv")
+movie_names = pd.read_csv("zad3/moviesBIG.csv")
 
-movie_data = pd.merge(ratings_data, movie_names, on="movieId")
-user_movie_rating = movie_data.pivot_table(index='userId', columns='movieId', values='rating').fillna(0)
-# print(user_movie_rating.head())
-b = sparse.csr_matrix(user_movie_rating.values)
+# print(ratings_data.describe())
+# print(movie_names.describe())
 
-
+row = ratings_data.userId
+col = ratings_data.movieId
+data = ratings_data.rating
+b = sparse.coo_matrix((data, (row, col)), shape=(283229, 193887), dtype=float)  # checked max in *.describe()
+b = sparse.csr_matrix(b)
 # print(b)
 
 
