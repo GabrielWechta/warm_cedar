@@ -1,6 +1,7 @@
 import binary_tree
 import red_black_tree
 import hash_table
+import scientist
 import sys
 import time
 
@@ -8,14 +9,24 @@ import time
 def parse(struc, fun, arg):
     if fun == "insert":
         arg = ''.join(filter(str.isalpha, arg))  # for non letter characters input
+        sci.start_clock()
         struc.insert(arg)
+        sci.insert_happened()
+
     if fun == "delete":
+        sci.start_clock()
         struc.delete(arg)
+        sci.delete_happened()
+
     if fun == "find":
+        sci.start_clock()
         sys.stdout.write(str(struc.find(arg)) + "\n")
+        sci.find_happened()
     if fun == "successor":
         if not isinstance(struc, hash_table.HashTable):
+            sci.start_clock()
             tmp = struc.successor(arg)
+            sci.successor_happened()
             if tmp is not None:
                 sys.stdout.write(str(tmp.data) + "\n")
             else:
@@ -27,10 +38,14 @@ def parse(struc, fun, arg):
             inserts = file.readline()
         for ins in inserts.split():
             ins = ''.join(filter(str.isalpha, ins))  # for non letter characters input
+            sci.start_clock()
             struc.insert(ins)
+            sci.insert_happened()
     if fun == "min":
         if not isinstance(struc, hash_table.HashTable):
+            sci.start_clock()
             tmp = struc.min(struc.root)
+            sci.min_happened()
             if tmp is not None:
                 sys.stdout.write(str(tmp.data) + "\n")
             else:
@@ -39,7 +54,9 @@ def parse(struc, fun, arg):
             sys.stdout.write("\n")
     if fun == "max":
         if not isinstance(struc, hash_table.HashTable):
+            sci.start_clock()
             tmp = struc.max(struc.root)
+            sci.max_happened()
             if tmp is not None:
                 sys.stdout.write(str(tmp.data) + "\n")
             else:
@@ -48,13 +65,16 @@ def parse(struc, fun, arg):
             sys.stdout.write("\n")
     if fun == "inorder":
         if not isinstance(struc, hash_table.HashTable):
+            sci.start_clock()
             struc.inorder()
+            sci.inorder_happened()
             sys.stdout.write("\n")
         else:
             sys.stdout.write("\n")
 
 
 if __name__ == "__main__":
+    sci = scientist.Scientist()
     structure = None
     if sys.argv[1] == "--type":
         if sys.argv[2] == "bst":
@@ -79,6 +99,8 @@ if __name__ == "__main__":
 
     else:
         raise Exception("I only understand '--type' flag.")
+
+    sci.describe_program()
 
 # x = red_black_tree.RedBlackTree()
 # parse(x, "max", "1.txt")
