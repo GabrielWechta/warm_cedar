@@ -13,6 +13,7 @@ class BinaryTree:
 
     def __init__(self):
         self.root = None
+        self.compares = 0
 
     def __printHelper(self, curr_ptr, indent, last):
         # print the tree structure on the screen
@@ -31,19 +32,20 @@ class BinaryTree:
             self.__printHelper(curr_ptr.right, indent, True)
 
     def __searchTreeHelper(self, node, key):
+        self.compares += 1
         if node is None or key == node.data:
             return node
-
-        if key < node.data:
+        self.compares += 1
+        if key.lower() < node.data.lower():
             return self.__searchTreeHelper(node.left, key)
         return self.__searchTreeHelper(node.right, key)
 
     def __deleteNodeHelper(self, node, key):
         if node is None:
             return node
-        elif key < node.data:
+        elif key.lower() < node.data.lower():
             node.left = self.__deleteNodeHelper(node.left, key)
-        elif key > node.data:
+        elif key.lower() > node.data.lower():
             node.right = self.__deleteNodeHelper(node.right, key)
         else:
             if node.left is None and node.right is None:
@@ -94,6 +96,7 @@ class BinaryTree:
         return self.__searchTreeHelper(self.root, k)
 
     def find(self, k):
+        self.compares = 0
         return 1 if self.searchTree(k) is not None else 0
 
     def min(self, node):
@@ -137,7 +140,7 @@ class BinaryTree:
 
         while x is not None:
             y = x
-            if node.data < x.data:
+            if node.data.lower() < x.data.lower():
                 x = x.left
             else:
                 x = x.right
@@ -145,7 +148,7 @@ class BinaryTree:
         node.parent = y
         if y is None:
             self.root = node
-        elif node.data < y.data:
+        elif node.data.lower() < y.data.lower():
             y.left = node
         else:
             y.right = node

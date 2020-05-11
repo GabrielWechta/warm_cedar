@@ -4,6 +4,7 @@ import sys
 class LinkedList:
     def __init__(self):
         self.head = None
+        self.compares = 0
 
     def __iter__(self):
         node = self.head
@@ -16,8 +17,8 @@ class LinkedList:
             self.head = Node(k)
             return
         current = self.head
-        if current.data == k:
-            return
+        # if current.data == k:
+        #     return
         while current.next is not None:
             if current.data == k:
                 return
@@ -41,9 +42,11 @@ class LinkedList:
             previous = node
 
     def find(self, k):
+        self.compares = 0
         node = self.head
         while node is not None:
             x = node.data
+            self.compares += 1
             if node.data == k:
                 return 1
             node = node.next

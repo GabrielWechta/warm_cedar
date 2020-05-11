@@ -29,6 +29,8 @@ class Scientist:
         self.number_of_structure_elements = 0
         self.maximum_number_of_structure_elements = 0
 
+        self.compares = 0
+
     def start_clock(self):
         self.measure_start = time.time()
 
@@ -112,3 +114,9 @@ class Scientist:
         sys.stderr.write("for inorder: " + str(
             self.time_of_inorders / self.number_of_inorders) if self.number_of_inorders else "for inorder: " + "0")
         sys.stderr.write("\n")
+
+    def set_compare_counter(self, compares):
+        self.compares = compares
+
+    def describe_compares(self):
+        sys.stdout.write(str(self.compares) + "\n")

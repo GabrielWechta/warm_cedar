@@ -22,6 +22,9 @@ def parse(struc, fun, arg):
         sci.start_clock()
         sys.stdout.write(str(struc.find(arg)) + "\n")
         sci.find_happened()
+        # sci.set_compare_counter(struc.compares)
+        # sys.stdout.write(arg + ": ")
+        # sci.describe_compares()
     if fun == "successor":
         if not isinstance(struc, hash_table.HashTable):
             sci.start_clock()
@@ -34,13 +37,16 @@ def parse(struc, fun, arg):
         else:
             sys.stdout.write("\n")
     if fun == "load":
-        with open(arg, 'r') as file:
-            inserts = file.readline()
-        for ins in inserts.split():
-            ins = ''.join(filter(str.isalpha, ins))  # for non letter characters input
-            sci.start_clock()
-            struc.insert(ins)
-            sci.insert_happened()
+        try:
+            with open(arg, 'r') as file:
+                inserts = file.read()
+            for ins in inserts.split():
+                ins = ''.join(filter(str.isalpha, ins))  # for non letter characters input
+                sci.start_clock()
+                struc.insert(ins)
+                sci.insert_happened()
+        except:
+            sys.stdout.write("No file \n")
     if fun == "min":
         if not isinstance(struc, hash_table.HashTable):
             sci.start_clock()
@@ -82,7 +88,7 @@ if __name__ == "__main__":
         elif sys.argv[2] == "rbt":
             structure = red_black_tree.RedBlackTree()
         elif sys.argv[2] == "hmap":
-            structure = hash_table.HashTable(1, 10)  # TODO tweak
+            structure = hash_table.HashTable(3, 10)  # TODO tweak
         else:
             print("I don't support this data structure. You can use 'bst', 'rbt', 'hmap' flags.")
 
@@ -101,10 +107,3 @@ if __name__ == "__main__":
         raise Exception("I only understand '--type' flag.")
 
     sci.describe_program()
-
-# x = red_black_tree.RedBlackTree()
-# parse(x, "max", "1.txt")
-# parse(x, "find", "nic")
-# parse(x, "min", "nothing here")
-# parse(x, "max", "nothing here")
-# parse(x, "inorder", "nothing here")

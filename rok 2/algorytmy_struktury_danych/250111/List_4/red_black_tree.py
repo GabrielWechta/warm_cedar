@@ -23,6 +23,7 @@ class RedBlackTree():
         self.TNULL.left = None
         self.TNULL.right = None
         self.root = self.TNULL
+        self.compares = 0
 
     def __pre_order_helper(self, node):
         if node != self.TNULL:
@@ -43,10 +44,11 @@ class RedBlackTree():
             sys.stdout.write(node.data + " ")
 
     def __search_tree_helper(self, node, key):
+        self.compares += 1
         if node == self.TNULL or key == node.data:
             return node
-
-        if key < node.data:
+        self.compares += 1
+        if key.lower() < node.data.lower():
             return self.__search_tree_helper(node.left, key)
         return self.__search_tree_helper(node.right, key)
 
@@ -125,7 +127,7 @@ class RedBlackTree():
             if node.data == key:
                 z = node
 
-            if node.data <= key:
+            if node.data.lower() < key.lower():
                 node = node.right
             else:
                 node = node.left
@@ -237,6 +239,7 @@ class RedBlackTree():
     # search the tree for the key k
     # and return the corresponding node
     def find(self, k):
+        self.compares = 0
         return 1 if self.__search_tree_helper(self.root, k) is not self.TNULL else 0
 
     # find the node with the minimum key
@@ -339,7 +342,7 @@ class RedBlackTree():
 
         while x != self.TNULL:
             y = x
-            if node.data < x.data:
+            if node.data.lower() < x.data.lower():
                 x = x.left
             else:
                 x = x.right
@@ -348,7 +351,7 @@ class RedBlackTree():
         node.parent = y
         if y == None:
             self.root = node
-        elif node.data < y.data:
+        elif node.data.lower() < y.data.lower():
             y.left = node
         else:
             y.right = node

@@ -8,6 +8,7 @@ class HashTable:
         self.size = size  # Size of T table = 10**size.
         self.T = [linked_list.LinkedList() for _ in range(10 ** self.size)]
         self.maximum_list_size = maximum_list_size
+        self.compares = 0
 
     def show(self):
         for x in self.T:
@@ -31,8 +32,11 @@ class HashTable:
         self.T[hash_key].delete(k)
 
     def find(self, k):
+        self.compares = 0
         hash_key = abs(hash(k)) % (10 ** self.size)
-        return self.T[hash_key].find(k)
+        answer = self.T[hash_key].find(k)
+        self.compares = self.T[hash_key].compares
+        return answer
 
     def min(self):
         sys.stdout.write("\n")
