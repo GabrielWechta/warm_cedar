@@ -1,0 +1,40 @@
+Nazwa projektu: "Neural Network Music Generator"
+
+Grupa: 250109, 250134, 239278, 250111
+
+Prowadzący: Zawada
+
+Repozytorium projektu: https://github.com/Bananasis/PytonMusic-Inc.
+
+# 2020.04.26 po I tygodniu
+
+Zgromadziliśmy materiały niezbędne do zrozumienia zagadnień związanych z projektem (książki, materiały filmowe) dotyczące między innymi LSTM, RNN, Keras.
+
+
+# 2020.05.03 po II tygodniu
+
+Wspólnie przerobiliśmy zebrane materiały. Zapoznaliśmy się z dokumentacjami potrzebnych bibliotek pythonowych. 
+
+
+# 2020.05.10 po III tygodniu
+
+Wybraliśmy odpowiednie sposoby reprezentacji danych (pliki MIDI) oraz biblioteki pythonowe implementujące interfejs służący do obróbki (music21).
+Wzorując sie na podobnych projektach, zaimplementowaliśmy trenowanie sieci oraz generator korzystający z modelu. 
+Uzyskaliśmy pierwsze wygenerowane pliki muzyczne.
+
+
+# 2020.05.17 po IV tygodniu
+
+Tutaj krótki opis (każdy stara się opisać głównie co sam zrobił w projekcie)
+
+
+# 2020.05.24 po V tygodniu
+
+Tutaj krótki opis (każdy stara się opisać głównie co sam zrobił w projekcie)
+
+
+# 2020.05.29 po VI tygodniu (koniec projektu)
+
+Tutaj proszę krótko opisać co się udało, co nie jest ewentualnie
+skończone i czy są jeszcze może jakieś plany (opis może być taki sam dla
+wszystkich członków grupy)
