@@ -25,7 +25,7 @@ Uzyskaliśmy pierwsze wygenerowane pliki muzyczne.
 
 # 2020.05.17 po IV tygodniu
 
-Tutaj krótki opis (każdy stara się opisać głównie co sam zrobił w projekcie)
+Wybranie frameworka dla GUI (PyQt). Zrobiłem interface dla scenariusza generowania.
 
 
 # 2020.05.24 po V tygodniu
