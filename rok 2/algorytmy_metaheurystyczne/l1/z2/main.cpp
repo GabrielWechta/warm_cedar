@@ -90,7 +90,7 @@ vector<int> minimumTsp(int t, int n, const vector<vector<int>> &graph) {
     auto start = chrono::system_clock::now();
     auto end = chrono::system_clock::now();
     int set_length = n;     //dobieranie tych stałych przeprowadziłęm na drugim pliku input z treści zadania. Zmniejszenie set_length okzajonalnie dawało lepsze wyniki, ale rozrzucało pozostałe co srednio kończyło się gorszym wynikiem.
-    int tweaks_number = n; //przyjąłem taką stałą jako, że wydaje się rozsądna i daje dobre wyniki.
+    int tweaks_number = n; //przyjąłem taką stałą jako, że wydaje się rozsądna i daje dobre wyniki. TODO
     vector<int> r, w;
     vector<int> s = someInitialCandidate(n);
     vector<int> best = s;

@@ -4,7 +4,7 @@ METODA:
 Jako, że problem jest minimalizacyjny (tak dosłownie jak to tylko możliwe), wybrałem dwie metody pochodzące z książki (S. Luke, Essentials of Metaheuristics)
 
 1.Hill-Climbing with Random Restarts (with 3 intervals)
-- ze wszystkich algorytmów hill-climbing ten z losowymi restartami wydaje się być najodpowiednieszjy z powodu "małych" różnić między minimami funkcji h i g oraz dużą ilością minimów lokalnych w okolicach minima lokalnego.
+- ze wszystkich algorytmów hill-climbing ten z losowymi restartami wydaje się być najodpowiednieszjy z powodu "małych" różnić między minimami funkcji h i g oraz dużą liczbą minimów lokalnych w okolicach minima globalnego.
 
 2. Bounded Uniform Convolution (with p = 1)
 - do funckji tweak() użyłem szumu z jednakowym prawdopodobieństwem i pewnym dodaniem szumu to każdej składowej wektora. (Może Gaussian Convolution byłby lepszy?)
