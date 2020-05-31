@@ -30,7 +30,9 @@ Wybranie frameworka dla GUI (PyQt). Zrobiłem interface dla scenariusza generowa
 
 # 2020.05.24 po V tygodniu
 
-Tutaj krótki opis (każdy stara się opisać głównie co sam zrobił w projekcie)
+Wyszukałem biblioteki plików midi, nadających się do przetrenowania nowych rodzajów modeli.
+Dodałem okno "about", mówiące o programie i twórcach.
+Do końca zintegrowałem gui.
 
 
 # 2020.05.29 po VI tygodniu (koniec projektu)
