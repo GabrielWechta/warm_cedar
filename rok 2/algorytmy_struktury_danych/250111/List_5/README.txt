@@ -1,8 +1,8 @@
 Zadanie 1:
-Implementacja opiera się o dwie klasy QueueElement i PriorityQueue. Złożoność wszytskicj operacji oprócz print jest O(log n).
+Implementacja opiera się o dwie klasy HeapQueue i Element. Złożoność wszytskich operacji oprócz print jest O(log n).
 Program na std inpucie przyjmuje m - liczbę operacji i następnie czeka na operacje.
 
-W zadaniach 2 i 3 nie korzystam z mojej implementacji PriorityQueue, a z wbudowanego modułu pythona 3.8 - heapq, ze względu na szybkość i niską wagę w porównaniu z moim kodem. Sprawdziłem, że dla wszystkich zastosowań moja implementacja działa, natomiast heapq po prostu działa szybciej.
+W zadaniach 2 i 3 nie korzystam z mojej implementacji HeapQueue, a z wbudowanego modułu pythona 3.8 - heapq, ze względu na szybkość i niską wagę w porównaniu z moim kodem. Sprawdziłem, że dla wszystkich zastosowań moja implementacja działa, natomiast heapq po prostu działa szybciej.
 
 Zadanie 2:
 W zadaniu 2 na standardowym wejściu przyjmujemy {n, m, (u, v, w) * m, wierzchołek startowy}. Tym samym pliki testowe ze strony dr. Gołębiewskiego należy rozszerzyć o dodatkową linijkę z wierzchołkiem startowym.

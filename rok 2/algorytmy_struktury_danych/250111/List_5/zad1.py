@@ -1,126 +1,108 @@
+import math
 import sys
-from math import inf
 
 
-def parent(i):
-    return i - 1 >> 1
-
-
-def left(i):
-    return i + i + 1
-
-
-def right(i):
-    return i + i + 2
-
-
-class QueueElement:
-    def __init__(self, key, priority=inf):
+class Element:
+    def __init__(self, key, priority=math.inf):
         self.key = key
         self.priority = priority
-
-    def __repr__(self):
-        return "({}, {})".format(self.key, int(self.priority))
-
-    def __str__(self):
-        return repr(self)
 
     def __lt__(self, other):
         return self.priority < other.priority
 
+    def __le__(self, other):
+        return self.priority <= other.priority
 
-class PriorityQueue:
+    def __gt__(self, other):
+        return self.priority > other.priority
+
+    def __ge__(self, other):
+        return self.priority >= other.priority
+
+
+class HeapQueue:
     def __init__(self):
-        self.elements = []
-        self.size = 0
+        self.heapList = [Element(0, 0)]
+        self.currentSize = 0
 
-    def __str__(self):
-        return ", ".join(str(el) for el in self.elements)
+    def go_up(self, i):
+        while i // 2 > 0:
+            if self.heapList[i] < self.heapList[i // 2]:
+                tmp = self.heapList[i // 2]
+                self.heapList[i // 2] = self.heapList[i]
+                self.heapList[i] = tmp
+            i = i // 2
 
-    def __len__(self):
-        return self.size
+    def insert(self, x, p):
+        self.heapList.append(Element(x, p))
+        self.currentSize = self.currentSize + 1
+        self.go_up(self.currentSize)
 
-    def __contains__(self, el):
-        return el in self.elements
+    def go_down(self, i):
+        while (i * 2) <= self.currentSize:
+            mc = self.min_child(i)
+            if self.heapList[i] > self.heapList[mc]:
+                tmp = self.heapList[i]
+                self.heapList[i] = self.heapList[mc]
+                self.heapList[mc] = tmp
+            i = mc
 
-    def _heapify(self, i):
-        l = left(i)
-        r = right(i)
-        first = i
-        if l < self.size and self.elements[l] < self.elements[i]:
-            first = l
-        if r < self.size and self.elements[r] < self.elements[first]:
-            first = r
-        if first != i:
-            self.elements[first], self.elements[i] = self.elements[i], self.elements[first]
-            self._heapify(first)
-
-    def empty(self):
-        print(0 if self.size else 1)
-
-    def top(self):
-        print(self.elements[0].key if self.elements else "")
+    def min_child(self, i):
+        if i * 2 + 1 > self.currentSize:
+            return i * 2
+        else:
+            if self.heapList[i * 2] < self.heapList[i * 2 + 1]:
+                return i * 2
+            else:
+                return i * 2 + 1
 
     def pop(self):
-        popped = self._pop()
-        print(popped.key if popped else "")
+        first = self.heapList[1]
+        self.heapList[1] = self.heapList[self.currentSize]
+        self.currentSize = self.currentSize - 1
+        self.heapList.pop()
+        self.go_down(1)
+        print(first.key)
 
-    def _pop(self):
-        if self.size:
-            popped = self.elements.pop()
-            self.size -= 1
-            if self.size:
-                self.elements[0], popped = popped, self.elements[0]
-                self._heapify(0)
-            return popped
+    def top(self):
+        print(self.heapList[1].key)
+
+    def empty(self):
+        print(1 if self.currentSize == 0 else 0)
 
     def print(self):
-        print(self)
-
-    def insert(self, key, priority):
-        self.elements.append(QueueElement(key))
-        self._increase_priority(self.size, float(priority))
-        self.size += 1
+        for element in self.heapList[1:]:
+            print("({}, {})".format(element.key, element.priority), sep="", end=" ")
+        print()
 
     def priority(self, key, new_priority):
-        new_priority = float(new_priority)
-        affected = [
-            ind
-            for ind, el in enumerate(self.elements)
-            if el.key == key and el.priority > new_priority
-        ]
-        for i in affected:
-            self._increase_priority(i, new_priority)
+        for element in self.heapList:
+            if element.key == key and element.priority < new_priority:
+                element.priority = new_priority
+        self.heapify(self.heapList)
 
-    def _increase_priority(self, i, new_priority):
-        element = self.elements[i]
-        element.priority = new_priority
+    def heapify(self, list_to_heap):
+        i = len(list_to_heap) // 2
+        self.heapList = list_to_heap
         while i > 0:
-            p = parent(i)
-            if element < self.elements[p]:
-                self.elements[i], self.elements[p] = self.elements[p], self.elements[i]
-                i = p
-            else:
-                break
+            self.go_down(i)
+            i = i - 1
 
 
 if __name__ == "__main__":
-    queue = PriorityQueue()
-    while True:
-        try:
-            m = int(input())
-            break
-        except ValueError:
-            print("Please enter the number of lines (an integer)")
-            continue
+    queue = HeapQueue()
 
-    for _ in range(m):
-        task = sys.stdin.readline()
-        if len(task.split()) == 3:
-            fun, x, p = task.split()
-            # print(fun, x, p)
-            method = getattr(queue, fun)
-            method(x, p)
-        if len(task.split()) == 1:
-            method = getattr(queue, task.split()[0])
-            method()
+    m = int(sys.stdin.readline())
+    for operation_count in range(m):
+        try:
+            task = sys.stdin.readline()
+            if len(task.split()) == 3:
+                fun, x, p = task.split()
+                # print(fun, x, p)
+                method = getattr(queue, fun)
+                method(x, p)
+            if len(task.split()) == 1:
+                method = getattr(queue, task.split()[0])
+                method()
+        except AttributeError:
+            print("I believe you have used incorrect operation name.")
