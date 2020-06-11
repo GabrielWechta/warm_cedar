@@ -1,3 +1,11 @@
+Pliki należy odpalać:
+zadania: 1
+	python3 zad1.py
+zadania: 2-4
+	python3 zad#.py <plik.txt
+
+gdzie #-numer zadania
+
 Zadanie 1:
 Implementacja opiera się o dwie klasy HeapQueue i Element. Złożoność wszytskich operacji oprócz print jest O(log n).
 Program na std inpucie przyjmuje m - liczbę operacji i następnie czeka na operacje.
@@ -30,5 +38,6 @@ Wierzchołek startowy jest wybieranu z zakresu (0, n-1)
 
 Z powodów, które zawarłem w mailu nie udało mi się rozwiązać tego zadania do końca (nie napisałem ostatniego przeszukiwania). 
 
-Wyniki testów zawierają się w plikach 5*.txt. Przy 50000 dostałem broken_pipe error z linuxa. Dla innego formatu 
+Wyniki testów zawierają się w plikach 5*.txt. 
+Przy 50000 dostałem broken_pipe error z linuxa. Graf o 50000 wierzchołkach ma około 1.25 miliarda krawędzi. Nie mam tyle miejsca na komputerze aby takie krawędzie wygenerować dla mojej implementacji wczytywania grafu.
 

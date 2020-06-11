@@ -37,6 +37,4 @@ Do końca zintegrowałem gui.
 
 # 2020.05.29 po VI tygodniu (koniec projektu)
 
-Tutaj proszę krótko opisać co się udało, co nie jest ewentualnie
-skończone i czy są jeszcze może jakieś plany (opis może być taki sam dla
-wszystkich członków grupy)
+pdf ze sprawozdaniem znajduje się w folderze głównym na svn.
