@@ -1,0 +1,46 @@
+1. Konto na GitHubie już mam.
+2. Generacja ssh:
+	$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+   klucz publiczny następnie należy dodać do kluczy ssh powiązanych do konta na GitHubie oraz dodać do ssh-agent.
+	$ eval "$(ssh-agent -s)"
+	$ ssh-add ~/.ssh/id_rsa
+   pozostaje zmienić adres URL repozytorium
+	$ git remote set-url origin git+ssh://git@github.com/username/reponame.git
+3. > time-based one-time password (TOTP) <3
+   > text-message
+   > security key (fingerprint / facial regonition / PIN)
+
+##########
+1. Transport Layer Security (TLS):
+	end-to-end security of data sent between applications (passwords, logins).
+	combination of symmetric and asymmetric cryptography.
+	może używać: RSA, Diffie-Hellman (DH), Ephemeral Diffie-Hellman (DHE), Elliptic Curve Diffie-Hellman (ECDH) and Ephemeral Elliptic Curve Diffie-Hellman (ECDHE).
+	Certificate Authority (CA) żeby sprawdzić public key. 
+
+2. Secure Shell (SSH):
+	encryption to ensure secure transfer of information between server and the client.
+	symmetric -> key exchange algorithm
+	asymmetric -> 2 private, public
+	hashing
+
+	handshake aby być pewnym, że każdy jest tym za kogo się podaje.
+	serwer proponuje protokuł kodujący i jego wersje -> porozumienie jest osiągniętę
+	Diffie-Hellman Key Exchange
+	...
+	kiedy bezpieczny tunel jest osiągnięty, sprawdzane są dane logowania (bez szans na przechwycenie).
+
+3. Gwarantuje to znacznie bezpieczniejsze połączenie z serwerem między innymi proces autoryzcaji użytkownika (login, hasło) przebiega bezpiecznie.
+	IP source routing
+	DNS Spoofing
+	Data manipulation at things like routers along the network
+	Eavesdropping or sniffing of the transmitted data
+	IP address spoofing
+
+4.
+	logowanie wyłącznie za pomocą loginu i hasła
+	w przypadku użycia app-authentication, eliminowane jest niebezpieczeństwo sms wysłanego na zły numer
+	wirus/trojan
+5.	
+	When you use a non-browser application or mobile device that accesses your Google Apps account, a so called application-specific password is required.
+
+
