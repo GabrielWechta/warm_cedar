@@ -1,0 +1,10 @@
+#!/bin/bash
+
+for file in $(find $1 -type f); do
+	while read line; do
+		word=$(echo "$line" | tr '[:space:]' '[\n*]' | grep -v "^\s*$" | uniq -c | awk '{if($1>1)print$2}')
+		if ! [ -z "$word" ]; then
+			echo $word":" $line "in" $file
+		fi
+	done < $file
+done

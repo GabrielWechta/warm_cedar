@@ -1,0 +1,4 @@
+#!/bin/bash
+
+find $1 -type f | xargs cat | tr '[:space:]' '[\n*]' | grep -v "^\s*$" | sort | uniq -c | sort -bnr
+
