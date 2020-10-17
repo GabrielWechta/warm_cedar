@@ -1,0 +1,15 @@
+#!/bin/bash
+
+for word in $( find $1 -type f | xargs cat | tr '[:space:]' '[\n*]' | grep -v "^\s*$" | sort | uniq );
+do
+	echo $word":" 
+	for address in $( grep -lrw $word $1 );
+	do
+		echo "file" $( basename $address  )':'
+		echo "lines:"
+		grep -w $word $address
+	done
+	echo
+
+done
+
