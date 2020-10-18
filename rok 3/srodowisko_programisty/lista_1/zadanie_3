@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Skrypt do zliczania w ilu plikach występuje słowo (dla każdego słowa w poddrzewie katalogów).
 for word in $( find $1 -type f | xargs cat | tr '[:space:]' '[\n*]' | grep -v "^\s*$" | sort | uniq | sort );
 do
 	echo -n $word ":" $( grep -lrw $word $1 | wc -l )

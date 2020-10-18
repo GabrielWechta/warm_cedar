@@ -1,4 +1,5 @@
 #!/bin/bash
 
+# Skrypt do zliczania ile razy dane słowo wystąpiło we wszystkich plikach poddrzewa katalogów.
 find $1 -type f | xargs cat | tr '[:space:]' '[\n*]' | grep -v "^\s*$" | sort | uniq -c | sort -bnr
 

@@ -1,4 +1,5 @@
 #!/bin/bash
+# Skrypt do pokazywania każdej linii w której występuje dane słowo (dla każdego słowa w poddrzewie katalogów).
 
 for word in $( find $1 -type f | xargs cat | tr '[:space:]' '[\n*]' | grep -v "^\s*$" | sort | uniq );
 do
