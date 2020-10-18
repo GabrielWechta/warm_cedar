@@ -1,7 +1,7 @@
 import sys
 
 
-def get_prefix_array(pattern):
+def get_prefix_array(pattern): # generating prefix_array is standard implementation of KMP algorithm.
     prefix_array = [0] * len(pattern)
     i = 1
     m = 0
@@ -19,16 +19,16 @@ def get_prefix_array(pattern):
     return prefix_array
 
 
-def get_occurrences(file_name, pattern, prefix_array):
+def get_occurrences(file_name, pattern, prefix_array): # standard searching for occurrences.
     occurrences = []
-    file = open(file_name, "r")
-    text = file.read()
+    file = open(file_name, "r") 
+    text = file.read() # reading text from file given in program arguments.
 
     p = 0
     t = 0
     text_length = len(text)
 
-    while t < text_length:
+    while t < text_length: # as long as we are in the text length.
         if pattern[p] != text[t]:
             if p == 0:
                 t += 1
@@ -47,6 +47,6 @@ def get_occurrences(file_name, pattern, prefix_array):
 
 
 if __name__ == '__main__':
-    pattern = sys.argv[1]
-    prefix_array = get_prefix_array(pattern)
+    pattern = sys.argv[1] # we need this to be string. 
+    prefix_array = get_prefix_array(pattern) # in order to perform searching we need array with prefixes value for every character in pattern.
     print(get_occurrences(sys.argv[2], pattern, prefix_array))
