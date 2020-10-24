@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>lista_1</title>
+<title>lista_1_Gabriel_Wechta_250111</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13310,7 +13310,7 @@ Float64: 5.0e-324
 <li>Odpowiedzi na pytania:</li>
 </ul>
 <p>Liczba <em>macheps</em> jest najmniejszą liczbą maszynową, większą od ϵ gdzie 1 + ϵ = 1. <em>Macheps</em> jest więskzy od ϵ o ostani bit reprezentacji, tym samy <em>macheps</em> = 2ϵ.</p>
-<p>Liczba <em>eta</em> jest górną granicą zbioru liczb większych od 0, które nie mają reprezentacji w zbiorze liczb maszynowych, co jest równe $MIN_{sub}$.</p>
+<p>Liczba <em>eta</em> jest górną granicą zbioru liczb większych od 0.0, które nie mają reprezentacji w zbiorze liczb maszynowych, co jest równe $MIN_{sub}$. <em>Eta</em> jest najmniejszą liczbą większą od 0.0.</p>
 <p>Funckje floatmin(Float32), floatmin(Float64) zwracają najmniejszą, znormalizowaną, dodatnią liczbę reprezentowaną przez dany typ zmiennoprzecinkowy (co równa się $MIN_{nor}$). Kiedy nextfloat() zwraca zdenormalizowaną liczbę co pokazuje poniższy kod. W dokumetnacji IEEE-754 możemy przeczytać:</p>
 <blockquote><p>Underflow:
 If the exponent has minimum value (all zero), special rules for denormalized values are followed. The exponent value is set to 2-126 and the "invisible" leading bit for the mantissa is no longer used.
@@ -13690,7 +13690,7 @@ Przy stałej cesze kolejną liczbę otrzymujemy poprzez dodanie bita na samym ko
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Zadanie-4">Zadanie 4<a class="anchor-link" href="#Zadanie-4">&#182;</a></h3><ul>
-<li>Postaramy się rozwiązać a) i b) za jednym razem. Zaczniemy od 0.0 + $macheps$ i będziemy brali kolejne liczby mające reprezentacje we Float64.</li>
+<li>Postaramy się rozwiązać a) i b) za jednym razem. Zaczniemy od 1.0 + $macheps$ i będziemy brali kolejne liczby mające reprezentacje we Float64. Dodamy jeszcze (kierowani radą Pani Doktor Liliany Bujkiewicz) $k$ z treści zadania. $k$ powie nam, którą z kolei liczbą większą od 1 jest x.</li>
 </ul>
 
 </div>
@@ -13698,15 +13698,17 @@ Przy stałej cesze kolejną liczbę otrzymujemy poprzez dodanie bita na samym ko
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="kt">Float64</span><span class="p">(</span><span class="mf">1.0</span><span class="p">)</span>
+<span class="n">k</span> <span class="o">=</span> <span class="mi">0</span> <span class="c"># for checking which number is it.</span>
 <span class="k">while</span> <span class="kt">Float64</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="kt">Float64</span><span class="p">(</span><span class="kt">Float64</span><span class="p">(</span><span class="mf">1.0</span><span class="p">)</span><span class="o">/</span><span class="n">x</span><span class="p">))</span> <span class="o">==</span> <span class="kt">Float64</span><span class="p">(</span><span class="mf">1.0</span><span class="p">)</span> <span class="c"># Float64 in case this will be run on a computer with 32 bit architecture</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">nextfloat</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">k</span> <span class="o">+=</span> <span class="mi">1</span>
 <span class="k">end</span>
 
-<span class="n">println</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">println</span><span class="p">(</span><span class="s">&quot;x = &quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="s">&quot; | k = &quot;</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13723,7 +13725,7 @@ Przy stałej cesze kolejną liczbę otrzymujemy poprzez dodanie bita na samym ko
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>1.000000057228997
+<pre>x = 1.000000057228997 | k = 257736490
 </pre>
 </div>
 </div>
@@ -13785,7 +13787,7 @@ Przy stałej cesze kolejną liczbę otrzymujemy poprzez dodanie bita na samym ko
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="k">function</span> <span class="n">front_sum</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">breed</span><span class="p">)</span> <span class="c"># frontward</span>
@@ -13859,7 +13861,7 @@ Przy stałej cesze kolejną liczbę otrzymujemy poprzez dodanie bita na samym ko
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[23]:</div>
+    <div class="prompt output_prompt">Out[4]:</div>
 
 
 
@@ -13876,7 +13878,7 @@ Przy stałej cesze kolejną liczbę otrzymujemy poprzez dodanie bita na samym ko
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="k">using</span> <span class="n">LinearAlgebra</span>
@@ -13884,21 +13886,21 @@ Przy stałej cesze kolejną liczbę otrzymujemy poprzez dodanie bita na samym ko
 <span class="n">B</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1486.2497</span><span class="p">,</span> <span class="mf">878366.9879</span><span class="p">,</span> <span class="o">-</span><span class="mf">22.37492</span><span class="p">,</span> <span class="mf">4773714.647</span><span class="p">,</span> <span class="mf">0.000185049</span><span class="p">]</span>
 
 <span class="n">println</span><span class="p">(</span><span class="s">&quot;by LinearAlgebra: &quot;</span><span class="p">)</span>
-<span class="n">println</span><span class="p">(</span><span class="n">dot</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">))</span>
+<span class="n">println</span><span class="p">(</span><span class="s">&quot;Float64: &quot;</span><span class="p">,</span> <span class="n">dot</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">))</span>
 <span class="n">println</span><span class="p">(</span><span class="s">&quot;frontward sum:&quot;</span><span class="p">)</span>
-<span class="n">println</span><span class="p">(</span><span class="n">front_sum</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span> <span class="kt">Float32</span><span class="p">))</span>
-<span class="n">println</span><span class="p">(</span><span class="n">front_sum</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span> <span class="kt">Float64</span><span class="p">))</span>
+<span class="n">println</span><span class="p">(</span><span class="s">&quot;Float32: &quot;</span><span class="p">,</span><span class="n">front_sum</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span> <span class="kt">Float32</span><span class="p">))</span>
+<span class="n">println</span><span class="p">(</span><span class="s">&quot;Float64: &quot;</span><span class="p">,</span><span class="n">front_sum</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span> <span class="kt">Float64</span><span class="p">))</span>
 <span class="c"># println(front_sum(A,B,5, BigFloat))</span>
 <span class="n">println</span><span class="p">(</span><span class="s">&quot;backward sum:&quot;</span><span class="p">)</span>
-<span class="n">println</span><span class="p">(</span><span class="n">back_sum</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span> <span class="kt">Float32</span><span class="p">))</span>
-<span class="n">println</span><span class="p">(</span><span class="n">back_sum</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span> <span class="kt">Float64</span><span class="p">))</span>
+<span class="n">println</span><span class="p">(</span><span class="s">&quot;Float32: &quot;</span><span class="p">,</span><span class="n">back_sum</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span> <span class="kt">Float32</span><span class="p">))</span>
+<span class="n">println</span><span class="p">(</span><span class="s">&quot;Float64: &quot;</span><span class="p">,</span><span class="n">back_sum</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span> <span class="kt">Float64</span><span class="p">))</span>
 <span class="c"># println(back_sum(A,B,5, BigFloat))</span>
 <span class="n">println</span><span class="p">(</span><span class="s">&quot;biggest to smallest sum:&quot;</span><span class="p">)</span>
-<span class="n">println</span><span class="p">(</span><span class="n">biggest_to_smallest_sum</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span> <span class="kt">Float32</span><span class="p">))</span>
-<span class="n">println</span><span class="p">(</span><span class="n">biggest_to_smallest_sum</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span> <span class="kt">Float64</span><span class="p">))</span>
+<span class="n">println</span><span class="p">(</span><span class="s">&quot;Float32: &quot;</span><span class="p">,</span><span class="n">biggest_to_smallest_sum</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span> <span class="kt">Float32</span><span class="p">))</span>
+<span class="n">println</span><span class="p">(</span><span class="s">&quot;Float64: &quot;</span><span class="p">,</span><span class="n">biggest_to_smallest_sum</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span> <span class="kt">Float64</span><span class="p">))</span>
 <span class="n">println</span><span class="p">(</span><span class="s">&quot;smallest to biggest sum:&quot;</span><span class="p">)</span>
-<span class="n">println</span><span class="p">(</span><span class="n">smallest_to_biggest_sum</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span> <span class="kt">Float32</span><span class="p">))</span>
-<span class="n">println</span><span class="p">(</span><span class="n">smallest_to_biggest_sum</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span> <span class="kt">Float64</span><span class="p">))</span>
+<span class="n">println</span><span class="p">(</span><span class="s">&quot;Float32: &quot;</span><span class="p">,</span><span class="n">smallest_to_biggest_sum</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span> <span class="kt">Float32</span><span class="p">))</span>
+<span class="n">println</span><span class="p">(</span><span class="s">&quot;Float64: &quot;</span><span class="p">,</span><span class="n">smallest_to_biggest_sum</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span> <span class="kt">Float64</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -13916,19 +13918,19 @@ Przy stałej cesze kolejną liczbę otrzymujemy poprzez dodanie bita na samym ko
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>by LinearAlgebra: 
-1.0251881368296672e-10
+Float64: 1.0251881368296672e-10
 frontward sum:
--0.4999443
-1.0251881368296672e-10
+Float32: -0.4999443
+Float64: 1.0251881368296672e-10
 backward sum:
--0.4543457
--1.5643308870494366e-10
+Float32: -0.4543457
+Float64: -1.5643308870494366e-10
 biggest to smallest sum:
--0.5
-0.0
+Float32: -0.5
+Float64: 0.0
 smallest to biggest sum:
--0.5
-0.0
+Float32: -0.5
+Float64: 0.0
 </pre>
 </div>
 </div>
@@ -13940,7 +13942,10 @@ smallest to biggest sum:
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Jak widać wyniki bardzo się różnią. Metoda liczenia a) jest zgodna z metodą oferowaną przez pakiet LinearAlgebra natomiast wciąż różny od prawidłowej wartości, to jest $-1.00657107000000 * 10^{-11}$. Jeżeli chodzi o sumy c) i d). Wyniki są identyczne, co jest zrozumiałe bo kolejność wykonywania operacji ma znaczenie gdy liczby są sobie bliskie, natomiast w tym przypadku liczby były daleko od siebie, natomiast wartość ich sumy jest bardzo odległa od prawdziwej. Przykład jest tak dobrany aby dodnie sumy częściowe i ujemne były dużymi bliskimi sobie liczbami o przeciwnych znakach. Po zsumowaniu dostajemy 0.0.</p>
+<p>Jak widać wyniki bardzo się różnią. Metoda liczenia a) jest zgodna z metodą oferowaną przez pakiet LinearAlgebra natomiast wciąż różny od prawidłowej wartości, to jest $-1.00657107000000 * 10^{-11}$.</p>
+<p>Wybór sumy a) nad b), lub odwrotnie nie gwarantuje nam lepszego wyniku, wszytsko zależy od tego jak wartości są ustawione w tablicach.</p>
+<p>Jeżeli chodzi o sumy c) i d). Wyniki są identyczne, co jest zrozumiałe bo kolejność wykonywania operacji ma znaczenie gdy liczby są sobie bliskie, natomiast w tym przypadku liczby były daleko od siebie. Niemniej wartość ich sumy jest bardzo odległa od prawdziwej.</p>
+<p>Przykład jest tak dobrany aby dodatnie sumy częściowe i ujemne były dużymi bliskimi sobie liczbami o przeciwnych znakach. Po zsumowaniu dostajemy 0.0.</p>
 
 </div>
 </div>
@@ -13948,7 +13953,10 @@ smallest to biggest sum:
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Zadanie-6">Zadanie 6<a class="anchor-link" href="#Zadanie-6">&#182;</a></h3>
+<h3 id="Zadanie-6">Zadanie 6<a class="anchor-link" href="#Zadanie-6">&#182;</a></h3><ul>
+<li>Bez fantazji zaimplementujemy $f$ i $g$.</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -14240,19 +14248,6 @@ actually value of f&#39; in x_0 = 0.11694228168853815
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-julia"><pre><span></span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
 </div>
     </div>
   </div>
