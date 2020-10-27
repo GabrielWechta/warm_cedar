@@ -1,0 +1,28 @@
+Zadanie 1:
+
+Do skonfigurowania laptopa niezbędna okazała się dodatkowa karta sieciowa.
+Hotspota udało się postawić przy wykorzystaniu ustawień Ubuntu.
+Symulując w domu sytuacje udania się w publiczne miejsce zostawiłem komputer najbliżej pionu kamienicy. Niestety biorąc pod uwagę listę dostępnych wifi moich sąsiadów można było się spodziewać, że nikt nie podłączy sie do otwartej sieci.
+
+1.
+SSID: gabriel-HP-Laptop-15-bs1xx
+
+2.
+$ ifconfig
+$ nmap -sP 192.168.1.0/24
+(192.168.1.* to u mnie ip wlo1)
+
+wireshark -> statictics -> conversations
+
+3.
+wireshark -> statictics -> ressolved addresses
+
+4. 
+wireshark -> statictics -> protocol hierarchy
+wireshark filter http | ftp
+
+na przykład: ftp.mcafee.com
+
+5.
+traceroute
+
