@@ -10,5 +10,7 @@ for pkt in cap:
 		if len(matched_lines) != 0:
 			print(pkt.highest_layer, "\tintresting!", pkt.ip.src, " to ", pkt.ip.dst)
 			print(matched_lines)
+			file.write(str(pkt.ip.src) + " to " + str(pkt.ip.dst))
+			file.write(str(matched_lines))
 
 

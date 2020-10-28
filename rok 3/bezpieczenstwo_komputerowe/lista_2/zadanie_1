@@ -5,7 +5,7 @@ Hotspota udało się postawić przy wykorzystaniu ustawień Ubuntu.
 Symulując w domu sytuacje udania się w publiczne miejsce zostawiłem komputer najbliżej pionu kamienicy. Niestety biorąc pod uwagę listę dostępnych wifi moich sąsiadów można było się spodziewać, że nikt nie podłączy sie do otwartej sieci.
 
 1.
-SSID: gabriel-HP-Laptop-15-bs1xx
+wlan.fc.type_subtype eq 4 && wlan.ssid != ""
 
 2.
 $ ifconfig
