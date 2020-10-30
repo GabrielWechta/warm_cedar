@@ -2,7 +2,7 @@ Zadanie 1:
 
 Do skonfigurowania laptopa niezbędna okazała się dodatkowa karta sieciowa.
 Hotspota udało się postawić przy wykorzystaniu ustawień Ubuntu.
-Symulując w domu sytuacje udania się w publiczne miejsce zostawiłem komputer najbliżej pionu kamienicy. Niestety biorąc pod uwagę listę dostępnych wifi moich sąsiadów można było się spodziewać, że nikt nie podłączy sie do otwartej sieci.
+Symulując w domu sytuacje udania się w publiczne miejsce zostawiłem komputer najbliżej pionu kamienicy. Niestety biorąc pod uwagę listę dostępnych wifi moich sąsiadów oraz wiek osób spotykanych na klatce, można było się spodziewać, że nikt nie podłączy sie do otwartej sieci.
 
 1.
 wlan.fc.type_subtype eq 4 && wlan.ssid != ""
