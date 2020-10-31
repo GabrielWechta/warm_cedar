@@ -1,9 +1,0 @@
-#!/bin/bash
-
-git status
-git add .
-git status
-read 
-git commit
-
-git push origin master
