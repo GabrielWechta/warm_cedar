@@ -1,0 +1,29 @@
+cd /tmp
+mkdir student_1
+mkdir student_2
+cd student_1 
+svn checkout http://repo.cs.pwr.edu.pl/250111/srodowisko_programisty/lista_2
+ls
+# edytowanie
+nano to_conflict.txt
+svn add to_conflict.txt
+
+# zmiana studenta
+cd ../..
+cd student_2
+svn checkout http://repo.cs.pwr.edu.pl/250111/srodowisko_programisty/lista_2
+ls
+# edytowanie
+nano to_conflict.txt
+svn add to_conflict.txt
+svn commit -m "hoping to conflict"
+
+# ponowna zmiana studenta
+cd student_1/srodowisko_programisty/lista_2
+svn update
+e
+svn cleanup
+svn resolved to_conflict.txt
+svn update
+
+### wszystko
