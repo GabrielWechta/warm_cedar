@@ -1,0 +1,18 @@
+# Zaprezentuje jak można wykorzystać sparse directories do pobierania interesujacych nas fragmentów repozytorium.
+cd /Desktop
+
+svn checkout http://repo.cs.pwr.edu.pl/250111/srodowisko_programisty/lista_2 --depth empty
+
+### lokalnie nic nie ma
+ls lista_2
+
+### "telescope it deeper". Ale tylko pliki
+svn update --set-depth files lista_2/
+ls lista_2
+
+### pobierzmy jeszcze /a, ale bez katalogów
+svn update --set-depth immediates lista_2/
+ls lista_2
+
+### pobierzmy jeszcze /b i wszystkie jego podkatalogi, to jedyny plik w katalogu /a, który ma plik na drugim poziomie rekursji.
+svn update --set-depth infinity lista_2/a

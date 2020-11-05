@@ -6,7 +6,7 @@ svn checkout http://repo.cs.pwr.edu.pl/250111/srodowisko_programisty/lista_2
 ls
 # edytowanie
 nano to_conflict.txt
-svn add to_conflict.txt
+svn status
 
 # zmiana studenta
 cd ../..

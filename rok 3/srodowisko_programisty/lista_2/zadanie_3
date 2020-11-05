@@ -1,0 +1,27 @@
+cd ../../..
+svn checkout http://repo.cs.pwr.edu.pl/250111/srodowisko_programisty/lista_2
+
+### mamy skrypt task_3_script.sh
+cat task_3_script.sh
+ls -al task_3_script.sh
+
+### który nie jest wykonywalny 
+./task_3_script.sh
+svn proplist -v task_3_script.sh 
+
+### poprzez zmianę bitu execute permission, otrzymamy plik defaultowo wykonywalny 
+svn propset svn:executable on task_3_script.sh
+svn proplist -v task_3_script.sh 
+ls -al task_3_script.sh
+./task_3_script.sh
+
+### po commicie każda lokalna kopia repozytorium będzie miała skrypt ustawiony na wykonywalny.
+svn commit -m "share the words"
+cd /tmp/
+ls
+svn checkout http://repo.cs.pwr.edu.pl/250111/srodowisko_programisty/lista_2
+cd lista_2
+ls -al task_3_script.sh
+./task_3_script.sh
+
+svn log -v
