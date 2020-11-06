@@ -1,0 +1,36 @@
+# Gabriel Wechta
+# 250111
+# Środowisko Programisty 
+# lista 2 zadnaie 4
+
+cd ~/Desktop
+ls
+# pobierzemy 2 kopie robocze w dwóch miejscach
+svn checkout http://repo.cs.pwr.edu.pl/250111/srodowisko_programisty/lista_2
+
+cd /tmp
+ls
+svn checkout http://repo.cs.pwr.edu.pl/250111/srodowisko_programisty/lista_2
+
+# w pierwszej dodamy podkatalog z ustawionym svn:externals
+cd lista_2
+mkdir outer_wilds
+svn propset svn:externals 'outer_wilds http://repo.cs.pwr.edu.pl/info' .
+svn commit -m "I hope we will go there soon"
+svn up
+
+cd ~/Desktop
+
+# teraz zoabczymy jak wpływa to na inne lokalne kopie
+cd lista_2
+
+# najpierw spróbujemy bez externals
+svn up --ignore-externals
+
+# teraz z 
+svn up
+
+# probowalem dodac commit do repozytorium z wewnatrz outer_wildes do http://repo.cs.pwr.edu.pl/info, ale chyba nie mam dostępu :)
+# svn defaultowo ignoruje externals przy commitach
+# dziękuję, miłego dnia 
+exit

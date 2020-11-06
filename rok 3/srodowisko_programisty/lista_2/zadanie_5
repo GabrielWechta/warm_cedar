@@ -1,0 +1,53 @@
+# Gabriel Wechta
+# 250111
+# Środowisko Programisty 
+# lista 2 zadnaie 5
+
+cd ~/Desktop
+ls
+# poeksperymentujemy z lockiem
+svn checkout http://repo.cs.pwr.edu.pl/250111/srodowisko_programisty/lista_2
+
+cd /tmp
+svn checkout http://repo.cs.pwr.edu.pl/250111/srodowisko_programisty/lista_2
+# David chce zmienić coś w pliku audrey.png
+svn lock audrey.png -m "making Audrey even more dreamy."
+svn status 
+svn info audrey.png 
+# możemy zobaczyć, że lock rzeczywiście istnieje.
+
+# przejdzmy do innej kopii
+cd ~/Desktop
+
+# Mark chce zmienić plik
+svn status
+svn commit -m "I like Donna more."
+
+# Ale commit failuje
+# Chcąc srpawdzić skąd pojawił się problem
+svn status -u
+svn info http://repo.cs.pwr.edu.pl/250111/srodowisko_programisty/lista_2/audrey.png
+
+# widzi kto i kiedy założył lock
+# Mark jest pm i ma duże ego, więc ma pozowlenie na używanie --force
+svn unlock http://repo.cs.pwr.edu.pl/250111/srodowisko_programisty/lista_2/audrey.png
+svn unlock --force http://repo.cs.pwr.edu.pl/250111/srodowisko_programisty/lista_2/audrey.png
+
+# Pokażę jeszcze svn:needs-lock
+nano get_locked.txt
+svn add get_locked.txt
+
+svn propset svn:needs-lock on get_locked.txt 
+svn chmod 777 get_locked.txt
+ls -al
+svn proplist get_locked.txt 
+
+svn commit -m "changed"
+svn up
+
+ls -al
+
+# jak widać get_locked z -rwxrwxrwx przeszedł w -r--r--r-- czyli tak jak property svn:needs-lock działa
+
+svn log -v
+exit

@@ -1,0 +1,11 @@
+# Gabriel Wechta
+# 250111
+# Środowsiko Programisty
+# lista 2 zadanie 7
+### posiadam już wygenerowaną parę kluczy
+cd ~/.ssh
+svn import ~/.ssh/id_rsa.pub https://repo.cs.pwr.edu.pl/250111/250111.pub
+cat ~/.ssh.id_rsa.pub
+svn cat https://repo.cs.pwr.edu.pl/250111/250111.pub
+
+

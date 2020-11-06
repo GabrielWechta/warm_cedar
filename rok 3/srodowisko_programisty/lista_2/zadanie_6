@@ -1,0 +1,41 @@
+
+# dodamy dwa pliki 
+nano a.txt
+nano b.txt
+svn add a.txt
+svn add b.txt
+
+svn commit -m "added a.txt and b.txt"
+
+# usuniemy b.txt
+svn delete b.txt
+svn commit -m "deleted b.txt"
+
+# zmienimy a.txt i zrobimy move na b.txt
+nano a.txt
+svn move a.txt b.txt
+svn commit -m "changed and moved a.txt to b.txt"
+
+# zmienimy b.txt i zrobimy move na c.txt
+nano b.txt
+svn move b.txt c.txt
+svn commit -m "changed and moved b.txt to c.txt"
+
+# dodamy nowe b.txt
+nano b.txt
+svn add b.txt 
+
+svn commit -m "at last adding b.txt"
+# zobaczmy na rewizje w której c.txt jeszcze nie isntiał 
+svn diff -r 68:71 http://repo.cs.pwr.edu.pl/250111/srodowisko_programisty/lista_2/c.txt@67
+
+# a teraz porównajmy z rewizją w któ©ej zamieniliśmy b.txt na c.txt
+svn diff -r 68:71 http://repo.cs.pwr.edu.pl/250111/srodowisko_programisty/lista_2/c.txt@70
+
+# zobaczmy porpzednie wersje tym razem korzystając z kopii roboczej
+svn cat a.txt@72
+svn cat b.txt@73
+svn cat c.txt@74
+
+
+svn log -v
