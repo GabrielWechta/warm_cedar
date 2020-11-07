@@ -10,4 +10,5 @@ Większość kodów ma komentarze, niektóre zadania mają nawet sprawozdania.
 4 i 5 semestr były w systemie zajęć zdalnych, stąd niekiedy dziwna sktruktura rozwiązań, to jest omówione wszystko co chesz wiedzieć w plaintexcie.
 
 Trzymaj się.
+
 Gabriel 
