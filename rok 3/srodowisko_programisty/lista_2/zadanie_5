@@ -1,53 +1,63 @@
+cd /tmp
 # Gabriel Wechta
 # 250111
 # Środowisko Programisty 
 # lista 2 zadnaie 5
-
-cd ~/Desktop
-ls
 # poeksperymentujemy z lockiem
-svn checkout http://repo.cs.pwr.edu.pl/250111/srodowisko_programisty/lista_2
 
-cd /tmp
 svn checkout http://repo.cs.pwr.edu.pl/250111/srodowisko_programisty/lista_2
-# David chce zmienić coś w pliku audrey.png
-svn lock audrey.png -m "making Audrey even more dreamy."
+cd lista_2
+ls -al
+# mamy plik jpg audrey
+jp2a audrey.jpg
+
+# David chce zmienić coś w pliku audrey.jpg
+svn lock audrey.jpg -m "making Audrey even more dreamy."
 svn status 
-svn info audrey.png 
-# możemy zobaczyć, że lock rzeczywiście istnieje.
+svn info audrey.jpg 
+# widzimy, że lock rzeczywiście istnieje.
 
 # przejdzmy do innej kopii
 cd ~/Desktop
+cd lista_2
+svn checkout http://repo.cs.pwr.edu.pl/250111/srodowisko_programisty/lista_2
+ls -al
 
-# Mark chce zmienić plik
+# Mark chce zmienić plik. Zmienię teraz plik audrey.jpg na inny o tej samej nazwie
 svn status
+jp2a audrey.jpg
 svn commit -m "I like Donna more."
 
 # Ale commit failuje
 # Chcąc srpawdzić skąd pojawił się problem
 svn status -u
-svn info http://repo.cs.pwr.edu.pl/250111/srodowisko_programisty/lista_2/audrey.png
+svn info http://repo.cs.pwr.edu.pl/250111/srodowisko_programisty/lista_2/audrey.jpg
 
 # widzi kto i kiedy założył lock
 # Mark jest pm i ma duże ego, więc ma pozowlenie na używanie --force
-svn unlock http://repo.cs.pwr.edu.pl/250111/srodowisko_programisty/lista_2/audrey.png
-svn unlock --force http://repo.cs.pwr.edu.pl/250111/srodowisko_programisty/lista_2/audrey.png
+svn unlock http://repo.cs.pwr.edu.pl/250111/srodowisko_programisty/lista_2/audrey.jpg
+svn unlock --force http://repo.cs.pwr.edu.pl/250111/srodowisko_programisty/lista_2/audrey.jpg
 
+# i sam zakłada locka, aby nikt nie ruszał zdjecia. 
+svn lock audrey.jpg -m "Keep away from Donna!"
+svn commit -m "I love Donna."
+
+#####
 # Pokażę jeszcze svn:needs-lock
-nano get_locked.txt
-svn add get_locked.txt
+nano locking.txt
+svn add locking.txt
 
 svn propset svn:needs-lock on get_locked.txt 
-svn chmod 777 get_locked.txt
+svn chmod 777 locking.txt
 ls -al
-svn proplist get_locked.txt 
+svn proplist locking.txt 
 
-svn commit -m "changed"
+svn commit -m "changed mod"
 svn up
 
 ls -al
 
-# jak widać get_locked z -rwxrwxrwx przeszedł w -r--r--r-- czyli tak jak property svn:needs-lock działa
+# jak widać locking z -rwxrwxrwx przeszedł w -r--r--r-- czyli tak jak property svn:needs-lock działa
 
 svn log -v
 exit
