@@ -6,12 +6,12 @@ int NEWLINES = 0;
 int NUMBER_OF_WORDS = 0;
 %}
 %%
-^[\t" "]+ ;
+^[\t" "]+ ; 
 [\t" "]+$ ;
 [\t" "]+ printf(" ");
 \n	{ NEWLINES += 1; }		
 	
-[a-zA-Z0-9]+ { 	printf("%s",yytext);
+[^\n\t" "]+ { 	printf("%s",yytext);
 		NUMBER_OF_WORDS++;
 		}
 %%

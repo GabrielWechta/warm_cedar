@@ -1,0 +1,27 @@
+%{
+#include <stdio.h>
+int yywrap();
+int yylex();
+%}
+
+STRINGESCAPESEQ	[\\]
+LONGSTRINGCHAR	[^\\]
+SHORTSTRINGCHAR	[^\\'"\n]
+LONGSTRINGITEM	{LONGSTRINGCHAR}|{STRINGESCAPESEQ}
+SHORTSTRINGITEM	{SHORTSTRINGCHAR}|{STRINGESCAPESEQ}
+LONGSTRING	"'''"{LONGSTRINGITEM}*"'''"|\"\"\"{LONGSTRINGITEM}*\"\"\"
+SHORTSTRING	'({SHORTSTRINGITEM}|\")*'|\"({SHORTSTRINGITEM}|\')*\"
+STRINGPREFIX	r|u|R|U|f|F|fr|Fr|fR|FR|rf|rF|Rf|RF
+STRINGLITERAL	{STRINGPREFIX}?({SHORTSTRING}|{LONGSTRING})
+
+%%
+{STRINGLITERAL} ECHO;
+^#.*\n		;
+#.*\n		printf("\n");
+
+%%
+
+int yywrap() { return 1; }
+int main() { return yylex(); }
+
+

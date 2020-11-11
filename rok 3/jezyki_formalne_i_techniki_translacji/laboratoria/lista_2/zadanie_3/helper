@@ -1,0 +1,51 @@
+    %%
+    "/*"        {
+                int c;
+
+                for ( ; ; )
+                    {
+                    while ( (c = input()) != '*' &&
+                            c != EOF )
+                        ;    /* eat up text of comment */
+
+                    if ( c == '*' )
+                        {
+                        while ( (c = input()) == '*' )
+                            ;
+                        if ( c == '/' )
+                            break;    /* found the end */
+                        }
+
+                    if ( c == EOF )
+                        {
+                        error( "EOF in comment" );
+                        break;
+                        }
+                    }
+                }
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+<INITIAL>{
+"/*"              BEGIN(IN_COMMENT);
+}
+<IN_COMMENT>{
+"*/"      BEGIN(INITIAL);
+[^*\n]+   // eat comment in chunks
+"*"       // eat the lone star
+\n        yylineno++;
+}
+
+
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+int main(int argc, char** argv) 
+{ 
+    cout << "You have entered " << argc 
+         << " arguments:" << "\n"; 
+  
+    for (int i = 0; i < argc; ++i) 
+        cout << argv[i] << "\n"; 
+  
+    return 0; 
+} 
