@@ -23,4 +23,4 @@ int yywrap()
 }
 int main() { return yylex(); }
 
-
+//co z "\\n"?
