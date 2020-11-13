@@ -18,6 +18,7 @@ static int show_doc = 0;
 <INITIAL>\" 		{ECHO; BEGIN(STRING);}
 
 <STRING>[^\\"] ECHO;
+<STRING>"\\\\" ECHO;
 <STRING>\\\" ECHO;
 <STRING>\" {ECHO; BEGIN(INITIAL);}
 

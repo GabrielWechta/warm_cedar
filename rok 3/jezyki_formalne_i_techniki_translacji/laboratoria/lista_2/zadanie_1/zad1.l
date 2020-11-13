@@ -6,12 +6,13 @@ int NEWLINES = 0;
 int NUMBER_OF_WORDS = 0;
 %}
 %%
-^[\t" "]+ ; 
+^[\t" "\n]+ ; 
 [\t" "]+$ ;
 [\t" "]+ printf(" ");
-\n	{ NEWLINES += 1; }		
+\\\n	;
+\n	{ ECHO; NEWLINES += 1; }		
 	
-[^\n\t" "]+ { 	printf("%s",yytext);
+[^\n\t" "\\]+ { 	printf("%s",yytext);
 		NUMBER_OF_WORDS++;
 		}
 %%

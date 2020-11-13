@@ -1,4 +1,0 @@
-int x = 0 # glupia zmienna
-# powinno usunać całość
-print("#Hello, World!")
-print('#Hello, World!')
