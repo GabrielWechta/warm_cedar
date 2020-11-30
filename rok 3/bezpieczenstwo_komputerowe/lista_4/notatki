@@ -1,0 +1,129 @@
+ZADANIE 1:
+
+More Tools -> Developer Tools -> Security 
+
+1. certificate pinning:
+Mianowicie główne oraz pośrednie centra certyfikacji nie mają wyszczególnionych konkretnych domen, do których mogą wystawiać certyfikaty. Oznacza to, że każdy z tych podmiotów może wystawić zaufany certyfikat dla dowolnej domeny.
+EFF w 2010 podała, że wszystkich zaufanych podmiotów było 1482. Ciężko utrzymać kontrolę nad wszytskimi i dochodzi do nadużyć.
+
+Aby tego uniknąć Chrome i Firefox zaczęli stosować certificate pinning - pozwala określić, które urzędy certyfikacji mogą wystawiać certyfikaty na dane domeny.
+np. wszytskie domeny Google certyfikuje Google Internet Authority G2.
+
+2. Extened Validation SSL:
+Jest to rozszerzenei procesu administracyjnego prowadzacego do wystawienia certyfikatu dla danej domeny.
+Urząd Certyfikacji potwierdza tożsamość podmiotu na podstawie szczegółowej weryfikacji dokumentów rejestrowych i wpisów w rządowych bazach danych oraz innych wiarygodnych źródłach (w niektórych przypadkach wymagane jest przedstawienie stosownych dokumentów lub skanów dokumentów).
+Jest to wysokiej klasy poświadczenie autentyczności.
+
+Domain Validation (DV) - This type of certificate is the least expensive of the 3. It requires a basic form of domain validation to be performed. Validation is performed by email.
+Organization Validation (OV) - When obtaining an OV certificate the company name is checked against a company register, i.e Chamber of Commerce.
+Extended Validation (EV) - Like OV a company search is performed, however the physical location is also checked and the contact who requested the certificate is also validated.
+
+3. po zrobieniu zadania 3.
+
+4. Certificate Revocation List:
+Lista odwołanych certyfikatów przez urząd certyfikacji, z różnych powodów.
+CRL jest generowany oraz upubliczniany systematycznie, ale może być równiez upublicznione gdy zostanie naruszony, któryś z warunków bezpieczeństwa certyfikatu.
+Klient korzysta z CRL aby sprawdzić wiarygodność serwera oraz serwer może korzytsać z CRL aby sprawdzić autentyczność klienta.
+
+Online Certificate Status Protocol:
+Adres serwera OSCP jest dodawany przez CA do certyfikatu.
+Przeglądarka podczas oceniania certyfiakru, wysyła zapytanie pod adres serwera i otrzymuje odpowiedź czy ten certyfiakt nie został odrzucony.
+
+porównanie:
+* OCSP potrzebuje mniej danych niż CRL.
+* CRL, gdy nie dostarczone, pozwoli klientowi akceptować certyfikat defaultowo.
+* W CRL klient musi szukać interesującego go certyfiaktu w nieraz długiej liście odrzuconych certyfiaktów. OCSP sprawdza jeden, potrzebny certyfikat.
+* High traffic spowalnia OSCP, na popularnych stronach. 
+* Większość przeglądarek przechodzi na OCSP.
+
+5. Poznanie klucza prywatnego serwera:
+Klucz prywatny służy do podpisywania autentyczności serwera, kiedy klucz zostanie wykradziony, atakujący może podpisywać nim malware, który będzie akceptowany przez filtry przeglądarki, ponieważ jest autentycznie podpisany.
+Zaleca się aby klucz był trzymany offline.
+
+6. Poznanie klucza prywatnego CA konkretnego serwera: 
+Jednym z możliwości jest wykonanie kopii strony
+
+7. Poznanie klucza prywatnego jakiegoś CA:
+W tej sytuacji, atakujący będzie w stanie generować sztuczne certyfikaty. Jeżeli przez długi czas to zdarzenie nie zostanie wykryte, listy godnych zaufania certyfikatów mogą być zapchane sztucznymi.
+
+8. Słaba funkcja haszująca:
+MD2, MD4, MD5, czy SHA1 są wrażliwe na collision attack.
+Atakujacy może to wykorzystać inny certyfikat o takim samym podpisie.
+Przez co może się podszywać za zaatakowaną usługę.
+
+9. Downgrade attacks:
+Atack polegajacy na uzgodnieniu niższego poziomu bezpieczeństwa, pozostawionego w nowszych wersjach protokołu z powodu wstecznej kompatybilności. 
+W TLS polega na zaniechaniu szyfrowania połączenia i wysyłania wiadomości kodem jawnym.
+Zabezpieczeniem przeciwk downgrade attack jest upewnienie się, że zaróno klient jak i serwer wybierają najbezpieczniejsze połączenie.
+TLS 1.3, gdy widizi, że jedyna mozliwością komunikacji jest powrót do starszej wersji protokołu wysyła pole ServerHello.random zawierajace 8 predefiniowanych bajtów, zależnych od wersji. Jeżeli po stronie klienta się nie zgadzają połączenie jest przerywane.
+
+10. HTTP Strict Transport Security
+Rozwiązanie problemu MiTM, tj. przechwytywania niekodowanych (bo w HTTP) wiadomości.
+Strict Transport Security to nagłówek w HTTP nakazujący przeglądarce automatycznie przejść na HTTPS na określony czas.
+
+
+ZADANIE 2:
+klucz A do podpisu:
+openssl genrsa -out privkeyA.pem 
+
+żądanie certyfikatu do A:
+openssl req -new -key privkeyA.pem -out certA.csr
+
+obejrzeć można:
+openssl rsa -noout -text -in privkeyA.pem
+openssl req  -noout -text -in certA.csr 
+
+###
+
+klucz B do podpisu:
+openssl genrsa -out privkeyB.pem 
+
+żądanie certyfikatu do B:
+openssl req -new -key privkeyB.pem -out certB.csr
+
+zostawanie CA:
+openssl req -new -x509 -key privkeyB.pem -out CAcert.crt -days 15
+
+generowanie certyfikatu dla A:
+openssl x509 -req -days 45 -in certA.csr -CA CAcert.crt -CAkey privkeyB.pem -set_serial 01 -out certA.crt
+
+### 
+* apache 2
+* https://localhsot
+
+dodałem CAcert.crt do firefoxa
+następnie zmieniłem defaultowe certyfikaty na wygenerowane w lokalnym serwerze apache2
+
+###
+
+$ ab -n 10000 -c 1000 http://localhost/
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        3    7   3.0      6      23
+Processing:     4   16  27.5     13     421
+Waiting:        2   10  27.5      6     414
+Total:         11   23  29.2     20     444
+
+$ ab -n 10000 -c 1000 https://localhost/
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       28  347 686.9    131    5068
+Processing:    46  122  25.4    132     169
+Waiting:        4   30   7.7     32      84
+Total:         86  469 689.6    263    5181
+
+SSL dodaje wartwę enkrypcji.
+pewne niedeterministyczne wnioski:
+1. używanie kodowania zawsze spowalnia, ponieważ potrzebne są funkcję enkryptujące
+2. https wprowdza http/2 (?)
+
+ZADANIE 3:
+pobrałem source code z chess.com do index.html z mojego folderu xampp
+dodałem certyfikat do xampp 
+
+cd /opt/lampp
+sudo ./manager-linux.run (or manager-linux-x64.run)
+
+sudo service apache2 stop
+
+
