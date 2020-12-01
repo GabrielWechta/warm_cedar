@@ -1,6 +1,6 @@
 #!/bin/bash
 
-bison -d calc.y
+bison -d calc.y -t
 flex calc.l
-gcc calc.tab.c lex.yy.c -o calc -lm
+g++ calc.tab.c lex.yy.c -o calc -lm
 ./calc

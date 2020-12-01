@@ -10,8 +10,9 @@
 %}
 
 %%
-
+#.*
 [ \t]	; // ignore all whitespace
+\\\n	;
 [0-9]+		{yylval = atoi(yytext); return NUM;}
 \n		{return '\n';}
 "+"		{return '+';}
