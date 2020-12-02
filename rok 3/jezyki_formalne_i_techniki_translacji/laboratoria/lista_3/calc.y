@@ -75,7 +75,7 @@ exp:
 	| exp '*' exp { rpn += "* "; $$ = ($1 * $3) % p; }
 	| exp '/' exp { rpn += "/ "; long long tmp = ((long long)$1 * mul_inv($3, p)) % (long long)p; $$ = tmp; }
 	//| '-' exp %prec NEG { $$ = ((-$2 % p) + p) % p; }
-	| exp '^' exp { rpn += "^ "; $$ = modexp($1, $3, p); }
+	| exp '^' exponent { rpn += "^ "; $$ = modexp($1, $3, p); }
 	| '(' exp ')' { $$ = $2; }
 	| num		{ $$ = $1; }
 ;
@@ -84,6 +84,11 @@ num:
 	| '-' NUM %prec NEG { $$ = ((-$2 % p) + p) % p; rpn += to_string($$) + " ";}
 
 ;
+
+exponent:
+
+	NUM { $$ = (($1 % p) + p) % p; rpn += to_string($$) + " ";}
+	| '-' NUM %prec NEG { $$ = ((-$2 % (p-1)) + (p-1)) % (p-1); rpn += to_string($$) + " ";}
 %%
 
 int main() {
