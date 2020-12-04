@@ -3,11 +3,13 @@ ZADANIE 1:
 More Tools -> Developer Tools -> Security 
 
 1. certificate pinning:
-Mianowicie główne oraz pośrednie centra certyfikacji nie mają wyszczególnionych konkretnych domen, do których mogą wystawiać certyfikaty. Oznacza to, że każdy z tych podmiotów może wystawić zaufany certyfikat dla dowolnej domeny.
+Klient (przeglądarka) przypina certyfikat (klucz publiczny) do danego serwera, aby ominąc proces chain authentication.
+
+Główne oraz pośrednie centra certyfikacji nie mają wyszczególnionych konkretnych domen, do których mogą wystawiać certyfikaty. Oznacza to, że każdy z tych podmiotów może wystawić zaufany certyfikat dla dowolnej domeny.
 EFF w 2010 podała, że wszystkich zaufanych podmiotów było 1482. Ciężko utrzymać kontrolę nad wszytskimi i dochodzi do nadużyć.
 
 Aby tego uniknąć Chrome i Firefox zaczęli stosować certificate pinning - pozwala określić, które urzędy certyfikacji mogą wystawiać certyfikaty na dane domeny.
-np. wszytskie domeny Google certyfikuje Google Internet Authority G2.
+np. wszytskie domeny Google certyfikuje Google Internet Authority G2. Natomiast wycofali się z tego jako, że jest to niebezpieczne zachowanie.
 
 2. Extened Validation SSL:
 Jest to rozszerzenei procesu administracyjnego prowadzacego do wystawienia certyfikatu dla danej domeny.
@@ -18,7 +20,10 @@ Domain Validation (DV) - This type of certificate is the least expensive of the 
 Organization Validation (OV) - When obtaining an OV certificate the company name is checked against a company register, i.e Chamber of Commerce.
 Extended Validation (EV) - Like OV a company search is performed, however the physical location is also checked and the contact who requested the certificate is also validated.
 
-3. po zrobieniu zadania 3.
+3. Kto się nabierze na taki atak:
+Osoby z trzęsącymi się rękami i źle wpisujące adresy url.
+Ofiary zhackowania DNS i przekierowania na phishingową stronę.
+niemądzry użytkownicy klikający show advanced.
 
 4. Certificate Revocation List:
 Lista odwołanych certyfikatów przez urząd certyfikacji, z różnych powodów.
@@ -40,21 +45,24 @@ porównanie:
 Klucz prywatny służy do podpisywania autentyczności serwera, kiedy klucz zostanie wykradziony, atakujący może podpisywać nim malware, który będzie akceptowany przez filtry przeglądarki, ponieważ jest autentycznie podpisany.
 Zaleca się aby klucz był trzymany offline.
 
-6. Poznanie klucza prywatnego CA konkretnego serwera: 
-Jednym z możliwości jest wykonanie kopii strony
+6. Poznanie klucza prywatnego konkretnego CA dla konretnego www: 
+Jednym z możliwości jest wykonanie kopii strony (phishing), jako, że mogę podpisać certyfikat wystawainy przez mój fake serwer.
 
 7. Poznanie klucza prywatnego jakiegoś CA:
+Jako atakujący można zbadać jakie domenty sa autoryzowane przez tego CA.
 W tej sytuacji, atakujący będzie w stanie generować sztuczne certyfikaty. Jeżeli przez długi czas to zdarzenie nie zostanie wykryte, listy godnych zaufania certyfikatów mogą być zapchane sztucznymi.
 
 8. Słaba funkcja haszująca:
 MD2, MD4, MD5, czy SHA1 są wrażliwe na collision attack.
 Atakujacy może to wykorzystać inny certyfikat o takim samym podpisie.
-Przez co może się podszywać za zaatakowaną usługę.
+Przez co może się podszywać za zaatakowaną usługę. Tzn hash NIE jest nakładany na klucz prywatny lub publiczny, ale na inne dane w certyfikacie, na przykład adres.
+
+In other words, the certificate authority signs a hash, which may be valid for other data. The certificate authority doesn't know what certificate it is signing anymore! You, as user, may get a certificate for mail.google.com with a valid signature that was created for happy.attacker.com, with the attacker holding the private key. In other words, you may not be communicating with Google at all!
 
 9. Downgrade attacks:
 Atack polegajacy na uzgodnieniu niższego poziomu bezpieczeństwa, pozostawionego w nowszych wersjach protokołu z powodu wstecznej kompatybilności. 
 W TLS polega na zaniechaniu szyfrowania połączenia i wysyłania wiadomości kodem jawnym.
-Zabezpieczeniem przeciwk downgrade attack jest upewnienie się, że zaróno klient jak i serwer wybierają najbezpieczniejsze połączenie.
+Zabezpieczeniem przeciwko downgrade attack jest upewnienie się, że zarówno klient jak i serwer wybierają najbezpieczniejsze połączenie.
 TLS 1.3, gdy widizi, że jedyna mozliwością komunikacji jest powrót do starszej wersji protokołu wysyła pole ServerHello.random zawierajace 8 predefiniowanych bajtów, zależnych od wersji. Jeżeli po stronie klienta się nie zgadzają połączenie jest przerywane.
 
 10. HTTP Strict Transport Security

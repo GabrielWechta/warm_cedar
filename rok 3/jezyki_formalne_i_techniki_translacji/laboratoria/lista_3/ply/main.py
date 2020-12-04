@@ -10,10 +10,10 @@ tokens = (
     'LINECONT'
 )
 
-
-def t_COMMENT(t):
-    r'\#.*'
-    pass
+#
+# def t_COMMENT(t):
+#     r'\#.*'
+#     pass
 
 
 def t_IGNORE(t):
@@ -86,7 +86,7 @@ def t_newline(t):
 
 
 t_ignore = ' \t'
-
+t_ignore_COMMENT = r'\#.*'
 
 def t_error(t):
     print("Illegal character '%s'" % t.value[0])
