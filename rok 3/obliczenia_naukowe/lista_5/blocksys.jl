@@ -81,24 +81,27 @@ function gauss_choosing_main_element(A::SparseMatrixCSC{Float64, Int64}, b::Vect
     permutation = Vector{Int64}(undef, n)
 
     # initializing permutation vector
+    # it will be used to "rotate" vector - b
     for i = 1:n
         permutation[i] = i
     end
 
-    for k = 1:n-1 # k is for columns
+    for k = 1:n-1 # k is for rows
         how_many_to_eliminate = k + (l - k % l) # optimazing
-        max_row = k # max_row is for finding max element
+        row = k # row is for finding max element
         max_element = abs(A[k, k]) # variable for biggest element in columns
 
         for i = k:how_many_to_eliminate
             if abs(A[k, permutation[i]]) > max_element
                 max_element = abs(A[k, permutation[i]])
-                max_row = i
+                row = i
             end
         end
 
-        permutation[k], permutation[max_row] = permutation[max_row], permutation[k]
+        # saving permutation
+        permutation[k], permutation[row] = permutation[row], permutation[k]
 
+        # standard part + fixing based on permutation
         for i = k + 1:how_many_to_eliminate
             multiplier = A[k, permutation[i]] / A[k, permutation[k]]
 
@@ -123,8 +126,7 @@ end
 function solve_gauss_with_main_element(A::SparseMatrixCSC{Float64, Int64}, b::Vector{Float64}, n::Int64, l::Int64)
     A, permutation, b = gauss_choosing_main_element(A, b, n, l, false)
 
-    #Vector with solutions of equations set
-    x = Vector{Float64}(undef, n)
+    x = Vector{Float64}(undef, n) # answer vector
 
     for i = n:-1:1 # i is for rows
         sum = Float64(0.0)
@@ -132,26 +134,87 @@ function solve_gauss_with_main_element(A::SparseMatrixCSC{Float64, Int64}, b::Ve
             sum += A[j, permutation[i]] * x[j]
         end
 
-        x[i] = (b[permutation[i]] - sum) / A[i, permutation[i]]
+        x[i] = (b[permutation[i]] - sum) / A[i, permutation[i]] # calculating x based on permuatation
     end
     return x
 end
 
+function do_lu(A::SparseMatrixCSC{Float64, Int64}, b::Vector{Float64}, n::Int64, l::Int64)
+    return gauss(A, b, n, l, true)
+end
+
+function do_lu_with_main_element(A::SparseMatrixCSC{Float64, Int64}, b::Vector{Float64}, n::Int64, l::Int64)
+     return gauss_choosing_main_element(A, b, n, l, true)
+end
+
+function solve_lu(A::SparseMatrixCSC{Float64, Int64}, b::Vector{Float64}, n::Int64, l::Int64)
+
+    """ Part for changing b """
+    modified_b = Vector{Float64}(undef, n) # for modified b
+    for i = 1:n
+        sum = Float64(0.0)
+
+        for j = max(1, Int64(l * floor((i - 1) / l))):i - 1 # from Kincaid
+            sum += A[j, i] * modified_b[j]
+        end
+
+        modified_b[i] = b[i] - sum
+    end
+
+    """ Part for calculating x """
+    x = Vector{Float64}(undef, n) # answer vector
+    for i = n:-1:1
+        sum = Float64(0.0)
+
+        for j = i + 1:min(n, i + l + 1)
+            sum += A[j, i] * x[j]
+        end
+        x[i] = (modified_b[i] - sum) / A[i, i]
+    end
+
+    return x
+end
+
+function solve_lu_with_main_element(A::SparseMatrixCSC{Float64, Int64}, permutation::Vector{Int64},
+                                                b::Vector{Float64}, n::Int64, l::Int64)
+
+    """ Part for changing b """
+    modified_b = Vector{Float64}(undef, n)
+    for i = 1:n
+        sum = Float64(0.0)
+
+        for j = max(1, Int64(l * floor((i - 1) / l)) - 1):i - 1
+            sum += A[j, permutation[i]] * modified_b[j]
+        end
+
+        modified_b[i] = b[permutation[i]] - sum
+    end
+
+    """ Part for calculating x """
+    x = Vector{Float64}(undef, n)
+    for i = n:-1:1
+        sum = Float64(0.0)
+
+        for j = i + 1:min(i + 2 * l + 1, n)
+            sum += A[j, permutation[i]] * x[j]
+        end
+
+        x[i] = (modified_b[i] -  sum) / A[i, permutation[i]]
+    end
+
+    return x
+end
+
+
 A, n, l = read_matrix_from_file("/home/gabriel/Desktop/studia/rok 3/obliczenia_naukowe/lista_5/dane16/A.txt")
+A_sec, n, l = read_matrix_from_file("/home/gabriel/Desktop/studia/rok 3/obliczenia_naukowe/lista_5/dane16/A.txt")
+
 b, n = read_right_side_vector_from_file("/home/gabriel/Desktop/studia/rok 3/obliczenia_naukowe/lista_5/dane16/b.txt")
-# mat = Matrix(A)
-# x = A[1,2]
-# println(x)
-# A1, nothi1 = gauss(A, b, n ,l, false)
-# mat1 = Matrix(A1)
-# A2, nothi2 = gauss(A, b, n ,l, true)
-# mat2 = Matrix(A2)
-# x = solve_gauss(A, b, n, l)
-# mat = Matrix(A)
-# x = A[1,2]
-# println(x)
-# A1, nothi1 = gauss_choosing_main_element(A, b, n ,l, false)
-# mat1 = Matrix(A1)
-# A2, nothi2 = gauss(A, b, n ,l, true)
-# mat2 = Matrix(A2)
-x = solve_gauss_with_main_element(A, b, n, l)
+b_sec, n = read_right_side_vector_from_file("/home/gabriel/Desktop/studia/rok 3/obliczenia_naukowe/lista_5/dane16/b.txt")
+
+A1, perm,  b1 = do_lu_with_main_element(A,b,n,l)
+x = solve_lu_with_main_element(A1, perm, b1, n, l)
+# A2, b2 = gauss(A_sec,b_sec,n,l, true)
+# mat_1 = Matrix(A1)
+# mat_2 = Matrix(A2)
+# x = solve_gauss_with_main_element(A, b, n, l)
