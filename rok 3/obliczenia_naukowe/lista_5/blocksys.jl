@@ -1,6 +1,6 @@
 module blocksys
 
-export read_matrix_from_file, read_right_side_vector_from_file, gauss, gauss_choosing_main_element, solve_gauss, solve_gauss_with_main_element, do_lu, do_lu_with_main_element, solve_lu, solve_lu_with_main_element
+export read_matrix_from_file, read_right_side_vector_from_file, gauss, gauss_choosing_main_element, solve_gauss, solve_gauss_with_main_element, do_lu, do_lu_with_main_element, solve_lu, solve_lu_with_main_element, calculate_vector_b, save_results_to_file
 
 using SparseArrays
 
