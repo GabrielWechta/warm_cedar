@@ -1,7 +1,16 @@
 using blocksys
 using matrixgen
 using PyPlot
+using SparseArrays
+using Base
+using LinearAlgebra # it is olny used for testing error!!
 
+function relative_error(x::Vector{Float64}, n::Int64)
+    one = ones(n, 1)
+    err = norm(one - x) / norm(x)
+    return err
+end
+# sizes = [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000]
 sizes = [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 20000, 30000, 40000, 50000, 60000, 70000, 80000, 90000, 100000, 110000, 120000, 130000, 140000, 150000, 160000, 170000, 180000, 190000, 200000]
 number_of_tests = length(sizes)
 l = 5
@@ -32,6 +41,12 @@ lu_main_t = Array{Float64}(undef, number_of_tests)
 solve_lu_t = Array{Float64}(undef, number_of_tests)
 solve_lu_main_t = Array{Float64}(undef, number_of_tests)
 
+# relative error
+gauss_e = Array{Float64}(undef, number_of_tests)
+gauss_main_e = Array{Float64}(undef, number_of_tests)
+solve_lu_e = Array{Float64}(undef, number_of_tests)
+solve_lu_main_e = Array{Float64}(undef, number_of_tests)
+
 for test in 1:number_of_tests
     """ Creating test matrix """
     blockmat(sizes[test], l, cond, mat_file_path)
@@ -46,6 +61,7 @@ for test in 1:number_of_tests
     gauss_o[test] = sizes[test] * l^2 + 2sizes[test]
     gauss_m[test] = measurment[3]
     gauss_t[test] = measurment[2]
+    gauss_e[test] = relative_error(measurment[1], sizes[test])
 
 ################################################################################
     """ Loading test matrix and calculating right side vector b """
@@ -58,6 +74,7 @@ for test in 1:number_of_tests
     gauss_main_o[test] = sizes[test] * l^3 + 2sizes[test]
     gauss_main_m[test] = measurment[3]
     gauss_main_t[test] = measurment[2]
+    gauss_main_e[test] = relative_error(measurment[1], sizes[test])
 
 ################################################################################
     """ Loading test matrix and calculating right side vector b """
@@ -77,6 +94,7 @@ for test in 1:number_of_tests
     solve_lu_o[test] = sizes[test] * (l^2 + 3l)
     solve_lu_m[test] = lu_m[test] + measurment[3]
     solve_lu_t[test] = lu_t[test] + measurment[2]
+    solve_lu_e[test] = relative_error(measurment[1], sizes[test])
 
 ################################################################################
     """ Loading test matrix and calculating right side vector b """
@@ -96,6 +114,7 @@ for test in 1:number_of_tests
     solve_lu_main_o[test] = sizes[test] * (l^2 + 3l)
     solve_lu_main_m[test] = lu_main_m[test] + measurment[3]
     solve_lu_main_t[test] = lu_main_t[test] + measurment[2]
+    solve_lu_main_e[test] = relative_error(measurment[1], sizes[test])
 end
 
 """ Draw graphs part """
@@ -132,3 +151,15 @@ grid(true)
 legend(loc=2,borderaxespad=0)
 title("Comparing solving times.")
 savefig("/home/gabriel/Desktop/studia/rok 3/obliczenia_naukowe/lista_5/times.png")
+
+
+""" Relative error """
+clf()
+plot(sizes, gauss_e, label="Gauss", linewidth=1.0)
+plot(sizes, gauss_main_e, label="Gauss with main element choosing", linewidth=1.0)
+plot(sizes, solve_lu_e, label="LU", linewidth=1.0)
+plot(sizes, solve_lu_main_e, label="LU with main element choosing", linewidth=1.0)
+grid(true)
+legend(loc=1,borderaxespad=0)
+title("Comparing relative error.")
+savefig("/home/gabriel/Desktop/studia/rok 3/obliczenia_naukowe/lista_5/error.png")
