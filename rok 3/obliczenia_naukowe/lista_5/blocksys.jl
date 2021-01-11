@@ -33,7 +33,7 @@ using LinearAlgebra # only for norm() to calculate error!!!
 
                 A[j, i] = value
             end
-            return (A, n, l)
+            return A, n, l
         end
     end
 
@@ -55,7 +55,7 @@ using LinearAlgebra # only for norm() to calculate error!!!
                 b[i] = parse(Float64, line)
                 i += 1
             end
-            return (b, n)
+            return b, n
         end
     end
 
@@ -369,36 +369,16 @@ using LinearAlgebra # only for norm() to calculate error!!!
         OUT:
         b - calculated right side vector b, type Vector{Float64}.
         """
-        b = Vector{Float64}(undef, n)
+	    b = Vector{Float64}(undef, n)
 
-        for i = 1:n
-            b[i] = Float64(0.0)
+	    for i = 1:n
+		b[i] = Float64(0.0)
 
-            for j = max(1, Int64(l * floor((i - 1) / l)) - 1):min(n, Int64(l + l * floor((i - 1) / l)))
-                b[i] += A[j, i]
-            end
+		for j = max(1, i - (2 + l)):min(n,i+l)
+		    b[i] += A[j, i]
+		end 
+	    end
 
-            if i + l <= n
-                b[i] += A[i, i + l]
-            end
-        end
-
-        return b
-    end
+	    return b
+	end
 end
-
-#
-# A, n, l = read_matrix_from_file("/home/gabriel/Desktop/studia/rok 3/obliczenia_naukowe/lista_5/dane16/A.txt")
-# A_sec, n, l = read_matrix_from_file("/home/gabriel/Desktop/studia/rok 3/obliczenia_naukowe/lista_5/dane16/A.txt")
-#
-# b, n = read_right_side_vector_from_file("/home/gabriel/Desktop/studia/rok 3/obliczenia_naukowe/lista_5/dane16/b.txt")
-# b_sec, n = read_right_side_vector_from_file("/home/gabriel/Desktop/studia/rok 3/obliczenia_naukowe/lista_5/dane16/b.txt")
-#
-# new_b = calculate_vector_b(A, n, l)
-# A1, perm,  b1 = do_lu_with_main_element(A,b,n,l)
-# x = solve_lu_with_main_element(A1, perm, b1, n, l)
-# A2, b2 = gauss(A_sec,b_sec,n,l, true)
-# mat_1 = Matrix(A1)
-# mat_2 = Matrix(A2)
-# x = solve_gauss_with_main_element(A, b, n, l)
-# save_results_to_file("/home/gabriel/Desktop/studia/rok 3/obliczenia_naukowe/lista_5/result.txt", x, n, false)
