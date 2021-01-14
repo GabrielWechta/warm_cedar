@@ -1,0 +1,28 @@
+-z execstack : Disables Executable Stack
+Oczywiście głupi pomysł, flaga została ponieważ są programy (pradawne), które wciąż go używają.
+
+-fno-stack-protector : Disables Stack Canaries
+Canaries jak te w kopalniach, są to ofiarne wartości pomiędzy bufferami i ważnymi danymi. Jeżeli canaries są naruszone, co najpewniej również oznacza, że ważne dane również zostały naruszone i program od razu się zatrzymuje. Czasami są to takie wartości jak \x0a czy \x0b czyli odpowiednio "enter" i "vertical enter", ciężkie do przesłania.
+
+ASLR - shuffles blocks of memory, so no longer code is at constant place.
+
+jak pokazać:
+$ gcc login.c -o login -fno-stack-protector -z execstack -g
+$ gdb login.c
+
+modyfikacja authenticated:
+(gdb) b login
+(gdb) run aaaaaaaaaab
+(gdb) n
+...
+(gdb) p secret 
+(gdb) p authenticated
+
+modyfikacja secret:
+(gdb) b login
+(gdb) run aaaaaaaaaabbbbc
+(gdb) n
+...
+(gdb) p secret 
+(gdb) p authenticated
+
