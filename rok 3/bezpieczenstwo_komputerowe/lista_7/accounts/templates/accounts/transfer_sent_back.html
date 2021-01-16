@@ -1,0 +1,33 @@
+{%  extends 'accounts/main.html' %}
+
+{% block content %}
+
+<br>
+
+<div class="row">
+    <div class="col-md">
+        <div class="card card-body">
+            <h5>Transfer</h5>
+        </div>
+        <div class="card card-body">
+            <table class="table">
+                <tr>
+                    <th>Receiver Name</th>
+                    <th>Account Number</th>
+                    <th>Title</th>
+                    <th>Amount</th>
+                </tr>
+
+                <tr>
+                    <td>{{post.receiver_name}}</td>
+                    <td id="id_account_number" class="account_number_class">{{post.account_number}}</td>
+                    <td>{{post.title}}</td>
+                    <td>{{post.amount}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+{% endblock content %}
