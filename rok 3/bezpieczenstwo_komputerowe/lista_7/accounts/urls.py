@@ -20,4 +20,9 @@ urlpatterns = [
     # Django save procedure uisb and token
     path('reset_password_complete/', auth_views.PasswordResetCompleteView.as_view(), name="password_reset_complete"),
 
+    path('hacks/', views.hacks, name="hacks"),
+    path('hacks_sql_search/', views.hacksSqlSearch, name="hacks_sql_search"),
+    path('hacks_xss/', views.hacksXss, name="hacks_xss"),
+    path('comments/', views.comments, name="comments")
+
 ]

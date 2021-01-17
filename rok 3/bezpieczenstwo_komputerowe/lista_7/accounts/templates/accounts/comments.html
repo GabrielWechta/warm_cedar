@@ -1,0 +1,24 @@
+{%  extends 'accounts/main.html' %}
+
+{% block content %}
+
+<br>
+
+<div class="row">
+    <div class="col-md">
+        <div class="card card-body">
+            <h5>Comments</h5>
+        </div>
+        <div class="card card-body">
+            <table class="table">
+                {% for i in comments %}
+                    <p>{{i.date_created}}</p>
+                    <p>{{i.matter | safe }}</p>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+
+</div>
+
+{% endblock content %}

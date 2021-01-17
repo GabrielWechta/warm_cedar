@@ -5,6 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
+from django.utils.safestring import mark_safe
 
 from .models import *
 from .forms import TransferForm, CreateUserForm
@@ -58,8 +59,12 @@ def home(request):
     transfers = Transfer.objects.all()
     good_transfer = Transfer.objects.none()
     for t in transfers:
-        if str(t.customer) == username:
-            good_transfer |= Transfer.objects.filter(id=t.id)
+        try:
+            if str(t.customer) == username:
+                good_transfer |= Transfer.objects.filter(id=t.id)
+        except Exception:
+            pass
+
     number = good_transfer.count()
 
     context = {'number': number}
@@ -74,20 +79,13 @@ def products(request):
     transfers = Transfer.objects.all()
     good_transfer = Transfer.objects.none()
     for t in transfers:
-        if str(t.customer) == username:
-            good_transfer |= Transfer.objects.filter(id=t.id)
+        try:
+            if str(t.customer) == username:
+                good_transfer |= Transfer.objects.filter(id=t.id)
+        except Exception:
+            pass
 
     return render(request, 'accounts/products.html', {'transfers': good_transfer})
-
-
-# @login_required(login_url='login')
-# def customer(request, pk):
-#     customer = Customer.objects.get(id=pk)
-#
-#     transfers = customer.transfer_set.all()
-#     transfer_count = transfers.count()
-#     context = {'customer': customer, 'transfers': transfers, 'transfer_count': transfer_count}
-#     return render(request, 'accounts/customer.html', context)
 
 
 @login_required(login_url='login')
@@ -99,7 +97,7 @@ def createTransfer(request):
             user = request.user
             form = TransferForm(request.POST)
             # print(form.id)
-            tmp = form.save( commit=False)
+            tmp = form.save(commit=False)
             tmp.customer = user
             tmp.save()
             context = {'post': request.POST}
@@ -123,3 +121,48 @@ def sendBackTransfer(request):
         'post': transfer
     }
     return render(request, 'accounts/transfer_sent_back.html', context)
+
+
+@login_required(login_url='login')
+def hacks(request):
+    return render(request, 'accounts/hacks.html')
+
+
+@login_required(login_url='login')
+def hacksSqlSearch(request):
+    query = request.GET['q']
+    customer_id = request.user.id
+    # print(query)
+    #
+    # posts = Transfer.objects.raw(f"SELECT * FROM accounts_transfer WHERE receiver_name=\"{query}\" AND customer_id=\"{customer_id}\";")
+    print(f"-- SELECT * FROM accounts_transfer WHERE receiver_name=\"{query}\" AND customer_id=\"{customer_id}\";")
+    posts = Transfer.objects.raw(
+        f"SELECT * FROM accounts_transfer WHERE receiver_name=\"{query}\" AND customer_id=\"{customer_id}\";")
+    # print(posts)
+    return render(request, 'accounts/hacks_sql_search.html', {'transfers': posts})
+
+
+@login_required(login_url='login')
+def hacksXss(request):
+    add = request.GET['a']
+    # customer_id = request.user.id
+    comment = Comment(matter=mark_safe(add))
+    print(comment.matter)
+    comment.save()
+    # print(add)
+    # print(f"\"{add}\"")
+    # # <script type="text/javascript">window.location.href = "http://localhost:8000/create_transfer/"</script>
+    # context = {
+    #     'class_name': 'large" style="font-size:4000px',
+    #     # 'paragraph': mark_safe("<script type=\"text/javascript\">alert('hello wdwd world!');</script>"),
+    #     'paragraph': mark_safe(add),
+    # }
+
+    return render(request, 'accounts/main.html')
+
+
+@login_required(login_url='login')
+def comments(request):
+    my_comments = Comment.objects.all()
+
+    return render(request, 'accounts/comments.html', {'comments': my_comments})
