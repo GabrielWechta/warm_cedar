@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.utils.safestring import mark_safe
+from django.views.decorators.csrf import csrf_exempt
 
 from .models import *
 from .forms import TransferForm, CreateUserForm
@@ -26,7 +27,7 @@ def registerPage(request):
         context = {'form': form}
         return render(request, 'accounts/register.html', context)
 
-
+@csrf_exempt
 def loginPage(request):
     if request.user.is_authenticated:
         return redirect('home')
@@ -34,6 +35,9 @@ def loginPage(request):
         if request.method == "POST":
             username = request.POST.get('username')
             password = request.POST.get('password')
+
+            print(username)
+            print(password)
 
             user = authenticate(request, username=username, password=password)
 

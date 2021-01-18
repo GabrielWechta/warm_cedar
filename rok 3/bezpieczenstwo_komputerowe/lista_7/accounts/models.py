@@ -18,4 +18,4 @@ class Comment(models.Model):
     date_created = models.DateTimeField(auto_now=True, null=True)
 
     def __str__(self):
-        return self.date_created
+        return self.matter
