@@ -1,3 +1,4 @@
+1. ####################################################################################################
 -z execstack : Disables Executable Stack
 Oczywiście głupi pomysł, flaga została ponieważ są programy (pradawne), które wciąż go używają.
 
@@ -26,3 +27,20 @@ modyfikacja secret:
 (gdb) p secret 
 (gdb) p authenticated
 
+2. ####################################################################################################
+-m32 is necessary, too, on 64-bit systems. The int $0x80 32-bit ABI doesn't work with 64-bit addresses like .rodata in a PIE executable. Also, the machine code was assembled for 32-bit. It happens that the same sequence of bytes would decode to equivalent instructions in 64-bit mode but that's not always the case.
+
+int *ret; 
+- wrzuca zmienną na stos, tuż pod argumentami main'a.
+
+ret = (int *)&ret + 2; 
+- teraz ret wskazuje dwa inty powyżej starego ret, czyli tam gdzie jest adres powrotu po wyjściu z maina.
+
+(*ret) = (int)shellcode;
+- adres powrotu jest ustawiony na adres początku shellcode. Tym samym shellcode będzie wykonany po wyjściu z maina.
+
+jak pokazać:
+$ gdb smartnot 
+(gdb) b main
+(gdb) r
+(gdb) x /25i &shellcode
