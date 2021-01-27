@@ -1,0 +1,8 @@
+#!/bin/bash
+break main 
+run
+set disassembly-flavor intel
+layout asm
+layout regs
+focus cmd
+si

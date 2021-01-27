@@ -3,7 +3,7 @@
 
 int auth(char *code) {
 	int ret, cmp;
-	cmp = strcmp(code, "haslo");
+	cmp = strcmp(code, "1234567890");
 	if (cmp == 0) {
 		ret = 1;
 	} 

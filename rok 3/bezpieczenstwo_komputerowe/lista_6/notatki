@@ -40,7 +40,6 @@ ret = (int *)&ret + 2;
 - adres powrotu jest ustawiony na adres początku shellcode. Tym samym shellcode będzie wykonany po wyjściu z maina.
 
 jak pokazać:
-$ gdb smartnot 
-(gdb) b main
-(gdb) r
-(gdb) x /25i &shellcode
+$ gdb -x gdb_script ./smartnot 
+
+Instrukcja call działa identycznie do instrukcji jmp z tą różnicą, że przed przeskokiem układa na stosie bieżące wartości rejestrów EIP oraz ew. CS tak aby później było można wrócić do miejsca gdzie wykonany był skok przy użyciu którejś instrukcji z rodziny ret. Istnieją dwie główne odmiany instrukcji call:
