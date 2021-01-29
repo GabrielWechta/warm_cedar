@@ -8,27 +8,35 @@
         <input type="text" id="searchBox" class="input-medium search-query" name="q" placeholder="Search">
         <input type="submit" class="btn" value="Search">
     </form>
-{#    dodać sql z insertem #}
+
+    <br>
+
+    <h1>SQL</h1>
+    <form method="get" action="/hacks_sql_insert/" class="navbar-form pull-right">
+        <input type="text" id="searchBox" class="input-medium search-query" name="q" placeholder="Insert">
+        <input type="submit" class="btn" value="Insert">
+    </form>
+
 
     <br>
 
     <h1>XSS Comment</h1>
     <form method="get" action="/hacks_xss/" class="navbar-form pull-right">
         <input type="text" id="searchBox" class="input-medium search-query" name="a" placeholder="Search">
-        <input type="submit" class="btn" value="Search">
+        <input type="submit" class="btn" value="Add">
     </form>
 
-{#    <span id="search-query"></span>#}
-{##}
-{#    <p class="{{ class_name|safe }}">{{ paragraph }}</p>#}
-{##}
-{#    <!-- The results of the search query -->#}
-{##}
-{#    <script type="application/javascript">#}
-{#        var searchParams = new URLSearchParams(document.location.search);#}
-{#        if (searchParams.has("query")) {#}
-{#            document.getElementById("search-query").innerHTML = "You searched for " + searchParams.get("query")#}
-{#        }#}
-{#    </script>#}
+    {#    <span id="search-query"></span>#}
+    {##}
+    {#    <p class="{{ class_name|safe }}">{{ paragraph }}</p>#}
+    {##}
+    {#    <!-- The results of the search query -->#}
+    {##}
+    {#    <script type="application/javascript">#}
+    {#        var searchParams = new URLSearchParams(document.location.search);#}
+    {#        if (searchParams.has("query")) {#}
+    {#            document.getElementById("search-query").innerHTML = "You searched for " + searchParams.get("query")#}
+    {#        }#}
+    {#    </script>#}
 
 {% endblock content %}

@@ -22,6 +22,7 @@ urlpatterns = [
 
     path('hacks/', views.hacks, name="hacks"),
     path('hacks_sql_search/', views.hacksSqlSearch, name="hacks_sql_search"),
+    path('hacks_sql_insert/', views.hacksSqlInsert, name="hacks_sql_insert"),
     path('hacks_xss/', views.hacksXss, name="hacks_xss"),
     path('comments/', views.comments, name="comments")
 

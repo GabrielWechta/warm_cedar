@@ -7,6 +7,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.utils.safestring import mark_safe
 from django.views.decorators.csrf import csrf_exempt
+from django.db import connection
 
 from .models import *
 from .forms import TransferForm, CreateUserForm
@@ -26,6 +27,7 @@ def registerPage(request):
 
         context = {'form': form}
         return render(request, 'accounts/register.html', context)
+
 
 @csrf_exempt
 def loginPage(request):
@@ -144,6 +146,14 @@ def hacksSqlSearch(request):
         f"SELECT * FROM accounts_transfer WHERE receiver_name=\"{query}\" AND customer_id=\"{customer_id}\";")
     # print(posts)
     return render(request, 'accounts/hacks_sql_search.html', {'transfers': posts})
+
+
+@login_required(login_url='login')
+def hacksSqlInsert(request):
+    matter = request.GET['q']
+    with connection.cursor() as cursor:
+        cursor.execute(f"UPDATE accounts_transfer SET title = '{matter}' WHERE id = 1;")
+    return render(request, 'accounts/dashboard.html')
 
 
 @login_required(login_url='login')
