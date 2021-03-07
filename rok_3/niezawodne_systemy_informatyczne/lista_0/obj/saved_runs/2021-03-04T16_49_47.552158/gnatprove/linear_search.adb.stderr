@@ -1,0 +1,1 @@
+linear_search.ads:12:49: medium: postcondition might fail, cannot prove A (Index) /= I (e.g. when A = (9 => 1, others => 0) and I = 0 and Index = 10 and Search'Result = 0)[#0]

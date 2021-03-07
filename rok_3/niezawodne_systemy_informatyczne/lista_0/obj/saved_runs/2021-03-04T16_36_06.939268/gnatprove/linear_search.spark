@@ -1,0 +1,117 @@
+{
+  "spark": [
+    {
+      "name": "Linear_Search",
+      "sloc": [
+        {
+          "file": "linear_search.ads",
+          "line": 1
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "Linear_Search.Search",
+      "sloc": [
+        {
+          "file": "linear_search.ads",
+          "line": 9
+        }
+      ],
+      "spark": "all"
+    }
+  ],
+  "flow": [
+    {
+      "file": "linear_search.adb",
+      "line": 6,
+      "col": 7,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "Linear_Search.Search",
+        "sloc": [
+          {
+            "file": "linear_search.ads",
+            "line": 9
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "linear_search.adb",
+      "line": 7,
+      "col": 7,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "Linear_Search.Search",
+        "sloc": [
+          {
+            "file": "linear_search.ads",
+            "line": 9
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    }
+  ],
+  "session_map": {
+    " 1": "/home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_0/obj/gnatprove/linear_search__search"
+  },
+  "proof": [
+  ],
+  "assumptions": [
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Linear_Search",
+          "sloc": [
+            {
+              "file": "linear_search.ads",
+              "line": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Linear_Search.Search",
+          "sloc": [
+            {
+              "file": "linear_search.ads",
+              "line": 9
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "timings": {
+    "codepeer results": 2.99999992421363E-05,
+    "init_why_sections": 5.92000025790185E-04,
+    "globals/properties (advanced)": 1.97999994270504E-04,
+    "gnatwhy3.run_vcs": 1.10000000859145E-05,
+    "flow analysis": 1.24999997206032E-03,
+    "marking": 1.57000002218410E-04,
+    "translation of standard": 3.35799995809793E-03,
+    "gnatwhy3.register_vcs": 1.33119998499751E-02,
+    "globals (basic)": 1.27999999676831E-04,
+    "gnatwhy3.schedule_vcs": 3.99999998990097E-06,
+    "gnatwhy3.save_session": 1.06779998168349E-02,
+    "gnatwhy3.init": 2.22834005951881E-01
+  }
+}

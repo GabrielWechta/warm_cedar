@@ -1,0 +1,33 @@
+V "GNAT Lib v2020"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U linear_search%b	linear_search.adb	64b471e2 NE OO PK
+
+U linear_search%s	linear_search.ads	343439f8 EE NE OO PK
+
+D linear_search.ads	20210304160228 343439f8 linear_search%s
+D linear_search.adb	20210304160900 5080481a linear_search%b
+D system.ads		20200819050647 4635ec04 system%s
+G a e
+G c Z s b [search linear_search 9 13 none]
+G c Z s s [TarBIP linear_search 7 4 none]
+X 1 linear_search.ads
+1K9*Linear_Search 13l5 13e18 2|1b14 29l5 29t18
+4I9*T<short_short_integer> 5r17 9r49 2|5r49
+5I12*U{4I9} 7r22 2|6r15 7r15
+7A9*Ar(integer)<4I9> 9r25 2|5r25 9r16 10r16
+9V13*Search{4I9} 9>21 9>29 10r18 11r25 2|5b13 27l8 27t14
+9a21 A{7A9} 10r35 11r22 2|5b21 14r30 14r54 16r13
+9i29 I{integer} 11r42 2|5b29 14r67 16r25
+X 2 linear_search.adb
+6i7 Point{1|5I12} 9m7 12r13 14r41 16r16 17r20 18r16 21m13 21r22
+7i7 Right{1|5I12} 10m7 12r22 18r24
+14i21 Index<short_short_integer> 14r57
+

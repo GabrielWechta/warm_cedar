@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Gabriel Wechta Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <a href="#" class="logo">GW</a>
+    <div class="toggle"></div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="programing.html">Programing</a></li>
+        <li><a href="#">Section 2</a></li>
+        <li><a href="#">Section 3</a></li>
+    </ul>
+</header>
+<section class="banner">
+    <section class="textBx">
+        <h2>Hi Dear, I am Gabriel Wechta.</h2>
+        <a href="#" class="btn">About Me</a>
+    </section>
+    <img src="resources/my_photo.jpeg" class="my_photo" alt="Here should be my photo">
+</section>
+<section class="about">
+    <nav class="heading">
+        <h2>About Me</h2>
+    </nav>
+    <nav class="halloween">
+        <h4>Birth</h4>
+        <p>I was born on Halloween eve in 1999. After that event I am curiously happy when spooky staff happen.
+            Furthermore, as everybody born around that time in Poland, I am used to getting presents around first of
+            November,
+            in Poland first of November is holiday, during which everybody gathers to go visit family graves.
+            <br>So graveyards are also my happy places.
+            <br>Despite that my other happy places are Hyrule, Lordran, Arkham, Northern Kingdoms and Twin Peaks.</p>
+    </nav>
+</section>
+
+<nav class="parallax_twin"></nav>
+
+<section class="about">
+    <nav class="games">
+        <h4>Games</h4>
+        <p>I know it may be hard to believe, especially because I am an IT engineer, but I love video games. And by love
+            I
+            mean absolute fascination and deep trust. It really amazes me how they are written, deigned and programmed.
+            It is important to notice that video games are subset of games, overall. I really like games like chess and
+            role playing games - old, board kind. When I have to much time in my bath I think about how
+            really impressing and how absurd is idea of humankind spending time on <i>playing</i>. I am always
+            amazed how "bread and
+            circuses" turned into "bread and games", <i>homo ludens</i> I suppose. </p>
+    </nav>
+</section>
+
+<nav class="parallax_games"></nav>
+
+<section class="about">
+    <nav class="movies">
+        <h4>Visual Art</h4>
+        <p>My greatest internet discovery where youtube videos about movies, some may call them - video essays.
+            Since I have seen video about Quentin Tarantino's techniques to enhance story by camera movement, I
+            accidentally found my biggest fascination. Slippery slope after that, when movie is getting "meta" I am
+            getting "in love". <br> Next great moment I can point in my movie experience is watching <i>Synecdoche, New
+                York</i>. Wow.</p> Also David Lynch is my hero.
+    </nav>
+</section>
+<nav class="parallax_movies"></nav>
+<script type="text/javascript">
+    window.addEventListener("scroll", function () {
+        let header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+    });
+</script>
+<div class="footer-basic">
+    <footer>
+        <p class="copyright">Gabriel Wechta <br>mail: wechtagabriel@gmail.com </p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://github.com/GabrielWechta">GitHub</a></li>
+            <li class="list-inline-item"><a href="https://www.chess.com/member/7wodapokisielu">Chess</a></li>
+            <li class="list-inline-item"><a href="https://www.youtube.com/channel/UC3ZRWCNsn9DK6MPj4ER_B4Q">YouTube</a></li>
+        </ul>
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+V "GNAT Lib v2020"
+M P W=b
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_IO
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U main%b		main.adb		fdb75aea NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W linear_search%s	linear_search.adb	linear_search.ali
+Z system.img_int%s	s-imgint.adb		s-imgint.ali
+
+D ada.ads		20200819050642 76789da1 ada%s
+D a-except.ads		20200819050642 a7106115 ada.exceptions%s
+D a-ioexce.ads		20200819050642 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20200819050642 119b8fb3 ada.streams%s
+D a-tags.ads		20200819050643 edddc8f0 ada.tags%s
+D a-textio.ads		20200819050643 aef4d56d ada.text_io%s
+D a-unccon.ads		20200819050643 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20200819050644 5ab55268 interfaces%s
+D i-cstrea.ads		20200819050644 e53d8b8e interfaces.c_streams%s
+D linear_search.ads	20210304160228 343439f8 linear_search%s
+D main.adb		20210304160653 6777b67f main%b
+D system.ads		20200819050647 4635ec04 system%s
+D s-crtl.ads		20200819050645 0ebbdb71 system.crtl%s
+D s-exctab.ads		20200819050645 54135002 system.exception_table%s
+D s-ficobl.ads		20200819050645 078245e4 system.file_control_block%s
+D s-imgint.ads		20200819050645 02dbe0c2 system.img_int%s
+D s-parame.ads		20200819050646 4752c4cb system.parameters%s
+D s-secsta.ads		20200819050646 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20200819050646 a7318a92 system.soft_links%s
+D s-stache.ads		20200819050646 a37c21ec system.stack_checking%s
+D s-stalib.ads		20200819050646 6b7a13f2 system.standard_library%s
+D s-stoele.ads		20200819050646 2dc34a04 system.storage_elements%s
+D s-traent.ads		20200819050646 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20200819050646 5ecf7212 system.unsigned_types%s
+D s-wchcon.ads		20200819050646 1b7d22d2 system.wch_con%s
+G a e
+G c Z b b [main standard 4 11 none]
+G r c none [main standard 4 11 none] [search linear_search 9 13 none]
+X 1 ada.ads
+16K9*Ada 20e8 11|2r6 2r25
+X 6 a-textio.ads
+57K13*Text_IO 727e16 11|2w10 2r29
+508U14*Put_Line 11|10s4 12s4 14s4 16s4
+X 10 linear_search.ads
+1K9*Linear_Search 13e18 11|1w6 1r25
+4I9*T<short_short_integer> 11|7r10 10r14 12r14 14r14 16r14
+7A9*Ar(integer)<4I9> 11|5r19 6r19
+9V13*Search{4I9} 11|9s11 11s11 13s11 15s11
+X 11 main.adb
+4U11*Main 4b11 20l5 20t9
+5a4 A{10|7A9} 9r19 13r19
+6a4 B{10|7A9} 11r19 15r19
+7i4 Res{10|4I9} 9m4 10r22 11m4 12r22 13m4 14r22 15m4 16r22
+

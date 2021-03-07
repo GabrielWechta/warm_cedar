@@ -1,0 +1,40 @@
+V "GNAT Lib v2020"
+A -x
+A ada
+A -gnatA
+A -gnatc
+P GP FX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+
+U linear_search%b	linear_search.adb	8e19b1ff OO PK
+
+U linear_search%s	linear_search.ads	343439f8 OO PK
+
+D linear_search.ads	20210304160228 343439f8 linear_search%s
+D linear_search.adb	20210304160254 ba2d8807 linear_search%b
+D system.ads		20200819050647 4635ec04 system%s
+G a Z
+X 1 linear_search.ads
+1K9*Linear_Search 13l5 13e18 2|1b14 27l5 27t18
+4I9*T<short_short_integer> 5r17 9r49 2|5r49
+5I12*U{4I9} 7r22 2|6r15 7r15
+7A9*Ar(integer)<4I9> 9r25 2|5r25 9r16 10r16
+9V13*Search{4I9} 9>21 9>29 10r18 11r25 2|5b13 25l8 25t14
+9a21 A{7A9} 10r35 11r22 2|5b21 14r30 14r54 16r13
+9i29 I{integer} 11r42 2|5b29 14r67 16r25
+X 2 linear_search.adb
+6i7 Point{1|5I12} 9m7 12r13 14r41 16r16 17r20 19m13 19r22
+7i7 Right{1|5I12} 10m7 12r21
+14i21 Index<short_short_integer> 14r57
+
+QQ SPARKVERSION SPARK Community 2020 (20200818)
+GG EK_DIRECT_CALLS linear_search__search 0
+GG EK_GLOBALS linear_search__search local FALSE E_FUNCTION FALSE ORIGIN_FLOW 1 linear_search proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 0 FALSE TRUE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS linear_search 0
+GG EK_GLOBALS linear_search local FALSE E_PACKAGE TRUE ORIGIN_FLOW 0 proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 initializes 0 calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_FLOW_SCOPE linear_search TRUE FALSE FALSE FALSE FALSE __standard
+GG EK_FLOW_SCOPE linear_search__search FALSE FALSE FALSE FALSE TRUE linear_search VISIBLE_PART
+GG EK_END_MARKER

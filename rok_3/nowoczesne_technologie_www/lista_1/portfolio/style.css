@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cabin', sans-serif;
+}
+
+img {
+    border-radius: 100px;
+    max-width: 100%;
+    height: auto;
+    margin-right: 30vh;
+}
+
+section {
+    padding: 50px;
+}
+
+.banner {
+    position: relative;
+    min-height: 100vh;
+    background-image: url("resources/wheel.jpg");
+
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner h2 {
+    font-size: 3em;
+    color: lightsalmon;
+    line-height: 1.5em;
+}
+
+.btn {
+    position: relative;
+    background: lightsalmon;
+    display: inline-block;
+    color: #fff;
+    margin-top: 20px;
+    padding: 10px 30px;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.about {
+    font-size: 35px;
+    background-color: azure;
+}
+
+.heading {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+
+}
+
+.parallax_twin {
+    background-image: url("resources/77095b31d0597a1c4dd75bd96391aba4.jpg");
+
+    min-height: 60vh;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+
+    padding: 40px;
+}
+
+.parallax_games {
+    background-image: url("resources/5fc8f01b15e9f961bf0af92a.jpg");
+
+    min-height: 60vh;
+
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+
+    padding: 40px;
+}
+
+.parallax_movies {
+    background-image: url("resources/Amelie-692072426-large.jpg");
+
+    min-height: 60vh;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+
+    padding: 40px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: 0.7s;
+}
+
+
+header .logo {
+    color: azure;
+    font-size: 35px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+}
+
+header ul li {
+    position: relative;
+    list-style: none;
+}
+
+header ul li a {
+    position: relative;
+    display: inline-block;
+    margin: 0 15px;
+    color: azure;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+header ul li a:hover {
+    opacity: 0.9;
+}
+
+/* State sticky */
+
+header.sticky {
+    background: azure;
+    padding: 20px 100px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+header.sticky .logo {
+    color: #000;
+}
+
+header.sticky ul li a {
+    color: #000;
+}
+
+header.sticky ul li a:hover {
+    opacity: 0.7;
+}
+
+footer-basic {
+    padding: 40px 40px;
+    background-color: #ffffff;
+    color: #4b4c4d;
+}
+
+.footer-basic ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.footer-basic li {
+    padding: 5px 15px;
+
+}
+
+.footer-basic ul a {
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.footer-basic ul a:hover {
+    opacity: 1;
+}
+
+.footer-basic .social {
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.footer-basic .social > a {
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    margin: 0 8px;
+    color: inherit;
+    opacity: 0.75;
+}
+
+.footer-basic .social > a:hover {
+    opacity: 0.9;
+}
+
+.footer-basic .copyright {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: dimgray;
+    margin-bottom: 0;
+}
+
+.programing {
+    font-size: 35px;
+    background-color: #242423;
+}
+
+.programing h4{
+    margin-top: 7vh;
+    font-size: 35px;
+    color: #cccccc;
+}
+.programing p{
+    font-size: 35px;
+    color: #cccccc;
+}

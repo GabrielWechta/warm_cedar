@@ -1,0 +1,190 @@
+'2021-03-04T16:29:45.265257':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_0/obj/gnatprove
+  label: Examine All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: analysis of data and information flow ...
+
+    warning: no bodies have been analyzed by GNATprove
+
+    enable analysis of a non-generic body using SPARK_Mode
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-04T16:29:45.265257'
+'2021-03-04T16:29:59.259133':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_0/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    warning: no bodies have been analyzed by GNATprove
+
+    enable analysis of a non-generic body using SPARK_Mode
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-04T16:29:59.259133'
+'2021-03-04T16:34:23.621651':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_0/obj/gnatprove
+  label: Basic Prove Line
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    linear_search.adb:5:13: not fully conformant with declaration at linear_search.ads:9
+
+    linear_search.adb:5:13: name "A" does not match
+
+    linear_search.ads:11:22: "A" is undefined (more references follow)
+
+    linear_search.ads:11:42: "I" is undefined (more references follow)
+
+    gnatprove: error during generation of Global contracts
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-04T16:34:23.621651'
+'2021-03-04T16:35:51.178429':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_0/obj/gnatprove
+  label: Basic Prove Line
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    linear_search.ads:10:35: "My_Array" is undefined (more references follow)
+
+    gnatprove: error during generation of Global contracts
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-04T16:35:51.178429'
+'2021-03-04T16:36:06.939268':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_0/obj/gnatprove
+  label: Basic Prove Line
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_0/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-04T16:36:06.939268'
+'2021-03-04T16:36:36.864703':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_0/obj/gnatprove
+  label: Basic Prove Line
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_0/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-04T16:36:36.864703'
+'2021-03-04T16:49:47.552158':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_0/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    linear_search.ads:12:49: medium: postcondition might fail, cannot prove A (Index)
+    /= I (e.g. when A = (9 => 1, others => 0) and I = 0 and Index = 10 and Search''Result
+    = 0)[#0]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_0/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-04T16:49:47.552158'
+'2021-03-04T16:56:37.558633':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_0/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    linear_search.ads:12:49: medium: postcondition might fail, cannot prove A (Index)
+    /= I (e.g. when A = (9 => 1, others => 0) and I = 0 and Index = 10 and Search''Result
+    = 0)[#0]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_0/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-04T16:56:37.558633'
+'2021-03-04T16:57:15.199857':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_0/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    linear_search.adb:19:28: medium: range check might fail (e.g. when Point = 10)[#0]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_0/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-04T16:57:15.199857'
+'2021-03-04T17:02:34.960587':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_0/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    linear_search.adb:19:28: medium: range check might fail (e.g. when Point = 10)[#0]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_0/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-04T17:02:34.960587'
+'2021-03-04T17:03:02.508215':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_0/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_0/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-04T17:03:02.508215'
+'2021-03-04T17:09:13.812968':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_0/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_0/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-04T17:09:13.812968'

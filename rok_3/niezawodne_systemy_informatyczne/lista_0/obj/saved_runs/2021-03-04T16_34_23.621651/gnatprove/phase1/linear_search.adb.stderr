@@ -1,0 +1,4 @@
+linear_search.adb:5:13: not fully conformant with declaration at linear_search.ads:9
+linear_search.adb:5:13: name "A" does not match
+linear_search.ads:11:22: "A" is undefined (more references follow)
+linear_search.ads:11:42: "I" is undefined (more references follow)
