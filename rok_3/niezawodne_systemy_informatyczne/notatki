@@ -1,0 +1,7 @@
+zadanie 2
+najlepiej, tak liczyć wartosc wielomianu zeby Z i Y liczone w kolejncyh iteracjach były w relacji, czyli odpwiedni niezmiennik.
+Po wyjsciu assert Z = Y.
+czyli raz wyliczyc z definicji i raz ze schematu hornera.
+Zmienna Z "with ghost", wtedy nie jest kompilowana kiedy nie jest w trybie dowodzenia.
+
+odpuścić 2 punkty z tego zadania.

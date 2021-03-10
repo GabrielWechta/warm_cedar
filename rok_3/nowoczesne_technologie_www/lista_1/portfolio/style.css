@@ -64,14 +64,22 @@ section {
     background-image: url("resources/77095b31d0597a1c4dd75bd96391aba4.jpg");
 
     min-height: 60vh;
+    max-width: 100%;
 
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
     opacity: 0.8;
 
     padding: 40px;
+}
+
+@media only screen and (max-device-width: 1366px) {
+    .parallax_twin {
+        background-attachment: scroll;
+    }
 }
 
 .parallax_games {
@@ -237,12 +245,13 @@ footer-basic {
     background-color: #242423;
 }
 
-.programing h4{
+.programing h4 {
     margin-top: 7vh;
     font-size: 35px;
     color: #cccccc;
 }
-.programing p{
+
+.programing p {
     font-size: 35px;
     color: #cccccc;
 }
