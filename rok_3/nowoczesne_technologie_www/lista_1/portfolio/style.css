@@ -7,21 +7,15 @@
     font-family: 'Cabin', sans-serif;
 }
 
-img {
-    border-radius: 100px;
-    max-width: 100%;
-    height: auto;
-    margin-right: 30vh;
-}
-
 section {
     padding: 50px;
 }
 
 .banner {
     position: relative;
+    /*min-height: 140vh; */
     min-height: 100vh;
-    background-image: url("resources/wheel.jpg");
+    background-image: url("resources/gabi_2.JPG");
 
     background-size: cover;
     display: flex;
@@ -33,6 +27,7 @@ section {
     font-size: 3em;
     color: lightsalmon;
     line-height: 1.5em;
+    text-shadow: 0 5px 20px rgba(0, 0, 0, 1);
 }
 
 .btn {
@@ -53,63 +48,21 @@ section {
     background-color: azure;
 }
 
-.heading {
+.about hr {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: 12px;
+    border: 0;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.about h2 {
     width: 100%;
     text-align: center;
     margin-bottom: 30px;
 
 }
 
-.parallax_twin {
-    background-image: url("resources/77095b31d0597a1c4dd75bd96391aba4.jpg");
-
-    min-height: 60vh;
-    max-width: 100%;
-
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    opacity: 0.8;
-
-    padding: 40px;
-}
-
-@media only screen and (max-device-width: 1366px) {
-    .parallax_twin {
-        background-attachment: scroll;
-    }
-}
-
-.parallax_games {
-    background-image: url("resources/5fc8f01b15e9f961bf0af92a.jpg");
-
-    min-height: 60vh;
-
-
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0.8;
-
-    padding: 40px;
-}
-
-.parallax_movies {
-    background-image: url("resources/Amelie-692072426-large.jpg");
-
-    min-height: 60vh;
-
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0.8;
-
-    padding: 40px;
-}
 
 header {
     position: fixed;
@@ -251,7 +204,260 @@ footer-basic {
     color: #cccccc;
 }
 
+.programing img {
+    margin-top: 50px;
+    max-width: 100%;
+    max-height: 100%;
+    opacity: 0.8;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 1);
+    transition: transform 1s; /* Animation */
+}
+
+.programing img:hover {
+    transform: scale(1.015);
+}
+
 .programing p {
     font-size: 35px;
     color: #cccccc;
+}
+
+.programing a {
+    color: lightsalmon;
+}
+
+.color-with-marker {
+    list-style-position: inside;
+}
+
+.color-with-marker li {
+    color: #cccccc;
+    font-family: 'Cabin', sans-serif;
+    opacity: 0.6;
+}
+
+.column-list {
+    color: #cccccc;
+    font-family: 'Cabin', sans-serif;
+    opacity: 0.6;
+    column-count: 2;
+    list-style-type: none;
+}
+
+.parallax_gabi {
+    background-image: url("resources/gabi.JPG");
+
+    min-height: 80vh;
+    max-width: 100%;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    opacity: 0.8;
+
+    padding: 40px;
+}
+
+
+.parallax_chess {
+    background-image: url("resources/5fc8f01b15e9f961bf0af92a.jpg");
+
+    min-height: 60vh;
+
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+
+    padding: 40px;
+}
+
+.parallax_visual_art {
+    background-image: url("resources/street_art.JPG");
+
+    min-height: 60vh;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+
+    padding: 40px;
+}
+
+.parallax_movies {
+    background-image: url("resources/tea.JPG");
+
+    min-height: 60vh;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+
+    padding-top: 40px;
+}
+
+.parallax_photography {
+    background-image: url("resources/fire.JPG");
+
+    min-height: 90vh;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+
+    padding-top: 40px;
+}
+
+.parallax_photography_2 {
+    background-image: url("resources/banana.JPG");
+
+    min-height: 90vh;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+
+    padding-top: 40px;
+}
+
+.parallax_photography_3 {
+    background-image: url("resources/wojtek_2.JPG");
+
+    min-height: 90vh;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+
+    padding-top: 40px;
+}
+
+.parallax_photography_4 {
+    background-image: url("resources/time.JPG");
+
+    min-height: 90vh;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+
+    padding-top: 40px;
+}
+
+.parallax_photography_5 {
+    background-image: url("resources/bomb.JPG");
+
+    min-height: 90vh;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+
+    padding-top: 40px;
+}
+
+.parallax_photography_6 {
+    background-image: url("resources/waterfall.JPG");
+
+    min-height: 90vh;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+
+    padding-top: 40px;
+}
+
+.parallax_photography_7 {
+    background-image: url("resources/alaram.JPG");
+
+    min-height: 90vh;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+
+    padding-top: 40px;
+}
+
+.parallax_photography_8 {
+    background-image: url("resources/shoes.JPG");
+
+    min-height: 90vh;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+
+    padding-top: 40px;
+}
+
+@media only screen and (max-device-width: 1366px) {
+    .parallax_gabi {
+        background-attachment: scroll;
+    }
+
+    .parallax_chess {
+        background-attachment: scroll;
+    }
+
+    .parallax_visual_art {
+        background-attachment: scroll;
+    }
+
+    .parallax_photography {
+        background-attachment: scroll;
+    }
+
+    .parallax_photography_2 {
+        background-attachment: scroll;
+    }
+
+    .parallax_photography_3 {
+        background-attachment: scroll;
+    }
+
+    .parallax_photography_4 {
+        background-attachment: scroll;
+    }
+
+    .parallax_photography_5 {
+        background-attachment: scroll;
+    }
+
+    .parallax_photography_6 {
+        background-attachment: scroll;
+    }
+
+    .parallax_photography_7 {
+        background-attachment: scroll;
+    }
+
+    .parallax_photography_8 {
+        background-attachment: scroll;
+    }
 }

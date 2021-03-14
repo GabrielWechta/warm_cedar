@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Gabriel Wechta Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <a href="#" class="logo">Gabriel Wechta</a>
+    <div class="toggle"></div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="programing.html">Programing</a></li>
+        <li><a href="bragging.html">Bragging</a></li>
+        <li><a href="interests.html">Interests</a></li>
+    </ul>
+</header>
+<script type="text/javascript">
+    window.addEventListener("scroll", function () {
+        let header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+    });
+</script>
+<div class="footer-basic">
+    <footer>
+        <p class="copyright">Gabriel Wechta <br>mail: wechtagabriel@gmail.com </p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://github.com/GabrielWechta">GitHub</a></li>
+            <li class="list-inline-item"><a href="https://www.chess.com/member/7wodapokisielu">Chess</a></li>
+            <li class="list-inline-item"><a href="https://www.youtube.com/channel/UC3ZRWCNsn9DK6MPj4ER_B4Q">YouTube</a>
+            </li>
+        </ul>
+    </footer>
+</div>
+</body>
+</html>
