@@ -1,0 +1,7 @@
+v 4
+file . "zadanie_1.vhdl" "01f04299e647407e72c736277fd299302792deb8" "20210315084429.521":
+  entity hello_world at 2( 24) + 0 on 27;
+  architecture behaviour of hello_world at 8( 173) + 0 on 28;
+file . "zadanie_2.vhdl" "895bca06296af197b75738c4307964512e28aa73" "20210315091024.512":
+  entity welcome_world at 1( 0) + 0 on 35;
+  architecture behaviour of welcome_world at 6( 65) + 0 on 36;
