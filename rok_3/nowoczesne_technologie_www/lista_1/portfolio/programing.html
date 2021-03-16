@@ -8,9 +8,9 @@
 </head>
 <body>
 <header>
-    <a href="#" class="logo">Gabriel Wechta</a>
-    <div class="toggle"></div>
-    <ul>
+    <a href="#" class="logo">GW</a>
+    <div class="toggle" onclick="toggleMenu();"></div>
+    <ul class="menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="programing.html">Programing</a></li>
         <li><a href="bragging.html">Bragging</a></li>
@@ -20,16 +20,17 @@
 
 <section class="programing">
     <h4>IT path</h4>
-    <p>As most of Polish kids my programing education began with learning C++, around age of 13. Now it seems absurd how
+    <p>As most kids my programing education began with learning C++, around the age of 13. Now it seems absurd how
         much you have to
-        know before you can understand you first hello world in that language. Despite great effort to learn it pretty
-        well, before high school, my true education began in 3rd great of high school, during preparation for matura
+        know before you can understand your first hello world in that language. Despite great effort to learn it pretty
+        well, as soon as possible, my true education began in 3rd great of high school, during preparation for the matura
         exam.<br>
-        Bad time it was. A lot of duties, never ending exams and test, tons of work met with no reward. But in that
-        battlefield mess, my love to programing started to blossom. <br>
-        After high school, during studies, my
-        expectations were happily met by lectures approach and professionalism. I learned plenty languages and
-        frameworks (see below). But what is more important I understood deep programing ideas and rules.</p>
+        The bad time it was. A lot of duties, never-ending exams, and tests, tons of work met with no reward. But in
+        that battlefield mess, my love for programing started to blossom. <br>
+        After high school, during my studies, my expectations were happily met by lectures approach and professionalism.
+        I learned plenty of languages and frameworks (see below). But what is more important I understood deep
+        programming ideas and rules.</p>
+
 
     <img src="resources/fireworks.JPG" alt="fireworks">
 
@@ -58,18 +59,17 @@
         <li>♙ Ada</li>
     </ul>
 
-    <h4>My philosophical rubbish about IT</h4>
-    <p>At first it may sound like some too romantic vision of reality, but in my opinion it's very unnoticed marvel.
-        With every hour spend on learning math and programing (especially logic), I've started to notice how everything
-        becomes clearer and more easily understandable. It's impossible to grasp for people who didn't spend hundred of
+    <h4>My philosophical rubbish about math</h4>
+    <p>At first it may sound like some too romantic vision of reality, but in my opinion, it's a very unnoticed marvel.
+        With every hour spent learning math and programming (especially logic), I've started to notice how everything
+        becomes clearer and more easily understandable. It's impossible to grasp for people who didn't spend hundreds of
         hours thinking about really complex problems and it's hard to notice for people who did, but using math
-        analogies in life boost one's wisdom significantly. Since I began studies, I've started to notice how many
+        analogies in life boost one's senses significantly. Since I began studies, I've started to notice how many
         folks,
-        make logical mistakes and even completely empty logical holes in there statements. At first I was amazed by how
-        many mathematical reasoning came to be in everyday life, now it annoys me because group of people I was able to
-        listen and to agree with, has decreased as good hip-hop artists after 2015. At the end politicians are
-        unbearable same as most nutritionists and "scientist" who do not understand that experiment's result is not
-        prove. </p>
+        make logical mistakes and even empty logical holes in their statements. I was always amazed by how much
+        mathematical reasoning came to be in everyday life. In the end, politicians are unbearable same as most
+        nutritionists and "scientists" who do not understand that experiment's result is not a prove. </p>
+
 
     <img src="resources/mountain.JPG" alt="mountain">
 
@@ -79,7 +79,7 @@
             Poland</a>. I worked there on <b>Java / Spring Boot</b> web app providing quick and easy access for HR to
             see in which tax category workers' job-time should be placed. (summer, 2019)
         </li>
-        <li>I am giving math private lessons to high school students, especially preparing for matura exam.
+        <li>I gave math private lessons to a high school student, especially preparing for the matura exam.
             (Continues)
         </li>
         <li>I was working in pastry factory in Darlington, England as production line worker, with native english
@@ -88,6 +88,7 @@
         <li>I was working in small, local shop in Poland as salesman. (summer, 2017)</li>
     </ul>
 
+
 </section>
 
 <script type="text/javascript">
@@ -95,7 +96,24 @@
         let header = document.querySelector("header");
         header.classList.toggle("sticky", window.scrollY > 0);
     });
-</script>
 
+    function toggleMenu() {
+        let menuToggle = document.querySelector('.toggle');
+        let menu = document.querySelector('.menu');
+        menuToggle.classList.toggle('active');
+        menu.classList.toggle('active');
+    }
+</script>
+<div class="footer-basic">
+    <footer>
+        <p class="copyright">Gabriel Wechta © 2021 <br>mail: wechtagabriel@gmail.com </p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://github.com/GabrielWechta">GitHub</a></li>
+            <li class="list-inline-item"><a href="https://www.chess.com/member/7wodapokisielu">Chess</a></li>
+            <li class="list-inline-item"><a href="https://www.youtube.com/channel/UC3ZRWCNsn9DK6MPj4ER_B4Q">YouTube</a>
+            </li>
+        </ul>
+    </footer>
+</div>
 </body>
 </html>

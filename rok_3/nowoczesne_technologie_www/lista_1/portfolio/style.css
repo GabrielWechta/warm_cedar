@@ -11,6 +11,10 @@ section {
     padding: 50px;
 }
 
+main {
+    padding: 50px;
+}
+
 .banner {
     position: relative;
     /*min-height: 140vh; */
@@ -41,26 +45,6 @@ section {
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 3px;
-}
-
-.about {
-    font-size: 35px;
-    background-color: azure;
-}
-
-.about hr {
-    margin-top: 15px;
-    margin-bottom: 15px;
-    height: 12px;
-    border: 0;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-}
-
-.about h2 {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 30px;
-
 }
 
 
@@ -131,6 +115,61 @@ header.sticky ul li a:hover {
     opacity: 0.7;
 }
 
+@media (max-device-width: 991px) {
+    header, header.sticky {
+        padding: 20px;
+        z-index: 1000;
+    }
+
+    .menu {
+        position: fixed;
+        top: 75px;
+        left: -100%;
+        display: block;
+        padding: 20px 50px;
+        text-align: center;
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        transition: 0.5s;
+        z-index: 999;
+        border-top: 3px solid rgba(0, 0, 0, 0.2);
+    }
+
+    .menu.active {
+        left: 0;
+    }
+
+    header ul li a {
+        color: #111;
+        font-size: 30px;
+        margin: 10px;
+    }
+
+    .toggle {
+        width: 40px;
+        height: 40px;
+        background: url("resources/menu.png") no-repeat center;
+        background-size: 35px;
+        cursor: pointer;
+    }
+
+    .toggle.active {
+        background: url("resources/close.png") no-repeat center;
+        background-size: 30px;
+        cursor: pointer;
+    }
+
+    header.sticky .toggle {
+        filter: invert(1)
+    }
+
+    header.sticky .toggle.active {
+        filter: invert(1)
+    }
+}
+
+
 footer-basic {
     padding: 40px 40px;
     background-color: #ffffff;
@@ -191,6 +230,26 @@ footer-basic {
     letter-spacing: 2px;
     color: dimgray;
     margin-bottom: 0;
+}
+
+.about {
+    font-size: 35px;
+    background-color: azure;
+}
+
+.about hr {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: 12px;
+    border: 0;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.about h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+
 }
 
 .programing {
@@ -459,5 +518,90 @@ footer-basic {
 
     .parallax_photography_8 {
         background-attachment: scroll;
+    }
+}
+
+.bragging {
+    font-size: 35px;
+    background-color: #242423;
+}
+
+.bragging h4 {
+    margin-top: 7vh;
+    font-size: 35px;
+    color: #cccccc;
+}
+
+.bragging p {
+    font-size: 35px;
+    color: #cccccc;
+}
+
+.bragging hr{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    height: 12px;
+    border: 0;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.bragging section {
+    padding: 0;
+    display: flex;
+}
+
+.bragging img {
+    width: 100%;
+    height: 100%;
+    align-self: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+
+}
+
+.bragging section article{
+    flex: 2;
+}
+.bragging .container {
+    flex: 1;
+    position: relative;
+    width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.bragging .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .8s ease;
+    background-color: #fff;
+}
+
+.bragging .container:hover .overlay {
+    opacity: 0.7;
+}
+
+.bragging .text {
+    color: black;
+    font-size: 2vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+@media only screen and (max-device-width: 1366px) {
+    .bragging .container {
+        width: 100%;
+        height: 100%;
+        align-self: center;
     }
 }

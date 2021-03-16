@@ -9,8 +9,8 @@
 <body>
 <header>
     <a href="#" class="logo">GW</a>
-    <div class="toggle"></div>
-    <ul>
+    <div class="toggle" onclick="toggleMenu();"></div>
+    <ul class="menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="programing.html">Programing</a></li>
         <li><a href="bragging.html">Bragging</a></li>
@@ -27,35 +27,38 @@
     <h2>About Me</h2>
 
     <h4>Birth</h4>
-    <p>I was born on Halloween eve in 1999 in Zielona Góra, Poland. After that, I am curiously happy when spooky
-        staff happen.
-        Furthermore, as everybody born around that time in Poland, I am used to getting presents around first of
+    <p>I was born on Halloween eve in 1999 in Zielona Góra, Poland. After that, I am curiously happy when spooky stuff
+        happens.
+        Furthermore, as everybody born around that time in Poland, I am used to getting presents around the first of
         November,
-        in Poland first of November is holiday, during which everybody gathers to go visit family graves.
-        <br>So graveyards are also my happy places.
+        in Poland, the first of November is a holiday, during which everybody gathers to go visit family graves.
+        <br>So graveyards are my happy places.
     </p>
+
 
     <hr>
 
     <h4>Education</h4>
-    <p>For the first 6 years of my life, I lived in Zielona Góra, then we moved to Jelenia Góra. Despite
-        similarity in names, places are pretty far from each other.
-        When I graduated Primary School, we moved again to Wrocław, which I am eternaly gratefoull for. There I
-        began junior high school, I was in architecture oriented class with extended math and art. Both bizzare and
+    <p>For the first 6 years of my life, I lived in Zielona Góra, then we moved to Jelenia Góra. Despite the similarity
+        in names, places are pretty far from each other.
+        When I graduated Primary School, we moved again to Wrocław, which I am eternally grateful for. There I
+        began junior high school, I was in an architecture-oriented class with extended math and art. Both bizarre and
         wonderful.
-        When it comes to high school I went to Akademickie Liceum Ogólnokształcące Politechniki Wrocławskiej, which
-        is school directly under/conected to Wrocław University of Science and Technology.
-        Great time, as a high school student I had plenty opurunites to use University assets, both in form of
-        equipment and lecturers. Some of my teachers were high school teacher, some were academic, so while solid
-        fundaments were made for matura exam, I also get pretty good preperation for completly diffrent approach and
-        style of studing on university. The school understood this potential, and exerted it. For example my math
-        class was being taught by two teachers, one was prepering us for standard exam evaluation, when the other's
-        classes had more lecture flow.
-        <br>Despite, what you might expect about polytechnic high school, surprisingly afford was put into teaching
-        us decent humanities. At first with some difficultie, after with tremendous respect my science orietned
-        brain started to apprciate art, literature and philosophy.
-        <br>Now I am studying on Department of Fundamentals of Computer Science, on Wrocław University of Science and
-        Technology (in this case "fundamentals" is not synonym of "basics"). </p>
+        When it comes to high school I went to Akademickie Liceum Ogólnokształcące Politechniki Wrocławskiej, which is a
+        school directly under/connected to Wrocław University of Science and Technology.
+        Great time, as a high school student I had plenty of opportunities to use University assets, both in form of
+        equipment and lecturers. Some of my teachers were high school teachers, some were academic, so while solid
+        fundaments were made for the matura exam, I also get pretty good preparation for a completely different approach
+        and style of studying at university. The school understood this potential and exerted it. For example, my math
+        class was being taught by two teachers, one was preparing us for standard exam evaluation when the other's
+        classes had more kind of "lecture" flow.
+        <br>Despite, what you might expect about polytechnic high school, surprisingly afford was put into teaching us
+        decent humanities. At first with some difficulties, after with tremendous respect, my science-oriented
+        brain started to appreciate art, literature, and philosophy.
+        <br>Now I am studying at the Department of Fundamentals of Computer Science, at Wrocław University of Science
+        and
+        Technology (in this case "fundamentals" is not a synonym of "basics"). </p>
+
     <hr>
 </section>
 <script type="text/javascript">
@@ -63,6 +66,13 @@
         let header = document.querySelector("header");
         header.classList.toggle("sticky", window.scrollY > 0);
     });
+
+    function toggleMenu() {
+        let menuToggle = document.querySelector('.toggle');
+        let menu = document.querySelector('.menu');
+        menuToggle.classList.toggle('active');
+        menu.classList.toggle('active');
+    }
 </script>
 <div class="footer-basic">
     <footer>

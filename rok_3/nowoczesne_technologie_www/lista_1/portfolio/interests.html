@@ -8,9 +8,9 @@
 </head>
 <body>
 <header>
-    <a href="#" class="logo">Gabriel Wechta</a>
-    <div class="toggle"></div>
-    <ul>
+    <a href="#" class="logo">GW</a>
+    <div class="toggle" onclick="toggleMenu();"></div>
+    <ul class="menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="programing.html">Programing</a></li>
         <li><a href="bragging.html">Bragging</a></li>
@@ -24,32 +24,37 @@
     <h4>Games</h4>
     <p>I know it may be hard to believe, especially because I am an IT engineer, but I love video games. And by love
         I
-        mean absolute fascination and deep trust. It really amazes me how they are written, deigned and programmed.
-        It is important to notice that video games are subset of games, overall. I really like games like chess and
-        role playing games - old, board kind. When I have to much time in my bath I think about how
-        really impressing and how absurd is idea of humankind spending time on <i>playing</i>. I am always
-        amazed how "bread and
-        circuses" turned into "bread and games", <i>homo ludens</i> I suppose. </p>
+        mean absolute fascination and deep trust. It amazes me how they are written, designed, and programmed.
+        It is important to notice that video games are a subset of games, overall. I like games like chess and
+        role-playing
+        games - old, board kind. When I have too much time in my bath I think about how incredibly impressing and how
+        absurd
+        is the idea of humankind spending time on <i>playing</i>. I am always amazed how "bread and circuses" turned
+        into
+        "bread and games", <i>homo ludens</i> I suppose. </p>
 </section>
 
 <nav class="parallax_chess"></nav>
 
 <section class="about">
     <h4>Movies</h4>
-    <p>My greatest internet discovery where youtube videos about movies, some may call them - video essays.
-        Since I have seen video about Quentin Tarantino's techniques to enhance story by camera movement, I
+    <p>My greatest internet discovery were youtube videos about movies, some may call them - video essays.
+        Since I have seen a video about Quentin Tarantino's techniques to enhance the story by camera movement, I
         accidentally found my biggest fascination. Slippery slope after that. Now I cannot see a movie without analyzing
-        how director uses some small details to tell his story better.
+        how the director uses some small details to tell his story better.
         I don't understand why people usually say something like "That's a great movie, Brad Pitt was amazing.". This
         sentence may make an impression that Brad Pitt had some significant impact on the quality of the movie. No,
-        Mister, no, no, no. It's like saying that <i>The Night Watch</i> by Rembrandt van Rijn is great because second
-        guard on the left is amazing.
-        <br>The movie (and his greatness) is mostly director's merit. Movies should be primarily recognizable by
-        director, not actors. So how many directories can you mention? Despite hmm... Hitchcock?
-        <br>Well, I enjoy knowing them and I usually choose a movie to watch based on director. I really like and
+        Mister, no, no, no. It's like saying that <i>The Night Watch</i> by Rembrandt van Rijn is great because the
+        second guard on the left is amazing.
+        <br>With all love to Brad Pitt, a movie (and its greatness) is mostly the director's merit. In my opinion movies
+        should be
+        primarily recognizable by the
+        director, not actors. And it's very hurtful that many overlooks this fact. So how many directories can you
+        mention? Despite hmm... Hitchcock?
+        <br>Well, I enjoy knowing them and I usually choose a movie to watch based on the director. I really like and
         admire Wes Anderson, Guy Ritchie, Edgar Wright, Joon-ho Bong, Paul Thomas Anderson, David Fincher, Christopher
-        Nolan, Peter Jackson (old, of course), Quentin Tarantino, Casey Neistat, Hayao Miyazaki and all those that i
-        don't know yet but i will get to know.
+        Nolan, Peter Jackson (old, of course), Quentin Tarantino, Casey Neistat, Hayao Miyazaki, and all those that I
+        don't know yet but I will get to know.
         <br>Also <b>David Lynch</b> and <b>Charlie Kaufman</b> are my heroes.
 </section>
 
@@ -57,11 +62,10 @@
 
 <section class="about">
     <h4>Visual Art</h4>
-    <p>My greatest internet discovery where youtube videos about movies, some may call them - video essays.
-        Since I have seen video about Quentin Tarantino's techniques to enhance story by camera movement, I
-        accidentally found my biggest fascination. Slippery slope after that.
-        <br> I discovered that art can have many forms and I realised that to understand art one just have to became
-        sensitive and not judgemental (is it not, what everybody should be?). At some point I started to make my own,
+    <p>In high school I discovered that art can have many forms and I realized that to understand art one just have to
+        become
+        sensitive and not judgemental (is it not, what everybody should be?). At some point, I started to make my own
+        stuff,
         like this one underneath.
     </p>
 </section>
@@ -70,17 +74,18 @@
 
 <section class="about">
     <h4>Photography</h4>
-    <p>In 2018 during kayaking trip with friends I realised, that none of us was taking pictures. So many great memories
-        captured by wind of time and permanently lost. After returning to home I was wondering how to buy cheap camera
-        and start taking pictures. Than it dawned me: Analog cameras! Old therefore cheap (how fullish I was) and easy
-        to make (how incredibly fullish I was). First roll of my pictures were never to be induced due to absolute no
-        knowledge what those crazy buttons and valves are. But it didn't stop me. I learned and experimented. I
-        Understood
-        how difficult it was to take good photo before digital photography and making whole process automatic.
+    <p>In 2018 during a kayaking trip with friends I realized, that none of us was taking pictures. So many great
+        memories were captured by the wind of time and permanently lost. After returning home I was wondering how to buy
+        a cheap camera and start taking pictures. Then it dawned on me: Analog cameras! Old therefore cheap (how fullish
+        I was) and easy to make (how incredibly fullish I was). The first roll of my pictures was never to be induced
+        due to absolutely no knowledge of what those crazy buttons and valves are. But it didn't stop me. I learned and
+        experimented. I understood
+        how difficult it was to take a good photo before digital photography and making the whole process automatic.
         <br>Now I have
         4 analog cameras and I appreciate our hard love-hate relationship. All photos you will see underneath are
         analogs (most on the website are too).
     </p>
+
 </section>
 
 <nav class="parallax_photography"></nav>
@@ -98,6 +103,13 @@
         let header = document.querySelector("header");
         header.classList.toggle("sticky", window.scrollY > 0);
     });
+
+    function toggleMenu() {
+        let menuToggle = document.querySelector('.toggle');
+        let menu = document.querySelector('.menu');
+        menuToggle.classList.toggle('active');
+        menu.classList.toggle('active');
+    }
 </script>
 <div class="footer-basic">
     <footer>
