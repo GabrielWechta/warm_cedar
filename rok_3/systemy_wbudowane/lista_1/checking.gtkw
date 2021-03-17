@@ -1,0 +1,27 @@
+[*]
+[*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
+[*] Wed Mar 17 12:17:43 2021
+[*]
+[dumpfile] "/home/gabriel/Desktop/studia/rok_3/systemy_wbudowane/lista_1/zadanie_4.ghw"
+[dumpfile_mtime] "Wed Mar 17 12:11:06 2021"
+[dumpfile_size] 396
+[savefile] "/home/gabriel/Desktop/studia/rok_3/systemy_wbudowane/lista_1/checking.gtkw"
+[timestart] 0
+[size] 1864 1016
+[pos] -1 -1
+*-21.000000 7710000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.logical_layout_tb.
+[sst_width] 233
+[signals_width] 316
+[sst_expanded] 1
+[sst_vpaned_height] 288
+@28
+top.logical_layout_tb.a
+top.logical_layout_tb.b
+top.logical_layout_tb.c
+top.logical_layout_tb.x
+@29
+top.logical_layout_tb.y
+[pattern_trace] 1
+[pattern_trace] 0
