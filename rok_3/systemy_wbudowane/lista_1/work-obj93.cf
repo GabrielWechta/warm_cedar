@@ -8,15 +8,15 @@ file . "adder_tb.vhdl" "bafd63ac69c2fb003b29525888c3ee90b8a4f9e6" "2021031709572
 file . "heartbeat.vhdl" "c2da2485660adc16a15d57eac0bfbb4195aa8b0c" "20210317094254.684":
   entity heartbeat at 1( 0) + 0 on 37;
   architecture behaviour of heartbeat at 8( 110) + 0 on 38;
-file . "zadanie_2.vhdl" "895bca06296af197b75738c4307964512e28aa73" "20210315091024.512":
-  entity welcome_world at 1( 0) + 0 on 35;
-  architecture behaviour of welcome_world at 6( 65) + 0 on 36;
-file . "zadanie_1.vhdl" "01f04299e647407e72c736277fd299302792deb8" "20210315084429.521":
-  entity hello_world at 2( 24) + 0 on 27;
-  architecture behaviour of hello_world at 8( 173) + 0 on 28;
+file . "zadanie_2.vhdl" "6d91072d9c0ce8556ed886aa48e14d211ecb7a85" "20210318103844.668":
+  entity welcome_world at 1( 0) + 0 on 51;
+  architecture behaviour of welcome_world at 6( 65) + 0 on 52;
+file . "zadanie_1.vhdl" "01f04299e647407e72c736277fd299302792deb8" "20210318103744.871":
+  entity hello_world at 2( 24) + 0 on 47;
+  architecture behaviour of hello_world at 8( 173) + 0 on 48;
 file . "adder.vhdl" "1cda9eeff9094d20c47428cc5d0ce5de69e9524c" "20210317095700.580":
   entity adder at 1( 0) + 0 on 39;
   architecture rtl of adder at 7( 209) + 0 on 40;
-file . "zadanie_4.vhdl" "44b6aae997bdd95b5afaf8a42993fbfdd878d2e4" "20210317120709.595":
-  entity logical_layout at 1( 0) + 0 on 43;
-  architecture rtl of logical_layout at 7( 128) + 0 on 44;
+file . "zadanie_4.vhdl" "16c38f3d526356efb6c2982f33974aa069feff7b" "20210318104346.476":
+  entity logical_layout at 1( 0) + 0 on 53;
+  architecture rtl of logical_layout at 7( 128) + 0 on 54;

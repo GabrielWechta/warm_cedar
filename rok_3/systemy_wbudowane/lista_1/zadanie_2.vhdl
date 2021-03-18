@@ -8,6 +8,8 @@ begin
 	process
 		variable l : line;
 	begin
+	    	write (l, String'("Hello world!"));
+    		writeline (output, l);
 		readline(input, l);
 		writeline(output, l);
 		wait;
