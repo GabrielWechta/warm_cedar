@@ -6,6 +6,6 @@ end logical_layout;
 	
 architecture rtl of logical_layout is
 	begin
-	x <= (a or b) nor ( b nor c );
-	y <= ( b nor c ) and ( a xor c );
+	x <= not (a or b) nor not ( b nor c );
+	y <= not ( b nor c ) and not ( a xor c );
 end rtl;
