@@ -128,7 +128,13 @@ footer-basic {
     color: #4b4c4d;
 }
 
-.footer-basic ul {
+.footer-basic-black {
+    padding: 40px 40px;
+    background-color: #242423;
+    color: #929292;
+}
+
+.footer-basic ul, .footer-basic-black ul {
     padding: 0;
     list-style: none;
     text-align: center;
@@ -137,29 +143,29 @@ footer-basic {
     margin-bottom: 0;
 }
 
-.footer-basic li {
+.footer-basic li, .footer-basic-black li{
     padding: 5px 15px;
     text-align: inherit;
     text-justify: none;
 
 }
 
-.footer-basic ul a {
+.footer-basic ul a, .footer-basic-black ul a  {
     color: inherit;
     text-decoration: none;
     opacity: 0.8;
 }
 
-.footer-basic ul a:hover {
+.footer-basic ul a:hover, .footer-basic-black ul a:hover {
     opacity: 1;
 }
 
-.footer-basic .social {
+.footer-basic .social, .footer-basic-black .social {
     text-align: center;
     padding-bottom: 25px;
 }
 
-.footer-basic .social > a {
+.footer-basic .social > a, .footer-basic-black .social > a {
     font-size: 24px;
     width: 40px;
     height: 40px;
@@ -173,11 +179,11 @@ footer-basic {
     opacity: 0.75;
 }
 
-.footer-basic .social > a:hover {
+.footer-basic .social > a:hover, .footer-basic-black .social > a:hover {
     opacity: 0.9;
 }
 
-.footer-basic .copyright {
+.footer-basic .copyright, .footer-basic-black .copyright {
     margin-top: 15px;
     text-align: center;
     font-size: 18px;
@@ -275,7 +281,7 @@ footer-basic {
 
 
 .parallax_chess {
-    background-image: url("resources/5fc8f01b15e9f961bf0af92a.jpg");
+    background-image: url("resources/chess.png");
 
     min-height: 60vh;
 
