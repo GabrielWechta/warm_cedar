@@ -1,0 +1,1 @@
+smallest_factor.adb:8:36: medium: postcondition might fail, cannot prove N'Old rem j /= 0 (e.g. when J = 2 and N'Old = 6) [possible explanation: loop at line 13 should mention N in a loop invariant][#0]

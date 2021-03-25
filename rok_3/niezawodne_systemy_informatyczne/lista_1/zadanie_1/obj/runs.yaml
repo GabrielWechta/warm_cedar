@@ -1,0 +1,173 @@
+'2021-03-25T17:33:51.802039':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    smallest_factor.adb:1:48: medium: "Factor" might not be initialized in "Smallest_factor"[#0]
+
+    smallest_factor.adb:5:14: medium: "Factor" might not be initialized[#1]
+
+    smallest_factor.adb:8:36: medium: postcondition might fail, cannot prove N''Old
+    rem j /= 0 (e.g. when J = 3 and N''Old = 3)[#2]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-25T17:33:51.802039'
+'2021-03-25T17:37:08.619855':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    smallest_factor.adb:1:48: medium: "Factor" might not be initialized in "Smallest_factor"[#0]
+
+    smallest_factor.adb:5:14: medium: "Factor" might not be initialized[#1]
+
+    smallest_factor.adb:6:03: medium: postcondition might fail, cannot prove N''Old
+    / Factor = N (e.g. when Factor = 2 and N = 2 and N''Old = 2) [possible explanation:
+    loop at line 13 should mention Factor in a loop invariant][#2]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-25T17:37:08.619855'
+'2021-03-25T17:39:56.016036':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    smallest_factor.adb:16:25: missing ";"
+
+    gnatprove: error during generation of Global contracts
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-25T17:39:56.016036'
+'2021-03-25T17:40:13.583318':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    smallest_factor.adb:1:48: medium: "Factor" might not be initialized in "Smallest_factor"[#0]
+
+    smallest_factor.adb:5:14: medium: "Factor" might not be initialized[#1]
+
+    smallest_factor.adb:8:36: medium: postcondition might fail, cannot prove N''Old
+    rem j /= 0 (e.g. when J = 2 and N''Old = 4) [possible explanation: loop at line
+    13 should mention N in a loop invariant][#2]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-25T17:40:13.583318'
+'2021-03-25T17:48:56.984050':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    smallest_factor.adb:12:14: value not in range of type "Standard.Positive"
+
+    smallest_factor.adb:12:14: "Constraint_Error" would have been raised at run time
+
+    gnatprove: error during generation of Global contracts
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-25T17:48:56.984050'
+'2021-03-25T17:49:26.517136':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    smallest_factor.adb:8:36: medium: postcondition might fail, cannot prove N''Old
+    rem j /= 0 (e.g. when J = 2 and N''Old = 6) [possible explanation: loop at line
+    13 should mention N in a loop invariant][#0]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-25T17:49:26.517136'
+'2021-03-25T17:49:46.679221':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    smallest_factor.adb:8:36: medium: postcondition might fail, cannot prove N''Old
+    rem J /= 0 (e.g. when J = 2 and N''Old = 6) [possible explanation: loop at line
+    13 should mention N in a loop invariant][#0]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-25T17:49:46.679221'
+'2021-03-25T17:53:04.558692':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/obj/gnatprove
+  label: Basic Prove Line
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    smallest_factor.adb:14:61: attribute "Old" can only appear in postcondition
+
+    gnatprove: error during generation of Global contracts
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-25T17:53:04.558692'
+'2021-03-25T17:53:15.194987':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/obj/gnatprove
+  label: Basic Prove Line
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-25T17:53:15.194987'
+'2021-03-25T17:53:30.358155':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/obj/gnatprove
+  label: Basic Prove Line
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-25T17:53:30.358155'

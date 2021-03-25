@@ -1,0 +1,29 @@
+V "GNAT Lib v2020"
+A -x
+A ada
+A -gnatA
+A -gnatc
+P GP FX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+
+U smallest_factor%b	smallest_factor.adb	83d82c67 OO SU
+
+D smallest_factor.adb	20210325164914 83d82c67 smallest_factor%b
+D system.ads		20200819050647 4635ec04 system%s
+G a Z
+X 1 smallest_factor.adb
+1U11*Smallest_Factor 1b11 1=28 1<48 20l5 20t20
+1i28 N{positive} 4r12 6r4 6r21 7r4 8r36 13r37 14r10 16m10 16r15
+1i48 Factor{positive} 5r14 6r12 7r14 8r22 12m4 15m10 16r19
+8i12 J{integer} 8r46
+13i8 Index{integer} 14r16 15r20
+
+QQ SPARKVERSION SPARK Community 2020 (20200818)
+GG EK_DIRECT_CALLS smallest_factor 0
+GG EK_GLOBALS smallest_factor local FALSE E_PROCEDURE FALSE ORIGIN_FLOW 0 proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_FLOW_SCOPE smallest_factor FALSE FALSE FALSE FALSE FALSE __standard
+GG EK_END_MARKER

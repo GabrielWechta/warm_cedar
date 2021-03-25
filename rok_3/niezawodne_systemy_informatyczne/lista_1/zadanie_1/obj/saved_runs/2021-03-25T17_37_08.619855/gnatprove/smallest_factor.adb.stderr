@@ -1,0 +1,3 @@
+smallest_factor.adb:1:48: medium: "Factor" might not be initialized in "Smallest_factor"[#0]
+smallest_factor.adb:5:14: medium: "Factor" might not be initialized[#1]
+smallest_factor.adb:6:03: medium: postcondition might fail, cannot prove N'Old / Factor = N (e.g. when Factor = 2 and N = 2 and N'Old = 2) [possible explanation: loop at line 13 should mention Factor in a loop invariant][#2]

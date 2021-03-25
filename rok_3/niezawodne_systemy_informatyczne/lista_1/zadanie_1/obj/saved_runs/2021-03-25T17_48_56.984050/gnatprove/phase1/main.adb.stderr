@@ -1,0 +1,2 @@
+smallest_factor.adb:12:14: value not in range of type "Standard.Positive"
+smallest_factor.adb:12:14: "Constraint_Error" would have been raised at run time

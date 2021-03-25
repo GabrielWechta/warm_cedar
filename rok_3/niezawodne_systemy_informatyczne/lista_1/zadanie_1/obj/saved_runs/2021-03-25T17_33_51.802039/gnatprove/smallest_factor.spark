@@ -1,0 +1,442 @@
+{
+  "spark": [
+    {
+      "name": "Smallest_factor",
+      "sloc": [
+        {
+          "file": "smallest_factor.adb",
+          "line": 1
+        }
+      ],
+      "spark": "all"
+    }
+  ],
+  "flow": [
+    {
+      "file": "smallest_factor.adb",
+      "line": 1,
+      "col": 28,
+      "suppressed": "",
+      "rule": "INOUT_ONLY_READ",
+      "severity": "warning",
+      "entity": {
+        "name": "Smallest_factor",
+        "sloc": [
+          {
+            "file": "smallest_factor.adb",
+            "line": 1
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "smallest_factor.adb",
+      "line": 1,
+      "col": 48,
+      "rule": "UNINITIALIZED",
+      "severity": "medium",
+      "entity": {
+        "name": "Smallest_factor",
+        "sloc": [
+          {
+            "file": "smallest_factor.adb",
+            "line": 1
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "smallest_factor__flow__0.trace",
+      "msg_id": 0,
+      "how_proved": "flow"
+    },
+    {
+      "file": "smallest_factor.adb",
+      "line": 5,
+      "col": 14,
+      "rule": "UNINITIALIZED",
+      "severity": "medium",
+      "entity": {
+        "name": "Smallest_factor",
+        "sloc": [
+          {
+            "file": "smallest_factor.adb",
+            "line": 1
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "smallest_factor__flow__1.trace",
+      "msg_id": 1,
+      "how_proved": "flow"
+    }
+  ],
+  "session_map": {
+    " 1": "/home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/obj/gnatprove/smallest_factor"
+  },
+  "proof": [
+    {
+      "file": "smallest_factor.adb",
+      "line": 13,
+      "col": 12,
+      "rule": "VC_DIVISION_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "Smallest_factor",
+        "sloc": [
+          {
+            "file": "smallest_factor.adb",
+            "line": 1
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 1.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "smallest_factor.adb",
+      "check_line": 13,
+      "check_col": 12,
+      "session_dir": 1,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 9.99999977648258E-03
+        }
+      }
+    },
+    {
+      "file": "smallest_factor.adb",
+      "line": 12,
+      "col": 8,
+      "rule": "VC_RANGE_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "Smallest_factor",
+        "sloc": [
+          {
+            "file": "smallest_factor.adb",
+            "line": 1
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 1.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 1.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "smallest_factor.adb",
+      "check_line": 12,
+      "check_col": 8,
+      "session_dir": 1,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 9.99999977648258E-03
+        }
+      }
+    },
+    {
+      "file": "smallest_factor.adb",
+      "line": 6,
+      "col": 10,
+      "rule": "VC_DIVISION_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "Smallest_factor",
+        "sloc": [
+          {
+            "file": "smallest_factor.adb",
+            "line": 1
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 21,
+              "time": 1.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "smallest_factor.adb",
+      "check_line": 6,
+      "check_col": 10,
+      "session_dir": 1,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 9.99999977648258E-03
+        }
+      }
+    },
+    {
+      "file": "smallest_factor.adb",
+      "line": 7,
+      "col": 10,
+      "rule": "VC_DIVISION_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "Smallest_factor",
+        "sloc": [
+          {
+            "file": "smallest_factor.adb",
+            "line": 1
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 21,
+              "time": 2.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "smallest_factor.adb",
+      "check_line": 7,
+      "check_col": 10,
+      "session_dir": 1,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 1.99999995529652E-02
+        }
+      }
+    },
+    {
+      "file": "smallest_factor.adb",
+      "line": 8,
+      "col": 42,
+      "rule": "VC_DIVISION_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "Smallest_factor",
+        "sloc": [
+          {
+            "file": "smallest_factor.adb",
+            "line": 1
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 1.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "smallest_factor.adb",
+      "check_line": 8,
+      "check_col": 42,
+      "session_dir": 1,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 9.99999977648258E-03
+        }
+      }
+    },
+    {
+      "file": "smallest_factor.adb",
+      "line": 8,
+      "col": 36,
+      "rule": "VC_POSTCONDITION",
+      "severity": "medium",
+      "entity": {
+        "name": "Smallest_factor",
+        "sloc": [
+          {
+            "file": "smallest_factor.adb",
+            "line": 1
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Unknown (unknown)",
+              "steps": 685,
+              "time": 4.00000000000000E-02
+            },
+            "CVC4_CE": {
+              "result": "Unknown (unknown)",
+              "steps": 600,
+              "time": 3.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Unknown (unknown)",
+              "steps": 393,
+              "time": 3.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Unknown (unknown)",
+              "steps": 386,
+              "time": 3.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Unknown (unknown)",
+              "steps": 309,
+              "time": 2.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "smallest_factor.adb",
+      "check_line": 5,
+      "check_col": 13,
+      "cntexmp": {
+        "smallest_factor.adb": {
+          "previous": {
+          },
+          "current": {
+            "1": [
+              {
+                "name": "N",
+                "value": "3",
+                "kind": "variable"
+              }
+            ],
+            "8": [
+              {
+                "name": "J",
+                "value": "3",
+                "kind": "variable"
+              },
+              {
+                "name": "N'Old",
+                "value": "3",
+                "kind": "variable"
+              }
+            ],
+            "12": [
+              {
+                "name": "Index",
+                "value": "2",
+                "kind": "variable"
+              }
+            ],
+            "13": [
+              {
+                "name": "Index",
+                "value": "2",
+                "kind": "variable"
+              }
+            ]
+          }
+        }
+      },
+      "msg_id": 2,
+      "session_dir": 1,
+      "how_proved": "prover"
+    }
+  ],
+  "assumptions": [
+  ],
+  "timings": {
+    "gnatwhy3.transformations.inline_trivial": 1.86489000916481E-01,
+    "codepeer results": 2.40000008489005E-05,
+    "init_why_sections": 5.75000012759119E-04,
+    "gnatwhy3.transformations.detect_polymorphism": 4.33999986853451E-04,
+    "globals/properties (advanced)": 1.18000003567431E-04,
+    "gnatwhy3.transformations.eliminate_literal": 1.70100003015250E-03,
+    "gnatwhy3.run_vcs": 1.03240996599197E-01,
+    "gnatwhy3.transformations.eliminate_algebraic_if_poly": 1.39999995008111E-03,
+    "gnatwhy3.transformations.eliminate_definition_if_poly": 1.69499998446554E-03,
+    "flow analysis": 1.03599997237325E-03,
+    "gnatwhy3.transformations.simplify_formula": 1.98399997316301E-03,
+    "marking": 1.19999996968545E-04,
+    "translation of standard": 3.29499994404614E-03,
+    "gnatwhy3.register_vcs": 9.03499964624643E-03,
+    "gnatwhy3.transformations.eliminate_epsilon": 1.32499996107072E-03,
+    "globals (basic)": 1.03999998827931E-04,
+    "gnatwhy3.schedule_vcs": 1.30999996326864E-03,
+    "gnatwhy3.transformations.prepare_for_counterexmp": 1.81499996688217E-03,
+    "gnatwhy3.save_session": 2.47099995613098E-03,
+    "gnatwhy3.transformations.eliminate_inductive": 6.81000004988164E-04,
+    "gnatwhy3.transformations.encoding_smt_if_poly": 1.89999991562217E-05,
+    "gnatwhy3.transformations.eliminate_unused_hypo": 1.43499998375773E-02,
+    "gnatwhy3.transformations.eliminate_builtin": 1.17099995259196E-03,
+    "gnatwhy3.transformations.discriminate_if_poly": 2.59999997069826E-05,
+    "gnatwhy3.init": 2.34093993902206E-01
+  }
+}

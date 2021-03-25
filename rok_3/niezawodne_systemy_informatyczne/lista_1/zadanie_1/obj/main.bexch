@@ -1,0 +1,20 @@
+[GENERATED OBJECT FILE]
+b__main.o
+[PROJECT FILES]
+/home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/smallesfactor.gpr
+20210325155349 48097f372443c5ccdb85605090bb7102
+[BOUND OBJECT FILES]
+/home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/obj/smallest_factor.o
+/home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/obj/main.o
+[GENERATED SOURCE FILES]
+b__main.ads
+b__main.adb
+b__main.ali
+[RESULTING OPTIONS]
+-L/home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/obj/
+-L/home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/obj/
+-L/home/gabriel/opt/GNAT/2020/lib/gcc/x86_64-pc-linux-gnu/9.3.1/adalib/
+-static
+-static-libgcc
+/home/gabriel/opt/GNAT/2020/lib/gcc/x86_64-pc-linux-gnu/9.3.1/adalib/libgnat.a
+-ldl

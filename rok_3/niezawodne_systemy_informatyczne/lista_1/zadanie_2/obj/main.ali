@@ -1,0 +1,28 @@
+V "GNAT Lib v2020"
+M P W=b
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U main%b		main.adb		7d2291c8 NE OO SU
+W poly%s		poly.adb		poly.ali
+
+D main.adb		20210325184300 4a10f851 main%b
+D poly.ads		20210325182812 37326999 poly%s
+D system.ads		20200819050647 4635ec04 system%s
+G a e
+G c Z b b [main standard 3 11 none]
+G r c none [main standard 3 11 none] [horner poly 3 13 none]
+X 1 main.adb
+3U11*Main 3b11 9l5 9t9
+4i4 Var{integer} 8m4
+5a4 Arr{2|2A9} 8r25
+X 2 poly.ads
+1K9*Poly 1|1w6 5r10 8r11 2|4e9
+2A9*Vector(integer)<integer> 1|5r15
+3V13*Horner{integer} 1|8s16
+
