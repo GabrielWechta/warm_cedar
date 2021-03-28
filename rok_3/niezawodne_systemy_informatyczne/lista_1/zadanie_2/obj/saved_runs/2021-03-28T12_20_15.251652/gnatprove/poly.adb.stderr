@@ -1,0 +1,7 @@
+poly.adb:10:22: medium: overflow check might fail (e.g. when A = (others => 2) and A'First = 0 and A'Last = 0 and X = 0) [possible explanation: precondition of subprogram at poly.ads:3 should mention A][#1]
+poly.adb:10:27: medium: overflow check might fail[#0]
+poly.adb:16:21: medium: assertion might fail, cannot prove Y = Z (e.g. when Y = -1 and Z = 0) [possible explanation: loop at line 12 should mention Y and Z in a loop invariant][#2]
+poly.ads:8:33: medium: overflow check might fail[#5]
+poly.ads:8:37: medium: range check might fail (e.g. when A = (others => 0) and A'First = 0 and A'Last = 2147483647)[#4]
+poly.ads:9:38: medium: postcondition might fail, cannot prove Horner'Result = A(0) (e.g. when A = (1 => 0, others => 1) and A'First = 1 and A'Last = 1 and Horner'Result = 0)[#6]
+poly.ads:9:56: medium: array index check might fail (e.g. when A = (1 => 0, others => 1) and A'First = 1 and A'Last = 1)[#3]

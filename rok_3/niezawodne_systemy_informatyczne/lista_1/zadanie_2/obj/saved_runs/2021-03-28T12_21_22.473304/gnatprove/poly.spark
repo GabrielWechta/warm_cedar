@@ -1,0 +1,364 @@
+{
+  "spark": [
+    {
+      "name": "Poly",
+      "sloc": [
+        {
+          "file": "poly.ads",
+          "line": 1
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "Poly.Horner",
+      "sloc": [
+        {
+          "file": "poly.ads",
+          "line": 3
+        }
+      ],
+      "spark": "all"
+    }
+  ],
+  "flow": [
+    {
+      "file": "poly.adb",
+      "line": 6,
+      "col": 7,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "Poly.Horner",
+        "sloc": [
+          {
+            "file": "poly.ads",
+            "line": 3
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "poly.adb",
+      "line": 7,
+      "col": 7,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "Poly.Horner",
+        "sloc": [
+          {
+            "file": "poly.ads",
+            "line": 3
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    }
+  ],
+  "session_map": {
+    " 1": "/home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/poly__horner"
+  },
+  "proof": [
+    {
+      "file": "poly.ads",
+      "line": 9,
+      "col": 59,
+      "rule": "VC_INDEX_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "Poly.Horner",
+        "sloc": [
+          {
+            "file": "poly.ads",
+            "line": 3
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "trivial_true": [
+            ]
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 1.00000000000000E-02
+            }
+          },
+          "transformations": {
+            "trivial_true": [
+            ]
+          }
+        }
+      ],
+      "check_file": "poly.ads",
+      "check_line": 9,
+      "check_col": 59,
+      "session_dir": 1,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 9.99999977648258E-03
+        }
+      }
+    },
+    {
+      "file": "poly.ads",
+      "line": 9,
+      "col": 40,
+      "rule": "VC_POSTCONDITION",
+      "severity": "medium",
+      "entity": {
+        "name": "Poly.Horner",
+        "sloc": [
+          {
+            "file": "poly.ads",
+            "line": 3
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+          },
+          "transformations": {
+            "trivial_true": [
+            ]
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 1
+            },
+            "CVC4_CE": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 1
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "poly.ads",
+      "check_line": 9,
+      "check_col": 18,
+      "cntexmp": {
+        "poly.adb": {
+          "previous": {
+            "13": [
+              {
+                "name": "Index",
+                "value": "0",
+                "kind": "variable"
+              },
+              {
+                "name": "Y",
+                "value": "1",
+                "kind": "variable"
+              },
+              {
+                "name": "Z",
+                "value": "1",
+                "kind": "variable"
+              }
+            ]
+          },
+          "current": {
+            "12": [
+              {
+                "name": "A",
+                "value": "(0 => 0, others => 0)",
+                "kind": "variable"
+              },
+              {
+                "name": "Index",
+                "value": "0",
+                "kind": "variable"
+              }
+            ],
+            "13": [
+              {
+                "name": "Z",
+                "value": "1",
+                "kind": "variable"
+              }
+            ],
+            "14": [
+              {
+                "name": "Index",
+                "value": "0",
+                "kind": "variable"
+              },
+              {
+                "name": "Y",
+                "value": "-1",
+                "kind": "variable"
+              }
+            ],
+            "15": [
+              {
+                "name": "Index",
+                "value": "0",
+                "kind": "variable"
+              },
+              {
+                "name": "Z",
+                "value": "0",
+                "kind": "variable"
+              }
+            ],
+            "18": [
+              {
+                "name": "Horner'Result",
+                "value": "-1",
+                "kind": "variable"
+              },
+              {
+                "name": "Y",
+                "value": "-1",
+                "kind": "variable"
+              }
+            ]
+          }
+        },
+        "poly.ads": {
+          "previous": {
+          },
+          "current": {
+            "3": [
+              {
+                "name": "A",
+                "value": "(0 => 0, others => 0)",
+                "kind": "variable"
+              },
+              {
+                "name": "A'First",
+                "value": "0",
+                "kind": "variable"
+              },
+              {
+                "name": "A'Last",
+                "value": "0",
+                "kind": "variable"
+              },
+              {
+                "name": "X",
+                "value": "-1",
+                "kind": "variable"
+              }
+            ],
+            "9": [
+              {
+                "name": "A",
+                "value": "(0 => 0, others => 0)",
+                "kind": "variable"
+              },
+              {
+                "name": "A'First",
+                "value": "0",
+                "kind": "variable"
+              },
+              {
+                "name": "A'Last",
+                "value": "0",
+                "kind": "variable"
+              },
+              {
+                "name": "Horner'Result",
+                "value": "-1",
+                "kind": "variable"
+              }
+            ]
+          }
+        }
+      },
+      "msg_id": 0,
+      "session_dir": 1,
+      "how_proved": "prover"
+    }
+  ],
+  "assumptions": [
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Poly.Horner",
+          "sloc": [
+            {
+              "file": "poly.ads",
+              "line": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Poly",
+          "sloc": [
+            {
+              "file": "poly.ads",
+              "line": 1
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "timings": {
+    "gnatwhy3.transformations.inline_trivial": 1.98559001088142E-01,
+    "codepeer results": 5.29999997525010E-05,
+    "init_why_sections": 1.04100001044571E-03,
+    "gnatwhy3.transformations.detect_polymorphism": 7.48999998904765E-04,
+    "globals/properties (advanced)": 6.68800016865134E-03,
+    "gnatwhy3.transformations.eliminate_literal": 2.60000000707805E-03,
+    "gnatwhy3.run_vcs": 2.07934007048607E-01,
+    "gnatwhy3.transformations.eliminate_algebraic_if_poly": 2.83599994145334E-03,
+    "gnatwhy3.transformations.eliminate_definition_if_poly": 2.35600001178682E-03,
+    "flow analysis": 2.38800002261996E-03,
+    "gnatwhy3.transformations.simplify_formula": 2.88900011219084E-03,
+    "marking": 1.01800002157688E-02,
+    "translation of standard": 5.99600002169609E-03,
+    "gnatwhy3.register_vcs": 5.59000018984079E-03,
+    "gnatwhy3.transformations.eliminate_epsilon": 3.23599996045232E-03,
+    "globals (basic)": 5.11799985542893E-03,
+    "gnatwhy3.schedule_vcs": 3.22699989192188E-03,
+    "gnatwhy3.transformations.prepare_for_counterexmp": 3.50100011564791E-03,
+    "gnatwhy3.save_session": 1.30350003018975E-02,
+    "gnatwhy3.transformations.eliminate_inductive": 1.85899995267391E-03,
+    "gnatwhy3.transformations.encoding_smt_if_poly": 1.40000001920271E-05,
+    "gnatwhy3.transformations.eliminate_unused_hypo": 7.95600004494190E-03,
+    "gnatwhy3.transformations.eliminate_builtin": 2.95099988579750E-03,
+    "gnatwhy3.transformations.discriminate_if_poly": 2.09999998332933E-05,
+    "gnatwhy3.init": 4.55204993486404E-01
+  }
+}

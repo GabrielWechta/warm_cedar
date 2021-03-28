@@ -1,0 +1,37 @@
+V "GNAT Lib v2020"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U selection%b		selection.adb		c7de7d75 NE OO PK
+
+U selection%s		selection.ads		d18c3ad5 EE NE OO PK
+
+D selection.ads		20210328132843 d18c3ad5 selection%s
+D selection.adb		20210328133834 165247a0 selection%b
+D system.ads		20200819050647 4635ec04 system%s
+G a e
+G c Z s s [sorted selection 5 13 none]
+G c Z s b [sort selection 11 14 none]
+G c Z s s [arrIP selection 3 9 none]
+X 1 selection.ads
+1K9*Selection 17l5 17e14 2|1b14 21l5 21t14
+3A9*Arr(integer)<integer> 5r25 11r31 2|2r31
+6i16 I{integer} 6r48 6r56
+11U14*Sort 11=20 2|2b14 20l8 20t12
+11a20 A{3A9} 13r15 14r8 15r24 2|2b20 7r16 7r27 9r28 10r16 10r25 15r21 16m13
+. 16r21 17m13
+X 2 selection.adb
+3i7 Min{integer} 8m10 10r18 11m16 14r13 16r23 17r15
+4i7 Temp{integer} 15m13 17r23
+7i11 I{integer} 8r17 9r19 14r20 15r23 16r15
+9i14 J{integer} 10r27 11r23
+

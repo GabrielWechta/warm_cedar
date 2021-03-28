@@ -1,0 +1,1796 @@
+{
+  "spark": [
+    {
+      "name": "Poly",
+      "sloc": [
+        {
+          "file": "poly.ads",
+          "line": 1
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "Poly.Horner",
+      "sloc": [
+        {
+          "file": "poly.ads",
+          "line": 5
+        }
+      ],
+      "spark": "all"
+    }
+  ],
+  "flow": [
+  ],
+  "session_map": {
+    " 1": "/home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/poly__horner"
+  },
+  "proof": [
+    {
+      "file": "poly.adb",
+      "line": 14,
+      "col": 17,
+      "rule": "VC_OVERFLOW_CHECK",
+      "severity": "medium",
+      "entity": {
+        "name": "Poly.Horner",
+        "sloc": [
+          {
+            "file": "poly.ads",
+            "line": 5
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 0
+            },
+            "CVC4_CE": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 5
+            },
+            "Z3": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 0
+            },
+            "altergo": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "trivial_true": [
+            ]
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "trivial_true": [
+            ]
+          }
+        }
+      ],
+      "check_file": "poly.adb",
+      "check_line": 14,
+      "check_col": 17,
+      "cntexmp": {
+        "poly.adb": {
+          "previous": {
+            "18": [
+              {
+                "name": "Index",
+                "value": "1",
+                "kind": "variable"
+              },
+              {
+                "name": "Y",
+                "value": "2",
+                "kind": "variable"
+              },
+              {
+                "name": "Z",
+                "value": "0",
+                "kind": "variable"
+              }
+            ]
+          },
+          "current": {
+            "13": [
+              {
+                "name": "A",
+                "value": "(1 => 0, others => 0)",
+                "kind": "variable"
+              },
+              {
+                "name": "Index",
+                "value": "0",
+                "kind": "variable"
+              }
+            ],
+            "14": [
+              {
+                "name": "X",
+                "value": "-2",
+                "kind": "variable"
+              },
+              {
+                "name": "Y",
+                "value": "2",
+                "kind": "variable"
+              }
+            ],
+            "15": [
+              {
+                "name": "A",
+                "value": "(1 => 0, others => 0)",
+                "kind": "variable"
+              },
+              {
+                "name": "Z",
+                "value": "0",
+                "kind": "variable"
+              }
+            ],
+            "18": [
+              {
+                "name": "A",
+                "value": "(1 => 0, others => 0)",
+                "kind": "variable"
+              }
+            ]
+          }
+        },
+        "poly.ads": {
+          "previous": {
+          },
+          "current": {
+            "5": [
+              {
+                "name": "A",
+                "value": "(1 => 0, others => 0)",
+                "kind": "variable"
+              },
+              {
+                "name": "A'First",
+                "value": "0",
+                "kind": "variable"
+              },
+              {
+                "name": "A'Last",
+                "value": "1",
+                "kind": "variable"
+              },
+              {
+                "name": "X",
+                "value": "-2",
+                "kind": "variable"
+              }
+            ]
+          }
+        }
+      },
+      "msg_id": 0,
+      "session_dir": 1,
+      "how_proved": "prover"
+    },
+    {
+      "file": "poly.adb",
+      "line": 14,
+      "col": 21,
+      "rule": "VC_OVERFLOW_CHECK",
+      "severity": "medium",
+      "entity": {
+        "name": "Poly.Horner",
+        "sloc": [
+          {
+            "file": "poly.ads",
+            "line": 5
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 0
+            },
+            "CVC4_CE": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 5
+            },
+            "Z3": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 0
+            },
+            "altergo": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "trivial_true": [
+            ]
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 87,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "trivial_true": [
+            ]
+          }
+        }
+      ],
+      "check_file": "poly.adb",
+      "check_line": 14,
+      "check_col": 21,
+      "cntexmp": {
+        "poly.adb": {
+          "previous": {
+            "18": [
+              {
+                "name": "Index",
+                "value": "1",
+                "kind": "variable"
+              },
+              {
+                "name": "Y",
+                "value": "0",
+                "kind": "variable"
+              },
+              {
+                "name": "Z",
+                "value": "0",
+                "kind": "variable"
+              }
+            ]
+          },
+          "current": {
+            "13": [
+              {
+                "name": "A",
+                "value": "(1 => 0, others => -2147483649)",
+                "kind": "variable"
+              },
+              {
+                "name": "Index",
+                "value": "0",
+                "kind": "variable"
+              }
+            ],
+            "14": [
+              {
+                "name": "A",
+                "value": "(1 => 0, others => -2147483649)",
+                "kind": "variable"
+              },
+              {
+                "name": "A'First",
+                "value": "0",
+                "kind": "variable"
+              },
+              {
+                "name": "A'Last",
+                "value": "1",
+                "kind": "variable"
+              },
+              {
+                "name": "Index",
+                "value": "0",
+                "kind": "variable"
+              },
+              {
+                "name": "X",
+                "value": "0",
+                "kind": "variable"
+              },
+              {
+                "name": "Y",
+                "value": "0",
+                "kind": "variable"
+              }
+            ],
+            "15": [
+              {
+                "name": "A",
+                "value": "(1 => 0, others => -2147483649)",
+                "kind": "variable"
+              },
+              {
+                "name": "Z",
+                "value": "0",
+                "kind": "variable"
+              }
+            ],
+            "18": [
+              {
+                "name": "A",
+                "value": "(1 => 0, others => -2147483649)",
+                "kind": "variable"
+              }
+            ]
+          }
+        },
+        "poly.ads": {
+          "previous": {
+          },
+          "current": {
+            "5": [
+              {
+                "name": "A",
+                "value": "(1 => 0, others => -2147483649)",
+                "kind": "variable"
+              },
+              {
+                "name": "A'First",
+                "value": "0",
+                "kind": "variable"
+              },
+              {
+                "name": "A'Last",
+                "value": "1",
+                "kind": "variable"
+              },
+              {
+                "name": "X",
+                "value": "0",
+                "kind": "variable"
+              }
+            ]
+          }
+        }
+      },
+      "msg_id": 1,
+      "session_dir": 1,
+      "how_proved": "prover"
+    },
+    {
+      "file": "poly.adb",
+      "line": 15,
+      "col": 43,
+      "rule": "VC_OVERFLOW_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "Poly.Horner",
+        "sloc": [
+          {
+            "file": "poly.ads",
+            "line": 5
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 20,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "trivial_true": [
+            ]
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 13,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "trivial_true": [
+            ]
+          }
+        }
+      ],
+      "check_file": "poly.adb",
+      "check_line": 15,
+      "check_col": 43,
+      "session_dir": 1,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "poly.adb",
+      "line": 15,
+      "col": 43,
+      "rule": "VC_RANGE_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "Poly.Horner",
+        "sloc": [
+          {
+            "file": "poly.ads",
+            "line": 5
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 20,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "trivial_true": [
+            ]
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "trivial_true": [
+            ]
+          }
+        }
+      ],
+      "check_file": "poly.adb",
+      "check_line": 15,
+      "check_col": 43,
+      "session_dir": 1,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "poly.adb",
+      "line": 15,
+      "col": 33,
+      "rule": "VC_OVERFLOW_CHECK",
+      "severity": "medium",
+      "entity": {
+        "name": "Poly.Horner",
+        "sloc": [
+          {
+            "file": "poly.ads",
+            "line": 5
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 0
+            },
+            "CVC4_CE": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 5
+            },
+            "Z3": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 0
+            },
+            "altergo": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "trivial_true": [
+            ]
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 0
+            },
+            "Z3": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 0
+            },
+            "altergo": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "trivial_true": [
+            ]
+          }
+        }
+      ],
+      "check_file": "poly.adb",
+      "check_line": 15,
+      "check_col": 33,
+      "cntexmp": {
+        "poly.adb": {
+          "previous": {
+            "18": [
+              {
+                "name": "Index",
+                "value": "1",
+                "kind": "variable"
+              },
+              {
+                "name": "Y",
+                "value": "0",
+                "kind": "variable"
+              },
+              {
+                "name": "Z",
+                "value": "0",
+                "kind": "variable"
+              }
+            ]
+          },
+          "current": {
+            "13": [
+              {
+                "name": "A",
+                "value": "(0 => 0, 1 => 0, others => 0)",
+                "kind": "variable"
+              },
+              {
+                "name": "Index",
+                "value": "0",
+                "kind": "variable"
+              }
+            ],
+            "14": [
+              {
+                "name": "X",
+                "value": "0",
+                "kind": "variable"
+              },
+              {
+                "name": "Y",
+                "value": "0",
+                "kind": "variable"
+              }
+            ],
+            "15": [
+              {
+                "name": "A",
+                "value": "(0 => 0, 1 => 0, others => 0)",
+                "kind": "variable"
+              },
+              {
+                "name": "A'First",
+                "value": "0",
+                "kind": "variable"
+              },
+              {
+                "name": "A'Last",
+                "value": "1",
+                "kind": "variable"
+              },
+              {
+                "name": "Index",
+                "value": "0",
+                "kind": "variable"
+              },
+              {
+                "name": "X",
+                "value": "0",
+                "kind": "variable"
+              },
+              {
+                "name": "Z",
+                "value": "0",
+                "kind": "variable"
+              }
+            ],
+            "18": [
+              {
+                "name": "A",
+                "value": "(0 => 0, 1 => 0, others => 0)",
+                "kind": "variable"
+              }
+            ]
+          }
+        },
+        "poly.ads": {
+          "previous": {
+          },
+          "current": {
+            "5": [
+              {
+                "name": "A",
+                "value": "(0 => 0, 1 => 0, others => 0)",
+                "kind": "variable"
+              },
+              {
+                "name": "A'First",
+                "value": "0",
+                "kind": "variable"
+              },
+              {
+                "name": "A'Last",
+                "value": "1",
+                "kind": "variable"
+              },
+              {
+                "name": "X",
+                "value": "0",
+                "kind": "variable"
+              }
+            ]
+          }
+        }
+      },
+      "msg_id": 2,
+      "session_dir": 1,
+      "how_proved": "prover"
+    },
+    {
+      "file": "poly.adb",
+      "line": 15,
+      "col": 28,
+      "rule": "VC_OVERFLOW_CHECK",
+      "severity": "medium",
+      "entity": {
+        "name": "Poly.Horner",
+        "sloc": [
+          {
+            "file": "poly.ads",
+            "line": 5
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 0
+            },
+            "CVC4_CE": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 5
+            },
+            "Z3": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 0
+            },
+            "altergo": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "trivial_true": [
+            ]
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 0
+            },
+            "Z3": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 0
+            },
+            "altergo": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "trivial_true": [
+            ]
+          }
+        }
+      ],
+      "check_file": "poly.adb",
+      "check_line": 15,
+      "check_col": 28,
+      "cntexmp": {
+        "poly.adb": {
+          "previous": {
+            "18": [
+              {
+                "name": "Index",
+                "value": "1",
+                "kind": "variable"
+              },
+              {
+                "name": "Y",
+                "value": "0",
+                "kind": "variable"
+              },
+              {
+                "name": "Z",
+                "value": "0",
+                "kind": "variable"
+              }
+            ]
+          },
+          "current": {
+            "13": [
+              {
+                "name": "A",
+                "value": "(1 => 0, others => -2)",
+                "kind": "variable"
+              },
+              {
+                "name": "Index",
+                "value": "0",
+                "kind": "variable"
+              }
+            ],
+            "14": [
+              {
+                "name": "X",
+                "value": "0",
+                "kind": "variable"
+              },
+              {
+                "name": "Y",
+                "value": "-2",
+                "kind": "variable"
+              }
+            ],
+            "15": [
+              {
+                "name": "A",
+                "value": "(1 => 0, others => -2)",
+                "kind": "variable"
+              },
+              {
+                "name": "A'First",
+                "value": "0",
+                "kind": "variable"
+              },
+              {
+                "name": "A'Last",
+                "value": "1",
+                "kind": "variable"
+              },
+              {
+                "name": "Index",
+                "value": "0",
+                "kind": "variable"
+              },
+              {
+                "name": "X",
+                "value": "0",
+                "kind": "variable"
+              },
+              {
+                "name": "Z",
+                "value": "0",
+                "kind": "variable"
+              }
+            ],
+            "18": [
+              {
+                "name": "A",
+                "value": "(1 => 0, others => -2)",
+                "kind": "variable"
+              }
+            ]
+          }
+        },
+        "poly.ads": {
+          "previous": {
+          },
+          "current": {
+            "5": [
+              {
+                "name": "A",
+                "value": "(1 => 0, others => -2)",
+                "kind": "variable"
+              },
+              {
+                "name": "A'First",
+                "value": "0",
+                "kind": "variable"
+              },
+              {
+                "name": "A'Last",
+                "value": "1",
+                "kind": "variable"
+              },
+              {
+                "name": "X",
+                "value": "0",
+                "kind": "variable"
+              }
+            ]
+          }
+        }
+      },
+      "msg_id": 3,
+      "session_dir": 1,
+      "how_proved": "prover"
+    },
+    {
+      "file": "poly.adb",
+      "line": 15,
+      "col": 17,
+      "rule": "VC_OVERFLOW_CHECK",
+      "severity": "medium",
+      "entity": {
+        "name": "Poly.Horner",
+        "sloc": [
+          {
+            "file": "poly.ads",
+            "line": 5
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 0
+            },
+            "CVC4_CE": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 5
+            },
+            "Z3": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 0
+            },
+            "altergo": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "trivial_true": [
+            ]
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "trivial_true": [
+            ]
+          }
+        }
+      ],
+      "check_file": "poly.adb",
+      "check_line": 15,
+      "check_col": 17,
+      "cntexmp": {
+        "poly.adb": {
+          "previous": {
+            "18": [
+              {
+                "name": "Index",
+                "value": "1",
+                "kind": "variable"
+              },
+              {
+                "name": "Y",
+                "value": "-4",
+                "kind": "variable"
+              },
+              {
+                "name": "Z",
+                "value": "-2147483643",
+                "kind": "variable"
+              }
+            ]
+          },
+          "current": {
+            "13": [
+              {
+                "name": "A",
+                "value": "(1 => 0, others => -3)",
+                "kind": "variable"
+              },
+              {
+                "name": "Index",
+                "value": "0",
+                "kind": "variable"
+              }
+            ],
+            "14": [
+              {
+                "name": "X",
+                "value": "0",
+                "kind": "variable"
+              },
+              {
+                "name": "Y",
+                "value": "-3",
+                "kind": "variable"
+              }
+            ],
+            "15": [
+              {
+                "name": "A",
+                "value": "(1 => 0, others => -3)",
+                "kind": "variable"
+              },
+              {
+                "name": "A'First",
+                "value": "0",
+                "kind": "variable"
+              },
+              {
+                "name": "A'Last",
+                "value": "1",
+                "kind": "variable"
+              },
+              {
+                "name": "Index",
+                "value": "0",
+                "kind": "variable"
+              },
+              {
+                "name": "X",
+                "value": "0",
+                "kind": "variable"
+              },
+              {
+                "name": "Z",
+                "value": "-2147483643",
+                "kind": "variable"
+              }
+            ],
+            "18": [
+              {
+                "name": "A",
+                "value": "(1 => 0, others => -3)",
+                "kind": "variable"
+              }
+            ]
+          }
+        },
+        "poly.ads": {
+          "previous": {
+          },
+          "current": {
+            "5": [
+              {
+                "name": "A",
+                "value": "(1 => 0, others => -3)",
+                "kind": "variable"
+              },
+              {
+                "name": "A'First",
+                "value": "0",
+                "kind": "variable"
+              },
+              {
+                "name": "A'Last",
+                "value": "1",
+                "kind": "variable"
+              },
+              {
+                "name": "X",
+                "value": "0",
+                "kind": "variable"
+              }
+            ]
+          }
+        }
+      },
+      "msg_id": 4,
+      "session_dir": 1,
+      "how_proved": "prover"
+    },
+    {
+      "file": "poly.adb",
+      "line": 18,
+      "col": 49,
+      "rule": "VC_OVERFLOW_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "Poly.Horner",
+        "sloc": [
+          {
+            "file": "poly.ads",
+            "line": 5
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "altergo": {
+              "result": "Valid",
+              "steps": 88,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "trivial_true": [
+            ]
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "poly.adb",
+      "check_line": 18,
+      "check_col": 49,
+      "session_dir": 1,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        },
+        "altergo": {
+          "count": 1,
+          "max_steps": 89,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "poly.adb",
+      "line": 18,
+      "col": 49,
+      "rule": "VC_RANGE_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "Poly.Horner",
+        "sloc": [
+          {
+            "file": "poly.ads",
+            "line": 5
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 13,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "trivial_true": [
+            ]
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "trivial_true": [
+            ]
+          }
+        }
+      ],
+      "check_file": "poly.adb",
+      "check_line": 18,
+      "check_col": 49,
+      "session_dir": 1,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "poly.adb",
+      "line": 18,
+      "col": 39,
+      "rule": "VC_OVERFLOW_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "Poly.Horner",
+        "sloc": [
+          {
+            "file": "poly.ads",
+            "line": 5
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 13,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "trivial_true": [
+            ]
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "trivial_true": [
+            ]
+          }
+        }
+      ],
+      "check_file": "poly.adb",
+      "check_line": 18,
+      "check_col": 39,
+      "session_dir": 1,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "poly.adb",
+      "line": 18,
+      "col": 61,
+      "rule": "VC_OVERFLOW_CHECK",
+      "severity": "medium",
+      "entity": {
+        "name": "Poly.Horner",
+        "sloc": [
+          {
+            "file": "poly.ads",
+            "line": 5
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 0
+            },
+            "CVC4_CE": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 5
+            },
+            "Z3": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 0
+            },
+            "altergo": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "trivial_true": [
+            ]
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "trivial_true": [
+            ]
+          }
+        }
+      ],
+      "check_file": "poly.adb",
+      "check_line": 18,
+      "check_col": 61,
+      "cntexmp": {
+        "poly.adb": {
+          "previous": {
+            "18": [
+              {
+                "name": "Index",
+                "value": "1",
+                "kind": "variable"
+              },
+              {
+                "name": "Y",
+                "value": "-2",
+                "kind": "variable"
+              },
+              {
+                "name": "Z",
+                "value": "0",
+                "kind": "variable"
+              }
+            ]
+          },
+          "current": {
+            "13": [
+              {
+                "name": "A",
+                "value": "(0 => 0, 1 => 0, others => 0)",
+                "kind": "variable"
+              },
+              {
+                "name": "Index",
+                "value": "0",
+                "kind": "variable"
+              }
+            ],
+            "14": [
+              {
+                "name": "X",
+                "value": "1",
+                "kind": "variable"
+              },
+              {
+                "name": "Y",
+                "value": "-2",
+                "kind": "variable"
+              }
+            ],
+            "15": [
+              {
+                "name": "A",
+                "value": "(0 => 0, 1 => 0, others => 0)",
+                "kind": "variable"
+              },
+              {
+                "name": "Z",
+                "value": "0",
+                "kind": "variable"
+              }
+            ],
+            "18": [
+              {
+                "name": "A",
+                "value": "(0 => 0, 1 => 0, others => 0)",
+                "kind": "variable"
+              },
+              {
+                "name": "A'First",
+                "value": "0",
+                "kind": "variable"
+              },
+              {
+                "name": "A'Last",
+                "value": "1",
+                "kind": "variable"
+              },
+              {
+                "name": "Index",
+                "value": "0",
+                "kind": "variable"
+              },
+              {
+                "name": "X",
+                "value": "1",
+                "kind": "variable"
+              },
+              {
+                "name": "Y",
+                "value": "-2",
+                "kind": "variable"
+              }
+            ]
+          }
+        },
+        "poly.ads": {
+          "previous": {
+          },
+          "current": {
+            "5": [
+              {
+                "name": "A",
+                "value": "(0 => 0, 1 => 0, others => 0)",
+                "kind": "variable"
+              },
+              {
+                "name": "A'First",
+                "value": "0",
+                "kind": "variable"
+              },
+              {
+                "name": "A'Last",
+                "value": "1",
+                "kind": "variable"
+              },
+              {
+                "name": "X",
+                "value": "1",
+                "kind": "variable"
+              }
+            ]
+          }
+        }
+      },
+      "msg_id": 5,
+      "session_dir": 1,
+      "how_proved": "prover"
+    },
+    {
+      "file": "poly.adb",
+      "line": 18,
+      "col": 32,
+      "rule": "VC_LOOP_INVARIANT_INIT",
+      "severity": "info",
+      "entity": {
+        "name": "Poly.Horner",
+        "sloc": [
+          {
+            "file": "poly.ads",
+            "line": 5
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "trivial_true": [
+            ]
+          }
+        }
+      ],
+      "check_file": "poly.adb",
+      "check_line": 18,
+      "check_col": 32,
+      "session_dir": 1,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "poly.adb",
+      "line": 18,
+      "col": 32,
+      "rule": "VC_LOOP_INVARIANT_PRESERV",
+      "severity": "medium",
+      "entity": {
+        "name": "Poly.Horner",
+        "sloc": [
+          {
+            "file": "poly.ads",
+            "line": 5
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 0
+            },
+            "CVC4_CE": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 5
+            },
+            "Z3": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 0
+            },
+            "altergo": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "trivial_true": [
+            ]
+          }
+        }
+      ],
+      "check_file": "poly.adb",
+      "check_line": 18,
+      "check_col": 32,
+      "cntexmp": {
+        "poly.adb": {
+          "previous": {
+            "18": [
+              {
+                "name": "Index",
+                "value": "1",
+                "kind": "variable"
+              },
+              {
+                "name": "Y",
+                "value": "-1",
+                "kind": "variable"
+              },
+              {
+                "name": "Z",
+                "value": "0",
+                "kind": "variable"
+              }
+            ]
+          },
+          "current": {
+            "13": [
+              {
+                "name": "A",
+                "value": "(0 => 0, 1 => 0, others => 0)",
+                "kind": "variable"
+              },
+              {
+                "name": "Index",
+                "value": "0",
+                "kind": "variable"
+              }
+            ],
+            "14": [
+              {
+                "name": "X",
+                "value": "1",
+                "kind": "variable"
+              },
+              {
+                "name": "Y",
+                "value": "-1",
+                "kind": "variable"
+              }
+            ],
+            "15": [
+              {
+                "name": "A",
+                "value": "(0 => 0, 1 => 0, others => 0)",
+                "kind": "variable"
+              },
+              {
+                "name": "Z",
+                "value": "0",
+                "kind": "variable"
+              }
+            ],
+            "18": [
+              {
+                "name": "A",
+                "value": "(0 => 0, 1 => 0, others => 0)",
+                "kind": "variable"
+              },
+              {
+                "name": "A'First",
+                "value": "0",
+                "kind": "variable"
+              },
+              {
+                "name": "A'Last",
+                "value": "1",
+                "kind": "variable"
+              },
+              {
+                "name": "Index",
+                "value": "0",
+                "kind": "variable"
+              },
+              {
+                "name": "X",
+                "value": "1",
+                "kind": "variable"
+              },
+              {
+                "name": "Y",
+                "value": "-1",
+                "kind": "variable"
+              },
+              {
+                "name": "Z",
+                "value": "0",
+                "kind": "variable"
+              }
+            ]
+          }
+        },
+        "poly.ads": {
+          "previous": {
+          },
+          "current": {
+            "5": [
+              {
+                "name": "A",
+                "value": "(0 => 0, 1 => 0, others => 0)",
+                "kind": "variable"
+              },
+              {
+                "name": "A'First",
+                "value": "0",
+                "kind": "variable"
+              },
+              {
+                "name": "A'Last",
+                "value": "1",
+                "kind": "variable"
+              },
+              {
+                "name": "X",
+                "value": "1",
+                "kind": "variable"
+              }
+            ]
+          }
+        }
+      },
+      "msg_id": 6,
+      "session_dir": 1,
+      "how_proved": "prover"
+    },
+    {
+      "file": "poly.adb",
+      "line": 20,
+      "col": 21,
+      "rule": "VC_ASSERT",
+      "severity": "info",
+      "entity": {
+        "name": "Poly.Horner",
+        "sloc": [
+          {
+            "file": "poly.ads",
+            "line": 5
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 0
+            },
+            "Z3": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 0
+            },
+            "altergo": {
+              "result": "Valid",
+              "steps": 53,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "trivial_true": [
+            ]
+          }
+        }
+      ],
+      "check_file": "poly.adb",
+      "check_line": 20,
+      "check_col": 21,
+      "session_dir": 1,
+      "how_proved": "prover",
+      "stats": {
+        "altergo": {
+          "count": 1,
+          "max_steps": 54,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "poly.ads",
+      "line": 6,
+      "col": 41,
+      "rule": "VC_INDEX_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "Poly.Horner",
+        "sloc": [
+          {
+            "file": "poly.ads",
+            "line": 5
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "trivial_true": [
+            ]
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 1.00000000000000E-02
+            }
+          },
+          "transformations": {
+            "trivial_true": [
+            ]
+          }
+        }
+      ],
+      "check_file": "poly.ads",
+      "check_line": 6,
+      "check_col": 41,
+      "session_dir": 1,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 9.99999977648258E-03
+        }
+      }
+    }
+  ],
+  "assumptions": [
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Poly.Horner",
+          "sloc": [
+            {
+              "file": "poly.ads",
+              "line": 5
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Poly",
+          "sloc": [
+            {
+              "file": "poly.ads",
+              "line": 1
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "timings": {
+    "gnatwhy3.transformations.inline_trivial": 7.67429992556572E-02,
+    "codepeer results": 5.29999997525010E-05,
+    "init_why_sections": 1.05600000824779E-03,
+    "gnatwhy3.transformations.detect_polymorphism": 2.51500005833805E-03,
+    "globals/properties (advanced)": 6.87899999320507E-03,
+    "gnatwhy3.transformations.eliminate_literal": 5.24300010874867E-03,
+    "gnatwhy3.run_vcs": 5.30925989151001E-01,
+    "gnatwhy3.transformations.eliminate_algebraic_if_poly": 4.55499999225140E-03,
+    "gnatwhy3.transformations.eliminate_definition_if_poly": 3.13499988988042E-03,
+    "flow analysis": 2.26600002497435E-03,
+    "gnatwhy3.transformations.simplify_formula": 5.68800000473857E-03,
+    "marking": 1.03289997205138E-02,
+    "translation of standard": 6.13099988549948E-03,
+    "gnatwhy3.register_vcs": 4.68399981036782E-03,
+    "gnatwhy3.transformations.eliminate_epsilon": 5.69200003519654E-03,
+    "globals (basic)": 5.19199995324016E-03,
+    "gnatwhy3.schedule_vcs": 7.93199986219406E-03,
+    "gnatwhy3.transformations.prepare_for_counterexmp": 3.65630015730858E-02,
+    "gnatwhy3.save_session": 2.63250004500151E-02,
+    "gnatwhy3.transformations.eliminate_inductive": 3.20199993439019E-03,
+    "gnatwhy3.transformations.encoding_smt_if_poly": 3.40000005962793E-05,
+    "gnatwhy3.transformations.eliminate_unused_hypo": 7.50199984759092E-03,
+    "gnatwhy3.transformations.eliminate_builtin": 3.72899998910725E-03,
+    "gnatwhy3.transformations.discriminate_if_poly": 8.29999989946373E-05,
+    "gnatwhy3.init": 5.21991014480591E-01
+  }
+}

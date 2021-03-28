@@ -1,0 +1,29 @@
+Summary of SPARK analysis
+=========================
+
+------------------------------------------------------------------------------------------------------------
+SPARK Analysis results        Total      Flow   CodePeer                      Provers   Justified   Unproved
+------------------------------------------------------------------------------------------------------------
+Data Dependencies                 .         .          .                            .           .          .
+Flow Dependencies                 .         .          .                            .           .          .
+Initialization                    2         2          .                            .           .          .
+Non-Aliasing                      .         .          .                            .           .          .
+Run-time Checks                  15         .          .    15 (CVC4 98%, altergo 2%)           .          .
+Assertions                        4         .          .                     2 (CVC4)           .          2
+Functional Contracts              2         .          .                     2 (CVC4)           .          .
+LSP Verification                  .         .          .                            .           .          .
+Termination                       .         .          .                            .           .          .
+Concurrency                       .         .          .                            .           .          .
+------------------------------------------------------------------------------------------------------------
+Total                            23    2 (9%)          .                     19 (83%)           .     2 (9%)
+
+
+max steps used for successful proof: 57
+
+Analyzed 2 units
+in unit main, 0 subprograms and packages out of 1 analyzed
+  Main at main.adb:4 skipped
+in unit selection, 3 subprograms and packages out of 3 analyzed
+  Selection at selection.ads:1 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  Selection.Sort at selection.ads:11 flow analyzed (0 errors, 0 checks and 0 warnings) and not proved, 15 checks out of 17 proved
+  Selection.Sorted at selection.ads:5 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (4 checks)

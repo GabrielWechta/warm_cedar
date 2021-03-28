@@ -1,13 +1,17 @@
-with Ada.Text_IO;
-
 package body Poly with SPARK_Mode is
-   function Horner ( X: Integer; A : Vector) return Integer
-   is
-      Result : Integer;
+   function Horner (X : Integer; A : Vector) return Integer is
+      Y : Integer := 0;
+      Z : Integer := 0 with Ghost;
    begin
-      for Index in reverse Integer range A'First .. A'Last loop
-         Ada.Text_IO.Put_Line(Integer'Image(Index));
+      for I in reverse A'Range loop
+         Z := Z + A(I) * (X ** (I - A'First));
+         Y := Y * X + A(I);
+
+         pragma Loop_Invariant (Z = (X ** (I - A'First)) * Y);
       end loop;
-      return 0;
-   end;
+
+      pragma Assert (Y = Z);
+
+      return Y;
+   end Horner;
 end Poly;

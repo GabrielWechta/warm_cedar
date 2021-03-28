@@ -1,0 +1,121 @@
+{
+  "spark": [
+    {
+      "name": "Poly",
+      "sloc": [
+        {
+          "file": "poly.ads",
+          "line": 1
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "Poly.Horner",
+      "sloc": [
+        {
+          "file": "poly.ads",
+          "line": 3
+        }
+      ],
+      "spark": "all"
+    }
+  ],
+  "flow": [
+    {
+      "file": "poly.ads",
+      "line": 6,
+      "col": 11,
+      "rule": "DEPENDS_MISSING",
+      "severity": "medium",
+      "entity": {
+        "name": "Poly.Horner",
+        "sloc": [
+          {
+            "file": "poly.ads",
+            "line": 3
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "poly__flow__0.trace",
+      "how_proved": "flow"
+    },
+    {
+      "file": "poly.adb",
+      "line": 6,
+      "col": 7,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "Poly.Horner",
+        "sloc": [
+          {
+            "file": "poly.ads",
+            "line": 3
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "poly.adb",
+      "line": 7,
+      "col": 7,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "Poly.Horner",
+        "sloc": [
+          {
+            "file": "poly.ads",
+            "line": 3
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    }
+  ],
+  "session_map": {
+    " 1": "/home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/poly__horner"
+  },
+  "proof": [
+  ],
+  "assumptions": [
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Poly",
+          "sloc": [
+            {
+              "file": "poly.ads",
+              "line": 1
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "timings": {
+    "codepeer results": 1.55999994603917E-04,
+    "init_why_sections": 1.06899999082088E-03,
+    "globals/properties (advanced)": 6.78399996832013E-03,
+    "gnatwhy3.run_vcs": 4.80000016978011E-05,
+    "flow analysis": 3.15600004978478E-03,
+    "marking": 1.02040003985167E-02,
+    "translation of standard": 5.96000021323562E-03,
+    "gnatwhy3.register_vcs": 3.27300000935793E-03,
+    "globals (basic)": 5.24599989876151E-03,
+    "gnatwhy3.schedule_vcs": 4.99999987368938E-06,
+    "gnatwhy3.save_session": 1.46399997174740E-02,
+    "gnatwhy3.init": 4.64971989393234E-01
+  }
+}

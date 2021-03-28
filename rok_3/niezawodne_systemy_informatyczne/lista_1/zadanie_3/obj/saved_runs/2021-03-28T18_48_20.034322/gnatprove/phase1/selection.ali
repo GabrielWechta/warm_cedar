@@ -1,0 +1,51 @@
+V "GNAT Lib v2020"
+A -x
+A ada
+A -gnatA
+A -gnatc
+P GP FX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+
+U selection%b		selection.adb		ec4c6676 OO PK
+
+U selection%s		selection.ads		d18c3ad5 OO PK
+
+D selection.ads		20210328132843 d18c3ad5 selection%s
+D selection.adb		20210328164807 3dc05ca3 selection%b
+D system.ads		20200819050647 4635ec04 system%s
+G a Z
+X 1 selection.ads
+1K9*Selection 17l5 17e14 2|1b14 25l5 25t14
+3A9*Arr(integer)<integer> 5r25 11r31 2|2r31
+5V13*Sorted{boolean} 5>21 15s16
+5a21 A{3A9} 6r21 6r32 6r46 6r54 9r15
+6i16 I{integer} 6r48 6r56
+11U14*Sort 11=20 2|2b14 24l8 24t12
+11a20 A{3A9} 13r15 14r8 15r24 2|2b20 7r16 7r27 9r24 10r16 10r25 13r42 13r53
+. 14r62 14r72 18r21 19m13 19r21 20m13 22r45 22r85 22r95 22r103
+X 2 selection.adb
+3i7 Min{integer} 8m10 10r18 11m16 13r35 14r64 17r13 19r23 20r15
+4i7 Temp{integer} 18m13 20r23
+7i11 I{integer} 8r17 9r19 14r48 17r20 18r23 19r15 22r56
+9i14 J{integer} 10r27 11r23 14r53
+14i43 K{integer} 14r74
+22i40 E{integer} 22r76 22r97
+22i71 L{integer} 22r105
+
+QQ SPARKVERSION SPARK Community 2020 (20200818)
+GG EK_DIRECT_CALLS selection__sorted 0
+GG EK_GLOBALS selection__sorted local FALSE E_FUNCTION FALSE ORIGIN_FLOW 1 selection proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS selection__sort 1 selection__sorted
+GG EK_GLOBALS selection__sort local FALSE E_PROCEDURE FALSE ORIGIN_FLOW 1 selection proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS selection 0
+GG EK_GLOBALS selection local FALSE E_PACKAGE TRUE ORIGIN_FLOW 0 proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 initializes 0 calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_FLOW_SCOPE selection__sorted FALSE FALSE FALSE FALSE TRUE selection VISIBLE_PART
+GG EK_FLOW_SCOPE selection__sort FALSE FALSE FALSE FALSE TRUE selection VISIBLE_PART
+GG EK_FLOW_SCOPE selection TRUE FALSE FALSE FALSE FALSE __standard
+GG EK_END_MARKER

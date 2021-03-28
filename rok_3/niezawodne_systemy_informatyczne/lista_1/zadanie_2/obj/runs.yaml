@@ -1,0 +1,2226 @@
+'2021-03-26T01:15:31.320720':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    poly.ads:8:17: missing operand
+
+    gnatprove: error during generation of Global contracts
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-26T01:15:31.320720'
+'2021-03-26T01:15:51.411945':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.adb:10:22: medium: overflow check might fail (e.g. when A = (others => 2)
+    and A''First = 0 and A''Last = 0 and X = 0) [possible explanation: precondition
+    of subprogram at poly.ads:3 should mention A and X][#1]
+
+    poly.adb:10:27: medium: overflow check might fail [possible explanation: precondition
+    of subprogram at poly.ads:3 should mention X][#0]
+
+    poly.adb:13:17: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => 0) and X = -2 and Y = 2) [possible explanation: loop at line 12 should mention
+    Y in a loop invariant][#2]
+
+    poly.adb:13:21: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => -2147483649) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0 and Y
+    = 0) [possible explanation: loop at line 12 should mention Y in a loop invariant][#3]
+
+    poly.adb:14:17: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => 1) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0 and Z = Integer''First)
+    [possible explanation: loop at line 12 should mention Z in a loop invariant][#6]
+
+    poly.adb:14:28: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => 2) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0) [possible explanation:
+    precondition of subprogram at poly.ads:3 should mention A and X][#5]
+
+    poly.adb:14:33: medium: overflow check might fail (e.g. when Index = 0 and X =
+    0) [possible explanation: precondition of subprogram at poly.ads:3 should mention
+    X][#4]
+
+    poly.adb:16:21: medium: assertion might fail, cannot prove Y = Z (e.g. when Y
+    = -1 and Z = 0) [possible explanation: loop at line 12 should mention Y and Z
+    in a loop invariant][#7]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-26T01:15:51.411945'
+'2021-03-26T01:19:16.240954':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.adb:10:22: medium: overflow check might fail (e.g. when A = (others => 2)
+    and A''First = 0 and A''Last = 0 and X = 0) [possible explanation: precondition
+    of subprogram at poly.ads:3 should mention A and X][#1]
+
+    poly.adb:10:27: medium: overflow check might fail [possible explanation: precondition
+    of subprogram at poly.ads:3 should mention X][#0]
+
+    poly.adb:13:17: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => 0) and X = -2 and Y = 2) [possible explanation: loop at line 12 should mention
+    Y in a loop invariant][#2]
+
+    poly.adb:13:21: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => -2147483649) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0 and Y
+    = 0) [possible explanation: loop at line 12 should mention Y in a loop invariant][#3]
+
+    poly.adb:14:17: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => 1) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0 and Z = Integer''First)
+    [possible explanation: loop at line 12 should mention Z in a loop invariant][#6]
+
+    poly.adb:14:28: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => 2) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0) [possible explanation:
+    precondition of subprogram at poly.ads:3 should mention A and X][#5]
+
+    poly.adb:14:33: medium: overflow check might fail (e.g. when Index = 0 and X =
+    0) [possible explanation: precondition of subprogram at poly.ads:3 should mention
+    X][#4]
+
+    poly.adb:16:21: medium: assertion might fail, cannot prove Y = Z (e.g. when Y
+    = -1 and Z = 0) [possible explanation: loop at line 12 should mention Y and Z
+    in a loop invariant][#7]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-26T01:19:16.240954'
+'2021-03-26T01:24:03.448423':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.adb:10:22: medium: overflow check might fail (e.g. when A = (others => 2)
+    and A''First = 0 and A''Last = 0 and X = 0) [possible explanation: precondition
+    of subprogram at poly.ads:3 should mention A and X][#1]
+
+    poly.adb:10:27: medium: overflow check might fail [possible explanation: precondition
+    of subprogram at poly.ads:3 should mention X][#0]
+
+    poly.adb:13:17: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => 0) and X = -2 and Y = 2) [possible explanation: loop at line 12 should mention
+    Y in a loop invariant][#2]
+
+    poly.adb:13:21: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => -2147483649) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0 and Y
+    = 0) [possible explanation: loop at line 12 should mention Y in a loop invariant][#3]
+
+    poly.adb:14:17: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => 1) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0 and Z = Integer''First)
+    [possible explanation: loop at line 12 should mention Z in a loop invariant][#6]
+
+    poly.adb:14:28: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => 2) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0) [possible explanation:
+    precondition of subprogram at poly.ads:3 should mention A and X][#5]
+
+    poly.adb:14:33: medium: overflow check might fail (e.g. when Index = 0 and X =
+    0) [possible explanation: precondition of subprogram at poly.ads:3 should mention
+    X][#4]
+
+    poly.adb:16:21: medium: assertion might fail, cannot prove Y = Z (e.g. when Y
+    = -1 and Z = 0) [possible explanation: loop at line 12 should mention Y and Z
+    in a loop invariant][#7]
+
+    poly.ads:9:12: medium: postcondition might fail, cannot prove Horner''Result >
+    Integer''first (e.g. when Horner''Result = Integer''First)[#8]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-26T01:24:03.448423'
+'2021-03-26T01:25:07.888895':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.adb:10:22: medium: overflow check might fail (e.g. when A = (others => 2)
+    and A''First = 0 and A''Last = 0 and X = 0) [possible explanation: precondition
+    of subprogram at poly.ads:3 should mention A and X][#1]
+
+    poly.adb:10:27: medium: overflow check might fail [possible explanation: precondition
+    of subprogram at poly.ads:3 should mention X][#0]
+
+    poly.adb:13:17: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => 0) and X = -2 and Y = 2) [possible explanation: loop at line 12 should mention
+    Y in a loop invariant][#2]
+
+    poly.adb:13:21: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => -2147483649) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0 and Y
+    = 0) [possible explanation: loop at line 12 should mention Y in a loop invariant][#3]
+
+    poly.adb:14:17: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => 1) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0 and Z = Integer''First)
+    [possible explanation: loop at line 12 should mention Z in a loop invariant][#6]
+
+    poly.adb:14:28: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => 2) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0) [possible explanation:
+    precondition of subprogram at poly.ads:3 should mention A and X][#5]
+
+    poly.adb:14:33: medium: overflow check might fail (e.g. when Index = 0 and X =
+    0) [possible explanation: precondition of subprogram at poly.ads:3 should mention
+    X][#4]
+
+    poly.adb:16:21: medium: assertion might fail, cannot prove Y = Z (e.g. when Y
+    = -1 and Z = 0) [possible explanation: loop at line 12 should mention Y and Z
+    in a loop invariant][#7]
+
+    poly.ads:10:12: medium: postcondition might fail, cannot prove Horner''Result
+    > Integer''first (e.g. when Horner''Result = Integer''First)[#8]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-26T01:25:07.888895'
+'2021-03-26T17:58:08.419866':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.adb:10:22: medium: overflow check might fail (e.g. when A = (others => 2)
+    and A''First = 0 and A''Last = 0 and X = 0) [possible explanation: precondition
+    of subprogram at poly.ads:3 should mention A and X][#1]
+
+    poly.adb:10:27: medium: overflow check might fail [possible explanation: precondition
+    of subprogram at poly.ads:3 should mention X][#0]
+
+    poly.adb:13:17: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => 0) and X = -2 and Y = 2) [possible explanation: loop at line 12 should mention
+    Y in a loop invariant][#2]
+
+    poly.adb:13:21: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => -2147483649) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0 and Y
+    = 0) [possible explanation: loop at line 12 should mention Y in a loop invariant][#3]
+
+    poly.adb:14:17: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => 1) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0 and Z = Integer''First)
+    [possible explanation: loop at line 12 should mention Z in a loop invariant][#6]
+
+    poly.adb:14:28: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => 2) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0) [possible explanation:
+    precondition of subprogram at poly.ads:3 should mention A and X][#5]
+
+    poly.adb:14:33: medium: overflow check might fail (e.g. when Index = 0 and X =
+    0) [possible explanation: precondition of subprogram at poly.ads:3 should mention
+    X][#4]
+
+    poly.adb:16:21: medium: assertion might fail, cannot prove Y = Z (e.g. when Y
+    = -1 and Z = 0) [possible explanation: loop at line 12 should mention Y and Z
+    in a loop invariant][#7]
+
+    poly.ads:10:12: medium: postcondition might fail, cannot prove Horner''Result
+    > Integer''first (e.g. when Horner''Result = Integer''First)[#8]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-26T17:58:08.419866'
+'2021-03-28T11:17:49.488757':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.adb:10:22: medium: overflow check might fail (e.g. when A = (others => 2)
+    and A''First = 0 and A''Last = 0 and X = 0) [possible explanation: precondition
+    of subprogram at poly.ads:3 should mention A and X][#1]
+
+    poly.adb:10:27: medium: overflow check might fail [possible explanation: precondition
+    of subprogram at poly.ads:3 should mention X][#0]
+
+    poly.adb:13:17: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => 0) and X = -2 and Y = 2) [possible explanation: loop at line 12 should mention
+    Y in a loop invariant][#2]
+
+    poly.adb:13:21: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => -2147483649) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0 and Y
+    = 0) [possible explanation: loop at line 12 should mention Y in a loop invariant][#3]
+
+    poly.adb:14:17: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => 1) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0 and Z = Integer''First)
+    [possible explanation: loop at line 12 should mention Z in a loop invariant][#6]
+
+    poly.adb:14:28: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => 2) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0) [possible explanation:
+    precondition of subprogram at poly.ads:3 should mention A and X][#5]
+
+    poly.adb:14:33: medium: overflow check might fail (e.g. when Index = 0 and X =
+    0) [possible explanation: precondition of subprogram at poly.ads:3 should mention
+    X][#4]
+
+    poly.adb:16:21: medium: assertion might fail, cannot prove Y = Z (e.g. when Y
+    = -1 and Z = 0) [possible explanation: loop at line 12 should mention Y and Z
+    in a loop invariant][#7]
+
+    poly.ads:10:12: medium: postcondition might fail, cannot prove Horner''Result
+    > Integer''first (e.g. when Horner''Result = Integer''First)[#8]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T11:17:49.488757'
+'2021-03-28T11:30:35.101537':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.adb:10:22: medium: overflow check might fail (e.g. when A = (others => 2)
+    and A''First = 0 and A''Last = 0 and X = 0) [possible explanation: precondition
+    of subprogram at poly.ads:3 should mention A and X][#1]
+
+    poly.adb:10:27: medium: overflow check might fail [possible explanation: precondition
+    of subprogram at poly.ads:3 should mention X][#0]
+
+    poly.adb:13:17: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => 0) and X = -2 and Y = 2) [possible explanation: loop at line 12 should mention
+    Y in a loop invariant][#2]
+
+    poly.adb:13:21: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => -2147483649) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0 and Y
+    = 0) [possible explanation: loop at line 12 should mention Y in a loop invariant][#3]
+
+    poly.adb:14:17: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => 1) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0 and Z = Integer''First)
+    [possible explanation: loop at line 12 should mention Z in a loop invariant][#6]
+
+    poly.adb:14:28: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => 2) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0) [possible explanation:
+    precondition of subprogram at poly.ads:3 should mention A and X][#5]
+
+    poly.adb:14:33: medium: overflow check might fail (e.g. when Index = 0 and X =
+    0) [possible explanation: precondition of subprogram at poly.ads:3 should mention
+    X][#4]
+
+    poly.adb:16:21: medium: assertion might fail, cannot prove Y = Z (e.g. when Y
+    = -1 and Z = 0) [possible explanation: loop at line 12 should mention Y and Z
+    in a loop invariant][#7]
+
+    poly.ads:8:33: medium: postcondition might fail, cannot prove Horner''Result =
+    0 (e.g. when Horner''Result = -1 and X = 0)[#8]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T11:30:35.101537'
+'2021-03-28T11:39:02.734683':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.adb:10:22: medium: overflow check might fail (e.g. when A = (others => 2)
+    and A''First = 0 and A''Last = 0 and X = 0) [possible explanation: precondition
+    of subprogram at poly.ads:3 should mention A][#1]
+
+    poly.adb:10:27: medium: overflow check might fail[#0]
+
+    poly.adb:16:21: medium: assertion might fail, cannot prove Y = Z (e.g. when Y
+    = -1 and Z = 0) [possible explanation: loop at line 12 should mention Y and Z
+    in a loop invariant][#2]
+
+    poly.ads:8:33: medium: overflow check might fail[#5]
+
+    poly.ads:8:37: medium: range check might fail (e.g. when A = (others => 0) and
+    A''First = 0 and A''Last = 2147483647)[#4]
+
+    poly.ads:9:38: medium: postcondition might fail, cannot prove Horner''Result =
+    A(0) (e.g. when A = (1 => 0, others => 1) and A''First = 1 and A''Last = 1 and
+    Horner''Result = 0)[#6]
+
+    poly.ads:9:56: medium: array index check might fail (e.g. when A = (1 => 0, others
+    => 1) and A''First = 1 and A''Last = 1)[#3]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T11:39:02.734683'
+'2021-03-28T12:20:15.251652':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    poly.ads:7:31: ";" should be ","
+
+    poly.ads:9:47: unrecognized attribute "returnsult"
+
+    gnatprove: error during generation of Global contracts
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T12:20:15.251652'
+'2021-03-28T12:20:21.672574':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove Line
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    poly.ads:9:47: unrecognized attribute "returnsult"
+
+    gnatprove: error during generation of Global contracts
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T12:20:21.672574'
+'2021-03-28T12:20:36.302238':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove Line
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.ads:9:40: medium: postcondition might fail, cannot prove Horner''Result =
+    A(0) (e.g. when A = (others => 1) and A''First = 0 and A''Last = 0 and Horner''Result
+    = 0)[#1]
+
+    poly.ads:9:58: medium: array index check might fail (e.g. when A = (1 => 0, others
+    => 1) and A''First = 1 and A''Last = 1)[#0]
+
+    poly.ads:10:12: warning: conjunct in postcondition does not check the outcome
+    of calling "Horner"
+
+    poly.ads:10:14: warning: attribute "Old" applied to constant has no effect
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T12:20:36.302238'
+'2021-03-28T12:21:22.473304':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove Line
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.ads:9:40: medium: postcondition might fail, cannot prove Horner''Result =
+    A(A''first) (e.g. when A = (0 => 0, others => 0) and A''First = 0 and A''Last
+    = 0 and Horner''Result = -1)[#0]
+
+    poly.ads:10:12: warning: conjunct in postcondition does not check the outcome
+    of calling "Horner"
+
+    poly.ads:10:14: warning: attribute "Old" applied to constant has no effect
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T12:21:22.473304'
+'2021-03-28T12:29:57.099300':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.adb:13:32: medium: loop invariant might not be preserved by an arbitrary
+    iteration, cannot prove Y <= abs Z (e.g. when Y = 1 and Z = 0)[#5]
+
+    poly.adb:13:37: medium: overflow check might fail (e.g. when Z = -4)[#4]
+
+    poly.adb:14:24: medium: overflow check might fail (e.g. when A = (others => Integer''First)
+    and A''First = 0 and A''Last = 0 and Index = 0 and X = -1 and Y = 1)[#1]
+
+    poly.adb:14:28: medium: overflow check might fail (e.g. when X = Integer''First
+    and Y = 2)[#0]
+
+    poly.adb:15:24: medium: overflow check might fail (e.g. when A = (others => 2)
+    and A''First = 0 and A''Last = 0 and Index = 0 and X = 0) [possible explanation:
+    precondition of subprogram at poly.ads:3 should mention A and X][#3]
+
+    poly.adb:15:29: medium: overflow check might fail [possible explanation: precondition
+    of subprogram at poly.ads:3 should mention X][#2]
+
+    poly.ads:9:40: medium: postcondition might fail, cannot prove Horner''Result =
+    A(A''first) (e.g. when A = (0 => 0, others => 0) and A''First = 0 and A''Last
+    = 0 and Horner''Result = -1)[#6]
+
+    poly.ads:10:12: warning: conjunct in postcondition does not check the outcome
+    of calling "Horner"
+
+    poly.ads:10:14: warning: attribute "Old" applied to constant has no effect
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T12:29:57.099300'
+'2021-03-28T12:31:29.783624':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.adb:13:32: medium: loop invariant might not be preserved by an arbitrary
+    iteration, cannot prove Y <= abs Z (e.g. when Y = 1 and Z = 0)[#5]
+
+    poly.adb:13:37: medium: overflow check might fail (e.g. when Z = -4)[#4]
+
+    poly.adb:14:24: medium: overflow check might fail (e.g. when A = (others => Integer''First)
+    and A''First = 0 and A''Last = 0 and Index = 0 and X = -1 and Y = 1)[#1]
+
+    poly.adb:14:28: medium: overflow check might fail (e.g. when X = Integer''First
+    and Y = 2)[#0]
+
+    poly.adb:15:24: medium: overflow check might fail (e.g. when A = (others => 2)
+    and A''First = 0 and A''Last = 0 and Index = 0 and X = 0) [possible explanation:
+    precondition of subprogram at poly.ads:3 should mention A and X][#3]
+
+    poly.adb:15:29: medium: overflow check might fail [possible explanation: precondition
+    of subprogram at poly.ads:3 should mention X][#2]
+
+    poly.ads:9:40: medium: postcondition might fail, cannot prove Horner''Result =
+    A(A''first) (e.g. when A = (0 => 0, others => 0) and A''First = 0 and A''Last
+    = 0 and Horner''Result = -1)[#6]
+
+    poly.ads:10:12: warning: conjunct in postcondition does not check the outcome
+    of calling "Horner"
+
+    poly.ads:10:14: warning: attribute "Old" applied to constant has no effect
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T12:31:29.783624'
+'2021-03-28T12:33:04.591030':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.adb:13:32: medium: loop invariant might not be preserved by an arbitrary
+    iteration, cannot prove Y <= abs Z (e.g. when Y = 1 and Z = 0)[#5]
+
+    poly.adb:13:37: medium: overflow check might fail (e.g. when Z = -4)[#4]
+
+    poly.adb:14:24: medium: overflow check might fail (e.g. when A = (others => Integer''First)
+    and A''First = 0 and A''Last = 0 and Index = 0 and X = -1 and Y = 1)[#1]
+
+    poly.adb:14:28: medium: overflow check might fail (e.g. when X = Integer''First
+    and Y = 2)[#0]
+
+    poly.adb:15:24: medium: overflow check might fail (e.g. when A = (others => 2)
+    and A''First = 0 and A''Last = 0 and Index = 0 and X = 0) [possible explanation:
+    precondition of subprogram at poly.ads:3 should mention A and X][#3]
+
+    poly.adb:15:29: medium: overflow check might fail [possible explanation: precondition
+    of subprogram at poly.ads:3 should mention X][#2]
+
+    poly.ads:9:40: medium: postcondition might fail, cannot prove Horner''Result =
+    A(A''first) (e.g. when A = (0 => 0, others => 0) and A''First = 0 and A''Last
+    = 0 and Horner''Result = -1)[#6]
+
+    poly.ads:10:12: warning: conjunct in postcondition does not check the outcome
+    of calling "Horner"
+
+    poly.ads:10:14: warning: attribute "Old" applied to constant has no effect
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T12:33:04.591030'
+'2021-03-28T12:33:57.251960':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove Line
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.ads:10:12: warning: conjunct in postcondition does not check the outcome
+    of calling "Horner"
+
+    poly.ads:10:14: warning: attribute "Old" applied to constant has no effect
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T12:33:57.251960'
+'2021-03-28T12:35:03.954381':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    poly.ads:10:19: missing Range attribute in iteration over an array
+
+    poly.ads:10:19: if "J" is meant to designate an element of the array, use "of"
+
+    gnatprove: error during generation of Global contracts
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T12:35:03.954381'
+'2021-03-28T12:35:24.037210':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove Line
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.ads:10:36: warning: attribute "Old" applied to constant has no effect
+
+    poly.ads:10:42: medium: array index check might fail (e.g. when A = (0 => 1, others
+    => 0) and A''First = 0 and A''Last = 0)[#0]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T12:35:24.037210'
+'2021-03-28T12:40:19.940536':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    poly.ads:10:25: missing arrow
+
+    gnatprove: error during generation of Global contracts
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T12:40:19.940536'
+'2021-03-28T12:40:37.051018':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove Line
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.ads:10:11: warning: conjunct in postcondition does not check the outcome
+    of calling "Horner"
+
+    poly.ads:10:42: warning: attribute "Old" applied to constant has no effect
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T12:40:37.051018'
+'2021-03-28T12:41:16.612262':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove Line
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.ads:9:40: medium: postcondition might fail, cannot prove Horner''Result =
+    A(0) (e.g. when A = (others => 1) and A''First = 0 and A''Last = 0 and Horner''Result
+    = 0)[#1]
+
+    poly.ads:9:58: medium: array index check might fail (e.g. when A = (1 => 0, others
+    => 1) and A''First = 1 and A''Last = 1)[#0]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T12:41:16.612262'
+'2021-03-28T12:41:45.206497':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.adb:13:32: medium: loop invariant might not be preserved by an arbitrary
+    iteration, cannot prove Y <= abs Z (e.g. when Y = 1 and Z = 0)[#5]
+
+    poly.adb:13:37: medium: overflow check might fail (e.g. when Z = -4)[#4]
+
+    poly.adb:14:24: medium: overflow check might fail (e.g. when A = (others => Integer''First)
+    and A''First = 0 and A''Last = 0 and Index = 0 and X = -1 and Y = 1)[#1]
+
+    poly.adb:14:28: medium: overflow check might fail (e.g. when X = Integer''First
+    and Y = 2)[#0]
+
+    poly.adb:15:24: medium: overflow check might fail (e.g. when A = (others => 2)
+    and A''First = 0 and A''Last = 0 and Index = 0 and X = 0) [possible explanation:
+    precondition of subprogram at poly.ads:3 should mention A and X][#3]
+
+    poly.adb:15:29: medium: overflow check might fail [possible explanation: precondition
+    of subprogram at poly.ads:3 should mention X][#2]
+
+    poly.adb:17:21: medium: assertion might fail, cannot prove Y = Z (e.g. when Y
+    = -1 and Z = 0)[#6]
+
+    poly.ads:9:40: medium: postcondition might fail, cannot prove Horner''Result =
+    A(0) (e.g. when A = (others => 1) and A''First = 0 and A''Last = 0 and Horner''Result
+    = 0)[#8]
+
+    poly.ads:9:58: medium: array index check might fail (e.g. when A = (1 => 0, others
+    => 1) and A''First = 1 and A''Last = 1)[#7]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T12:41:45.206497'
+'2021-03-28T12:46:57.321547':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    Fatal error: exception Out of memory
+
+    poly.adb:13:32: medium: loop invariant might not be preserved by an arbitrary
+    iteration, cannot prove Y <= abs Z (e.g. when Y = 1 and Z = 0)[#5]
+
+    poly.adb:13:37: medium: overflow check might fail (e.g. when Z = -4)[#4]
+
+    poly.adb:14:24: medium: overflow check might fail (e.g. when A = (others => Integer''First)
+    and A''First = 0 and A''Last = 0 and Index = 0 and X = -1 and Y = 1)[#1]
+
+    poly.adb:14:28: medium: overflow check might fail (e.g. when X = Integer''First
+    and Y = 2)[#0]
+
+    poly.adb:15:24: medium: overflow check might fail (e.g. when A = (others => 2)
+    and A''First = 0 and A''Last = 0 and Index = 0 and X = 0) [possible explanation:
+    precondition of subprogram at poly.ads:3 should mention A and X][#3]
+
+    poly.adb:15:29: medium: overflow check might fail [possible explanation: precondition
+    of subprogram at poly.ads:3 should mention X][#2]
+
+    poly.adb:17:21: medium: assertion might fail, cannot prove Y = Z (e.g. when Y
+    = -1 and Z = 0)[#6]
+
+    poly.ads:9:40: medium: postcondition might fail, cannot prove Horner''Result =
+    A(0) (e.g. when A = (others => 1) and A''First = 0 and A''Last = 0 and Horner''Result
+    = 0)[#8]
+
+    poly.ads:9:58: medium: array index check might fail (e.g. when A = (1 => 0, others
+    => 1) and A''First = 1 and A''Last = 1)[#7]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T12:46:57.321547'
+'2021-03-28T12:49:56.961835':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove Line
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.adb:15:17: medium: overflow check might fail (e.g. when A = (others => 2)
+    and A''First = 0 and A''Last = 0 and Index = 0 and X = 0 and Z = -1)[#2]
+
+    poly.adb:15:28: medium: overflow check might fail (e.g. when A = (others => 2)
+    and A''First = 0 and A''Last = 0 and Index = 0 and X = 0) [possible explanation:
+    precondition of subprogram at poly.ads:3 should mention A and X][#1]
+
+    poly.adb:15:33: medium: overflow check might fail [possible explanation: precondition
+    of subprogram at poly.ads:3 should mention X][#0]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T12:49:56.961835'
+'2021-03-28T12:56:48.545373':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.adb:14:24: medium: overflow check might fail (e.g. when A = (others => -2147483649)
+    and A''First = 0 and A''Last = 0 and Index = 0 and X = 0 and Y = 0)[#1]
+
+    poly.adb:14:28: medium: overflow check might fail (e.g. when X = Integer''First
+    and Y = 2)[#0]
+
+    poly.adb:15:17: medium: overflow check might fail (e.g. when A = (others => 2)
+    and A''First = 0 and A''Last = 0 and Index = 0 and X = 0 and Z = -1)[#4]
+
+    poly.adb:15:28: medium: overflow check might fail (e.g. when A = (others => 2)
+    and A''First = 0 and A''Last = 0 and Index = 0 and X = 0) [possible explanation:
+    precondition of subprogram at poly.ads:3 should mention A][#3]
+
+    poly.adb:15:33: medium: overflow check might fail[#2]
+
+    poly.adb:17:21: medium: assertion might fail, cannot prove Y = Z (e.g. when Y
+    = -1 and Z = 0)[#5]
+
+    poly.ads:8:33: medium: overflow check might fail[#8]
+
+    poly.ads:8:37: medium: range check might fail (e.g. when A = (others => 0) and
+    A''First = 0 and A''Last = 2147483647)[#7]
+
+    poly.ads:9:40: medium: postcondition might fail, cannot prove Horner''Result =
+    A(0) (e.g. when A = (others => 2) and A''First = 0 and A''Last = 0 and Horner''Result
+    = 1)[#9]
+
+    poly.ads:9:58: medium: array index check might fail (e.g. when A = (1 => 0, others
+    => 1) and A''First = 1 and A''Last = 1)[#6]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T12:56:48.545373'
+'2021-03-28T13:05:35.989000':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    poly.ads:5:15: missing "=>"
+
+    gnatprove: error during generation of Global contracts
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T13:05:35.989000'
+'2021-03-28T13:05:55.387885':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove Line
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.ads:5:21: medium: missing dependency "Horner''Result => A"[#0]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T13:05:55.387885'
+'2021-03-28T13:07:13.177542':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.adb:14:24: medium: overflow check might fail (e.g. when A = (others => -2147483649)
+    and A''First = 0 and A''Last = 0 and Index = 0 and X = 0 and Y = 0)[#2]
+
+    poly.adb:14:28: medium: overflow check might fail (e.g. when X = Integer''First
+    and Y = 2)[#1]
+
+    poly.adb:15:17: medium: overflow check might fail (e.g. when A = (others => 2)
+    and A''First = 0 and A''Last = 0 and Index = 0 and X = 0 and Z = -1)[#5]
+
+    poly.adb:15:28: medium: overflow check might fail (e.g. when A = (others => 2)
+    and A''First = 0 and A''Last = 0 and Index = 0 and X = 0) [possible explanation:
+    precondition of subprogram at poly.ads:3 should mention A][#4]
+
+    poly.adb:15:33: medium: overflow check might fail[#3]
+
+    poly.adb:17:21: medium: assertion might fail, cannot prove Y = Z (e.g. when Y
+    = -1 and Z = 0)[#6]
+
+    poly.ads:6:11: medium: missing dependency "Horner''Result => A"[#0]
+
+    poly.ads:11:33: medium: overflow check might fail[#9]
+
+    poly.ads:11:37: medium: range check might fail (e.g. when A = (others => 0) and
+    A''First = 0 and A''Last = 2147483647)[#8]
+
+    poly.ads:12:40: medium: postcondition might fail, cannot prove Horner''Result
+    = A(0) (e.g. when A = (others => 2) and A''First = 0 and A''Last = 0 and Horner''Result
+    = 1)[#10]
+
+    poly.ads:12:58: medium: array index check might fail (e.g. when A = (1 => 0, others
+    => 1) and A''First = 1 and A''Last = 1)[#7]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T13:07:13.177542'
+'2021-03-28T13:07:40.834715':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove Line
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.ads:6:11: medium: missing dependency "Horner''Result => A"[#0]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T13:07:40.834715'
+'2021-03-28T13:08:09.028421':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove Line
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T13:08:09.028421'
+'2021-03-28T13:08:19.547459':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove Line
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T13:08:19.547459'
+'2021-03-28T13:08:44.623471':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.adb:14:24: medium: overflow check might fail (e.g. when A = (others => -2147483649)
+    and A''First = 0 and A''Last = 0 and Index = 0 and X = 0 and Y = 0)[#2]
+
+    poly.adb:14:28: medium: overflow check might fail (e.g. when X = Integer''First
+    and Y = 2)[#1]
+
+    poly.adb:15:17: medium: overflow check might fail (e.g. when A = (others => 2)
+    and A''First = 0 and A''Last = 0 and Index = 0 and X = 0 and Z = -1)[#5]
+
+    poly.adb:15:28: medium: overflow check might fail (e.g. when A = (others => 2)
+    and A''First = 0 and A''Last = 0 and Index = 0 and X = 0) [possible explanation:
+    precondition of subprogram at poly.ads:3 should mention A][#4]
+
+    poly.adb:15:33: medium: overflow check might fail[#3]
+
+    poly.adb:17:21: medium: assertion might fail, cannot prove Y = Z (e.g. when Y
+    = -1 and Z = 0)[#6]
+
+    poly.ads:6:11: medium: missing dependency "Horner''Result => A"[#0]
+
+    poly.ads:11:33: medium: overflow check might fail[#9]
+
+    poly.ads:11:37: medium: range check might fail (e.g. when A = (others => 0) and
+    A''First = 0 and A''Last = 2147483647)[#8]
+
+    poly.ads:12:40: medium: postcondition might fail, cannot prove Horner''Result
+    = A(0) (e.g. when A = (others => 2) and A''First = 0 and A''Last = 0 and Horner''Result
+    = 1)[#10]
+
+    poly.ads:12:58: medium: array index check might fail (e.g. when A = (1 => 0, others
+    => 1) and A''First = 1 and A''Last = 1)[#7]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T13:08:44.623471'
+'2021-03-28T13:09:37.899229':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.adb:14:24: medium: overflow check might fail (e.g. when A = (others => -2147483649)
+    and A''First = 0 and A''Last = 0 and Index = 0 and X = 0 and Y = 0)[#2]
+
+    poly.adb:14:28: medium: overflow check might fail (e.g. when X = Integer''First
+    and Y = 2)[#1]
+
+    poly.adb:15:17: medium: overflow check might fail (e.g. when A = (others => 2)
+    and A''First = 0 and A''Last = 0 and Index = 0 and X = 0 and Z = -1)[#5]
+
+    poly.adb:15:28: medium: overflow check might fail (e.g. when A = (others => 2)
+    and A''First = 0 and A''Last = 0 and Index = 0 and X = 0) [possible explanation:
+    precondition of subprogram at poly.ads:3 should mention A][#4]
+
+    poly.adb:15:33: medium: overflow check might fail[#3]
+
+    poly.adb:17:21: medium: assertion might fail, cannot prove Y = Z (e.g. when Y
+    = -1 and Z = 0)[#6]
+
+    poly.ads:6:11: medium: missing dependency "Horner''Result => A"[#0]
+
+    poly.ads:11:33: medium: overflow check might fail[#9]
+
+    poly.ads:11:37: medium: range check might fail (e.g. when A = (others => 0) and
+    A''First = 0 and A''Last = 2147483647)[#8]
+
+    poly.ads:12:40: medium: postcondition might fail, cannot prove Horner''Result
+    = A(0) (e.g. when A = (others => 2) and A''First = 0 and A''Last = 0 and Horner''Result
+    = 1)[#10]
+
+    poly.ads:12:58: medium: array index check might fail (e.g. when A = (1 => 0, others
+    => 1) and A''First = 1 and A''Last = 1)[#7]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T13:09:37.899229'
+'2021-03-28T13:11:45.185364':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.adb:14:24: medium: overflow check might fail (e.g. when A = (others => -2147483649)
+    and A''First = 0 and A''Last = 0 and Index = 0 and X = 0 and Y = 0)[#1]
+
+    poly.adb:14:28: medium: overflow check might fail (e.g. when X = Integer''First
+    and Y = 2)[#0]
+
+    poly.adb:15:17: medium: overflow check might fail (e.g. when A = (others => 2)
+    and A''First = 0 and A''Last = 0 and Index = 0 and X = 0 and Z = -1)[#4]
+
+    poly.adb:15:28: medium: overflow check might fail (e.g. when A = (others => 2)
+    and A''First = 0 and A''Last = 0 and Index = 0 and X = 0) [possible explanation:
+    precondition of subprogram at poly.ads:3 should mention A][#3]
+
+    poly.adb:15:33: medium: overflow check might fail[#2]
+
+    poly.adb:17:21: medium: assertion might fail, cannot prove Y = Z (e.g. when Y
+    = -1 and Z = 0)[#5]
+
+    poly.ads:8:33: medium: overflow check might fail[#8]
+
+    poly.ads:8:37: medium: range check might fail (e.g. when A = (others => 0) and
+    A''First = 0 and A''Last = 2147483647)[#7]
+
+    poly.ads:9:40: medium: postcondition might fail, cannot prove Horner''Result =
+    A(0) (e.g. when A = (others => 2) and A''First = 0 and A''Last = 0 and Horner''Result
+    = 1)[#9]
+
+    poly.ads:9:58: medium: array index check might fail (e.g. when A = (1 => 0, others
+    => 1) and A''First = 1 and A''Last = 1)[#6]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T13:11:45.185364'
+'2021-03-28T13:12:41.828647':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.adb:14:24: medium: overflow check might fail (e.g. when A = (others => -2147483649)
+    and A''First = 0 and A''Last = 0 and Index = 0 and X = 0 and Y = 0)[#1]
+
+    poly.adb:14:28: medium: overflow check might fail (e.g. when X = Integer''First
+    and Y = 2)[#0]
+
+    poly.adb:15:17: medium: overflow check might fail (e.g. when A = (others => 2)
+    and A''First = 0 and A''Last = 0 and Index = 0 and X = 0 and Z = -1)[#4]
+
+    poly.adb:15:28: medium: overflow check might fail (e.g. when A = (others => 2)
+    and A''First = 0 and A''Last = 0 and Index = 0 and X = 0) [possible explanation:
+    precondition of subprogram at poly.ads:3 should mention A][#3]
+
+    poly.adb:15:33: medium: overflow check might fail[#2]
+
+    poly.adb:17:21: medium: assertion might fail, cannot prove Y = Z (e.g. when Y
+    = -1 and Z = 0)[#5]
+
+    poly.ads:8:33: medium: overflow check might fail[#7]
+
+    poly.ads:8:37: medium: range check might fail (e.g. when A = (others => 0) and
+    A''First = 0 and A''Last = 2147483647)[#6]
+
+    poly.ads:9:40: medium: postcondition might fail, cannot prove Horner''Result =
+    A(A''first) (e.g. when A = (0 => 2, others => 0) and A''First = 0 and A''Last
+    = 0 and Horner''Result = 1)[#8]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T13:12:41.828647'
+'2021-03-28T13:17:37.683666':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.adb:14:24: medium: overflow check might fail (e.g. when A = (others => -2147483649)
+    and A''First = 0 and A''Last = 0 and Index = 0 and X = 0 and Y = 0)[#1]
+
+    poly.adb:14:28: medium: overflow check might fail (e.g. when X = -10 and Y = 214748365)[#0]
+
+    poly.adb:15:17: medium: overflow check might fail (e.g. when A = (others => 2)
+    and A''First = 0 and A''Last = 0 and Index = 0 and X = 0 and Z = -1)[#4]
+
+    poly.adb:15:28: medium: overflow check might fail (e.g. when A = (others => 2)
+    and A''First = 0 and A''Last = 0 and Index = 0 and X = 0) [possible explanation:
+    precondition of subprogram at poly.ads:3 should mention A][#3]
+
+    poly.adb:15:33: medium: overflow check might fail[#2]
+
+    poly.adb:17:21: medium: assertion might fail, cannot prove Y = Z (e.g. when Y
+    = -1 and Z = 0)[#5]
+
+    poly.ads:9:33: medium: overflow check might fail[#7]
+
+    poly.ads:9:37: medium: range check might fail (e.g. when A = (others => 0) and
+    A''First = 0 and A''Last = 2147483647)[#6]
+
+    poly.ads:10:40: medium: postcondition might fail, cannot prove Horner''Result
+    = A(A''first) (e.g. when A = (0 => 2, others => 0) and A''First = 0 and A''Last
+    = 0 and Horner''Result = 1)[#8]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T13:17:37.683666'
+'2021-03-28T13:19:26.820044':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.adb:14:24: medium: overflow check might fail (e.g. when A = (others => -2147483649)
+    and A''First = 0 and A''Last = 0 and Index = 0 and X = 0 and Y = 0)[#1]
+
+    poly.adb:14:28: medium: overflow check might fail (e.g. when X = -10 and Y = 214748365)[#0]
+
+    poly.adb:15:17: medium: overflow check might fail (e.g. when A = (0 => 2, others
+    => 0) and A''First = 0 and A''Last = 0 and Index = 0 and X = 0 and Z = -1)[#4]
+
+    poly.adb:15:28: medium: overflow check might fail (e.g. when A = (0 => 2, others
+    => 0) and A''First = 0 and A''Last = 0 and Index = 0 and X = 0)[#3]
+
+    poly.adb:15:33: medium: overflow check might fail[#2]
+
+    poly.adb:17:21: medium: assertion might fail, cannot prove Y = Z (e.g. when Y
+    = -1 and Z = 0)[#5]
+
+    poly.ads:10:33: medium: overflow check might fail[#7]
+
+    poly.ads:10:37: medium: range check might fail (e.g. when A = (others => 0) and
+    A''First = 0 and A''Last = 2147483647)[#6]
+
+    poly.ads:11:40: medium: postcondition might fail, cannot prove Horner''Result
+    = A(A''first) (e.g. when A = (0 => -2, others => 0) and A''First = 0 and A''Last
+    = 0 and Horner''Result = -3)[#8]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T13:19:26.820044'
+'2021-03-28T13:22:51.718638':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.adb:14:24: medium: overflow check might fail (e.g. when A = (others => -2147483649)
+    and A''First = 1 and A''Last = 10 and Index = 1 and X = 0 and Y = 0)[#1]
+
+    poly.adb:14:28: medium: overflow check might fail (e.g. when X = -10 and Y = 214748365)[#0]
+
+    poly.adb:15:17: medium: overflow check might fail (e.g. when A = (others => 2)
+    and A''First = 1 and A''Last = 10 and Index = 1 and X = 0 and Z = -1)[#4]
+
+    poly.adb:15:28: medium: overflow check might fail (e.g. when A = (others => 2)
+    and A''First = 1 and A''Last = 10 and Index = 1 and X = 0) [possible explanation:
+    precondition of subprogram at poly.ads:3 should mention A][#3]
+
+    poly.adb:15:33: medium: overflow check might fail (e.g. when Index = 1 and X =
+    0)[#2]
+
+    poly.adb:17:21: medium: assertion might fail, cannot prove Y = Z (e.g. when Y
+    = -1 and Z = 0)[#5]
+
+    poly.ads:10:33: medium: overflow check might fail[#7]
+
+    poly.ads:10:37: medium: range check might fail (e.g. when A = (others => 0) and
+    A''First = 0 and A''Last = 2147483647)[#6]
+
+    poly.ads:11:40: medium: postcondition might fail, cannot prove Horner''Result
+    = A(A''first) (e.g. when A = (10 => 2, others => 10) and A''First = 10 and A''Last
+    = 10 and Horner''Result = 1)[#8]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T13:22:51.718638'
+'2021-03-28T13:24:11.734523':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.adb:13:32: medium: loop invariant might not be preserved by an arbitrary
+    iteration, cannot prove Y <= abs Z (e.g. when Y = 1 and Z = 0)[#6]
+
+    poly.adb:13:37: medium: overflow check might fail (e.g. when Z = Integer''First)[#5]
+
+    poly.adb:14:24: medium: overflow check might fail (e.g. when A = (others => Integer''First)
+    and A''First = 1 and A''Last = 10 and Index = 1 and X = -1 and Y = 1)[#1]
+
+    poly.adb:14:28: medium: overflow check might fail (e.g. when X = -10 and Y = 214748365)[#0]
+
+    poly.adb:15:17: medium: overflow check might fail (e.g. when A = (others => 2)
+    and A''First = 1 and A''Last = 10 and Index = 1 and X = 0 and Z = -1)[#4]
+
+    poly.adb:15:28: medium: overflow check might fail (e.g. when A = (others => 2)
+    and A''First = 1 and A''Last = 10 and Index = 1 and X = 0) [possible explanation:
+    precondition of subprogram at poly.ads:3 should mention A][#3]
+
+    poly.adb:15:33: medium: overflow check might fail (e.g. when Index = 1 and X =
+    0)[#2]
+
+    poly.adb:17:21: medium: assertion might fail, cannot prove Y = Z (e.g. when Y
+    = -1 and Z = 0)[#7]
+
+    poly.ads:10:40: medium: postcondition might fail, cannot prove Horner''Result
+    = A(A''first) (e.g. when A = (10 => 2, others => 10) and A''First = 10 and A''Last
+    = 10 and Horner''Result = 1)[#8]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T13:24:11.734523'
+'2021-03-28T13:26:53.093806':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.adb:16:32: medium: loop invariant might not be preserved by an arbitrary
+    iteration, cannot prove Y <= abs Z (e.g. when Y = 1 and Z = 0)[#7]
+
+    poly.adb:16:37: medium: overflow check might fail (e.g. when Z = Integer''First)[#6]
+
+    poly.adb:17:24: medium: overflow check might fail (e.g. when A = (others => Integer''First)
+    and A''First = 1 and A''Last = 10 and Index = 1 and X = -1 and Y = 1)[#1]
+
+    poly.adb:17:28: medium: overflow check might fail (e.g. when X = -10 and Y = 214748365)[#0]
+
+    poly.adb:18:17: medium: overflow check might fail (e.g. when A = (others => 2)
+    and A''First = 1 and A''Last = 10 and Exponent = 0 and Index = 1 and X = 0 and
+    Z = -1) [possible explanation: loop invariant at line 16 should mention Exponent][#4]
+
+    poly.adb:18:28: medium: overflow check might fail (e.g. when A = (others => 2)
+    and A''First = 1 and A''Last = 10 and Exponent = 0 and Index = 1 and X = 0) [possible
+    explanation: loop invariant at line 16 should mention Exponent][#3]
+
+    poly.adb:18:33: medium: overflow check might fail (e.g. when Exponent = 0 and
+    X = 0) [possible explanation: loop invariant at line 16 should mention Exponent][#2]
+
+    poly.adb:19:46: medium: overflow check might fail (e.g. when Exponent = Natural''Last)
+    [possible explanation: loop invariant at line 16 should mention Exponent][#5]
+
+    poly.adb:21:21: medium: assertion might fail, cannot prove Y = Z (e.g. when Y
+    = -1 and Z = 0)[#8]
+
+    poly.ads:10:40: medium: postcondition might fail, cannot prove Horner''Result
+    = A(A''first) (e.g. when A = (10 => 2, others => 10) and A''First = 10 and A''Last
+    = 10 and Horner''Result = 1)[#9]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T13:26:53.093806'
+'2021-03-28T13:28:34.093368':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.adb:16:32: medium: loop invariant might not be preserved by an arbitrary
+    iteration, cannot prove Y <= abs Z (e.g. when Y = 1 and Z = 0)[#7]
+
+    poly.adb:16:37: medium: overflow check might fail (e.g. when Z = Integer''First)[#6]
+
+    poly.adb:17:24: medium: overflow check might fail (e.g. when A = (others => Integer''First)
+    and A''First = 1 and A''Last = 10 and Index = 1 and X = -1 and Y = 1)[#1]
+
+    poly.adb:17:28: medium: overflow check might fail (e.g. when X = -10 and Y = 214748365)[#0]
+
+    poly.adb:18:17: medium: overflow check might fail (e.g. when A = (others => 2)
+    and A''First = 1 and A''Last = 10 and Exponent = 0 and Index = 1 and X = 0 and
+    Z = -1) [possible explanation: loop invariant at line 16 should mention Exponent][#4]
+
+    poly.adb:18:28: medium: overflow check might fail (e.g. when A = (others => 2)
+    and A''First = 1 and A''Last = 10 and Exponent = 0 and Index = 1 and X = 0) [possible
+    explanation: loop invariant at line 16 should mention Exponent][#3]
+
+    poly.adb:18:33: medium: overflow check might fail (e.g. when Exponent = 0 and
+    X = 0) [possible explanation: loop invariant at line 16 should mention Exponent][#2]
+
+    poly.adb:19:46: medium: range check might fail (e.g. when Exponent = 0) [possible
+    explanation: loop invariant at line 16 should mention Exponent][#5]
+
+    poly.adb:21:21: medium: assertion might fail, cannot prove Y = Z (e.g. when Y
+    = -1 and Z = 0)[#8]
+
+    poly.ads:10:40: medium: postcondition might fail, cannot prove Horner''Result
+    = A(A''first) (e.g. when A = (10 => 2, others => 10) and A''First = 10 and A''Last
+    = 10 and Horner''Result = 1)[#9]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T13:28:34.093368'
+'2021-03-28T13:29:37.684074':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.adb:16:32: medium: loop invariant might not be preserved by an arbitrary
+    iteration, cannot prove Y <= abs Z (e.g. when Y = 1 and Z = 0)[#7]
+
+    poly.adb:16:37: medium: overflow check might fail (e.g. when Z = Integer''First)[#6]
+
+    poly.adb:17:24: medium: overflow check might fail (e.g. when A = (others => Integer''First)
+    and A''First = 1 and A''Last = 10 and Index = 1 and X = -1 and Y = 1)[#1]
+
+    poly.adb:17:28: medium: overflow check might fail (e.g. when X = -10 and Y = 214748365)[#0]
+
+    poly.adb:18:17: medium: overflow check might fail (e.g. when A = (others => 2)
+    and A''First = 1 and A''Last = 10 and Exponent = 0 and Index = 1 and X = 0 and
+    Z = -1) [possible explanation: loop invariant at line 16 should mention Exponent][#4]
+
+    poly.adb:18:28: medium: overflow check might fail (e.g. when A = (others => 2)
+    and A''First = 1 and A''Last = 10 and Exponent = 0 and Index = 1 and X = 0) [possible
+    explanation: loop invariant at line 16 should mention Exponent][#3]
+
+    poly.adb:18:33: medium: overflow check might fail (e.g. when Exponent = 0 and
+    X = 0) [possible explanation: loop invariant at line 16 should mention Exponent][#2]
+
+    poly.adb:19:46: medium: range check might fail (e.g. when Exponent = 0) [possible
+    explanation: loop invariant at line 16 should mention Exponent][#5]
+
+    poly.adb:21:21: medium: assertion might fail, cannot prove Y = Z (e.g. when Y
+    = -1 and Z = 0)[#8]
+
+    poly.ads:10:40: medium: postcondition might fail, cannot prove Horner''Result
+    = A(A''first) (e.g. when A = (10 => 2, others => 10) and A''First = 10 and A''Last
+    = 10 and Horner''Result = 1)[#9]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T13:29:37.684074'
+'2021-03-28T13:33:01.435305':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.adb:13:28: medium: range check might fail (e.g. when A = (others => 10) and
+    A''First = 10 and A''Last = 10)[#0]
+
+    poly.adb:16:32: medium: loop invariant might not be preserved by an arbitrary
+    iteration, cannot prove Y <= abs Z (e.g. when Y = 1 and Z = 0)[#8]
+
+    poly.adb:16:37: medium: overflow check might fail (e.g. when Z = Integer''First)[#7]
+
+    poly.adb:17:24: medium: overflow check might fail (e.g. when A = (others => Integer''First)
+    and A''First = 1 and A''Last = 10 and Index = 1 and X = -1 and Y = 1)[#2]
+
+    poly.adb:17:28: medium: overflow check might fail (e.g. when X = -10 and Y = 214748365)[#1]
+
+    poly.adb:18:17: medium: overflow check might fail (e.g. when A = (others => 2)
+    and A''First = 1 and A''Last = 10 and Exponent = 0 and Index = 1 and X = 0 and
+    Z = -1) [possible explanation: loop invariant at line 16 should mention Exponent][#5]
+
+    poly.adb:18:28: medium: overflow check might fail (e.g. when A = (others => 2)
+    and A''First = 1 and A''Last = 10 and Exponent = 0 and Index = 1 and X = 0) [possible
+    explanation: loop invariant at line 16 should mention Exponent][#4]
+
+    poly.adb:18:33: medium: overflow check might fail (e.g. when Exponent = 0 and
+    X = 0) [possible explanation: loop invariant at line 16 should mention Exponent][#3]
+
+    poly.adb:19:46: medium: range check might fail (e.g. when Exponent = 0) [possible
+    explanation: loop invariant at line 16 should mention Exponent][#6]
+
+    poly.adb:21:21: medium: assertion might fail, cannot prove Y = Z (e.g. when Y
+    = -1 and Z = 0)[#9]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T13:33:01.435305'
+'2021-03-28T13:33:33.856063':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.adb:16:32: medium: loop invariant might not be preserved by an arbitrary
+    iteration, cannot prove Y <= abs Z (e.g. when Y = 1 and Z = 0)[#7]
+
+    poly.adb:16:37: medium: overflow check might fail (e.g. when Z = Integer''First)[#6]
+
+    poly.adb:17:24: medium: overflow check might fail (e.g. when A = (others => Integer''First)
+    and A''First = 1 and A''Last = 10 and Index = 1 and X = -1 and Y = 1)[#1]
+
+    poly.adb:17:28: medium: overflow check might fail (e.g. when X = -10 and Y = 214748365)[#0]
+
+    poly.adb:18:17: medium: overflow check might fail (e.g. when A = (others => 2)
+    and A''First = 1 and A''Last = 10 and Exponent = 0 and Index = 1 and X = 0 and
+    Z = -1) [possible explanation: loop invariant at line 16 should mention Exponent][#4]
+
+    poly.adb:18:28: medium: overflow check might fail (e.g. when A = (others => 2)
+    and A''First = 1 and A''Last = 10 and Exponent = 0 and Index = 1 and X = 0) [possible
+    explanation: loop invariant at line 16 should mention Exponent][#3]
+
+    poly.adb:18:33: medium: overflow check might fail (e.g. when Exponent = 0 and
+    X = 0) [possible explanation: loop invariant at line 16 should mention Exponent][#2]
+
+    poly.adb:19:46: medium: range check might fail (e.g. when Exponent = 0) [possible
+    explanation: loop invariant at line 16 should mention Exponent][#5]
+
+    poly.adb:21:21: medium: assertion might fail, cannot prove Y = Z (e.g. when Y
+    = -1 and Z = 0)[#8]
+
+    poly.ads:10:40: medium: postcondition might fail, cannot prove Horner''Result
+    = A(A''first) (e.g. when A = (10 => 2, others => 10) and A''First = 10 and A''Last
+    = 10 and Horner''Result = 1)[#9]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T13:33:33.856063'
+'2021-03-28T13:40:18.104458':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    poly.adb:18:43: "I" is undefined
+
+    gnatprove: error during generation of Global contracts
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T13:40:18.104458'
+'2021-03-28T13:40:40.444329':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.adb:14:17: medium: overflow check might fail (e.g. when X = -2 and Y = 214748365)[#0]
+
+    poly.adb:14:21: medium: overflow check might fail (e.g. when A = (10 => 0, others
+    => -2147483649) and A''First = 1 and A''Last = 10 and Index = 1 and X = 0 and
+    Y = 0)[#1]
+
+    poly.adb:15:17: medium: overflow check might fail (e.g. when A = (10 => 0, others
+    => -3) and A''First = 1 and A''Last = 10 and Index = 1 and X = 0 and Z = -2147483643)[#4]
+
+    poly.adb:15:28: medium: overflow check might fail (e.g. when A = (others => -2)
+    and A''First = 1 and A''Last = 10 and Index = 10 and X = 0) [possible explanation:
+    precondition of subprogram at poly.ads:3 should mention A][#3]
+
+    poly.adb:15:33: medium: overflow check might fail (e.g. when A = (10 => 0, others
+    => 1) and A''First = 1 and A''Last = 10 and Index = 10 and X = 0)[#2]
+
+    poly.adb:18:32: medium: loop invariant might not be preserved by an arbitrary
+    iteration, cannot prove Z = (X ** (Index - A''First)) * Y (e.g. when A = (1 =>
+    0, 10 => 0, others => 1) and A''First = 1 and A''Last = 10 and Index = 1 and X
+    = 1 and Y = -1 and Z = 0)[#6]
+
+    poly.adb:18:61: medium: overflow check might fail (e.g. when A = (1 => 0, 10 =>
+    0, others => 1) and A''First = 1 and A''Last = 10 and Index = 1 and X = 1 and
+    Y = -2)[#5]
+
+    poly.ads:10:40: medium: postcondition might fail, cannot prove Horner''Result
+    = A(A''first) (e.g. when A = (10 => 1, others => 10) and A''First = 10 and A''Last
+    = 10 and Horner''Result = 0)[#7]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T13:40:40.444329'
+'2021-03-28T13:42:04.100204':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    poly.ads:3:59: missing ";"
+
+    gnatprove: error during generation of Global contracts
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T13:42:04.100204'
+'2021-03-28T13:42:48.493925':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.adb:14:17: medium: overflow check might fail (e.g. when X = -2 and Y = 2)[#0]
+
+    poly.adb:14:21: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => -2147483649) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0 and Y
+    = 0)[#1]
+
+    poly.adb:15:17: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => -3) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0 and Z = -2147483643)[#4]
+
+    poly.adb:15:28: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => -2) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0 and Z = 0) [possible
+    explanation: subprogram at poly.ads:5 should mention A and X in a precondition][#3]
+
+    poly.adb:15:33: medium: overflow check might fail [possible explanation: subprogram
+    at poly.ads:5 should mention X in a precondition][#2]
+
+    poly.adb:18:32: medium: loop invariant might not be preserved by an arbitrary
+    iteration, cannot prove Z = (X ** (Index - A''First)) * Y (e.g. when A = (0 =>
+    0, 1 => 0, others => 0) and A''First = 0 and A''Last = 1 and Index = 0 and X =
+    1 and Y = -1 and Z = 0)[#6]
+
+    poly.adb:18:61: medium: overflow check might fail (e.g. when A = (0 => 0, 1 =>
+    0, others => 0) and A''First = 0 and A''Last = 1 and Index = 0 and X = 1 and Y
+    = -2)[#5]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T13:42:48.493925'
+'2021-03-28T13:46:37.233056':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.adb:14:17: medium: overflow check might fail (e.g. when X = Integer''First
+    and Y = 2)[#0]
+
+    poly.adb:14:21: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => -2147483649) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0 and Y
+    = 0)[#1]
+
+    poly.adb:15:17: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => -3) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0 and Z = Integer''First+3)[#4]
+
+    poly.adb:15:28: medium: overflow check might fail (e.g. when A = (others => -2)
+    and A''First = 0 and A''Last = 0 and Index = 0 and X = 0) [possible explanation:
+    subprogram at poly.ads:5 should mention A and X in a precondition][#3]
+
+    poly.adb:15:33: medium: overflow check might fail [possible explanation: subprogram
+    at poly.ads:5 should mention X in a precondition][#2]
+
+    poly.adb:17:32: medium: loop invariant might not be preserved by an arbitrary
+    iteration, cannot prove Y <= abs Z (e.g. when Y = 1 and Z = 0)[#6]
+
+    poly.adb:17:32: medium: loop invariant might fail in first iteration, cannot prove
+    Y <= abs Z (e.g. when Y = 1 and Z = 0)[#7]
+
+    poly.adb:17:37: medium: overflow check might fail (e.g. when Z = -4)[#5]
+
+    poly.adb:20:21: medium: assertion might fail, cannot prove Y = Z (e.g. when Y
+    = 0 and Z = 1)[#8]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T13:46:37.233056'
+'2021-03-28T13:49:45.831356':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.adb:14:17: medium: overflow check might fail (e.g. when X = -2 and Y = 2)[#0]
+
+    poly.adb:14:21: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => -2147483649) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0 and Y
+    = 0)[#1]
+
+    poly.adb:15:17: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => -3) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0 and Z = -2147483643)[#4]
+
+    poly.adb:15:28: medium: overflow check might fail (e.g. when A = (others => -2)
+    and A''First = 0 and A''Last = 0 and Index = 0 and X = 0) [possible explanation:
+    subprogram at poly.ads:5 should mention A and X in a precondition][#3]
+
+    poly.adb:15:33: medium: overflow check might fail [possible explanation: subprogram
+    at poly.ads:5 should mention X in a precondition][#2]
+
+    poly.adb:18:32: medium: loop invariant might not be preserved by an arbitrary
+    iteration, cannot prove Z = (X ** (Index - A''First)) * Y (e.g. when A = (0 =>
+    0, 1 => 0, others => 0) and A''First = 0 and A''Last = 1 and Index = 0 and X =
+    1 and Y = -1 and Z = 0)[#6]
+
+    poly.adb:18:61: medium: overflow check might fail (e.g. when A = (0 => 0, 1 =>
+    0, others => 0) and A''First = 0 and A''Last = 1 and Index = 0 and X = 1 and Y
+    = -2)[#5]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T13:49:45.831356'
+'2021-03-28T13:52:04.343372':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.adb:14:17: medium: overflow check might fail (e.g. when X = -2 and Y = 2)[#0]
+
+    poly.adb:14:21: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => -2147483649) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0 and Y
+    = 0)[#1]
+
+    poly.adb:15:17: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => -3) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0 and Z = -2147483643)[#4]
+
+    poly.adb:15:28: medium: overflow check might fail [possible explanation: subprogram
+    at poly.ads:5 should mention A and X in a precondition][#3]
+
+    poly.adb:15:33: medium: overflow check might fail [possible explanation: subprogram
+    at poly.ads:5 should mention X in a precondition][#2]
+
+    poly.adb:18:32: medium: loop invariant might not be preserved by an arbitrary
+    iteration, cannot prove Z = (X ** (Index - A''First)) * Y (e.g. when A = (0 =>
+    0, 1 => 0, others => 0) and A''First = 0 and A''Last = 1 and Index = 0 and X =
+    1 and Y = -1 and Z = 0)[#6]
+
+    poly.adb:18:61: medium: overflow check might fail (e.g. when A = (0 => 0, 1 =>
+    0, others => 0) and A''First = 0 and A''Last = 1 and Index = 0 and X = 1 and Y
+    = -2)[#5]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T13:52:04.343372'
+'2021-03-28T13:57:10.810468':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    poly.ads:6:23: missing Range attribute in iteration over an array
+
+    poly.ads:6:23: if "I" is meant to designate an element of the array, use "of"
+
+    gnatprove: error during generation of Global contracts
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T13:57:10.810468'
+'2021-03-28T13:58:01.234619':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.adb:14:17: medium: overflow check might fail (e.g. when X = -2 and Y = 2)[#0]
+
+    poly.adb:14:21: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => -2147483649) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0 and Y
+    = 0)[#1]
+
+    poly.adb:15:17: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => -3) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0 and Z = -2147483643)[#4]
+
+    poly.adb:15:28: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => -2) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0 and Z = 0) [possible
+    explanation: precondition of subprogram at poly.ads:5 should mention X][#3]
+
+    poly.adb:15:33: medium: overflow check might fail (e.g. when A = (0 => 0, 1 =>
+    0, others => 0) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0 and Z
+    = 0) [possible explanation: precondition of subprogram at poly.ads:5 should mention
+    X][#2]
+
+    poly.adb:18:32: medium: loop invariant might not be preserved by an arbitrary
+    iteration, cannot prove Z = (X ** (Index - A''First)) * Y (e.g. when A = (0 =>
+    0, 1 => 0, others => 0) and A''First = 0 and A''Last = 1 and Index = 0 and X =
+    1 and Y = -1 and Z = 0)[#6]
+
+    poly.adb:18:61: medium: overflow check might fail (e.g. when A = (0 => 0, 1 =>
+    0, others => 0) and A''First = 0 and A''Last = 1 and Index = 0 and X = 1 and Y
+    = -2)[#5]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T13:58:01.234619'
+'2021-03-28T14:00:42.198040':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.adb:14:17: medium: overflow check might fail (e.g. when X = -2 and Y = 2)[#0]
+
+    poly.adb:14:21: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => -2147483649) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0 and Y
+    = 0)[#1]
+
+    poly.adb:15:17: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => -3) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0 and Z = -2147483643)[#4]
+
+    poly.adb:15:28: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => -2) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0 and Z = 0) [possible
+    explanation: precondition of subprogram at poly.ads:5 should mention X][#3]
+
+    poly.adb:15:33: medium: overflow check might fail (e.g. when A = (0 => 0, 1 =>
+    0, others => 0) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0 and Z
+    = 0) [possible explanation: precondition of subprogram at poly.ads:5 should mention
+    X][#2]
+
+    poly.adb:18:32: medium: loop invariant might not be preserved by an arbitrary
+    iteration, cannot prove Z = (X ** (Index - A''First)) * Y (e.g. when A = (0 =>
+    0, 1 => 0, others => 0) and A''First = 0 and A''Last = 1 and Index = 0 and X =
+    1 and Y = -1 and Z = 0)[#6]
+
+    poly.adb:18:61: medium: overflow check might fail (e.g. when A = (0 => 0, 1 =>
+    0, others => 0) and A''First = 0 and A''Last = 1 and Index = 0 and X = 1 and Y
+    = -2)[#5]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T14:00:42.198040'
+'2021-03-28T14:03:57.645428':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.adb:14:17: medium: overflow check might fail (e.g. when X = -2 and Y = 2)[#0]
+
+    poly.adb:14:21: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => -2147483649) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0 and Y
+    = 0)[#1]
+
+    poly.adb:15:17: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => -3) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0 and Z = -2147483643)[#4]
+
+    poly.adb:15:28: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => -2) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0 and Z = 0) [possible
+    explanation: precondition of subprogram at poly.ads:5 should mention X][#3]
+
+    poly.adb:15:33: medium: overflow check might fail (e.g. when A = (0 => 0, 1 =>
+    0, others => 0) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0 and Z
+    = 0) [possible explanation: precondition of subprogram at poly.ads:5 should mention
+    X][#2]
+
+    poly.adb:18:32: medium: loop invariant might not be preserved by an arbitrary
+    iteration, cannot prove Z = (X ** (Index - A''First)) * Y (e.g. when A = (0 =>
+    0, 1 => 0, others => 0) and A''First = 0 and A''Last = 1 and Index = 0 and X =
+    1 and Y = -1 and Z = 0)[#6]
+
+    poly.adb:18:61: medium: overflow check might fail (e.g. when A = (0 => 0, 1 =>
+    0, others => 0) and A''First = 0 and A''Last = 1 and Index = 0 and X = 1 and Y
+    = -2)[#5]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T14:03:57.645428'
+'2021-03-28T14:07:30.908791':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.adb:14:17: medium: overflow check might fail (e.g. when X = -2 and Y = 2)[#0]
+
+    poly.adb:14:21: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => -2147483649) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0 and Y
+    = 0)[#1]
+
+    poly.adb:15:17: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => -3) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0 and Z = -2147483643)[#4]
+
+    poly.adb:15:28: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => -2) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0 and Z = 0) [possible
+    explanation: precondition of subprogram at poly.ads:5 should mention X][#3]
+
+    poly.adb:15:33: medium: overflow check might fail (e.g. when A = (0 => 0, 1 =>
+    0, others => 0) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0 and Z
+    = 0) [possible explanation: precondition of subprogram at poly.ads:5 should mention
+    X][#2]
+
+    poly.adb:18:32: medium: loop invariant might not be preserved by an arbitrary
+    iteration, cannot prove Z = (X ** (Index - A''First)) * Y (e.g. when A = (0 =>
+    0, 1 => 0, others => 0) and A''First = 0 and A''Last = 1 and Index = 0 and X =
+    1 and Y = -1 and Z = 0)[#6]
+
+    poly.adb:18:61: medium: overflow check might fail (e.g. when A = (0 => 0, 1 =>
+    0, others => 0) and A''First = 0 and A''Last = 1 and Index = 0 and X = 1 and Y
+    = -2)[#5]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T14:07:30.908791'
+'2021-03-28T14:13:13.314929':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.adb:14:17: medium: overflow check might fail (e.g. when X = -2 and Y = 2)[#0]
+
+    poly.adb:14:21: medium: overflow check might fail (e.g. when A = (0 => -2147483649,
+    1 => -1, others => 0) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0
+    and Y = 0)[#1]
+
+    poly.adb:15:17: medium: overflow check might fail (e.g. when A = (1 => -2, others
+    => -3) and A''First = 0 and A''Last = 1 and Index = 0 and X = 0 and Z = -2147483643)[#4]
+
+    poly.adb:15:28: medium: overflow check might fail (e.g. when A = (others => -2)
+    and A''First = 0 and A''Last = 1 and Index = 1 and X = 0) [possible explanation:
+    precondition of subprogram at poly.ads:5 should mention X][#3]
+
+    poly.adb:15:33: medium: overflow check might fail (e.g. when A = (1 => -1, others
+    => 0) and A''First = 0 and A''Last = 1 and Index = 1 and X = 0) [possible explanation:
+    precondition of subprogram at poly.ads:5 should mention X][#2]
+
+    poly.adb:18:32: medium: loop invariant might not be preserved by an arbitrary
+    iteration, cannot prove Z = (X ** (Index - A''First)) * Y (e.g. when A = (0 =>
+    -1, 1 => -1, others => 0) and A''First = 0 and A''Last = 1 and Index = 0 and X
+    = 1 and Y = -2 and Z = 1)[#6]
+
+    poly.adb:18:61: medium: overflow check might fail (e.g. when A = (0 => 1073741823,
+    1 => -1, others => 0) and A''First = 0 and A''Last = 1 and Index = 0 and X = 2
+    and Y = -1073741823)[#5]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T14:13:13.314929'
+'2021-03-28T14:14:23.328724':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.adb:7:35: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => -3) and A''First = 0 and A''Last = 1 and Definition = -2147483643 and I = 0
+    and X = 0)[#2]
+
+    poly.adb:7:42: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => -2) and A''First = 0 and A''Last = 1 and Definition = 0 and I = 0 and X = 0)
+    [possible explanation: precondition of subprogram at poly.ads:3 should mention
+    A and X][#1]
+
+    poly.adb:7:47: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => 0) and A''First = 0 and A''Last = 1 and Definition = 0 and I = 0 and X = 0)
+    [possible explanation: precondition of subprogram at poly.ads:3 should mention
+    X][#0]
+
+    poly.adb:8:27: medium: overflow check might fail (e.g. when Result = 2 and X =
+    -2)[#3]
+
+    poly.adb:8:31: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => -2147483649) and A''First = 0 and A''Last = 1 and I = 0 and Result = 0 and
+    X = 0)[#4]
+
+    poly.adb:10:33: medium: loop invariant might not be preserved by an arbitrary
+    iteration, cannot prove Definition = (X ** (I - A''First)) * Result (e.g. when
+    A = (0 => 0, 1 => 0, others => 0) and A''First = 0 and A''Last = 1 and Definition
+    = 0 and I = 0 and Result = -1 and X = 1)[#6]
+
+    poly.adb:10:67: medium: overflow check might fail (e.g. when A = (0 => 0, 1 =>
+    0, others => 0) and A''First = 0 and A''Last = 1 and I = 0 and Result = -2 and
+    X = 1)[#5]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T14:14:23.328724'
+'2021-03-28T14:17:31.736704':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.adb:7:35: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => -3) and A''First = 0 and A''Last = 1 and Definition = -2147483643 and I = 0
+    and X = 0)[#2]
+
+    poly.adb:7:42: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => -2) and A''First = 0 and A''Last = 1 and Definition = 0 and I = 0 and X = 0)
+    [possible explanation: precondition of subprogram at poly.ads:3 should mention
+    A and X][#1]
+
+    poly.adb:7:47: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => 0) and A''First = 0 and A''Last = 1 and Definition = 0 and I = 0 and X = 0)
+    [possible explanation: precondition of subprogram at poly.ads:3 should mention
+    X][#0]
+
+    poly.adb:8:27: medium: overflow check might fail (e.g. when Result = 2 and X =
+    -2)[#3]
+
+    poly.adb:8:31: medium: overflow check might fail (e.g. when A = (1 => 0, others
+    => -2147483649) and A''First = 0 and A''Last = 1 and I = 0 and Result = 0 and
+    X = 0)[#4]
+
+    poly.adb:10:33: medium: loop invariant might not be preserved by an arbitrary
+    iteration, cannot prove Definition = (X ** (I - A''First)) * Result (e.g. when
+    A = (0 => 0, 1 => 0, others => 0) and A''First = 0 and A''Last = 1 and Definition
+    = 0 and I = 0 and Result = -1 and X = 1)[#6]
+
+    poly.adb:10:67: medium: overflow check might fail (e.g. when A = (0 => 0, 1 =>
+    0, others => 0) and A''First = 0 and A''Last = 1 and I = 0 and Result = -2 and
+    X = 1)[#5]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T14:17:31.736704'
+'2021-03-28T15:13:02.796665':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.adb:7:17: medium: overflow check might fail (e.g. when A = (1 => -2, others
+    => -3) and A''First = 0 and A''Last = 1 and I = 0 and X = 0 and Z = -2147483643)[#2]
+
+    poly.adb:7:24: medium: overflow check might fail (e.g. when A = (others => -2)
+    and A''First = 0 and A''Last = 1 and I = 1 and X = 0) [possible explanation: precondition
+    of subprogram at poly.ads:5 should mention X][#1]
+
+    poly.adb:7:29: medium: overflow check might fail (e.g. when A = (1 => -1, others
+    => 0) and A''First = 0 and A''Last = 1 and I = 0 and X = 0 and Z = 0) [possible
+    explanation: precondition of subprogram at poly.ads:5 should mention X][#0]
+
+    poly.adb:8:17: medium: overflow check might fail (e.g. when X = -2 and Y = 2)[#3]
+
+    poly.adb:8:21: medium: overflow check might fail (e.g. when A = (1 => -1, others
+    => -2147483649) and A''First = 0 and A''Last = 1 and I = 0 and X = 0 and Y = 0)[#4]
+
+    poly.adb:10:33: medium: loop invariant might not be preserved by an arbitrary
+    iteration, cannot prove Z = (X ** (I - A''First)) * Y (e.g. when A = (0 => -1,
+    1 => -1, others => 0) and A''First = 0 and A''Last = 1 and I = 0 and X = 1 and
+    Y = -2 and Z = 1)[#6]
+
+    poly.adb:10:58: medium: overflow check might fail (e.g. when A = (0 => 3, 1 =>
+    -1, others => 0) and A''First = 0 and A''Last = 1 and I = 0 and X = 2 and Y =
+    -3)[#5]
+
+    poly.adb:13:22: medium: assertion might fail, cannot prove Y = Z (e.g. when Y
+    = -1 and Z = 0)[#7]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T15:13:02.796665'
+'2021-03-28T15:13:48.364205':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.adb:7:17: medium: overflow check might fail (e.g. when A = (1 => -2, others
+    => -3) and A''First = 0 and A''Last = 1 and I = 0 and X = 0 and Z = -2147483643)[#2]
+
+    poly.adb:7:24: medium: overflow check might fail [possible explanation: precondition
+    of subprogram at poly.ads:5 should mention X][#1]
+
+    poly.adb:7:29: medium: overflow check might fail (e.g. when A = (1 => -1, others
+    => 0) and A''First = 0 and A''Last = 1 and I = 0 and X = 0 and Z = 0) [possible
+    explanation: precondition of subprogram at poly.ads:5 should mention X][#0]
+
+    poly.adb:8:17: medium: overflow check might fail (e.g. when X = -2 and Y = 2)[#3]
+
+    poly.adb:8:21: medium: overflow check might fail (e.g. when A = (1 => -1, others
+    => -2147483649) and A''First = 0 and A''Last = 1 and I = 0 and X = 0 and Y = 0)[#4]
+
+    poly.adb:10:33: medium: loop invariant might not be preserved by an arbitrary
+    iteration, cannot prove Z = (X ** (I - A''First)) * Y (e.g. when A = (0 => -1,
+    1 => -1, others => 0) and A''First = 0 and A''Last = 1 and I = 0 and X = 1 and
+    Y = -2 and Z = 1)[#6]
+
+    poly.adb:10:58: medium: overflow check might fail (e.g. when A = (0 => 3, 1 =>
+    -1, others => 0) and A''First = 0 and A''Last = 1 and I = 0 and X = 2 and Y =
+    -3)[#5]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T15:13:48.364205'
+'2021-03-28T15:22:15.514490':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.adb:7:33: medium: loop invariant might not be preserved by an arbitrary iteration,
+    cannot prove Z = (X ** (I - A''First)) * Y (e.g. when A = (1 => -1, others =>
+    0) and A''First = 0 and A''Last = 1 and I = 0 and X = 0 and Y = -1 and Z = 0)[#7]
+
+    poly.adb:7:40: medium: overflow check might fail (e.g. when A = (others => 0)
+    and A''First = 0 and A''Last = 1 and I = 1 and X = 0) [possible explanation: precondition
+    of subprogram at poly.ads:5 should mention X][#5]
+
+    poly.adb:7:58: medium: overflow check might fail (e.g. when A = (1 => -2, others
+    => 0) and A''First = 0 and A''Last = 1 and I = 0 and X = 0 and Y = -2)[#6]
+
+    poly.adb:8:17: medium: overflow check might fail (e.g. when A = (others => -2)
+    and A''First = 0 and A''Last = 1 and I = 1 and X = 0 and Z = -6)[#2]
+
+    poly.adb:8:24: medium: overflow check might fail (e.g. when A = (others => -2)
+    and A''First = 0 and A''Last = 1 and I = 0 and X = 0) [possible explanation: precondition
+    of subprogram at poly.ads:5 should mention X][#1]
+
+    poly.adb:8:29: medium: overflow check might fail (e.g. when A = (others => 0)
+    and A''First = 0 and A''Last = 1 and I = 0 and X = 0) [possible explanation: precondition
+    of subprogram at poly.ads:5 should mention X][#0]
+
+    poly.adb:9:17: medium: overflow check might fail (e.g. when X = -2 and Y = 2)[#3]
+
+    poly.adb:9:21: medium: overflow check might fail (e.g. when A = (others => -2147483649)
+    and A''First = 0 and A''Last = 1 and I = 1 and X = 0 and Y = 0)[#4]
+
+    poly.adb:14:22: medium: assertion might fail, cannot prove Y = Z (e.g. when Y
+    = -1 and Z = 0)[#8]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T15:22:15.514490'
+'2021-03-28T15:22:50.217536':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    poly.adb:7:17: medium: overflow check might fail (e.g. when A = (1 => -2, others
+    => -3) and A''First = 0 and A''Last = 1 and I = 0 and X = 0 and Z = -2147483643)[#2]
+
+    poly.adb:7:24: medium: overflow check might fail (e.g. when A = (others => -2)
+    and A''First = 0 and A''Last = 1 and I = 1 and X = 0) [possible explanation: precondition
+    of subprogram at poly.ads:5 should mention X][#1]
+
+    poly.adb:7:29: medium: overflow check might fail (e.g. when A = (others => 0)
+    and A''First = 0 and A''Last = 1 and I = 1 and X = 0) [possible explanation: precondition
+    of subprogram at poly.ads:5 should mention X][#0]
+
+    poly.adb:8:17: medium: overflow check might fail (e.g. when X = -2 and Y = 2)[#3]
+
+    poly.adb:8:21: medium: overflow check might fail (e.g. when A = (1 => -1, others
+    => -2147483649) and A''First = 0 and A''Last = 1 and I = 0 and X = 0 and Y = 0)[#4]
+
+    poly.adb:10:33: medium: loop invariant might not be preserved by an arbitrary
+    iteration, cannot prove Z = (X ** (I - A''First)) * Y (e.g. when A = (0 => -1,
+    1 => -1, others => 0) and A''First = 0 and A''Last = 1 and I = 0 and X = 1 and
+    Y = -2 and Z = 1)[#6]
+
+    poly.adb:10:58: medium: overflow check might fail (e.g. when A = (0 => 3, 1 =>
+    -1, others => 0) and A''First = 0 and A''Last = 1 and I = 0 and X = 2 and Y =
+    -3)[#5]
+
+    Summary logged in /home/gabriel/Desktop/studia/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-28T15:22:50.217536'

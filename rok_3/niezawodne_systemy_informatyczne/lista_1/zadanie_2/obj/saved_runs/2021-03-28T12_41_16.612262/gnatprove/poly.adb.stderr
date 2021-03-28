@@ -1,0 +1,2 @@
+poly.ads:9:40: medium: postcondition might fail, cannot prove Horner'Result = A(0) (e.g. when A = (others => 1) and A'First = 0 and A'Last = 0 and Horner'Result = 0)[#1]
+poly.ads:9:58: medium: array index check might fail (e.g. when A = (1 => 0, others => 1) and A'First = 1 and A'Last = 1)[#0]

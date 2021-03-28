@@ -5,16 +5,17 @@ A -march=x86-64
 P ZX
 
 RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
 RV NO_IO
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U poly%b		poly.adb		2b14994a NE OO PK
+U poly%b		poly.adb		ecc2a0a0 NE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
-Z system.img_int%s	s-imgint.adb		s-imgint.ali
+Z system.exp_int%s	s-expint.adb		s-expint.ali
 
-U poly%s		poly.ads		37326999 EE NE OO PK
+U poly%s		poly.ads		8d355c2d EE NE OO PK
 
 D ada.ads		20200819050642 76789da1 ada%s
 D a-except.ads		20200819050642 a7106115 ada.exceptions%s
@@ -25,13 +26,13 @@ D a-textio.ads		20200819050643 aef4d56d ada.text_io%s
 D a-unccon.ads		20200819050643 0e9b276f ada.unchecked_conversion%s
 D interfac.ads		20200819050644 5ab55268 interfaces%s
 D i-cstrea.ads		20200819050644 e53d8b8e interfaces.c_streams%s
-D poly.ads		20210325182812 37326999 poly%s
-D poly.adb		20210325184049 b2d225be poly%b
+D poly.ads		20210328102937 8d355c2d poly%s
+D poly.adb		20210328103150 cf0329e0 poly%b
 D system.ads		20200819050647 4635ec04 system%s
 D s-crtl.ads		20200819050645 0ebbdb71 system.crtl%s
 D s-exctab.ads		20200819050645 54135002 system.exception_table%s
+D s-expint.ads		20200819050645 192336fc system.exp_int%s
 D s-ficobl.ads		20200819050645 078245e4 system.file_control_block%s
-D s-imgint.ads		20200819050645 02dbe0c2 system.img_int%s
 D s-parame.ads		20200819050646 4752c4cb system.parameters%s
 D s-secsta.ads		20200819050646 9b3ab94b system.secondary_stack%s
 D s-soflin.ads		20200819050646 a7318a92 system.soft_links%s
@@ -45,17 +46,18 @@ G a e
 G c Z s b [horner poly 3 13 none]
 G c Z s s [vectorIP poly 2 9 none]
 X 1 ada.ads
-16K9*Ada 20e8 11|1r6 9r10
+16K9*Ada 20e8 11|1r6
 X 6 a-textio.ads
-57K13*Text_IO 727e16 11|1w10 9r14
-508U14*Put_Line 11|9s22
+57K13*Text_IO 727e16 11|1w10
 X 10 poly.ads
-1K9*Poly 4l5 4e9 11|3b14 13l5 13t9
+1K9*Poly 12l5 12e9 11|3b14 20l5 20t9
 2A9*Vector(integer)<integer> 3r37 11|4r38
-3V13*Horner{integer} 3>21 3>33 11|4b13 12t7
-3i21 X{integer} 11|4b22
-3a33 A{2A9} 11|4b34 8r42 8r53
+3V13*Horner{integer} 3>21 3>33 9r40 11|4b13 19t7
+3i21 X{integer} 11|4b22 14r26 15r27
+3a33 A{2A9} 6r10 7r10 9r22 9r56 9r58 10r10 10r14 11|4b34 12r42 12r53 14r15
+. 15r15
 X 11 poly.adb
-6i7 Result{integer}
-8i11 Index{integer} 9r45
+6i7 Y{integer} 9m7 13r32 14m10 14r30 18r14
+7i7 Z{integer} 10m7 13r41 15m10
+12i11 Index{integer} 14r17 15r17 15r32
 

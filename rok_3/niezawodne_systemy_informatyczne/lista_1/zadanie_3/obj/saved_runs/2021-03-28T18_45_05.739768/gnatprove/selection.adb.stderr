@@ -1,0 +1,2 @@
+selection.adb:21:95: medium: loop invariant might fail in first iteration, cannot prove A(E) <= A(L) (e.g. when A = (0 => 0, others => -1) and E = 0 and L = 1)[#0]
+selection.adb:21:95: medium: loop invariant might not be preserved by an arbitrary iteration, cannot prove A(E) <= A(L) (e.g. when A = (1 => 0, 2 => -1, others => 2) and E = 1 and L = 2)[#1]

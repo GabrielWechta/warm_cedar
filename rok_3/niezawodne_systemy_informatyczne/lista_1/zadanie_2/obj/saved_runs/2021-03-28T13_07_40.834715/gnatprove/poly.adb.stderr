@@ -1,0 +1,1 @@
+poly.ads:6:11: medium: missing dependency "Horner'Result => A"[#0]

@@ -1,0 +1,2 @@
+selection.adb:10:18: medium: array index check might fail (e.g. when A'First = 1 and A'Last = 2 and Min = 0) [possible explanation: loop at line 9 should mention Min in a loop invariant][#0]
+selection.ads:15:16: medium: postcondition might fail, cannot prove Sorted (A) (e.g. when A = (-1 => 1, 0 => 0, others => -1) and A'First = -1 and A'Last = 0) [possible explanation: loop invariant at selection.adb:19 should mention A][#1]

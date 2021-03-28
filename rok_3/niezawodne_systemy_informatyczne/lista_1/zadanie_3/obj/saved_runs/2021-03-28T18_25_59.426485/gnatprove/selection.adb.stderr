@@ -1,0 +1,4 @@
+selection.adb:15:60: medium: loop invariant might not be preserved by an arbitrary iteration, cannot prove E <= A(I) (e.g. when A = (1 => -1, 2 => -1, others => 0) and E = 1 and I = 0)[#0]
+selection.adb:15:60: medium: loop invariant might fail in first iteration, cannot prove E <= A(I) (e.g. when A = (1 => -1, others => 0) and E = 1 and I = 0)[#1]
+selection.adb:22:71: medium: loop invariant might not be preserved by an arbitrary iteration, cannot prove A(Element) <= A(Element + 1) (e.g. when A = (0 => 2, 1 => 1, 2 => 1, others => 0) and Element = 0)[#2]
+selection.ads:15:16: medium: postcondition might fail, cannot prove Sorted (A) (e.g. when A = (0 => -1, others => 0) and A'First = 0 and A'Last = -1)[#3]

@@ -1,0 +1,8 @@
+poly.adb:14:17: medium: overflow check might fail (e.g. when X = -2 and Y = 214748365)[#0]
+poly.adb:14:21: medium: overflow check might fail (e.g. when A = (10 => 0, others => -2147483649) and A'First = 1 and A'Last = 10 and Index = 1 and X = 0 and Y = 0)[#1]
+poly.adb:15:17: medium: overflow check might fail (e.g. when A = (10 => 0, others => -3) and A'First = 1 and A'Last = 10 and Index = 1 and X = 0 and Z = -2147483643)[#4]
+poly.adb:15:28: medium: overflow check might fail (e.g. when A = (others => -2) and A'First = 1 and A'Last = 10 and Index = 10 and X = 0) [possible explanation: precondition of subprogram at poly.ads:3 should mention A][#3]
+poly.adb:15:33: medium: overflow check might fail (e.g. when A = (10 => 0, others => 1) and A'First = 1 and A'Last = 10 and Index = 10 and X = 0)[#2]
+poly.adb:18:32: medium: loop invariant might not be preserved by an arbitrary iteration, cannot prove Z = (X ** (Index - A'First)) * Y (e.g. when A = (1 => 0, 10 => 0, others => 1) and A'First = 1 and A'Last = 10 and Index = 1 and X = 1 and Y = -1 and Z = 0)[#6]
+poly.adb:18:61: medium: overflow check might fail (e.g. when A = (1 => 0, 10 => 0, others => 1) and A'First = 1 and A'Last = 10 and Index = 1 and X = 1 and Y = -2)[#5]
+poly.ads:10:40: medium: postcondition might fail, cannot prove Horner'Result = A(A'first) (e.g. when A = (10 => 1, others => 10) and A'First = 10 and A'Last = 10 and Horner'Result = 0)[#7]

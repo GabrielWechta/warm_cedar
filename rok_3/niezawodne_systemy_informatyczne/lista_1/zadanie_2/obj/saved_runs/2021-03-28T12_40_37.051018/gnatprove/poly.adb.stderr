@@ -1,0 +1,2 @@
+poly.ads:10:11: warning: conjunct in postcondition does not check the outcome of calling "Horner"
+poly.ads:10:42: warning: attribute "Old" applied to constant has no effect

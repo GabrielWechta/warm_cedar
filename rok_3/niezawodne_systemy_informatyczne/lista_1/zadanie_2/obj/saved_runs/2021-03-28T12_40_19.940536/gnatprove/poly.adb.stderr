@@ -1,0 +1,2 @@
+poly.ads:10:36: warning: attribute "Old" applied to constant has no effect
+poly.ads:10:42: medium: array index check might fail (e.g. when A = (0 => 1, others => 0) and A'First = 0 and A'Last = 0)[#0]

@@ -1,0 +1,9 @@
+poly.adb:13:32: medium: loop invariant might not be preserved by an arbitrary iteration, cannot prove Y <= abs Z (e.g. when Y = 1 and Z = 0)[#5]
+poly.adb:13:37: medium: overflow check might fail (e.g. when Z = -4)[#4]
+poly.adb:14:24: medium: overflow check might fail (e.g. when A = (others => Integer'First) and A'First = 0 and A'Last = 0 and Index = 0 and X = -1 and Y = 1)[#1]
+poly.adb:14:28: medium: overflow check might fail (e.g. when X = Integer'First and Y = 2)[#0]
+poly.adb:15:24: medium: overflow check might fail (e.g. when A = (others => 2) and A'First = 0 and A'Last = 0 and Index = 0 and X = 0) [possible explanation: precondition of subprogram at poly.ads:3 should mention A and X][#3]
+poly.adb:15:29: medium: overflow check might fail [possible explanation: precondition of subprogram at poly.ads:3 should mention X][#2]
+poly.ads:9:40: medium: postcondition might fail, cannot prove Horner'Result = A(A'first) (e.g. when A = (0 => 0, others => 0) and A'First = 0 and A'Last = 0 and Horner'Result = -1)[#6]
+poly.ads:10:12: warning: conjunct in postcondition does not check the outcome of calling "Horner"
+poly.ads:10:14: warning: attribute "Old" applied to constant has no effect

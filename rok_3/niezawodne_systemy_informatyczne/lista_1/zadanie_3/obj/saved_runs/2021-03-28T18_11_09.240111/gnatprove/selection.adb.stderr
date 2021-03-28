@@ -1,0 +1,1 @@
+selection.ads:15:16: medium: postcondition might fail, cannot prove Sorted (A) (e.g. when A = (-2 => 1, -1 => 0, 0 => 0, others => -2) and A'First = -2 and A'Last = 0) [possible explanation: loop at selection.adb:7 should mention A in a loop invariant][#0]

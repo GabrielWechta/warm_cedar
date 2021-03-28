@@ -1,0 +1,2 @@
+poly.ads:6:23: missing Range attribute in iteration over an array
+poly.ads:6:23: if "I" is meant to designate an element of the array, use "of"

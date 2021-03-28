@@ -1,0 +1,7 @@
+poly.adb:7:17: medium: overflow check might fail (e.g. when A = (1 => -2, others => -3) and A'First = 0 and A'Last = 1 and I = 0 and X = 0 and Z = -2147483643)[#2]
+poly.adb:7:24: medium: overflow check might fail (e.g. when A = (others => -2) and A'First = 0 and A'Last = 1 and I = 1 and X = 0) [possible explanation: precondition of subprogram at poly.ads:5 should mention X][#1]
+poly.adb:7:29: medium: overflow check might fail (e.g. when A = (others => 0) and A'First = 0 and A'Last = 1 and I = 1 and X = 0) [possible explanation: precondition of subprogram at poly.ads:5 should mention X][#0]
+poly.adb:8:17: medium: overflow check might fail (e.g. when X = -2 and Y = 2)[#3]
+poly.adb:8:21: medium: overflow check might fail (e.g. when A = (1 => -1, others => -2147483649) and A'First = 0 and A'Last = 1 and I = 0 and X = 0 and Y = 0)[#4]
+poly.adb:10:33: medium: loop invariant might not be preserved by an arbitrary iteration, cannot prove Z = (X ** (I - A'First)) * Y (e.g. when A = (0 => -1, 1 => -1, others => 0) and A'First = 0 and A'Last = 1 and I = 0 and X = 1 and Y = -2 and Z = 1)[#6]
+poly.adb:10:58: medium: overflow check might fail (e.g. when A = (0 => 3, 1 => -1, others => 0) and A'First = 0 and A'Last = 1 and I = 0 and X = 2 and Y = -3)[#5]

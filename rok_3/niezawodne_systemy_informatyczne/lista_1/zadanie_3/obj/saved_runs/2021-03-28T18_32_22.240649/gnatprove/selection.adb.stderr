@@ -1,0 +1,2 @@
+selection.adb:22:66: medium: loop invariant might not be preserved by an arbitrary iteration, cannot prove E <= A(Min) (e.g. when A = (1 => 0, others => -1) and E = 0 and Min = 2)[#0]
+selection.ads:15:16: medium: postcondition might fail, cannot prove Sorted (A) (e.g. when A = (-1 => 1, 0 => 0, others => -1) and A'First = -1 and A'Last = 0)[#1]
