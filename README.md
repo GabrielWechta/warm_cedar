@@ -1,9 +1,9 @@
 # warm_cedar
 Repository for studies (Wroclaw University of Science and Technology, The Faculty of Fundamental Problems of Technology - Algorithmic Informatics)
 
-To repo ma (*będzie miało*) w zasadzie wszyskto co jest potrzebne aby pokonać informatykę na W11.
+To repo ma w zasadzie wszyskto co jest potrzebne aby zrobić informatykę na W11.
 
-Jeżeli coś tutaj okaże ci się przydatne, albo uratuje ci dupę na parę godziny przed deadlinem to wesprzyj dowolną ackję charytatywną.
+Jeżeli coś tutaj okaże ci się przydatne, albo uratuje ci dupę na parę godziny przed deadlinem to w tym przypływie euforii, złapaniu Boga za nogi, wesprzyj jakąś akcję charytatywną.
 
 Większość kodów ma komentarze, niektóre zadania mają nawet sprawozdania.
 
