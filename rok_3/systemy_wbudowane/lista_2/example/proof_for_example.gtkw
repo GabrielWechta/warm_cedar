@@ -1,0 +1,35 @@
+[*]
+[*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
+[*] Wed Mar 31 11:45:28 2021
+[*]
+[dumpfile] "/home/gabriel/Desktop/warm_cedar/rok_3/systemy_wbudowane/lista_2/example/wave.ghw"
+[dumpfile_mtime] "Wed Mar 31 11:37:31 2021"
+[dumpfile_size] 857
+[savefile] "/home/gabriel/Desktop/warm_cedar/rok_3/systemy_wbudowane/lista_2/example/proof_for_example.gtkw"
+[timestart] 0
+[size] 1860 1016
+[pos] -101 -101
+*-26.000000 335800000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.example_tb.
+[treeopen] top.example_tb.uut.
+[sst_width] 233
+[signals_width] 171
+[sst_expanded] 1
+[sst_vpaned_height] 289
+@28
+top.example_tb.uut.a
+top.example_tb.uut.b
+top.example_tb.uut.c
+[color] 3
+top.example_tb.uut.not_or
+[color] 3
+top.example_tb.uut.or_or
+@29
+[color] 2
+top.example_tb.uut.or_not
+@28
+[color] 1
+top.example_tb.uut.x
+[pattern_trace] 1
+[pattern_trace] 0

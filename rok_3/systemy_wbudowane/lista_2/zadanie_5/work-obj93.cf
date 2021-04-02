@@ -1,0 +1,14 @@
+v 4
+file . "zadanie_5_tb.vhd" "1ffaad28ea75a185f8d000ecaa53d1d4ddc4a163" "20210402095247.334":
+  entity orand_tb at 1( 0) + 0 on 35;
+  architecture behavior of orand_tb at 8( 104) + 0 on 36;
+file . "zadanie_5.vhd" "0918a6c8023271b3547f6486abc02a4185e80a2e" "20210402093942.639":
+  entity orand at 1( 0) + 0 on 27;
+  architecture behavioral of orand at 14( 205) + 0 on 28;
+file . "my-gates.vhd" "e23776c5a9162317395bdc8728549cd591da416c" "20210402093031.033":
+  entity gateandthree at 1( 0) + 0 on 13;
+  architecture behavioral of gateandthree at 14( 215) + 0 on 14;
+  entity gateorthree at 20( 369) + 0 on 15;
+  architecture behavioral of gateorthree at 33( 581) + 0 on 16;
+  entity mux at 40( 739) + 0 on 17;
+  architecture behavioral of mux at 51( 906) + 0 on 18;

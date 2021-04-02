@@ -1,0 +1,46 @@
+[*]
+[*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
+[*] Fri Apr  2 09:55:21 2021
+[*]
+[dumpfile] "/home/gabriel/Desktop/warm_cedar/rok_3/systemy_wbudowane/lista_2/zadanie_5/miracle.ghw"
+[dumpfile_mtime] "Fri Apr  2 09:52:51 2021"
+[dumpfile_size] 896
+[savefile] "/home/gabriel/Desktop/warm_cedar/rok_3/systemy_wbudowane/lista_2/zadanie_5/solution_for_5.gtkw"
+[timestart] 0
+[size] 1860 1016
+[pos] -39 -39
+*-25.000000 91600000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.orand_tb.
+[treeopen] top.orand_tb.uut.
+[sst_width] 233
+[signals_width] 78
+[sst_expanded] 1
+[sst_vpaned_height] 289
+@28
+[color] 2
+top.orand_tb.uut.gl.a
+[color] 2
+top.orand_tb.uut.gl.b
+[color] 2
+top.orand_tb.uut.gl.c
+[color] 1
+top.orand_tb.uut.gl.z
+[color] 2
+top.orand_tb.uut.gr.a
+[color] 2
+top.orand_tb.uut.gr.b
+[color] 2
+top.orand_tb.uut.gr.c
+[color] 1
+top.orand_tb.uut.gr.z
+[color] 3
+top.orand_tb.uut.go.a
+[color] 3
+top.orand_tb.uut.go.b
+[color] 6
+top.orand_tb.uut.go.s
+@29
+top.orand_tb.uut.go.z
+[pattern_trace] 1
+[pattern_trace] 0

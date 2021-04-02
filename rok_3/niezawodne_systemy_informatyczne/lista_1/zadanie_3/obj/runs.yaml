@@ -2776,3 +2776,17 @@
     '
   output_parser: GNATprove_Parser
   timestamp: '2021-03-28T18:52:06.231011'
+'2021-03-31T08:46:12.195067':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_3/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_1/zadanie_3/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-03-31T08:46:12.195067'

@@ -12,8 +12,8 @@ RV NO_ELABORATION_CODE
 
 U smallest_factor%b	smallest_factor.adb	ef7e2ec0 OO SU
 
-D smallest_factor.adb	20210325165313 ef7e2ec0 smallest_factor%b
-D system.ads		20200819050647 4635ec04 system%s
+D smallest_factor.adb	20210330184945 ef7e2ec0 smallest_factor%b
+D system.ads		20200228061809 4635ec04 system%s
 G a Z
 X 1 smallest_factor.adb
 1U11*Smallest_Factor 1b11 1=28 1<48 21l5 21t20
@@ -23,7 +23,7 @@ X 1 smallest_factor.adb
 13i8 Index{integer} 14r48 15r16 16r20
 14i38 J{integer} 14r67
 
-QQ SPARKVERSION SPARK Community 2020 (20200818)
+QQ SPARKVERSION SPARK Community 2020 (20200429)
 GG EK_DIRECT_CALLS smallest_factor 0
 GG EK_GLOBALS smallest_factor local FALSE E_PROCEDURE FALSE ORIGIN_FLOW 0 proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
 GG EK_FLOW_SCOPE smallest_factor FALSE FALSE FALSE FALSE FALSE __standard

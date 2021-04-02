@@ -1,0 +1,48 @@
+[*]
+[*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
+[*] Fri Apr  2 10:35:14 2021
+[*]
+[dumpfile] "/home/gabriel/Desktop/warm_cedar/rok_3/systemy_wbudowane/lista_2/example/fresh.ghw"
+[dumpfile_mtime] "Fri Apr  2 10:33:48 2021"
+[dumpfile_size] 4784
+[savefile] "/home/gabriel/Desktop/warm_cedar/rok_3/systemy_wbudowane/lista_2/example/for_4.gtkw"
+[timestart] 1035000000
+[size] 1860 1016
+[pos] -39 -39
+*-28.000000 2614000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.xand_tb.
+[treeopen] top.xand_tb.uut.
+[sst_width] 233
+[signals_width] 181
+[sst_expanded] 1
+[sst_vpaned_height] 289
+@800022
+#{top.xand_tb.uut.a[3:0]} top.xand_tb.uut.a[3] top.xand_tb.uut.a[2] top.xand_tb.uut.a[1] top.xand_tb.uut.a[0]
+@28
+top.xand_tb.uut.a[3]
+top.xand_tb.uut.a[2]
+top.xand_tb.uut.a[1]
+top.xand_tb.uut.a[0]
+@1001200
+-group_end
+@800022
+#{top.xand_tb.uut.b[3:0]} top.xand_tb.uut.b[3] top.xand_tb.uut.b[2] top.xand_tb.uut.b[1] top.xand_tb.uut.b[0]
+@28
+top.xand_tb.uut.b[3]
+top.xand_tb.uut.b[2]
+top.xand_tb.uut.b[1]
+top.xand_tb.uut.b[0]
+@1001200
+-group_end
+@800023
+#{top.xand_tb.uut.c[3:0]} top.xand_tb.uut.c[3] top.xand_tb.uut.c[2] top.xand_tb.uut.c[1] top.xand_tb.uut.c[0]
+@29
+top.xand_tb.uut.c[3]
+top.xand_tb.uut.c[2]
+top.xand_tb.uut.c[1]
+top.xand_tb.uut.c[0]
+@1001201
+-group_end
+[pattern_trace] 1
+[pattern_trace] 0
