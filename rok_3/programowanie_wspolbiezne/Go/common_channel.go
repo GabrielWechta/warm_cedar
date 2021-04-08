@@ -1,5 +1,3 @@
-/* Przykład, że każdy koniec kanału może być używany przez różne wątki */
-
 package main
 
 import (

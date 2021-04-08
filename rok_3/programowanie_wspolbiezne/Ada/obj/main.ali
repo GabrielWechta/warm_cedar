@@ -1,0 +1,25 @@
+V "GNAT Lib v2020"
+M P W=b
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U main%b		main.adb		7e1953b6 NE OO SU
+W graph%s		graph.adb		graph.ali
+
+D graph.ads		20210408110017 cba40acf graph%s
+D main.adb		20210408111515 b5bd5979 main%b
+D system.ads		20200228061809 4635ec04 system%s
+G a e
+G c Z b b [main standard 5 11 none]
+G r c none [main standard 5 11 none] [simulate graph 3 14 none]
+X 1 graph.ads
+1K9*Graph 5e10 2|1w6 2r5 8r4
+3U14*Simulate 2|8s10
+X 2 main.adb
+5U11*Main 5b11 11l5 11t9
+
