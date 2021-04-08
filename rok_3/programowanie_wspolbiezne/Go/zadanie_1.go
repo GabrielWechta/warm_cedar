@@ -144,11 +144,11 @@ func receiverSenderThread(node Node, graph *Graph, keeper PackageKeeper) {
 		keeper.packages[received].wasHere = append(keeper.packages[received].wasHere, node.id)
 		graph.nodes[node.id].visitors = append(graph.nodes[node.id].visitors, received)
 
+		masterOutputer <- "pakiet " + strconv.Itoa(received) + " w wierzchołku " + strconv.Itoa(node.id) + "\n"
+
 		time.Sleep(time.Duration(random.Float64() * float64(time.Second)))
 		pick := node.link[random.Intn(len(node.link))]
 		graph.nodes[pick].channel <- received
-
-		masterOutputer <- "pakiet " + strconv.Itoa(received) + " w wierzchołku " + strconv.Itoa(node.id) + "\n"
 	}
 }
 

@@ -27,11 +27,11 @@ RV NO_DEFAULT_INITIALIZATION
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_IMPLICIT_LOOPS
-RV MAX_SELECT_ALTERNATIVES=2
-RV MAX_TASK_ENTRIES=1
+RV MAX_SELECT_ALTERNATIVES=3
+RV MAX_TASK_ENTRIES=3
 RV MAX_TASKS=1+
 
-U graph%b		graph.adb		3551be60 NE OO PK
+U graph%b		graph.adb		10e0f6ab NE OO PK
 W ada%s			ada.ads			ada.ali
 Z ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 W ada.numerics%s	a-numeri.ads		a-numeri.ali
@@ -42,8 +42,8 @@ Z ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W system%s		system.ads		system.ali
 Z system.concat_2%s	s-conca2.adb		s-conca2.ali
+Z system.concat_3%s	s-conca3.adb		s-conca3.ali
 Z system.concat_4%s	s-conca4.adb		s-conca4.ali
-Z system.img_bool%s	s-imgboo.adb		s-imgboo.ali
 Z system.img_int%s	s-imgint.adb		s-imgint.ali
 Z system.parameters%s	s-parame.adb		s-parame.ali
 Z system.random_numbers%s  s-rannum.adb		s-rannum.ali
@@ -72,19 +72,19 @@ D a-tags.ads		20200228061809 edddc8f0 ada.tags%s
 D a-textio.ads		20200228061809 aef4d56d ada.text_io%s
 D a-unccon.ads		20200228061809 0e9b276f ada.unchecked_conversion%s
 D graph.ads		20210408110017 cba40acf graph%s
-D graph.adb		20210408111646 49d3154b graph%b
+D graph.adb		20210408230343 6c625d80 graph%b
 D interfac.ads		20200228061809 5ab55268 interfaces%s
 D i-c.ads		20200228061809 c624fa43 interfaces.c%s
 D i-cstrea.ads		20200228061809 e53d8b8e interfaces.c_streams%s
 D system.ads		20200228061809 4635ec04 system%s
 D s-atacco.ads		20200228061809 4c36d12f system.address_to_access_conversions%s
 D s-conca2.ads		20200228061809 02a0d7d0 system.concat_2%s
+D s-conca3.ads		20200228061809 0b705ca5 system.concat_3%s
 D s-conca4.ads		20200228061809 7e642b20 system.concat_4%s
 D s-crtl.ads		20200228061809 0ebbdb71 system.crtl%s
 D s-exctab.ads		20200228061809 54135002 system.exception_table%s
 D s-ficobl.ads		20200228061809 078245e4 system.file_control_block%s
 D s-finroo.ads		20200228061809 4ff27390 system.finalization_root%s
-D s-imgboo.ads		20200228061809 f5d971eb system.img_bool%s
 D s-imgint.ads		20200228061809 02dbe0c2 system.img_int%s
 D s-imguns.ads		20200228061809 9ff43cf7 system.img_uns%s
 D s-linux.ads		20200228061809 ed0b8aee system.linux%s
@@ -122,8 +122,8 @@ X 7 a-numeri.ads
 X 8 a-nudira.ads
 44k22*Discrete_Random 81e33 17|3w19 12r37
 50R9 Generator<37|63R9> 17|15r11[12]
-52V13 Random{integer} 17|42s36[12] 105s19[12] 106s20[12]
-61U14 Reset<37|100p14> 17|102s7[12]
+52V13 Random{integer} 17|42s36[12] 131s19[12] 132s20[12]
+61U14 Reset<37|100p14> 17|128s7[12]
 X 9 a-nudira.adb
 53V16 Random[37|83]{integer} 38|393b13[17|12]
 65V16 Random[37|83]{integer} 38|393b13[17|12]
@@ -135,50 +135,68 @@ X 10 a-nuflra.ads
 53U14*Reset<37|100p14> 17|21s36
 X 14 a-textio.ads
 57K13*Text_IO 727e16 17|1w10 2r9
-465U14*Put 17|118s13
-508U14*Put_Line 17|75s25 79s25 120s10
+465U14*Put 17|143s10 146s16 176s10 179s16 187s10 190s16
+508U14*Put_Line 17|105s22 108s22 149s10 182s10 193s10
 X 16 graph.ads
-1K9*Graph 5l5 5e10 17|6b14 132l5 132t10
-3U14*Simulate 3>23 3>38 3>53 17|8b14 131l8 131t16
-3i23 N{integer} 17|8b23 30r66 31r38 42r51 50r30 62r27 66r40 74r30 97r21 105r34
-. 106r34 116r21 117r24 123r19
-3i38 D{integer} 17|8b38 104r37
-3i53 K{integer} 17|8b53 127r19
+1K9*Graph 5l5 5e10 17|6b14 198l5 198t10
+3U14*Simulate 3>23 3>38 3>53 17|8b14 196l8 196t16
+3i23 N{integer} 17|8b23 30r66 31r38 42r51 50r30 60r41 62r80 67r22 84r27 87r40
+. 104r27 123r21 131r34 132r34 142r21 144r24 154r19 159r19 169r19 175r21 188r24
+3i38 D{integer} 17|8b38 130r37
+3i53 K{integer} 17|8b53 59r77 63r47 164r19 177r24 186r21
 X 17 graph.adb
 10I15 Random_Range{integer} 12r54
 12K15 R[8|44] 13r11
-15r7 G{8|50R9[12]} 42r43 102r13 105r26 106r27
-17V16 Get_Task_Delay{duration} 17b16 24l11 24t25 77s31 128s16
+15r7 G{8|50R9[12]} 42r43 128r13 131r26 132r27
+17V16 Get_Task_Delay{duration} 17b16 24l11 24t25 107s28 165s16
 18r10 Second_G{10|47R9} 21r43 22r54
 19f10 Result{float} 22m10 23r27
-29A12 Boolean_Array(boolean)<integer> 30r49 35r73 40r43 66r23
+29A12 Boolean_Array(boolean)<integer> 30r49 35r73 40r43 87r23
 30A12 Matrix(29A12)<integer> 31r28
-31a7 Connections_Matrix{30A12} 37r24 98m10 108r32 110m13 118r31
-33i7 Good_Shortcuts_Number{integer} 103m7 104r13 109m13 109r38
-33i30 Start{integer} 105m10 108r13 108r51 110r32
-33i37 Target{integer} 106m10 108r21 108r58 110r39
-35U17 SetUpNeighbours 35b17 35>33 35=54 38l11 38t26 68s10
+31a7 Connections_Matrix{30A12} 37r24 124m10 134r32 136m13 145r16
+33i7 Good_Shortcuts_Number{integer} 129m7 130r13 135m13 135r38
+33i30 Start{integer} 131m10 134r13 134r51 136r32
+33i37 Target{integer} 132m10 134r21 134r58 136r39
+35U17 SetUpNeighbours 35b17 35>33 35=54 38l11 38t26 92s10
 35i33 Task_Id{integer} 37r43
 35a54 Neighbours{29A12} 37m10
-40V16 GetNeighbourId{integer} 40b16 40>31 53l11 53t25 80s30
+40V16 GetNeighbourId{integer} 40b16 40>31 53l11 53t25 109s27
 40a31 Neighbours{29A12} 46r16
 41i10 Target_Id{integer} 48m16 52r17
 42i10 Skips_Counter{integer} 45r16 47m16 47r33
 43i10 I{integer} 46r27 48r29 50m13 50r19
-57T17 Node_Thread 57d29 59l11 59e22 61r60 64b17 92l11 92t22 124r24
-57i29 Id{integer} 68r26 74r25 75r102 79r102
-58Y16 ReceiveAndSend 58>31 73b26 80s58 84l23 84t37 129s22
-58i31 P{integer} 75r59 79r59 80r73
-61A12 NTAR_Type(57T17)<integer> 62r14
-62a7 NTAR{61A12} 80r25 124m10 129r10
-65b10 Empty{boolean} 78m25 82m25
-66a10 Neighbours{29A12} 68m30 68r30 80r45
-73i41 P{integer}
-97i11 R{integer} 98r29 98r32
-116i11 R{integer} 118r50
-117i14 C{integer} 118r53
-123i11 I{integer} 124r15 124r36
-127i11 I{integer} 129r37
+57A12 Integer_Array(integer)<integer> 59r60 62r63
+59A12 Node_Keeper_Type(57A12)<integer> 60r21
+60a7 Node_Keeper{59A12} 100m19 178r16 179r34
+62A12 Package_Keeper_Type(57A12)<integer> 63r24
+63a7 Package_Keeper{62A12} 68r16 69m16 189r16 190r34
+65U17 AddNodeToPackageRoute 65b17 65>39 65>63 73l11 73t32 102s19
+65i39 Package_Id{integer} 68r31 69r31
+65i63 Node_Id{integer} 69r49
+67i14 I{integer} 68r43 69r43
+77T17 Node_Thread 77d29 81l11 81e22 83r60 86b17 118l11 118t22 155r24
+77i29 Id{integer} 92r26 100r31 102r49 104r22 105r104 108r104
+78Y16 StartBaby 91b17 160s22
+79Y16 ReceiveAndSend 79>31 96b26 98l23 98t37 109s55 166s22
+79i31 P{integer} 97r32
+80Y16 Join 112b26 170s22
+83A12 NTAR_Type(77T17)<integer> 84r14
+84a7 NTAR{83A12} 109r22 155m10 160r10 166r10 170r10
+87a10 Neighbours{29A12} 92m30 92r30 109r42
+88i10 P_Prim{integer} 97m22 100r63 102r41 105r56 108r56 109r70
+89i10 Visited_Packages_Number{integer} 100r35 101m19 101r46
+96i41 P{integer}
+123i11 R{integer} 124r29 124r32
+142i11 R{integer} 143r28 145r35
+144i14 C{integer} 145r38 146r34
+154i11 I{integer} 155r15 155r36
+159i11 I{integer} 160r15
+164i11 I{integer} 166r37
+169i11 I{integer} 170r15
+175i11 R{integer} 176r34 178r28 179r46
+177i14 C{integer} 178r31 179r49
+186i11 R{integer} 187r28 189r31 190r49
+188i14 C{integer} 189r34 190r52
 X 18 interfac.ads
 74M9*Unsigned_32
 77M9*Unsigned_64

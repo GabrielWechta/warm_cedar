@@ -1,311 +1,40 @@
 <?xml version="1.0"?>
 <Locations >
-  <Project >
-    <file_marker column=" 1" line=" 1" >
+  <Project>
+    <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_file>
+    <file_marker column=" 28" line=" 8" >
       <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
       <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/main.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 1" >
+    <file_marker column=" 16" line=" 128" >
       <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
       <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 89" >
+    <file_marker column=" 36" line=" 57" >
       <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
       <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 89" >
+    <file_marker column=" 39" line=" 59" >
       <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
       <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 89" >
+    <file_marker column=" 1" line=" 151" >
       <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
       <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 35" line=" 37" >
+    <file_marker column=" 1" line=" 151" >
       <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/tasks3.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 31" line=" 64" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 89" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 31" line=" 64" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 89" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 31" line=" 64" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 107" line=" 79" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 79" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 107" line=" 79" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 64" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 94" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 35" line=" 37" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/tasks3.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 40" line=" 57" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 72" line=" 61" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 49" line=" 30" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 34" line=" 31" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 40" line=" 57" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 69" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 40" line=" 57" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 7" line=" 55" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 40" line=" 57" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 66" line=" 66" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 107" line=" 79" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 96" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 56" line=" 108" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 7" line=" 35" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 11" line=" 38" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 11" line=" 38" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 42" line=" 68" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 10" line=" 37" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 23" line=" 42" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 118" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 120" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 9" line=" 119" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 42" line=" 68" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 107" line=" 79" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 16" line=" 71" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 16" line=" 125" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 16" line=" 71" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 69" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 90" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 16" line=" 125" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 7" line=" 64" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 72" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 133" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 84" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 5" line=" 63" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 7" line=" 64" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 133" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
       <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 7" line=" 64" >
+    <file_marker column=" 1" line=" 151" >
       <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
       <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 133" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 7" line=" 64" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 42" line=" 68" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 7" line=" 64" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 133" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 7" line=" 64" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 133" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 7" line=" 64" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 66" line=" 8" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 58" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 73" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 133" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 19" line=" 84" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 31" line=" 77" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/random_seeds.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/random_seeds.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/tasks3.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 16" line=" 130" >
+    <file_marker column=" 7" line=" 195" >
       <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
       <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 16" line=" 125" >
+    <file_marker column=" 17" line=" 196" >
       <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
       <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
     </file_marker>
@@ -317,11 +46,51 @@
       <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
       <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/main.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 94" >
+    <file_marker column=" 28" line=" 59" >
       <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
       <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
     </file_marker>
-    <file_marker current="true" column=" 1" line=" 94" >
+    <file_marker column=" 21" line=" 60" >
+      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
+      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 34" line=" 179" >
+      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
+      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 38" line=" 65" >
+      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
+      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 102" >
+      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
+      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 10" line=" 67" >
+      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
+      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 12" line=" 66" >
+      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
+      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 16" line=" 69" >
+      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
+      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 25" line=" 67" >
+      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
+      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 16" line=" 69" >
+      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
+      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 102" >
+      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
+      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 103" >
       <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr</vfs_project>
       <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/src/graph.adb</vfs_file>
     </file_marker>

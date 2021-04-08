@@ -53,42 +53,68 @@ package body Graph is
       end GetNeighbourId; 
       --
       
+      -- Keepers Part
+      type Integer_Array is array (Integer range <>) of Integer;
+      
+      type Node_Keeper_Type is array (Integer range <>) of Integer_Array(0..K-1);
+      Node_Keeper : Node_Keeper_Type(0..N-1) := (others => (others => -1));
+      
+      type Package_Keeper_Type is array (Integer range <>) of Integer_Array(0..N-1);
+      Package_Keeper : Package_Keeper_Type(1..K) := (others => (others => -1));
+      
+      procedure AddNodeToPackageRoute(Package_Id: in Integer; Node_Id: in Integer) is 
+      begin
+         for I in 0..N-1 loop
+            if Package_Keeper(Package_Id)(I) = -1 then
+               Package_Keeper(Package_Id)(I) := Node_Id;
+               exit;
+            end if;
+         end loop;
+      end AddNodeToPackageRoute;   
+      --
+      
       -- Tasks Part
       task type Node_Thread(Id: Integer) is 
+         entry StartBaby;
          entry ReceiveAndSend(P: in Integer);
+         entry Join;
       end Node_Thread;
       
       type NTAR_Type is array (Integer range <>) of access Node_Thread;
       NTAR : NTAR_Type(0..N-1);
       
       task body Node_Thread is
-         Empty : Boolean := True;
          Neighbours : Boolean_Array(0..N-1) := (others => False);
+         P_Prim : Integer;
+         Visited_Packages_Number : Integer := 0;
       begin
+         accept StartBaby;
          SetUpNeighbours(Id, Neighbours);
          loop
             begin
                select
-                  --  when Empty = True =>
                   accept ReceiveAndSend(P : in Integer) do
-                     if Id = N - 1 then
-                        Put_Line("pakiet" & Integer'Image(P) & " jest w wierzcholku" & Integer'Image(Id));
-                     else
-                        delay Get_Task_Delay;
-                        Empty := False;
-                        Put_Line("pakiet" & Integer'Image(P) & " jest w wierzcholku" & Integer'Image(Id));
-                        NTAR(GetNeighbourId(Neighbours)).ReceiveAndSend(P);
-                        
-                        Empty := True;
-                     end if;
+                     P_Prim := P;
                   end ReceiveAndSend;
-               or terminate;
+                  
+                  Node_Keeper(Id)(Visited_Packages_Number) := P_Prim;
+                  Visited_Packages_Number := Visited_Packages_Number + 1;
+                  AddNodeToPackageRoute(P_Prim, Id);
+                  
+                  if Id = N - 1 then
+                     Put_Line("pakiet" & Integer'Image(P_Prim) & " jest w wierzcholku" & Integer'Image(Id));
+                  else
+                     delay Get_Task_Delay;
+                     Put_Line("pakiet" & Integer'Image(P_Prim) & " jest w wierzcholku" & Integer'Image(Id));
+                     NTAR(GetNeighbourId(Neighbours)).ReceiveAndSend(P_Prim);
+                  end if;
+               or 
+                  accept Join;
+               or 
+                  terminate;
                end select;
             end;
          end loop;
-         --  end StartBaby;
-
-
       end Node_Thread;
       --
 
@@ -112,21 +138,61 @@ package body Graph is
       end loop;
     
       
-      -- Printing array, maybe new package?
+      -- Printing Connection_Matrix
       for R in 0 .. N-1 loop
+         Put(Integer'Image(R) & " ->");
          for C in 0 .. N-1 loop
-            Put(Boolean'Image(Connections_Matrix(R)(C)) & " ");
+            if Connections_Matrix(R)(C) = True then
+               Put(Integer'Image(C) & ",");
+            end if;
          end loop;
          Put_Line("");
       end loop;
+
       
+      -- Initializing but they keep waiting
       for I in 0..N-1 loop
          NTAR(I):= new Node_Thread(I);
       end loop;
+      
+      -- Starting
+      for I in 0..N-1 loop
+         NTAR(I).all.StartBaby;
+      end loop;
 
+      -- Sending to Source
       for I in 1..K loop
          delay Get_Task_Delay;
          NTAR(0).all.ReceiveAndSend(I);
       end loop;
+      
+      for I in 0..N-1 loop
+         NTAR(I).all.Join;
+      end loop;
+      
+      
+      -- Printing Node_Keeper
+      for R in 0 .. N-1 loop
+         Put("W" & Integer'Image(R) & " byly");
+         for C in 0 .. K-1 loop
+            if Node_Keeper(R)(C) /= -1 then
+               Put(Integer'Image(Node_Keeper(R)(C)) & ",");
+            end if;
+         end loop;
+         Put_Line("");
+      end loop;
+      
+      -- Printing Package_Keeper
+      for R in 1 .. K loop
+         Put(Integer'Image(R) & " byl w");
+         for C in 0 .. N-1 loop
+            if Package_Keeper(R)(C) /= -1 then
+               Put(Integer'Image(Package_Keeper(R)(C)) & ",");
+            end if;
+         end loop;
+         Put_Line("");
+      end loop;
+      
    end Simulate;
+      
 end Graph; 

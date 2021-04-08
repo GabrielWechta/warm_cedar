@@ -5,7 +5,6 @@ use Graph;
 procedure Main is
 
 begin
-   Graph.Simulate(10, 30, 8);
-
+   Graph.Simulate(4, 3, 5);
 
 end Main;
