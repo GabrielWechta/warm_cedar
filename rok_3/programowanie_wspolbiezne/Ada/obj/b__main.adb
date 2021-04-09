@@ -9,41 +9,41 @@ with Ada.Exceptions;
 
 package body ada_main is
 
-   E079 : Short_Integer; pragma Import (Ada, E079, "system__os_lib_E");
-   E012 : Short_Integer; pragma Import (Ada, E012, "ada__exceptions_E");
-   E017 : Short_Integer; pragma Import (Ada, E017, "system__soft_links_E");
-   E029 : Short_Integer; pragma Import (Ada, E029, "system__exception_table_E");
-   E044 : Short_Integer; pragma Import (Ada, E044, "ada__containers_E");
-   E074 : Short_Integer; pragma Import (Ada, E074, "ada__io_exceptions_E");
-   E059 : Short_Integer; pragma Import (Ada, E059, "ada__strings_E");
-   E061 : Short_Integer; pragma Import (Ada, E061, "ada__strings__maps_E");
-   E065 : Short_Integer; pragma Import (Ada, E065, "ada__strings__maps__constants_E");
-   E049 : Short_Integer; pragma Import (Ada, E049, "interfaces__c_E");
-   E031 : Short_Integer; pragma Import (Ada, E031, "system__exceptions_E");
-   E085 : Short_Integer; pragma Import (Ada, E085, "system__object_reader_E");
-   E054 : Short_Integer; pragma Import (Ada, E054, "system__dwarf_lines_E");
-   E025 : Short_Integer; pragma Import (Ada, E025, "system__soft_links__initialize_E");
-   E043 : Short_Integer; pragma Import (Ada, E043, "system__traceback__symbolic_E");
-   E104 : Short_Integer; pragma Import (Ada, E104, "ada__numerics_E");
-   E143 : Short_Integer; pragma Import (Ada, E143, "ada__tags_E");
-   E151 : Short_Integer; pragma Import (Ada, E151, "ada__streams_E");
-   E159 : Short_Integer; pragma Import (Ada, E159, "system__file_control_block_E");
-   E158 : Short_Integer; pragma Import (Ada, E158, "system__finalization_root_E");
-   E156 : Short_Integer; pragma Import (Ada, E156, "ada__finalization_E");
-   E155 : Short_Integer; pragma Import (Ada, E155, "system__file_io_E");
-   E129 : Short_Integer; pragma Import (Ada, E129, "system__task_info_E");
-   E123 : Short_Integer; pragma Import (Ada, E123, "system__task_primitives__operations_E");
-   E010 : Short_Integer; pragma Import (Ada, E010, "ada__calendar_E");
-   E008 : Short_Integer; pragma Import (Ada, E008, "ada__calendar__delays_E");
-   E114 : Short_Integer; pragma Import (Ada, E114, "ada__real_time_E");
-   E149 : Short_Integer; pragma Import (Ada, E149, "ada__text_io_E");
-   E110 : Short_Integer; pragma Import (Ada, E110, "system__random_seed_E");
-   E169 : Short_Integer; pragma Import (Ada, E169, "system__tasking__initialization_E");
-   E177 : Short_Integer; pragma Import (Ada, E177, "system__tasking__protected_objects_E");
-   E179 : Short_Integer; pragma Import (Ada, E179, "system__tasking__protected_objects__entries_E");
-   E183 : Short_Integer; pragma Import (Ada, E183, "system__tasking__queuing_E");
-   E187 : Short_Integer; pragma Import (Ada, E187, "system__tasking__stages_E");
-   E005 : Short_Integer; pragma Import (Ada, E005, "graph_E");
+   E075 : Short_Integer; pragma Import (Ada, E075, "system__os_lib_E");
+   E011 : Short_Integer; pragma Import (Ada, E011, "ada__exceptions_E");
+   E015 : Short_Integer; pragma Import (Ada, E015, "system__soft_links_E");
+   E025 : Short_Integer; pragma Import (Ada, E025, "system__exception_table_E");
+   E040 : Short_Integer; pragma Import (Ada, E040, "ada__containers_E");
+   E070 : Short_Integer; pragma Import (Ada, E070, "ada__io_exceptions_E");
+   E055 : Short_Integer; pragma Import (Ada, E055, "ada__strings_E");
+   E057 : Short_Integer; pragma Import (Ada, E057, "ada__strings__maps_E");
+   E061 : Short_Integer; pragma Import (Ada, E061, "ada__strings__maps__constants_E");
+   E045 : Short_Integer; pragma Import (Ada, E045, "interfaces__c_E");
+   E027 : Short_Integer; pragma Import (Ada, E027, "system__exceptions_E");
+   E081 : Short_Integer; pragma Import (Ada, E081, "system__object_reader_E");
+   E050 : Short_Integer; pragma Import (Ada, E050, "system__dwarf_lines_E");
+   E017 : Short_Integer; pragma Import (Ada, E017, "system__soft_links__initialize_E");
+   E039 : Short_Integer; pragma Import (Ada, E039, "system__traceback__symbolic_E");
+   E124 : Short_Integer; pragma Import (Ada, E124, "ada__numerics_E");
+   E103 : Short_Integer; pragma Import (Ada, E103, "ada__tags_E");
+   E101 : Short_Integer; pragma Import (Ada, E101, "ada__streams_E");
+   E115 : Short_Integer; pragma Import (Ada, E115, "system__file_control_block_E");
+   E114 : Short_Integer; pragma Import (Ada, E114, "system__finalization_root_E");
+   E112 : Short_Integer; pragma Import (Ada, E112, "ada__finalization_E");
+   E111 : Short_Integer; pragma Import (Ada, E111, "system__file_io_E");
+   E149 : Short_Integer; pragma Import (Ada, E149, "system__task_info_E");
+   E143 : Short_Integer; pragma Import (Ada, E143, "system__task_primitives__operations_E");
+   E121 : Short_Integer; pragma Import (Ada, E121, "ada__calendar_E");
+   E119 : Short_Integer; pragma Import (Ada, E119, "ada__calendar__delays_E");
+   E134 : Short_Integer; pragma Import (Ada, E134, "ada__real_time_E");
+   E099 : Short_Integer; pragma Import (Ada, E099, "ada__text_io_E");
+   E130 : Short_Integer; pragma Import (Ada, E130, "system__random_seed_E");
+   E171 : Short_Integer; pragma Import (Ada, E171, "system__tasking__initialization_E");
+   E179 : Short_Integer; pragma Import (Ada, E179, "system__tasking__protected_objects_E");
+   E181 : Short_Integer; pragma Import (Ada, E181, "system__tasking__protected_objects__entries_E");
+   E185 : Short_Integer; pragma Import (Ada, E185, "system__tasking__queuing_E");
+   E189 : Short_Integer; pragma Import (Ada, E189, "system__tasking__stages_E");
+   E117 : Short_Integer; pragma Import (Ada, E117, "graph_E");
 
    Sec_Default_Sized_Stacks : array (1 .. 1) of aliased System.Secondary_Stack.SS_Stack (System.Parameters.Runtime_Default_Sec_Stack_Size);
 
@@ -54,14 +54,14 @@ package body ada_main is
 
    procedure finalize_library is
    begin
-      E179 := E179 - 1;
+      E181 := E181 - 1;
       declare
          procedure F1;
          pragma Import (Ada, F1, "system__tasking__protected_objects__entries__finalize_spec");
       begin
          F1;
       end;
-      E149 := E149 - 1;
+      E099 := E099 - 1;
       declare
          procedure F2;
          pragma Import (Ada, F2, "ada__text_io__finalize_spec");
@@ -72,7 +72,7 @@ package body ada_main is
          procedure F3;
          pragma Import (Ada, F3, "system__file_io__finalize_body");
       begin
-         E155 := E155 - 1;
+         E111 := E111 - 1;
          F3;
       end;
       declare
@@ -185,7 +185,7 @@ package body ada_main is
            True, True, False, True, True, True, True, False, 
            False, False, False, False, False, False, True, True, 
            True, False, False, False),
-         Count => (0, 0, 0, 0, 3, 3, 1, 0, 0, 0),
+         Count => (0, 0, 0, 0, 2, 1, 1, 0, 0, 0),
          Unknown => (False, False, False, False, False, False, True, False, False, False));
       Priority_Specific_Dispatching :=
         Local_Priority_Specific_Dispatching'Address;
@@ -209,76 +209,76 @@ package body ada_main is
       Ada.Exceptions'Elab_Spec;
       System.Soft_Links'Elab_Spec;
       System.Exception_Table'Elab_Body;
-      E029 := E029 + 1;
-      Ada.Containers'Elab_Spec;
-      E044 := E044 + 1;
-      Ada.Io_Exceptions'Elab_Spec;
-      E074 := E074 + 1;
-      Ada.Strings'Elab_Spec;
-      E059 := E059 + 1;
-      Ada.Strings.Maps'Elab_Spec;
-      E061 := E061 + 1;
-      Ada.Strings.Maps.Constants'Elab_Spec;
-      E065 := E065 + 1;
-      Interfaces.C'Elab_Spec;
-      E049 := E049 + 1;
-      System.Exceptions'Elab_Spec;
-      E031 := E031 + 1;
-      System.Object_Reader'Elab_Spec;
-      E085 := E085 + 1;
-      System.Dwarf_Lines'Elab_Spec;
-      E054 := E054 + 1;
-      System.Os_Lib'Elab_Body;
-      E079 := E079 + 1;
-      System.Soft_Links.Initialize'Elab_Body;
       E025 := E025 + 1;
+      Ada.Containers'Elab_Spec;
+      E040 := E040 + 1;
+      Ada.Io_Exceptions'Elab_Spec;
+      E070 := E070 + 1;
+      Ada.Strings'Elab_Spec;
+      E055 := E055 + 1;
+      Ada.Strings.Maps'Elab_Spec;
+      E057 := E057 + 1;
+      Ada.Strings.Maps.Constants'Elab_Spec;
+      E061 := E061 + 1;
+      Interfaces.C'Elab_Spec;
+      E045 := E045 + 1;
+      System.Exceptions'Elab_Spec;
+      E027 := E027 + 1;
+      System.Object_Reader'Elab_Spec;
+      E081 := E081 + 1;
+      System.Dwarf_Lines'Elab_Spec;
+      E050 := E050 + 1;
+      System.Os_Lib'Elab_Body;
+      E075 := E075 + 1;
+      System.Soft_Links.Initialize'Elab_Body;
       E017 := E017 + 1;
+      E015 := E015 + 1;
       System.Traceback.Symbolic'Elab_Body;
-      E043 := E043 + 1;
-      E012 := E012 + 1;
+      E039 := E039 + 1;
+      E011 := E011 + 1;
       Ada.Numerics'Elab_Spec;
-      E104 := E104 + 1;
+      E124 := E124 + 1;
       Ada.Tags'Elab_Spec;
       Ada.Tags'Elab_Body;
-      E143 := E143 + 1;
+      E103 := E103 + 1;
       Ada.Streams'Elab_Spec;
-      E151 := E151 + 1;
+      E101 := E101 + 1;
       System.File_Control_Block'Elab_Spec;
-      E159 := E159 + 1;
+      E115 := E115 + 1;
       System.Finalization_Root'Elab_Spec;
-      E158 := E158 + 1;
+      E114 := E114 + 1;
       Ada.Finalization'Elab_Spec;
-      E156 := E156 + 1;
+      E112 := E112 + 1;
       System.File_Io'Elab_Body;
-      E155 := E155 + 1;
+      E111 := E111 + 1;
       System.Task_Info'Elab_Spec;
-      E129 := E129 + 1;
+      E149 := E149 + 1;
       System.Task_Primitives.Operations'Elab_Body;
-      E123 := E123 + 1;
+      E143 := E143 + 1;
       Ada.Calendar'Elab_Spec;
       Ada.Calendar'Elab_Body;
-      E010 := E010 + 1;
+      E121 := E121 + 1;
       Ada.Calendar.Delays'Elab_Body;
-      E008 := E008 + 1;
+      E119 := E119 + 1;
       Ada.Real_Time'Elab_Spec;
       Ada.Real_Time'Elab_Body;
-      E114 := E114 + 1;
+      E134 := E134 + 1;
       Ada.Text_Io'Elab_Spec;
       Ada.Text_Io'Elab_Body;
-      E149 := E149 + 1;
+      E099 := E099 + 1;
       System.Random_Seed'Elab_Body;
-      E110 := E110 + 1;
+      E130 := E130 + 1;
       System.Tasking.Initialization'Elab_Body;
-      E169 := E169 + 1;
+      E171 := E171 + 1;
       System.Tasking.Protected_Objects'Elab_Body;
-      E177 := E177 + 1;
-      System.Tasking.Protected_Objects.Entries'Elab_Spec;
       E179 := E179 + 1;
+      System.Tasking.Protected_Objects.Entries'Elab_Spec;
+      E181 := E181 + 1;
       System.Tasking.Queuing'Elab_Body;
-      E183 := E183 + 1;
+      E185 := E185 + 1;
       System.Tasking.Stages'Elab_Body;
-      E187 := E187 + 1;
-      E005 := E005 + 1;
+      E189 := E189 + 1;
+      E117 := E117 + 1;
    end adainit;
 
    procedure Ada_Main_Program;

@@ -1,7 +1,4 @@
 V "GNAT Lib v2020"
-A -gnatA
-A -mtune=generic
-A -march=x86-64
 P SS ZX
 
 RN
@@ -27,11 +24,11 @@ RV NO_DEFAULT_INITIALIZATION
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_IMPLICIT_LOOPS
-RV MAX_SELECT_ALTERNATIVES=2
-RV MAX_TASK_ENTRIES=1
+RV MAX_SELECT_ALTERNATIVES=3
+RV MAX_TASK_ENTRIES=2
 RV MAX_TASKS=1+
 
-U graph%b		graph.adb		f0ba7a0e NE OO PK
+U graph%b		graph.adb		57ea085b NE OO PK
 W ada%s			ada.ads			ada.ali
 Z ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 W ada.numerics%s	a-numeri.ads		a-numeri.ali
@@ -72,7 +69,7 @@ D a-tags.ads		20200228061809 edddc8f0 ada.tags%s
 D a-textio.ads		20200228061809 aef4d56d ada.text_io%s
 D a-unccon.ads		20200228061809 0e9b276f ada.unchecked_conversion%s
 D graph.ads		20210408110017 cba40acf graph%s
-D graph.adb		20210409163115 8c38d125 graph%b
+D graph.adb		20210409173144 2b68a370 graph%b
 D interfac.ads		20200228061809 5ab55268 interfaces%s
 D i-c.ads		20200228061809 c624fa43 interfaces.c%s
 D i-cstrea.ads		20200228061809 e53d8b8e interfaces.c_streams%s
@@ -122,8 +119,8 @@ X 7 a-numeri.ads
 X 8 a-nudira.ads
 44k22*Discrete_Random 81e33 17|3w19 12r37
 50R9 Generator<37|63R9> 17|15r11[12]
-52V13 Random{integer} 17|42s36[12] 159s19[12] 160s20[12]
-61U14 Reset<37|100p14> 17|156s7[12]
+52V13 Random{integer} 17|42s36[12] 162s19[12] 163s20[12]
+61U14 Reset<37|100p14> 17|159s7[12]
 X 9 a-nudira.adb
 53V16 Random[37|83]{integer} 38|393b13[17|12]
 65V16 Random[37|83]{integer} 38|393b13[17|12]
@@ -135,77 +132,81 @@ X 10 a-nuflra.ads
 53U14*Reset<37|100p14> 17|21s36
 X 14 a-textio.ads
 57K13*Text_IO 727e16 17|1w10 2r9
-465U14*Put 17|171s10 174s16 204s10 207s16 215s10 218s16
-508U14*Put_Line 17|93s19 177s10 210s10 221s10
+264U14*New_Line 17|206s7 218s7
+465U14*Put 17|174s10 177s16 208s10 211s16 220s10 223s16
+508U14*Put_Line 17|94s19 98s19 180s10 214s10 226s10
 X 16 graph.ads
-1K9*Graph 5l5 5e10 17|6b14 226l5 226t10
-3U14*Simulate 3>23 3>38 3>53 17|8b14 224l8 224t16
-3i23 N{integer} 17|8b23 30r66 31r38 42r51 50r30 60r41 62r80 67r22 109r27
-. 112r40 129r27 151r21 159r34 160r34 170r21 172r24 182r19 187r19 197r19 203r21
-. 216r24
-3i38 D{integer} 17|8b38 158r37
-3i53 K{integer} 17|8b53 59r77 63r47 192r19 205r24 214r21
+1K9*Graph 5l5 5e10 17|6b14 231l5 231t10
+3U14*Simulate 3>23 3>38 3>53 17|8b14 229l8 229t16
+3i23 N{integer} 17|8b23 30r66 31r38 42r51 50r30 60r41 62r80 67r22 114r27
+. 117r40 134r27 154r21 162r34 163r34 173r21 175r24 185r19 190r19 200r19 207r21
+. 221r24
+3i38 D{integer} 17|8b38 161r37
+3i53 K{integer} 17|8b53 59r77 63r47 195r19 209r24 219r21
 X 17 graph.adb
 10I15 Random_Range{integer} 12r54
 12K15 R[8|44] 13r11
-15r7 G{8|50R9[12]} 42r43 156r13 159r26 160r27
-17V16 Get_Task_Delay{duration} 17b16 24l11 24t25 133s28 193s16
+15r7 G{8|50R9[12]} 42r43 159r13 162r26 163r27
+17V16 Get_Task_Delay{duration} 17b16 24l11 24t25 137s28 196s16
 18r10 Second_G{10|47R9} 21r43 22r54
 19f10 Result{float} 22m10 23r27
-29A12 Boolean_Array(boolean)<integer> 30r49 35r73 40r43 112r23
+29A12 Boolean_Array(boolean)<integer> 30r49 35r73 40r43 117r23
 30A12 Matrix(29A12)<integer> 31r28
-31a7 Connections_Matrix{30A12} 37r24 152m10 162r32 164m13 173r16
-33i7 Good_Shortcuts_Number{integer} 157m7 158r13 163m13 163r38
-33i30 Start{integer} 159m10 162r13 162r51 164r32
-33i37 Target{integer} 160m10 162r21 162r58 164r39
-35U17 SetUpNeighbours 35b17 35>33 35=54 38l11 38t26 117s10
+31a7 Connections_Matrix{30A12} 37r24 155m10 165r32 167m13 176r16
+33i7 Good_Shortcuts_Number{integer} 160m7 161r13 166m13 166r38
+33i30 Start{integer} 162m10 165r13 165r51 167r32
+33i37 Target{integer} 163m10 165r21 165r58 167r39
+35U17 SetUpNeighbours 35b17 35>33 35=54 38l11 38t26 122s10
 35i33 Task_Id{integer} 37r43
 35a54 Neighbours{29A12} 37m10
-40V16 GetNeighbourId{integer} 40b16 40>31 53l11 53t25 137s27
+40V16 GetNeighbourId{integer} 40b16 40>31 53l11 53t25 140s27
 40a31 Neighbours{29A12} 46r16
 41i10 Target_Id{integer} 48m16 52r17
 42i10 Skips_Counter{integer} 45r16 47m16 47r33
 43i10 I{integer} 46r27 48r29 50m13 50r19
 57A12 Integer_Array(integer)<integer> 59r60 62r63
 59A12 Node_Keeper_Type(57A12)<integer> 60r21
-60a7 Node_Keeper{59A12} 125m19 206r16 207r34
+60a7 Node_Keeper{59A12} 130m19 210r16 211r34
 62A12 Package_Keeper_Type(57A12)<integer> 63r24
-63a7 Package_Keeper{62A12} 68r16 69m16 217r16 218r34
-65U17 AddNodeToPackageRoute 65b17 65>39 65>63 73l11 73t32 127s19
+63a7 Package_Keeper{62A12} 68r16 69m16 222r16 223r34
+65U17 AddNodeToPackageRoute 65b17 65>39 65>63 73l11 73t32 132s19
 65i39 Package_Id{integer} 68r31 69r31
 65i63 Node_Id{integer} 69r49
 67i14 I{integer} 68r43 69r43
-78t12 Printer 82b17 98l11 98t18 130r22 134r22
-79Y16 Print 79>22 79>43 89b26 92l23 92t28 130s30 134s30
-79i22 Node_Id{integer} 90r35
-79i43 Package_Id{integer} 91r38
-83i10 Node_Prim{integer} 90m22 93r107
-84i10 Package_Prim{integer} 91m22 93r53
-89i32 Node_Id{integer}
-89i53 Package_Id{integer}
-102T17 Node_Thread 102d29 106l11 106e22 108r60 111b17 146l11 146t22 183r24
-102i29 Id{integer} 117r26 125r31 127r49 129r22 130r36 134r36
-103Y16 StartBaby 116b17 188s22
-104Y16 ReceiveAndSend 104>31 121b26 123l23 123t37 137s55 194s22
-104i31 P{integer} 122r32
-105Y16 Join 140b26 198s22
-108A12 NTAR_Type(102T17)<integer> 109r14
-109a7 NTAR{108A12} 137r22 183m10 188r10 194r10 198r10
-112a10 Neighbours{29A12} 117m30 117r30 137r42
-113i10 P_Prim{integer} 122m22 125r63 127r41 130r40 134r40 137r70
-114i10 Visited_Packages_Number{integer} 125r35 126m19 126r46
-121i41 P{integer}
-151i11 R{integer} 152r29 152r32
-170i11 R{integer} 171r28 173r35
-172i14 C{integer} 173r38 174r34
-182i11 I{integer} 183r15 183r36
-187i11 I{integer} 188r15
-192i11 I{integer} 194r37
-197i11 I{integer} 198r15
-203i11 R{integer} 204r34 206r28 207r46
-205i14 C{integer} 206r31 207r49
-214i11 R{integer} 215r28 217r31 218r49
-216i14 C{integer} 217r34 218r52
+78t12 Printer 83b17 103l11 103t18 135r22 138r22
+79Y16 Print 79>22 79>43 90b26 93l23 93t28 138s30
+79i22 Node_Id{integer} 91r35
+79i43 Package_Id{integer} 92r38
+80Y16 Final_Print 80>28 95b26 97l23 97t34 135s30
+80i28 Package_Id{integer} 96r38
+84i10 Node_Prim{integer} 91m22 94r107
+85i10 Package_Prim{integer} 92m22 94r53 96m22 98r53
+90i32 Node_Id{integer}
+90i53 Package_Id{integer}
+95i39 Package_Id{integer}
+107T17 Node_Thread 107d29 111l11 111e22 113r60 116b17 149l11 149t22 186r24
+107i29 Id{integer} 122r26 130r31 132r49 134r22 138r36
+108Y16 StartBaby 121b17 191s22
+109Y16 ReceiveAndSend 109>31 126b26 128l23 128t37 140s55 197s22
+109i31 P{integer} 127r32
+110Y16 Join 143b26 201s22
+113A12 NTAR_Type(107T17)<integer> 114r14
+114a7 NTAR{113A12} 140r22 186m10 191r10 197r10 201r10
+117a10 Neighbours{29A12} 122m30 122r30 140r42
+118i10 P_Prim{integer} 127m22 130r63 132r41 135r42 138r40 140r70
+119i10 Visited_Packages_Number{integer} 130r35 131m19 131r46
+126i41 P{integer}
+154i11 R{integer} 155r29 155r32
+173i11 R{integer} 174r28 176r35
+175i14 C{integer} 176r38 177r34
+185i11 I{integer} 186r15 186r36
+190i11 I{integer} 191r15
+195i11 I{integer} 197r37
+200i11 I{integer} 201r15
+207i11 R{integer} 208r34 210r28 211r46
+209i14 C{integer} 210r31 211r49
+219i11 R{integer} 220r28 222r31 223r49
+221i14 C{integer} 222r34 223r52
 X 18 interfac.ads
 74M9*Unsigned_32
 77M9*Unsigned_64

@@ -73,6 +73,36 @@ package body Graph is
       end AddNodeToPackageRoute;   
       --
       
+      -- Printer Part
+      
+      task Printer is
+         entry Print(Node_Id: in Integer; Package_Id: in Integer);
+         entry Final_Print(Package_Id: in Integer);
+      end Printer;
+      
+      task body Printer is
+         Node_Prim: Integer;
+         Package_Prim: Integer;
+      begin 
+         loop
+            begin 
+               select
+                  accept Print(Node_Id: in Integer; Package_Id: in Integer) do
+                     Node_Prim := Node_Id;
+                     Package_Prim := Package_Id;
+                  end Print;
+                  Put_Line("pakiet" & Integer'Image(Package_Prim) & " jest w wierzcholku" & Integer'Image(Node_Prim));
+               or accept Final_Print (Package_Id : in Integer) do
+                     Package_Prim := Package_Id;
+                  end Final_Print;
+                  Put_Line("pakiet" & Integer'Image(Package_Prim) & " zostal odebrany");
+               or terminate;
+               end select;
+            end;
+         end loop;
+      end Printer;
+      
+      
       -- Tasks Part
       task type Node_Thread(Id: Integer) is 
          entry StartBaby;
@@ -102,10 +132,11 @@ package body Graph is
                   AddNodeToPackageRoute(P_Prim, Id);
                   
                   if Id = N - 1 then
-                     Put_Line("pakiet" & Integer'Image(P_Prim) & " jest w wierzcholku" & Integer'Image(Id));
+                     Printer.Final_Print(P_Prim);
                   else
                      delay Get_Task_Delay;
-                     Put_Line("pakiet" & Integer'Image(P_Prim) & " jest w wierzcholku" & Integer'Image(Id));
+                     Printer.Print(Id, P_Prim);
+
                      NTAR(GetNeighbourId(Neighbours)).ReceiveAndSend(P_Prim);
                   end if;
                or 
@@ -172,6 +203,7 @@ package body Graph is
       
       
       -- Printing Node_Keeper
+      New_Line;
       for R in 0 .. N-1 loop
          Put("W" & Integer'Image(R) & " byly");
          for C in 0 .. K-1 loop
@@ -183,6 +215,7 @@ package body Graph is
       end loop;
       
       -- Printing Package_Keeper
+      New_Line;
       for R in 1 .. K loop
          Put(Integer'Image(R) & " byl w");
          for C in 0 .. N-1 loop

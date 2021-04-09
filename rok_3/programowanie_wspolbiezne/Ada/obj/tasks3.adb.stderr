@@ -1,0 +1,10 @@
+tasks3.adb:37:35: missing "with Ada.Containers;"
+tasks3.adb:41:08: "Integer_Vectors" is undefined
+tasks3.adb:43:04: "Nr_Of_Tasks" conflicts with declaration at line 6
+tasks3.adb:44:04: "Seeds" conflicts with declaration at line 7
+tasks3.adb:48:73: "Node_Type" is undefined
+tasks3.adb:52:59: discriminants must have a discrete or access type
+tasks3.adb:59:07: "Links" conflicts with declaration at line 52
+tasks3.adb:59:15: "Vector" is undefined
+tasks3.adb:64:42: expected type "Standard.Integer"
+tasks3.adb:64:42: found type "Standard.Boolean"

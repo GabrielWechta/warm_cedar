@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math/rand"
+	"os"
 	"strconv"
 	"sync"
 	"time"
@@ -126,6 +127,7 @@ func sourceThread(node Node, graph *Graph, k int, keeper PackageKeeper) {
 	random := rand.New(rand.NewSource(rand.Int63()))
 
 	for packageID := 0; packageID < k; packageID++ {
+		masterOutputer <- "pakiet " + strconv.Itoa(packageID) + " w wierzchołku " + strconv.Itoa(node.id) + "\n"
 		keeper.packages[packageID].wasHere = append(keeper.packages[packageID].wasHere, 0)
 		graph.nodes[node.id].visitors = append(graph.nodes[node.id].visitors, packageID)
 
@@ -167,15 +169,15 @@ func outletThread(node Node, graph *Graph, k int, wg *sync.WaitGroup, keeper Pac
 func main() {
 	var wg sync.WaitGroup
 
-	n := 8
-	d := 8
-	k := 12
-
-	graph := buildGraph(n)
-	addShortcuts(graph, n, d)
+	n, _ := strconv.ParseInt(os.Args[1], 10, 64)
+	d, _ := strconv.ParseInt(os.Args[2], 10, 64)
+	k, _ := strconv.ParseInt(os.Args[3], 10, 64)
+	
+	graph := buildGraph(int(n))
+	addShortcuts(graph, int(n), int(d))
 	printGraph(graph)
 
-	keeper := buildPackageKeeper(k)
+	keeper := buildPackageKeeper(int(k))
 
 	/* this is goroutine for output */
 	go func() {
@@ -185,14 +187,14 @@ func main() {
 		}
 	}()
 
-	for i := 0; i < n-1; i++ {
+	for i := 0; i < int(n)-1; i++ {
 		go receiverSenderThread(graph.nodes[i], graph, keeper)
 	}
 
-	go sourceThread(graph.nodes[0], graph, k, keeper)
+	go sourceThread(graph.nodes[0], graph, int(k), keeper)
 
 	wg.Add(1)
-	go outletThread(graph.nodes[n-1], graph, k, &wg, keeper)
+	go outletThread(graph.nodes[n-1], graph, int(k), &wg, keeper)
 
 	wg.Wait()
 	time.Sleep(time.Second)

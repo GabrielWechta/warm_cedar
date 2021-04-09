@@ -1,14 +1,10 @@
 V "GNAT Lib v2020"
 M P W=b
-A -gnatA
-A -mtune=generic
-A -march=x86-64
 P SS ZX
 
 RN
 RV NO_IO
 RV NO_SECONDARY_STACK
-RV NO_IMPLEMENTATION_PRAGMAS
 
 U main%b		main.adb		3467f719 NE OO SU
 W ada%s			ada.ads			ada.ali

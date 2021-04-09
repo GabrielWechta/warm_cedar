@@ -1,0 +1,14 @@
+nagrywanie:
+asciinema rec -i 0.2 lista#.cast
+# Gabriel Wechta
+# 250111
+# Programowanie wspolbienze, lista #
+svn export https://repo.cs.pwr.edu.pl/000000/Kurs_X/lista_#/
+cd lista_#
+# kod zrodlowy
+cat plik
+# kompilacja
+gnatmake main.adb OR go run main.go
+# uruchomienie
+./main 10 10 8
+# dziekuje 
