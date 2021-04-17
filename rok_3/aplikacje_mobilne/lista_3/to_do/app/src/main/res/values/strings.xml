@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">to_do</string>
+    <string name="channel_name">todo_channel</string>
+    <string name="channel_description">channel for todo</string>
+
+    <string-array name="emojis">
+        <item> </item>
+        <item>😊</item>
+        <item>❤</item>
+        <item>😒</item>
+        <item>🤦‍♂️</item>
+        <item>💋</item>
+        <item>🎉</item>
+    </string-array>
+</resources>

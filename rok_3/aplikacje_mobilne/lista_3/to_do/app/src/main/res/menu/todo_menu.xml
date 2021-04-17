@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/miSortByDate"
+        android:icon="@drawable/ic_sort_by_date"
+        android:title="Sort By Date"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/miGroupByIcon"
+        android:icon="@drawable/ic_sort_by_date"
+        android:title="Group By Icon"
+        app:showAsAction="never" />
+</menu>
