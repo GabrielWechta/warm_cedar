@@ -22,7 +22,7 @@
         android:id="@+id/button"
         android:layout_width="200dp"
         android:layout_height="100dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="36dp"
         android:onClick="open3by3"
         android:text="3 X 3"
         android:textSize="18sp"
@@ -50,7 +50,9 @@
         android:text="Last won was comitted by:"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.514" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
