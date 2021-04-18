@@ -1,0 +1,7 @@
+v 4
+file . "lfsr_tb.vhd" "70821daa2eb63caa1991386ffcc70203e3127b61" "20210418115050.636":
+  entity lfsr_tb at 1( 0) + 0 on 21;
+  architecture behavior of lfsr_tb at 8( 102) + 0 on 22;
+file . "lfsr.vhd" "52a983b82da1d97bb8561f3cd83f18d0b3c7c813" "20210418115011.882":
+  entity lfsr at 1( 0) + 0 on 19;
+  architecture behavioral of lfsr at 11( 196) + 0 on 20;

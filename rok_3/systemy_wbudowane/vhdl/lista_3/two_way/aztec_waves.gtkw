@@ -1,0 +1,33 @@
+[*]
+[*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
+[*] Sun Apr 18 10:05:28 2021
+[*]
+[dumpfile] "/home/gabriel/Desktop/warm_cedar/rok_3/systemy_wbudowane/vhdl/lista_3/two_way/new.ghw"
+[dumpfile_mtime] "Sun Apr 18 10:04:23 2021"
+[dumpfile_size] 18386
+[savefile] "/home/gabriel/Desktop/warm_cedar/rok_3/systemy_wbudowane/vhdl/lista_3/two_way/aztec_waves.gtkw"
+[timestart] 9110000000
+[size] 1860 1016
+[pos] -51 -51
+*-29.000000 11950000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.twoway_tb.
+[sst_width] 233
+[signals_width] 86
+[sst_expanded] 1
+[sst_vpaned_height] 289
+@800023
+#{top.twoway_tb.qq[7:0]} top.twoway_tb.qq[7] top.twoway_tb.qq[6] top.twoway_tb.qq[5] top.twoway_tb.qq[4] top.twoway_tb.qq[3] top.twoway_tb.qq[2] top.twoway_tb.qq[1] top.twoway_tb.qq[0]
+@29
+top.twoway_tb.qq[7]
+top.twoway_tb.qq[6]
+top.twoway_tb.qq[5]
+top.twoway_tb.qq[4]
+top.twoway_tb.qq[3]
+top.twoway_tb.qq[2]
+top.twoway_tb.qq[1]
+top.twoway_tb.qq[0]
+@1001201
+-group_end
+[pattern_trace] 1
+[pattern_trace] 0

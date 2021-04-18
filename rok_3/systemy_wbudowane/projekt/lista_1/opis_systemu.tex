@@ -1,0 +1,100 @@
+\documentclass[12pt]{article}
+ 
+\usepackage[margin=1in]{geometry} 
+\usepackage[utf8]{inputenc}
+\usepackage{polski} 
+\usepackage{hyperref}
+
+\title{%
+Elektroniczna szachownica z komputerem szachowym \\
+\large Inspirowana urządzeniem \href{https://www.dgt.nl/index.php/products/chess-computers/dgt-centaur}{DGT Centaur}
+}
+\author{Gabriel Wechta (250111),\\ Patryk Majewski (250134) }
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Wymagania systemu}
+\subsection{Co robi system?}
+\begin{enumerate}
+    \item Pozwala na rozegranie partii szachowej w tradycyjnej formie, to jest fizyczna szachownica i bierki. Umożliwia grę z komputerem lub człowiekiem, oferując dodatkowo ewaluację ruchów. W przypadku potyczki z komputerem, użytkownik ma możliwość wybrania spośród trzech poziomów trudności. Może też zdecydować, jakim kolorem będzie grać komputer. Gra kończy się w jednym z następujących przypadków: szach mat, pat, remis.
+    \item Podobnie jak tradycyjna szachownica, system jest przenośny i nie wymaga stałego zasilania.
+    \item Umożliwia promocję piona z wyborem figury, w którą ma się zmienić.
+    \item Obsługuje roszady, które gracz wprowadza za pomocą odpowiednich sekwencji ruchów.
+    \item Na ekranie wyświetla obecny stan gry, zegar szachowy, życie baterii, ewaluację obecnej pozycji, historię ruchów i podpowiedź następnego ruchu.
+    \item Komunikuje się z użytkownikiem poprzez podświetlanie poszczególnych pól. Sygnalizuje zaakceptowanie ruchu poprzez podświetlenie pola, na które gracz przesunął bierkę. W przypadku gry z komputerem, szachownica sygnalizuje jego ruch poprzez zaznaczenie pola z bierką, którą należy przestawić, jak również pola docelowego.
+    \item Kontroluje zgodność ruchów z zasadami gry. W przypadku zagrania ruchu niezgodnego z zasadami, na ekranie pojawia się komunikat o nielegalnym ruchu. Obecne i źródłowe pole bierki zaczyna mrugać.
+    \item Umożliwia rozpoczęcie gry z dowolnej pozycji. 
+    \item Pozwala na zapamiętanie ułożenia bierek, aby kontynuować przerwaną grę po ponownym włączeniu urządzenia. Wówczas na ekranie wyświetlany jest stan gry przed jej przerwaniem.
+    \item Umożliwia rozgrywkę z ograniczeniem czasowym lub bez niego. Użytkownik może wybrać jeden z predefiniowanych czasów dla obu graczy. W każdym momencie ma możliwość wstrzymania gry. Zegar odmierzający czas gracza zatrzymuje się w momencie postawienia przez niego bierki na polu docelowym.
+    \item Prowadzi ewaluację pozycji na szachownicy. Oblicza najlepsze ruchy w danym momencie. W przypadku rozgrywki z komputerem, wybiera ruchy odpowiednie dla wybranego poziomu trudności. W przypadku wykonania w imieniu komputera ruchu innego niż ten przez niego wskazany, silnik adaptuje się do obecnej sytuacji i nie zgłasza błędu.
+    \item Na życzenie użytkownika system wyświetla na ekranie najkorzystniejszy dla niego w danym momencie ruch.
+    \item W przypadku ruchu, którego nie jest w stanie odpowiednio zarejestrować, system informuje na ekranie o konieczności cofnięcia ruchu do ostatniej zarejestrowanej, legalnej pozycji.
+    \item W przypadku przypadkowego przewrócenia bierek, system to wykrywa i sygnalizuje potrzebę powrotu do ostatniej zarejestrowanej legalnej pozycji.
+    \item System po 30 minutach bez ruchu, w celu oszczędzania energii, wyłącza się.
+    \item Aby wyłączyć urządzenie należy wcisnąć i przytrzymać przycisk Play/Pause - On/Off na 10 sekund.
+\end{enumerate}
+
+\subsection{Jakie jest środowisko?}
+\begin{enumerate}
+\item Urządzenie przeznaczone jest do użytku w pomieszczeniach. Powinno być przystosowane przynajmniej do warunków nieekstremalnych, to jest temperatura 0-35 °C, wilgotność powietrza 30-60\%, wysokość bezwzględna do 3000 m. 
+\item Urządzenie ma być zamiennikiem dla tradycyjnej szachownicy. Musi być lekkie i łatwe w transporcie. Nie może wymagać stałego zasilania.
+\end{enumerate}
+
+\subsection{Kto korzysta z systemu i w jaki sposób?}
+\begin{enumerate}
+
+\item Użytkownik może korzystać z systemu na dwa sposoby:
+\begin{enumerate}
+    \item Grając przeciwko komputerowi, co wymaga realizowania przez system funkcjonalności związanych z oznajmieniem ruchów komputera i fizycznego przestawiania przez użytkownika bierek komputera i jego własnych,
+	\item Grając przeciwko drugiemu graczowi, wtedy system zapisuje i wyświetla wykonane ruchy oraz przeprowadza ewaluację punktową obecnego stanu gry.
+\end{enumerate}
+
+\item Z innego punktu widzenia, użytkowników można podzielić według poziomu doświadczenia i oczekiwania co do nauki płynącej z rozgrywanych partii:
+\begin{enumerate}
+\item Gracz rozpoczynający naukę chce w głównej mierze dowiedzieć się, czy wykonany przez niego ruch był dobry i czy istnieje lepszy -- a jeżeli tak, jaki. Potrzebuje poziomu trudności pozwalającego na cieszenie się z gry,
+\item Gracz doświadczony oczekuje satysfakcjonującego wyzwania i godnego, responsywnego przeciwnika, być może z informacją zwrotną co do jakości wykonywanych ruchów.
+\end{enumerate}
+
+\end{enumerate}
+
+\subsection{W jaki sposób system realizuje założenia?}
+\begin{enumerate}
+\item Urządzenie do rozpoznania bierki na polu używa czujników ciężaru, których minimalna średnica detekcji wynosi 19 mm. Rodzaj i kolor bierki jest rozpoznawany na podstawie jej wagi. Tym samym przesunięcie bierki jest rejestrowany na podstawie zmiany masy.
+\item System wyświetla i zapisuje rozgrywkę w formacie PGN.
+\item Zbicie figury jest realizowane poprzez zarejestrowanie usunięcia ciężaru z pola, na którym figura się znajdowała, i położenie w jej miejsce bijącej figury.
+\item Sytuacja na szachownicy jest zapisywana w pamięci urządzenia. Po zakończeniu rozgrywki historia ruchów jest zapomniana, robiąc miejsce na kolejną grę.
+\item Ewaluacja sytuacji na szachownicy jest realizowana przez silnik szachowy Centaur zainstalowany na urządzeniu.
+\item Silnik na podstawie swoich algorytmów wykonuje ewaluacje co ruch, dzięki czemu może adaptować się do posunięć wykonanych w jego imieniu, ale innych niż zgłosił.
+\item Trudność wybrana przez gracza przed rozpoczęciem rozgrywki jest realizowana poprzez wybór ruchów o jakości odpowiedniej do poziomu trudności. 
+\item Promocja piona jest realizowana poprzez zdjęcie piona po dojściu na linię przemiany, oraz położeniu w jego miejscu figury.
+\item System rozpoznaje nielegalny ruch, sprawdzając legalność ruchu przez zaprogramowane zasady gry w szachy.
+\item Wyświetlanie podpowiedzi realizowane jest poprzez wyświetlenie na ekranie najlepszego ruchu obliczonego przez silnik.
+\item System wyświetla i odlicza czas każdemu z graczy. W przypadku naciśnięcia przycisku Play/Pause - On/Off, zegar jest zatrzymywany do czasu następnego wciśnięciu przycisku.
+\item Odmierzanie czasu jest realizowane przez moduł RTC.
+\item Urządzenie wyposażone jest w baterię litowo-polimerową, przystosowaną do urządzeń przenośnych.
+\item Szachownica, wyświetlacz i czujniki ciężaru są zasilane przez baterię.
+\item Bateria jest ładowana poprzez podłączenie urządzenia do ładowarki. Ładowarka USB - 5V i 2000mA.
+\item Wyświetlacz jest wykonany w technologii e-Ink, dzięki czemu ma niskie zapotrzebowanie na energię.
+\item Elementy świetlne szachownicy to diody LED o niskim zapotrzebowaniu na energię. Diody służą do informacji zwrotnej o zarejestrowaniu ruchu oraz sygnalizują ruch wykonany przez komputer. Urządzenie pozwala na dostosowanie intensywności światła, co umożliwia grę w różnych warunkach oświetleniowych.
+\item Wymienione komponenty są powszechnie używane w urządzeniach przenośnych i mają wymagania środowiskowe mniej restrykcyjne od wcześniej wspomnianych.
+\item Urządzenie jest zbliżone rozmiarem do tradycyjnej szachownicy (50 cm x 50 cm) i wykonane z tworzywa sztucznego, jest zatem trwałe i łatwe w transporcie.
+
+\item Ustawienia urządzenie obsługiwane są przez następujące przyciski znajdujące się na obudowie:
+\begin{itemize}
+    \item Up -- przesunięcie wybranego pola w menu do góry.
+    \item Down -- przesunięcie wybranego pola w menu w dół.
+    \item Back -- powrót do poprzedniego ekranu, w przypadku przytrzymania wyświetlacz jest odświeżany. 
+    \item Ok/Menu -- otwarcie ekranu ustawień, potwierdzenie wyboru.
+    \item Hint/Alternate move -- pierwsze wciśnięcie: wyświetlenie najlepszego ruchu w pozycji, ponowne wciśnięcie: wyświetlenie alternatywy.
+    \item Play/Pause - On/Off -- włącz/wyłącz. Gdy gra toczy się z włączonym zegarem, zatrzymaj/wznów czas.
+\end{itemize}
+
+\item Menu główne zawiera interfejs obsługujący: tryby gry, zegar szachowy, funkcjonalność rozpoczęcia rozgrywki od ustawionej pozycji, ustawienia jasności wyświetlacza, ustawienia wielkości czcionki na wyświetlaczu.
+\item Aby móc się wyłączyć po określonym czasie, system odmierza czas od ostatniego ruchu używając modułu RTC.
+\item Przy wyłączeniu z dowolnego powodu, obecny stan gry jest zapisywany w pamięci urządzenia, używając formatu PGN. Urządzenie odcina dopływ prądu do wyświetlacza.
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,37 @@
+[*]
+[*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
+[*] Sun Apr 18 09:35:37 2021
+[*]
+[dumpfile] "/home/gabriel/Desktop/warm_cedar/rok_3/systemy_wbudowane/vhdl/lista_3/simple/new.ghw"
+[dumpfile_mtime] "Sun Apr 18 09:34:53 2021"
+[dumpfile_size] 1775
+[savefile] "/home/gabriel/Desktop/warm_cedar/rok_3/systemy_wbudowane/vhdl/lista_3/simple/wave_for_simple.gtkw"
+[timestart] 494700000
+[size] 1860 1016
+[pos] -51 -51
+*-27.000000 1185000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.simple_tb.
+[treeopen] top.simple_tb.uut.
+[sst_width] 233
+[signals_width] 78
+[sst_expanded] 1
+[sst_vpaned_height] 289
+@28
+top.simple_tb.rst
+top.simple_tb.clk
+@800023
+#{top.simple_tb.uut.q[7:0]} top.simple_tb.uut.q[7] top.simple_tb.uut.q[6] top.simple_tb.uut.q[5] top.simple_tb.uut.q[4] top.simple_tb.uut.q[3] top.simple_tb.uut.q[2] top.simple_tb.uut.q[1] top.simple_tb.uut.q[0]
+@29
+top.simple_tb.uut.q[7]
+top.simple_tb.uut.q[6]
+top.simple_tb.uut.q[5]
+top.simple_tb.uut.q[4]
+top.simple_tb.uut.q[3]
+top.simple_tb.uut.q[2]
+top.simple_tb.uut.q[1]
+top.simple_tb.uut.q[0]
+@1001201
+-group_end
+[pattern_trace] 1
+[pattern_trace] 0
