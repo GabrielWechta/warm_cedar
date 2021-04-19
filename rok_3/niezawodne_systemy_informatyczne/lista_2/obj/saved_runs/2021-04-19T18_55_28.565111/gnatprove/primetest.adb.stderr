@@ -1,0 +1,2 @@
+primetest.adb:6:61: medium: loop invariant might not be preserved by an arbitrary iteration, cannot prove N rem E /= 0 (e.g. when E = 3 and N = 7)[#0]
+primetest.adb:6:61: medium: loop invariant might fail in first iteration, cannot prove N rem E /= 0 (e.g. when E = 2 and N = 4)[#1]

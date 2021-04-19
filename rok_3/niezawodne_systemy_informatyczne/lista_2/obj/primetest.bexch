@@ -1,0 +1,22 @@
+[MAPPING FILE]
+/tmp/GNAT-TEMP-000005.TMP
+[TOOLCHAIN VERSION]
+ada
+GNAT 2020
+[MAIN BASE NAME]
+primetest
+[COMPILER PATH]
+/home/gabriel/opt/GNAT/2020/bin/gcc
+[COMPILER LEADING SWITCHES]
+-c
+-x
+ada
+-gnatA
+[MAIN DEPENDENCY FILE]
+/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/obj/primetest.ali
+[DEPENDENCY FILES]
+[BINDING OPTIONS]
+gnatbind_prefix=
+[PROJECT FILES]
+/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/is_prime.gpr
+20210419164840 7fc7316868060ca5558075753f689927

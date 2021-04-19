@@ -1,0 +1,21 @@
+V "GNAT Lib v2020"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U isprime%b		isprime.adb		2f03c4c2 NE OO SU
+
+D isprime.adb		20210419162649 2f03c4c2 isprime%b
+D system.ads		20200228061809 4635ec04 system%s
+G a e
+G c Z b b [isprime standard 1 10 none]
+X 1 isprime.adb
+1V10*IsPrime{boolean} 1b10 1>19 5r17 12l5 12t12
+1i19 N{positive} 4r12 6r35 6r44 8r36 8r45
+6i25 I{integer} 6r50
+8i26 I{integer} 8r51
+

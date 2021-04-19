@@ -1,0 +1,335 @@
+{
+  "spark": [
+    {
+      "name": "primeTest",
+      "sloc": [
+        {
+          "file": "primetest.ads",
+          "line": 1
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "primeTest.IsPrime",
+      "sloc": [
+        {
+          "file": "primetest.ads",
+          "line": 3
+        }
+      ],
+      "spark": "all"
+    }
+  ],
+  "flow": [
+  ],
+  "session_map": {
+    " 1": "/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/obj/gnatprove/primetest__isprime"
+  },
+  "proof": [
+    {
+      "file": "primetest.adb",
+      "line": 6,
+      "col": 15,
+      "rule": "VC_DIVISION_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "primeTest.IsPrime",
+        "sloc": [
+          {
+            "file": "primetest.ads",
+            "line": 3
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "primetest.adb",
+      "check_line": 6,
+      "check_col": 15,
+      "session_dir": 1,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "primetest.ads",
+      "line": 6,
+      "col": 68,
+      "rule": "VC_DIVISION_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "primeTest.IsPrime",
+        "sloc": [
+          {
+            "file": "primetest.ads",
+            "line": 3
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "primetest.ads",
+      "check_line": 6,
+      "check_col": 68,
+      "session_dir": 1,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "primetest.ads",
+      "line": 8,
+      "col": 48,
+      "rule": "VC_DIVISION_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "primeTest.IsPrime",
+        "sloc": [
+          {
+            "file": "primetest.ads",
+            "line": 3
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "primetest.ads",
+      "check_line": 8,
+      "check_col": 48,
+      "session_dir": 1,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "primetest.ads",
+      "line": 6,
+      "col": 66,
+      "rule": "VC_POSTCONDITION",
+      "severity": "medium",
+      "entity": {
+        "name": "primeTest.IsPrime",
+        "sloc": [
+          {
+            "file": "primetest.ads",
+            "line": 3
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Unknown (unknown)",
+              "steps": 499,
+              "time": 0
+            },
+            "CVC4_CE": {
+              "result": "Unknown (unknown)",
+              "steps": 559,
+              "time": 0
+            },
+            "Z3": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 60
+            },
+            "altergo": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 60
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "primetest.ads",
+      "check_line": 6,
+      "check_col": 14,
+      "cntexmp": {
+        "primetest.adb": {
+          "previous": {
+          },
+          "current": {
+            "5": [
+              {
+                "name": "N",
+                "value": "4",
+                "kind": "variable"
+              }
+            ],
+            "6": [
+              {
+                "name": "N",
+                "value": "4",
+                "kind": "variable"
+              }
+            ],
+            "11": [
+              {
+                "name": "IsPrime'Result",
+                "value": "True",
+                "kind": "variable"
+              }
+            ]
+          }
+        },
+        "primetest.ads": {
+          "previous": {
+          },
+          "current": {
+            "3": [
+              {
+                "name": "N",
+                "value": "4",
+                "kind": "variable"
+              }
+            ],
+            "6": [
+              {
+                "name": "I",
+                "value": "2",
+                "kind": "variable"
+              },
+              {
+                "name": "N",
+                "value": "4",
+                "kind": "variable"
+              }
+            ]
+          }
+        }
+      },
+      "msg_id": 0,
+      "session_dir": 1,
+      "how_proved": "prover"
+    }
+  ],
+  "assumptions": [
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "primeTest.IsPrime",
+          "sloc": [
+            {
+              "file": "primetest.ads",
+              "line": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "primeTest",
+          "sloc": [
+            {
+              "file": "primetest.ads",
+              "line": 1
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "timings": {
+    "gnatwhy3.transformations.eliminate_algebraic": 2.86199990659952E-03,
+    "gnatwhy3.transformations.inline_trivial": 5.09648025035858E-01,
+    "codepeer results": 2.20000001718290E-05,
+    "init_why_sections": 5.78999985009432E-04,
+    "gnatwhy3.transformations.eliminate_let_term": 9.89999971352518E-04,
+    "gnatwhy3.transformations.detect_polymorphism": 1.59000002895482E-04,
+    "globals/properties (advanced)": 1.46999998833053E-04,
+    "gnatwhy3.transformations.eliminate_literal": 2.24500009790063E-03,
+    "gnatwhy3.run_vcs": 1.05930998921394E-01,
+    "gnatwhy3.transformations.eliminate_algebraic_if_poly": 6.93999987561256E-04,
+    "gnatwhy3.transformations.eliminate_definition_if_poly": 1.78000002051704E-04,
+    "flow analysis": 8.62999993842095E-04,
+    "gnatwhy3.transformations.simplify_formula": 2.24500009790063E-03,
+    "marking": 1.30000000353903E-04,
+    "translation of standard": 3.34500009194016E-03,
+    "gnatwhy3.transformations.eliminate_recursion": 9.18000005185604E-04,
+    "gnatwhy3.register_vcs": 8.52000026497990E-04,
+    "gnatwhy3.transformations.eliminate_epsilon": 1.93799997214228E-03,
+    "globals (basic)": 1.06999999843538E-04,
+    "gnatwhy3.schedule_vcs": 1.67100003454834E-03,
+    "gnatwhy3.transformations.prepare_for_counterexmp": 2.88500008173287E-03,
+    "gnatwhy3.save_session": 3.50899994373322E-03,
+    "gnatwhy3.transformations.eliminate_inductive": 1.24699994921684E-03,
+    "gnatwhy3.transformations.split_premise_right": 6.01999985519797E-04,
+    "gnatwhy3.transformations.encoding_smt_if_poly": 7.99999997980194E-06,
+    "gnatwhy3.transformations.eliminate_unused_hypo": 1.71000006957911E-04,
+    "gnatwhy3.transformations.eliminate_builtin": 1.61999999545515E-03,
+    "gnatwhy3.transformations.discriminate_if_poly": 1.20000004244503E-05,
+    "gnatwhy3.init": 1.94835007190704E-01,
+    "gnatwhy3.transformations.introduce_premises": 7.54999986384064E-04
+  }
+}
