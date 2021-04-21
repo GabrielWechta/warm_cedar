@@ -1,0 +1,540 @@
+'2021-04-20T11:30:14.406279':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    max2.ads:13:87: medium: postcondition might fail, cannot prove V(I) = V(J) (e.g.
+    when FindMax2''Result = 0 and I = 0 and J = 1 and V = (0 => 2, others => 1) and
+    V''First = 0 and V''Last = 1)[#0]
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-20T11:30:14.406279'
+'2021-04-20T11:36:19.103447':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    max2.ads:8:14: medium: postcondition might fail (e.g. when FindMax2''Result =
+    1 and V = (others => 1) and V''First = 0 and V''Last = 0)[#0]
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-20T11:36:19.103447'
+'2021-04-20T11:38:43.132372':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    max2.ads:14:100: medium: postcondition might fail, cannot prove V(J) <= V(I) (e.g.
+    when FindMax2''Result = -1 and I = -1 and J = 0 and V = (-1 => 1, others => 2)
+    and V''First = -1 and V''Last = 0)[#0]
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-20T11:38:43.132372'
+'2021-04-20T11:39:06.099159':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    max2.ads:14:100: medium: postcondition might fail, cannot prove V(J) <= V(I) (e.g.
+    when FindMax2''Result = -1 and I = -1 and J = 0 and V = (-1 => 1, others => 2)
+    and V''First = -1 and V''Last = 0)[#0]
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-20T11:39:06.099159'
+'2021-04-20T11:43:10.249352':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    max2.adb:14:10: pragma "Loop_Invariant" must appear next to pragma at line 9
+
+    gnatprove: error during generation of Global contracts
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-20T11:43:10.249352'
+'2021-04-20T11:43:40.849052':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    max2.ads:13:87: medium: postcondition might fail, cannot prove V(I) = V(J) (e.g.
+    when FindMax2''Result = 0 and I = 0 and J = 1 and V = (0 => 2, others => 1) and
+    V''First = 0 and V''Last = 1)[#0]
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-20T11:43:40.849052'
+'2021-04-20T11:44:49.693306':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    max2.adb:14:25: medium: assertion might fail, cannot prove Second >= 0 (e.g. when
+    Second = -1)[#0]
+
+    max2.ads:14:100: medium: postcondition might fail, cannot prove V(J) <= V(I) (e.g.
+    when FindMax2''Result = 1 and I = -1 and J = 0 and V = (-1 => 2, others => 3)
+    and V''First = -1 and V''Last = 0)[#1]
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-20T11:44:49.693306'
+'2021-04-20T11:45:34.480922':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    max2.adb:7:10: prefix for "Length" attribute must be constrained array
+
+    gnatprove: error during generation of Global contracts
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-20T11:45:34.480922'
+'2021-04-20T11:45:45.444851':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    max2.adb:17:25: medium: assertion might fail, cannot prove Second >= 0 (e.g. when
+    Second = -1)[#0]
+
+    max2.ads:14:100: medium: postcondition might fail, cannot prove V(J) <= V(I) (e.g.
+    when FindMax2''Result = 1 and I = -1 and J = 0 and V = (-1 => 2, others => 3)
+    and V''First = -1 and V''Last = 0)[#1]
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-20T11:45:45.444851'
+'2021-04-20T11:46:00.046975':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    max2.ads:13:87: medium: postcondition might fail, cannot prove V(I) = V(J) (e.g.
+    when FindMax2''Result = 0 and I = 0 and J = 1 and V = (0 => 2, others => 1) and
+    V''First = 0 and V''Last = 1)[#0]
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-20T11:46:00.046975'
+'2021-04-20T11:46:54.653998':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    max2.ads:13:87: medium: postcondition might fail, cannot prove V(I) = V(J) (e.g.
+    when FindMax2''Result = 0 and I = 0 and J = 1 and V = (0 => 2, others => 1) and
+    V''First = 0 and V''Last = 1)[#0]
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-20T11:46:54.653998'
+'2021-04-20T11:48:03.544797':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    max2.adb:8:32: medium: loop invariant might fail in first iteration, cannot prove
+    Second < Max[#1]
+
+    max2.adb:10:25: medium: assertion might fail, cannot prove Second >= 0 (e.g. when
+    Second = -1)[#0]
+
+    max2.ads:13:87: medium: postcondition might fail, cannot prove V(I) = V(J) (e.g.
+    when FindMax2''Result = 0 and I = 0 and J = 1 and V = (0 => 2, others => 1) and
+    V''First = 0 and V''Last = 1)[#2]
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-20T11:48:03.544797'
+'2021-04-20T11:49:13.346893':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    max2.adb:10:25: medium: assertion might fail, cannot prove Second >= 0 (e.g. when
+    Second = -1)[#0]
+
+    max2.ads:14:100: medium: postcondition might fail, cannot prove V(J) <= V(I) (e.g.
+    when FindMax2''Result = 1 and I = -1 and J = 0 and V = (-1 => 2, others => 3)
+    and V''First = -1 and V''Last = 0)[#1]
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-20T11:49:13.346893'
+'2021-04-20T11:49:32.809167':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    max2.ads:13:87: medium: postcondition might fail, cannot prove V(I) = V(J) (e.g.
+    when FindMax2''Result = 0 and I = 0 and J = 1 and V = (0 => 2, others => 1) and
+    V''First = 0 and V''Last = 1)[#0]
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-20T11:49:32.809167'
+'2021-04-20T11:53:14.990208':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    max2.ads:9:06: medium: postcondition might fail, cannot prove FindMax2''Result
+    = 0 or (for some I in V''Range => FindMax2''Result = V(I)) (e.g. when FindMax2''Result
+    = 1 and V = (others => 2) and V''First = 0 and V''Last = 0)[#0]
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-20T11:53:14.990208'
+'2021-04-20T11:56:02.115807':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    max2.ads:15:100: medium: postcondition might fail, cannot prove V(J) <= V(I) (e.g.
+    when FindMax2''Result = 1 and I = -1 and J = 0 and V = (-1 => 2, others => 3)
+    and V''First = -1 and V''Last = 0)[#0]
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-20T11:56:02.115807'
+'2021-04-20T12:02:07.260940':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    max2.ads:10:06: medium: postcondition might fail, cannot prove FindMax2''Result
+    = 0 or (for some I in V''Range => FindMax2''Result = V(I)) (e.g. when FindMax2''Result
+    = 1 and V = (others => 2) and V''First = 0 and V''Last = 0)[#0]
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-20T12:02:07.260940'
+'2021-04-20T12:03:48.384567':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    max2.adb:9:32: medium: loop invariant might not be preserved by an arbitrary iteration
+    (e.g. when Second = 1 and V = (others => 1) and V''First = -1 and V''Last = 0)[#0]
+
+    max2.ads:14:87: medium: postcondition might fail, cannot prove V(I) = V(J) (e.g.
+    when FindMax2''Result = 0 and I = 0 and J = 1 and V = (1 => 1, others => 2) and
+    V''First = 0 and V''Last = 1)[#1]
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-20T12:03:48.384567'
+'2021-04-20T12:06:54.417443':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    max2.adb:10:62: medium: loop invariant might fail in first iteration, cannot prove
+    V(J) <= Max (e.g. when J = 0 and Max = 0 and V = (others => 1) and V''First =
+    0 and V''Last = 0)[#0]
+
+    max2.adb:10:62: medium: loop invariant might not be preserved by an arbitrary
+    iteration, cannot prove V(J) <= Max (e.g. when J = 1 and Max = 1 and V = (0 =>
+    1, others => 2) and V''First = 0 and V''Last = 1)[#1]
+
+    max2.ads:14:87: medium: postcondition might fail, cannot prove V(I) = V(J) (e.g.
+    when FindMax2''Result = 0 and I = 0 and J = 1 and V = (0 => 2, 2 => 2, others
+    => 1) and V''First = 0 and V''Last = 2)[#2]
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-20T12:06:54.417443'
+'2021-04-20T12:07:20.902686':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    max2.adb:15:07: pragma "Loop_Invariant" must appear immediately within the statements
+    of a loop
+
+    max2.adb:16:07: pragma "Loop_Invariant" must appear immediately within the statements
+    of a loop
+
+    max2.adb:17:07: pragma "Loop_Invariant" must appear immediately within the statements
+    of a loop
+
+    max2.adb:18:07: pragma "Loop_Invariant" must appear immediately within the statements
+    of a loop
+
+    gnatprove: error during generation of Global contracts
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-20T12:07:20.902686'
+'2021-04-20T12:07:47.308647':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    max2.ads:15:100: medium: postcondition might fail, cannot prove V(J) <= V(I) (e.g.
+    when FindMax2''Result = 1 and I = -1 and J = 0 and V = (-1 => 2, others => 3)
+    and V''First = -1 and V''Last = 0)[#0]
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-20T12:07:47.308647'
+'2021-04-20T12:09:13.951894':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    max2.ads:15:100: medium: postcondition might fail, cannot prove V(J) <= V(I) (e.g.
+    when FindMax2''Result = 1 and I = -1 and J = 0 and V = (-1 => 2, others => 3)
+    and V''First = -1 and V''Last = 0)[#0]
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-20T12:09:13.951894'
+'2021-04-20T12:11:23.035111':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    max2.adb:18:33: if expression must be parenthesized
+
+    gnatprove: error during generation of Global contracts
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-20T12:11:23.035111'
+'2021-04-20T12:12:40.460720':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    max2.ads:10:06: medium: postcondition might fail, cannot prove FindMax2''Result
+    = 0 or (for some I in V''Range => FindMax2''Result = V(I)) (e.g. when FindMax2''Result
+    = 1 and V = (others => 2) and V''First = 0 and V''Last = 0)[#0]
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-20T12:12:40.460720'
+'2021-04-20T12:16:34.150591':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    max2.adb:18:33: medium: loop invariant might fail in first iteration (e.g. when
+    I = 0 and Second = 0 and V = (others => 1) and V''First = 0 and V''Last = 0)[#0]
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-20T12:16:34.150591'
+'2021-04-20T12:17:26.893141':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    max2.adb:18:77: missing ";"
+
+    max2.adb:25:03: missing "end loop;" for "loop" at line 7
+
+    gnatprove: error during generation of Global contracts
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-20T12:17:26.893141'
+'2021-04-20T12:17:39.382291':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    max2.adb:18:141: missing ";"
+
+    gnatprove: error during generation of Global contracts
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-20T12:17:39.382291'
+'2021-04-20T12:18:35.207853':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-20T12:18:35.207853'
+'2021-04-20T12:20:01.737688':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-20T12:20:01.737688'
+'2021-04-20T12:31:49.607083':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-20T12:31:49.607083'

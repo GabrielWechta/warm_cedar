@@ -1,0 +1,4 @@
+max2.adb:15:07: pragma "Loop_Invariant" must appear immediately within the statements of a loop
+max2.adb:16:07: pragma "Loop_Invariant" must appear immediately within the statements of a loop
+max2.adb:17:07: pragma "Loop_Invariant" must appear immediately within the statements of a loop
+max2.adb:18:07: pragma "Loop_Invariant" must appear immediately within the statements of a loop

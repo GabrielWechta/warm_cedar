@@ -1,0 +1,1 @@
+max2.ads:10:06: medium: postcondition might fail, cannot prove FindMax2'Result = 0 or (for some I in V'Range => FindMax2'Result = V(I)) (e.g. when FindMax2'Result = 1 and V = (others => 2) and V'First = 0 and V'Last = 0)[#0]

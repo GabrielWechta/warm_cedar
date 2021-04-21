@@ -1,0 +1,2 @@
+max2.adb:17:25: medium: assertion might fail, cannot prove Second >= 0 (e.g. when Second = -1)[#0]
+max2.ads:14:100: medium: postcondition might fail, cannot prove V(J) <= V(I) (e.g. when FindMax2'Result = 1 and I = -1 and J = 0 and V = (-1 => 2, others => 3) and V'First = -1 and V'Last = 0)[#1]

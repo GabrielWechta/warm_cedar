@@ -1,0 +1,3 @@
+max2.adb:8:32: medium: loop invariant might fail in first iteration, cannot prove Second < Max[#1]
+max2.adb:10:25: medium: assertion might fail, cannot prove Second >= 0 (e.g. when Second = -1)[#0]
+max2.ads:13:87: medium: postcondition might fail, cannot prove V(I) = V(J) (e.g. when FindMax2'Result = 0 and I = 0 and J = 1 and V = (0 => 2, others => 1) and V'First = 0 and V'Last = 1)[#2]

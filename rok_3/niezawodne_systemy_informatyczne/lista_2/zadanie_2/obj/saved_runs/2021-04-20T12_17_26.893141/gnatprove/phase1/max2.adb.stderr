@@ -1,0 +1,2 @@
+max2.adb:18:77: missing ";"
+max2.adb:25:03: missing "end loop;" for "loop" at line 7

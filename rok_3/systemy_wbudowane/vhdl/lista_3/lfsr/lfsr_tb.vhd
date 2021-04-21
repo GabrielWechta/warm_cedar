@@ -20,17 +20,20 @@ ARCHITECTURE behavior OF lfsr_tb IS
     CONSTANT clk_period : TIME := 20 ns;
 
 BEGIN
-
     uut : lfsr PORT MAP(
         clk => clk,
         q => qq
     );
 
     clk_process : PROCESS
+        VARIABLE bytes_count : INTEGER := 100;
     BEGIN
-        clk <= '0';
-        WAIT FOR clk_period/2;
-        clk <= '1';
-        WAIT FOR clk_period/2;
-    END PROCESS;
+        WHILE bytes_count > 0 LOOP
+            clk <= '0';
+            WAIT FOR clk_period/2;
+            clk <= '1';
+            WAIT FOR clk_period/2;
+            bytes_count := bytes_count - 1;
+        END LOOP;
+    END PROCESS clk_process;
 END;

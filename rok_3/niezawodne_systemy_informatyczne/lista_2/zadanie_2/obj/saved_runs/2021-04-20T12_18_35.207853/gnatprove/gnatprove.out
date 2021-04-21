@@ -1,0 +1,28 @@
+Summary of SPARK analysis
+=========================
+
+-------------------------------------------------------------------------------------------------------------
+SPARK Analysis results        Total      Flow   CodePeer                       Provers   Justified   Unproved
+-------------------------------------------------------------------------------------------------------------
+Data Dependencies                 .         .          .                             .           .          .
+Flow Dependencies                 .         .          .                             .           .          .
+Initialization                    .         .          .                             .           .          .
+Non-Aliasing                      .         .          .                             .           .          .
+Run-time Checks                  15         .          .          15 (CVC4 98%, Z3 2%)           .          .
+Assertions                       12         .          .    12 (CVC4 86%, Trivial 14%)           .          .
+Functional Contracts              1         .          .     1 (CVC4 71%, Trivial 29%)           .          .
+LSP Verification                  .         .          .                             .           .          .
+Termination                       .         .          .                             .           .          .
+Concurrency                       .         .          .                             .           .          .
+-------------------------------------------------------------------------------------------------------------
+Total                            28         .          .                     28 (100%)           .          .
+
+
+max steps used for successful proof: 1
+
+Analyzed 2 units
+in unit main, 0 subprograms and packages out of 1 analyzed
+  Main at main.adb:4 skipped
+in unit max2, 2 subprograms and packages out of 2 analyzed
+  Max2 at max2.ads:1 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  Max2.FindMax2 at max2.ads:5 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (28 checks)

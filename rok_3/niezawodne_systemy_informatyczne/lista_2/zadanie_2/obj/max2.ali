@@ -1,0 +1,41 @@
+V "GNAT Lib v2020"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U max2%b		max2.adb		7763bcdd NE OO PK
+
+U max2%s		max2.ads		5c94bbc3 EE NE OO PK
+
+D max2.ads		20210420093004 5c94bbc3 max2%s
+D max2.adb		20210420094925 2bf7071e max2%b
+D system.ads		20200228061809 4635ec04 system%s
+G a e
+G c Z s b [findmax2 max2 5 13 none]
+G c Z s s [vectorIP max2 3 9 none]
+X 1 max2.ads
+1K9*Max2 15l5 15e9 2|1b14 20l5 20t9
+3A9*Vector(positive)<integer> 5r27 2|2r27
+5V13*FindMax2{integer} 5>23 8r14 9r7 9r56 11r12 11r71 13r12 14r54 2|2b13
+. 19l8 19t16
+5a23 V{3A9} 7r13 7r40 9r45 9r74 11r53 11r64 13r51 13r76 13r87 13r94 14r32
+. 14r47 14r89 14r100 14r108 2|2b23 7r16 9r46 9r57 12r13 14r20
+9i40 I{integer} 9r76
+11i48 I{integer} 11r66
+13i46 I{integer} 13r89
+13i71 J{integer} 13r96
+14i27 I{integer} 14r49 14r110
+14i84 J{integer} 14r102
+X 2 max2.adb
+4i7 Max{integer} 8r41 12r20 13r23 14m13
+5i7 Second{integer} 8r32 9r64 10r33 13m13 18r14
+7i11 I{integer} 12r15 14r22
+9i41 E{integer} 9r59
+

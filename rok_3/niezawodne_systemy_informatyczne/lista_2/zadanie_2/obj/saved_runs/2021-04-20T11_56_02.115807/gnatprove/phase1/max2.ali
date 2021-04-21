@@ -1,0 +1,48 @@
+V "GNAT Lib v2020"
+A -x
+A ada
+A -gnatA
+A -gnatc
+P GP FX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+
+U max2%b		max2.adb		ab18174a OO PK
+
+U max2%s		max2.ads		5c94bbc3 OO PK
+
+D max2.ads		20210420095554 5c94bbc3 max2%s
+D max2.adb		20210420095549 f78cac89 max2%b
+D system.ads		20200228061809 4635ec04 system%s
+G a Z
+X 1 max2.ads
+1K9*Max2 16l5 16e9 2|1b14 20l5 20t9
+3A9*Vector(positive)<integer> 5r27 2|2r27
+5V13*FindMax2{integer} 5>23 8r14 10r7 10r56 12r12 12r71 14r12 15r54 2|2b13
+. 19l8 19t16
+5a23 V{3A9} 7r13 7r40 10r45 10r74 12r53 12r64 14r51 14r76 14r87 14r94 15r32
+. 15r47 15r89 15r100 15r108 2|2b23 7r16 9r46 9r57 12r13 14r20
+10i40 I{integer} 10r76
+12i48 I{integer} 12r66
+14i46 I{integer} 14r89
+14i71 J{integer} 14r96
+15i27 I{integer} 15r49 15r110
+15i84 J{integer} 15r102
+X 2 max2.adb
+4i7 Max{integer} 8r42 12r20 13r23 14m13
+5i7 Second{integer} 8r32 9r64 10r33 13m13 18r14
+7i11 I{integer} 12r15 14r22
+9i41 E{integer} 9r59
+
+QQ SPARKVERSION SPARK Community 2020 (20200429)
+GG EK_DIRECT_CALLS max2__findmax2 0
+GG EK_GLOBALS max2__findmax2 local FALSE E_FUNCTION FALSE ORIGIN_FLOW 1 max2 proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS max2 0
+GG EK_GLOBALS max2 local FALSE E_PACKAGE TRUE ORIGIN_FLOW 0 proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 initializes 0 calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_FLOW_SCOPE max2 TRUE FALSE FALSE FALSE FALSE __standard
+GG EK_FLOW_SCOPE max2__findmax2 FALSE FALSE FALSE FALSE TRUE max2 VISIBLE_PART
+GG EK_END_MARKER

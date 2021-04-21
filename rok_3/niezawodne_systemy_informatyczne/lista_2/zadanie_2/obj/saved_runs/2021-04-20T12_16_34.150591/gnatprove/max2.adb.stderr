@@ -1,0 +1,1 @@
+max2.adb:18:33: medium: loop invariant might fail in first iteration (e.g. when I = 0 and Second = 0 and V = (others => 1) and V'First = 0 and V'Last = 0)[#0]

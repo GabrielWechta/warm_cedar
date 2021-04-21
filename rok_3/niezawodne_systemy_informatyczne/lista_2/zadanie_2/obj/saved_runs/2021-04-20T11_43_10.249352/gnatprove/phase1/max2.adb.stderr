@@ -1,0 +1,1 @@
+max2.adb:14:10: pragma "Loop_Invariant" must appear next to pragma at line 9

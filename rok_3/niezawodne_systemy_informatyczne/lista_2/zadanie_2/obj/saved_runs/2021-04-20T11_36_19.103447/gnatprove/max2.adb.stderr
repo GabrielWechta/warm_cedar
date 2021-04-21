@@ -1,0 +1,1 @@
+max2.ads:8:14: medium: postcondition might fail (e.g. when FindMax2'Result = 1 and V = (others => 1) and V'First = 0 and V'Last = 0)[#0]

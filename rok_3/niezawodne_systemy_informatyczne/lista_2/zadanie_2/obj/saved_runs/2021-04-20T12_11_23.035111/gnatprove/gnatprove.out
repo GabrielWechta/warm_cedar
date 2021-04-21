@@ -1,0 +1,28 @@
+Summary of SPARK analysis
+=========================
+
+------------------------------------------------------------------------------------------------------
+SPARK Analysis results        Total      Flow   CodePeer                Provers   Justified   Unproved
+------------------------------------------------------------------------------------------------------
+Data Dependencies                 .         .          .                      .           .          .
+Flow Dependencies                 .         .          .                      .           .          .
+Initialization                    .         .          .                      .           .          .
+Non-Aliasing                      .         .          .                      .           .          .
+Run-time Checks                   9         .          .    9 (CVC4 95%, Z3 5%)           .          .
+Assertions                        8         .          .               8 (CVC4)           .          .
+Functional Contracts              1         .          .                      .           .          1
+LSP Verification                  .         .          .                      .           .          .
+Termination                       .         .          .                      .           .          .
+Concurrency                       .         .          .                      .           .          .
+------------------------------------------------------------------------------------------------------
+Total                            18         .          .               17 (94%)           .     1 (6%)
+
+
+max steps used for successful proof: 1
+
+Analyzed 2 units
+in unit main, 0 subprograms and packages out of 1 analyzed
+  Main at main.adb:4 skipped
+in unit max2, 2 subprograms and packages out of 2 analyzed
+  Max2 at max2.ads:1 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  Max2.FindMax2 at max2.ads:5 flow analyzed (0 errors, 0 checks and 0 warnings) and not proved, 17 checks out of 18 proved
