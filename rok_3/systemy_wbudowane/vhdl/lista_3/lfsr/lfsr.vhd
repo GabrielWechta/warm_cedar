@@ -1,12 +1,12 @@
 LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
 USE IEEE.numeric_std.ALL;
-use work.P.all;
+USE work.P.ALL;
 
 ENTITY lfsr IS
   PORT (
     clk : IN STD_LOGIC;
-    q : INOUT STD_LOGIC_VECTOR(15 DOWNTO 0) := (0 => '1', OTHERS => '0')
+    q : INOUT STD_LOGIC_VECTOR(15 DOWNTO 0) := ('0', '0', '0', '0', '0', '0', '0', '0', '1', '1', '1', '1', '1', '1', '1', '1')
   );
 END lfsr;
 

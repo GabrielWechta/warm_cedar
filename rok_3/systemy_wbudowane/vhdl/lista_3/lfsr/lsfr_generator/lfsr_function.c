@@ -41,7 +41,7 @@ void print_bytes(void *p, size_t len)
 
 int main(void)
 {
-	unsigned int v = 1;
+	unsigned int v = 255;
 	unsigned int random_bits = 1;
 	int i = 0;
 	while (i < 100)

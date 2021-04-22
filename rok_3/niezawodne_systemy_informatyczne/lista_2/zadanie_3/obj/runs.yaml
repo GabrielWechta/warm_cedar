@@ -1,0 +1,203 @@
+'2021-04-22T09:31:20.622873':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_3/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    warning: no bodies have been analyzed by GNATprove
+
+    enable analysis of a non-generic body using SPARK_Mode
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-22T09:31:20.622873'
+'2021-04-22T09:31:44.076319':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_3/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    warning: no bodies have been analyzed by GNATprove
+
+    enable analysis of a non-generic body using SPARK_Mode
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-22T09:31:44.076319'
+'2021-04-22T09:31:52.194561':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_3/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    warning: no bodies have been analyzed by GNATprove
+
+    enable analysis of a non-generic body using SPARK_Mode
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-22T09:31:52.194561'
+'2021-04-22T09:34:52.485623':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_3/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    warning: no bodies have been analyzed by GNATprove
+
+    enable analysis of a non-generic body using SPARK_Mode
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-22T09:34:52.485623'
+'2021-04-22T09:35:43.446780':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_3/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    sqrt_test.adb:8:24: medium: float overflow check might fail (e.g. when R = 8.5984436E+36)[#3]
+
+    sqrt_test.adb:9:18: medium: float overflow check might fail (e.g. when R = 0.0
+    and X = 0.0)[#2]
+
+    sqrt_test.adb:9:22: medium: divide by zero might fail (e.g. when R = 0.0)[#0]
+
+    sqrt_test.adb:9:22: medium: float overflow check might fail (e.g. when R = 4.4841551E-44
+    and X = 1.9999979E+0)[#1]
+
+    sqrt_test.ads:9:14: medium: postcondition might fail, cannot prove abs (X - Sqrt''Result
+    ** 2) <= X * Tolerance (e.g. when Sqrt''Result = 0.0 and Tolerance = 0.0 and X
+    = 0.0)[#4]
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_3/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-22T09:35:43.446780'
+'2021-04-22T09:41:22.974623':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_3/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    sqrt_test.adb:8:24: medium: float overflow check might fail (e.g. when R = 1.4807558E+20)[#3]
+
+    sqrt_test.adb:9:18: medium: float overflow check might fail (e.g. when R = 0.0
+    and X = 0.0)[#2]
+
+    sqrt_test.adb:9:22: medium: divide by zero might fail (e.g. when R = 0.0)[#0]
+
+    sqrt_test.adb:9:22: medium: float overflow check might fail (e.g. when R = 1.1479437E-41
+    and X = 1.0000157E+0)[#1]
+
+    sqrt_test.ads:9:14: medium: postcondition might fail, cannot prove abs (X - Sqrt''Result
+    ** 2) <= X * Tolerance (e.g. when Sqrt''Result = 1.0 and Tolerance = 1.0 and X
+    = 2.5390625E-1)[#4]
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_3/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-22T09:41:22.974623'
+'2021-04-22T09:44:18.215880':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_3/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    sqrt_test.adb:9:24: medium: float overflow check might fail (e.g. when H = 1.0
+    and R = 4.0233047E+28 and Tolerance = 1.5007959E-7)[#2]
+
+    sqrt_test.adb:10:18: medium: float overflow check might fail (e.g. when H = 3.9144456E+33
+    and R = 3.4027845E+38) [possible explanation: loop at line 9 should mention H
+    in a loop invariant][#0]
+
+    sqrt_test.adb:12:20: medium: float overflow check might fail[#1]
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_3/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-22T09:44:18.215880'
+'2021-04-22T09:45:44.690288':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_3/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    sqrt_test.adb:10:18: medium: float overflow check might fail (e.g. when H = 3.9144456E+33
+    and R = 3.4027845E+38) [possible explanation: loop at line 9 should mention H
+    in a loop invariant][#0]
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_3/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-22T09:45:44.690288'
+'2021-04-22T09:46:48.046721':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_3/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    sqrt_test.adb:18:34: medium: float overflow check might fail (e.g. when Left =
+    2.0282408E+31 and Right = -3.4028235E+38) [possible explanation: loop at line
+    17 should mention Left and Right in a loop invariant][#0]
+
+    sqrt_test.adb:20:20: medium: float overflow check might fail (e.g. when Approx
+    = 4.8357030E+24)[#1]
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_3/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-22T09:46:48.046721'
+'2021-04-22T09:50:10.680788':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_3/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    sqrt_test.adb:9:23: medium: float overflow check might fail (e.g. when H = 1.0
+    and R = 4.0233047E+28 and Tolerance = 1.5007959E-7)[#1]
+
+    sqrt_test.adb:10:18: medium: float overflow check might fail (e.g. when H = 3.9144456E+33
+    and R = 3.4027845E+38) [possible explanation: loop at line 9 should mention H
+    in a loop invariant][#0]
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_3/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-22T09:50:10.680788'

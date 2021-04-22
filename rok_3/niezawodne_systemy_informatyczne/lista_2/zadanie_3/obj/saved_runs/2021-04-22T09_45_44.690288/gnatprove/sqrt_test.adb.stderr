@@ -1,0 +1,1 @@
+sqrt_test.adb:10:18: medium: float overflow check might fail (e.g. when H = 3.9144456E+33 and R = 3.4027845E+38) [possible explanation: loop at line 9 should mention H in a loop invariant][#0]

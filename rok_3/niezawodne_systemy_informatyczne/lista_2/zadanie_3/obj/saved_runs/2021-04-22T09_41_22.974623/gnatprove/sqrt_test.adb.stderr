@@ -1,0 +1,5 @@
+sqrt_test.adb:8:24: medium: float overflow check might fail (e.g. when R = 1.4807558E+20)[#3]
+sqrt_test.adb:9:18: medium: float overflow check might fail (e.g. when R = 0.0 and X = 0.0)[#2]
+sqrt_test.adb:9:22: medium: divide by zero might fail (e.g. when R = 0.0)[#0]
+sqrt_test.adb:9:22: medium: float overflow check might fail (e.g. when R = 1.1479437E-41 and X = 1.0000157E+0)[#1]
+sqrt_test.ads:9:14: medium: postcondition might fail, cannot prove abs (X - Sqrt'Result ** 2) <= X * Tolerance (e.g. when Sqrt'Result = 1.0 and Tolerance = 1.0 and X = 2.5390625E-1)[#4]

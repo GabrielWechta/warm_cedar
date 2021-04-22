@@ -1,0 +1,2 @@
+sqrt_test.adb:18:34: medium: float overflow check might fail (e.g. when Left = 2.0282408E+31 and Right = -3.4028235E+38) [possible explanation: loop at line 17 should mention Left and Right in a loop invariant][#0]
+sqrt_test.adb:20:20: medium: float overflow check might fail (e.g. when Approx = 4.8357030E+24)[#1]

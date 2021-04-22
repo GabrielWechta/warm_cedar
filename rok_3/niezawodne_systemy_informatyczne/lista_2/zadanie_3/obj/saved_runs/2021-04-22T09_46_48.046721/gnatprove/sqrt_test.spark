@@ -1,0 +1,889 @@
+{
+  "spark": [
+    {
+      "name": "Sqrt_test",
+      "sloc": [
+        {
+          "file": "sqrt_test.ads",
+          "line": 1
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "Sqrt_test.Sqrt",
+      "sloc": [
+        {
+          "file": "sqrt_test.ads",
+          "line": 3
+        }
+      ],
+      "spark": "all"
+    }
+  ],
+  "flow": [
+    {
+      "file": "sqrt_test.adb",
+      "line": 5,
+      "col": 7,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "Sqrt_test.Sqrt",
+        "sloc": [
+          {
+            "file": "sqrt_test.ads",
+            "line": 3
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "sqrt_test.adb",
+      "line": 6,
+      "col": 7,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "Sqrt_test.Sqrt",
+        "sloc": [
+          {
+            "file": "sqrt_test.ads",
+            "line": 3
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    }
+  ],
+  "session_map": {
+    " 1": "/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_3/obj/gnatprove/sqrt_test__sqrt"
+  },
+  "proof": [
+    {
+      "file": "sqrt_test.adb",
+      "line": 18,
+      "col": 42,
+      "rule": "VC_FP_OVERFLOW_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "Sqrt_test.Sqrt",
+        "sloc": [
+          {
+            "file": "sqrt_test.ads",
+            "line": 3
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "trivial"
+    },
+    {
+      "file": "sqrt_test.adb",
+      "line": 18,
+      "col": 34,
+      "rule": "VC_FP_OVERFLOW_CHECK",
+      "severity": "medium",
+      "entity": {
+        "name": "Sqrt_test.Sqrt",
+        "sloc": [
+          {
+            "file": "sqrt_test.ads",
+            "line": 3
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Unknown (sat)",
+              "steps": 55694,
+              "time": 1.19000000000000E+00
+            },
+            "CVC4_CE": {
+              "result": "Unknown (sat)",
+              "steps": 32810,
+              "time": 8.90000000000000E-01
+            },
+            "Z3": {
+              "result": "Unknown (sat)",
+              "steps": 2152121,
+              "time": 7.60000000000000E-01
+            },
+            "altergo": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 5
+            }
+          },
+          "transformations": {
+            "trivial_true": [
+            ]
+          }
+        }
+      ],
+      "check_file": "sqrt_test.adb",
+      "check_line": 18,
+      "check_col": 34,
+      "cntexmp": {
+        "sqrt_test.adb": {
+          "previous": {
+          },
+          "current": {
+            "7": [
+              {
+                "name": "Approx",
+                "value": "1.6015590E+0",
+                "kind": "variable"
+              },
+              {
+                "name": "X",
+                "value": "1.6015590E+0",
+                "kind": "variable"
+              }
+            ],
+            "9": [
+              {
+                "name": "X",
+                "value": "1.6015590E+0",
+                "kind": "variable"
+              }
+            ],
+            "10": [
+              {
+                "name": "Left",
+                "value": "1.0",
+                "kind": "variable"
+              }
+            ],
+            "11": [
+              {
+                "name": "Right",
+                "value": "1.6015590E+0",
+                "kind": "variable"
+              },
+              {
+                "name": "X",
+                "value": "1.6015590E+0",
+                "kind": "variable"
+              }
+            ],
+            "17": [
+              {
+                "name": "Approx",
+                "value": "1.9780136E+0",
+                "kind": "variable"
+              },
+              {
+                "name": "Left",
+                "value": "2.0282408E+31",
+                "kind": "variable"
+              },
+              {
+                "name": "Right",
+                "value": "-3.4028235E+38",
+                "kind": "variable"
+              },
+              {
+                "name": "X",
+                "value": "1.6015590E+0",
+                "kind": "variable"
+              }
+            ],
+            "18": [
+              {
+                "name": "Left",
+                "value": "2.0282408E+31",
+                "kind": "variable"
+              },
+              {
+                "name": "Right",
+                "value": "-3.4028235E+38",
+                "kind": "variable"
+              }
+            ]
+          }
+        },
+        "sqrt_test.ads": {
+          "previous": {
+          },
+          "current": {
+            "3": [
+              {
+                "name": "Tolerance",
+                "value": "3.8905549E-3",
+                "kind": "variable"
+              },
+              {
+                "name": "X",
+                "value": "1.6015590E+0",
+                "kind": "variable"
+              }
+            ]
+          }
+        }
+      },
+      "msg_id": 0,
+      "session_dir": 1,
+      "how_proved": "prover"
+    },
+    {
+      "file": "sqrt_test.adb",
+      "line": 18,
+      "col": 42,
+      "rule": "VC_DIVISION_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "Sqrt_test.Sqrt",
+        "sloc": [
+          {
+            "file": "sqrt_test.ads",
+            "line": 3
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "trivial_true": [
+            ]
+          }
+        }
+      ],
+      "check_file": "sqrt_test.adb",
+      "check_line": 18,
+      "check_col": 42,
+      "session_dir": 1,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "sqrt_test.adb",
+      "line": 18,
+      "col": 25,
+      "rule": "VC_FP_OVERFLOW_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "Sqrt_test.Sqrt",
+        "sloc": [
+          {
+            "file": "sqrt_test.ads",
+            "line": 3
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 67875,
+              "time": 1.31000000000000E+00
+            },
+            "altergo": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 5
+            }
+          },
+          "transformations": {
+            "trivial_true": [
+            ]
+          }
+        }
+      ],
+      "check_file": "sqrt_test.adb",
+      "check_line": 18,
+      "check_col": 25,
+      "session_dir": 1,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1511,
+          "max_time": 1.30999994277954E+00
+        }
+      }
+    },
+    {
+      "file": "sqrt_test.adb",
+      "line": 20,
+      "col": 20,
+      "rule": "VC_FP_OVERFLOW_CHECK",
+      "severity": "medium",
+      "entity": {
+        "name": "Sqrt_test.Sqrt",
+        "sloc": [
+          {
+            "file": "sqrt_test.ads",
+            "line": 3
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Unknown (sat)",
+              "steps": 81723,
+              "time": 2.34000000000000E+00
+            },
+            "CVC4_CE": {
+              "result": "Unknown (sat)",
+              "steps": 35088,
+              "time": 7.30000000000000E-01
+            },
+            "Z3": {
+              "result": "Unknown (sat)",
+              "steps": 5262466,
+              "time": 1.71000000000000E+00
+            },
+            "altergo": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 5
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "sqrt_test.adb",
+      "check_line": 20,
+      "check_col": 20,
+      "cntexmp": {
+        "sqrt_test.adb": {
+          "previous": {
+          },
+          "current": {
+            "7": [
+              {
+                "name": "Approx",
+                "value": "1.9394908E+0",
+                "kind": "variable"
+              },
+              {
+                "name": "X",
+                "value": "1.9394908E+0",
+                "kind": "variable"
+              }
+            ],
+            "9": [
+              {
+                "name": "X",
+                "value": "1.9394908E+0",
+                "kind": "variable"
+              }
+            ],
+            "10": [
+              {
+                "name": "Left",
+                "value": "1.0",
+                "kind": "variable"
+              }
+            ],
+            "11": [
+              {
+                "name": "Right",
+                "value": "1.9394908E+0",
+                "kind": "variable"
+              },
+              {
+                "name": "X",
+                "value": "1.9394908E+0",
+                "kind": "variable"
+              }
+            ],
+            "17": [
+              {
+                "name": "Approx",
+                "value": "1.4851073E+0",
+                "kind": "variable"
+              },
+              {
+                "name": "Left",
+                "value": "1.7470551E+0",
+                "kind": "variable"
+              },
+              {
+                "name": "Right",
+                "value": "9.6714060E+24",
+                "kind": "variable"
+              },
+              {
+                "name": "X",
+                "value": "1.9394908E+0",
+                "kind": "variable"
+              }
+            ],
+            "18": [
+              {
+                "name": "Approx",
+                "value": "4.8357030E+24",
+                "kind": "variable"
+              },
+              {
+                "name": "Left",
+                "value": "1.7470551E+0",
+                "kind": "variable"
+              }
+            ],
+            "20": [
+              {
+                "name": "Approx",
+                "value": "4.8357030E+24",
+                "kind": "variable"
+              }
+            ]
+          }
+        },
+        "sqrt_test.ads": {
+          "previous": {
+          },
+          "current": {
+            "3": [
+              {
+                "name": "Tolerance",
+                "value": "2.0213987E-7",
+                "kind": "variable"
+              },
+              {
+                "name": "X",
+                "value": "1.9394908E+0",
+                "kind": "variable"
+              }
+            ]
+          }
+        }
+      },
+      "msg_id": 1,
+      "session_dir": 1,
+      "how_proved": "prover"
+    },
+    {
+      "file": "sqrt_test.adb",
+      "line": 17,
+      "col": 29,
+      "rule": "VC_FP_OVERFLOW_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "Sqrt_test.Sqrt",
+        "sloc": [
+          {
+            "file": "sqrt_test.ads",
+            "line": 3
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "altergo": {
+              "result": "Valid",
+              "steps": 251,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 13803,
+              "time": 2.60000000000000E-01
+            }
+          },
+          "transformations": {
+            "trivial_true": [
+            ]
+          }
+        }
+      ],
+      "check_file": "sqrt_test.adb",
+      "check_line": 17,
+      "check_col": 29,
+      "session_dir": 1,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 2.59999990463257E-01
+        },
+        "altergo": {
+          "count": 1,
+          "max_steps": 252,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "sqrt_test.adb",
+      "line": 17,
+      "col": 20,
+      "rule": "VC_FP_OVERFLOW_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "Sqrt_test.Sqrt",
+        "sloc": [
+          {
+            "file": "sqrt_test.ads",
+            "line": 3
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 32575,
+              "time": 1.34000000000000E+00
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "altergo": {
+              "result": "Valid",
+              "steps": 5127,
+              "time": 9.92900000000000E-01
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "sqrt_test.adb",
+      "check_line": 17,
+      "check_col": 20,
+      "session_dir": 1,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 503,
+          "max_time": 1.34000003337860E+00
+        },
+        "altergo": {
+          "count": 1,
+          "max_steps": 5128,
+          "max_time": 9.92900013923645E-01
+        }
+      }
+    },
+    {
+      "file": "sqrt_test.adb",
+      "line": 17,
+      "col": 47,
+      "rule": "VC_FP_OVERFLOW_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "Sqrt_test.Sqrt",
+        "sloc": [
+          {
+            "file": "sqrt_test.ads",
+            "line": 3
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "Z3": {
+              "result": "Valid",
+              "steps": 494935,
+              "time": 2.20000000000000E-01
+            }
+          },
+          "transformations": {
+            "trivial_true": [
+            ]
+          }
+        }
+      ],
+      "check_file": "sqrt_test.adb",
+      "check_line": 17,
+      "check_col": 47,
+      "session_dir": 1,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        },
+        "Z3": {
+          "count": 1,
+          "max_steps": 57,
+          "max_time": 2.19999998807907E-01
+        }
+      }
+    },
+    {
+      "file": "sqrt_test.ads",
+      "line": 9,
+      "col": 35,
+      "rule": "VC_FP_OVERFLOW_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "Sqrt_test.Sqrt",
+        "sloc": [
+          {
+            "file": "sqrt_test.ads",
+            "line": 3
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "altergo": {
+              "result": "Valid",
+              "steps": 1526,
+              "time": 1.93500000000000E-01
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "sqrt_test.ads",
+      "check_line": 9,
+      "check_col": 35,
+      "session_dir": 1,
+      "how_proved": "prover",
+      "stats": {
+        "altergo": {
+          "count": 1,
+          "max_steps": 1527,
+          "max_time": 1.93499997258186E-01
+        }
+      }
+    },
+    {
+      "file": "sqrt_test.ads",
+      "line": 9,
+      "col": 21,
+      "rule": "VC_FP_OVERFLOW_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "Sqrt_test.Sqrt",
+        "sloc": [
+          {
+            "file": "sqrt_test.ads",
+            "line": 3
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 32241,
+              "time": 1.35000000000000E+00
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "sqrt_test.ads",
+      "check_line": 9,
+      "check_col": 21,
+      "session_dir": 1,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 493,
+          "max_time": 1.35000002384186E+00
+        }
+      }
+    },
+    {
+      "file": "sqrt_test.ads",
+      "line": 9,
+      "col": 46,
+      "rule": "VC_FP_OVERFLOW_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "Sqrt_test.Sqrt",
+        "sloc": [
+          {
+            "file": "sqrt_test.ads",
+            "line": 3
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "sqrt_test.ads",
+      "check_line": 9,
+      "check_col": 46,
+      "session_dir": 1,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "sqrt_test.ads",
+      "line": 9,
+      "col": 14,
+      "rule": "VC_POSTCONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "Sqrt_test.Sqrt",
+        "sloc": [
+          {
+            "file": "sqrt_test.ads",
+            "line": 3
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 92983,
+              "time": 3.61000000000000E+00
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "sqrt_test.ads",
+      "check_line": 9,
+      "check_col": 14,
+      "session_dir": 1,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 2229,
+          "max_time": 3.60999989509583E+00
+        }
+      }
+    }
+  ],
+  "assumptions": [
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Sqrt_test.Sqrt",
+          "sloc": [
+            {
+              "file": "sqrt_test.ads",
+              "line": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Sqrt_test",
+          "sloc": [
+            {
+              "file": "sqrt_test.ads",
+              "line": 1
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "timings": {
+    "gnatwhy3.transformations.eliminate_algebraic": 8.14600009471178E-03,
+    "gnatwhy3.transformations.inline_trivial": 2.03235197067261E+00,
+    "codepeer results": 2.99999992421363E-05,
+    "init_why_sections": 5.93999982811511E-04,
+    "gnatwhy3.transformations.eliminate_let_term": 3.19500011391938E-03,
+    "gnatwhy3.transformations.detect_polymorphism": 1.36200000997633E-03,
+    "globals/properties (advanced)": 1.46999998833053E-04,
+    "gnatwhy3.transformations.eliminate_literal": 1.63320004940033E-02,
+    "gnatwhy3.run_vcs": 2.04429998993874E-01,
+    "gnatwhy3.transformations.eliminate_algebraic_if_poly": 1.05769997462630E-02,
+    "gnatwhy3.transformations.eliminate_definition_if_poly": 8.11500009149313E-03,
+    "flow analysis": 1.70699995942414E-03,
+    "gnatwhy3.transformations.simplify_formula": 3.54319997131824E-02,
+    "marking": 1.50000007124618E-04,
+    "translation of standard": 3.35299992002547E-03,
+    "gnatwhy3.transformations.eliminate_recursion": 2.32700002379715E-03,
+    "gnatwhy3.register_vcs": 9.28699970245361E-03,
+    "gnatwhy3.transformations.eliminate_epsilon": 1.20430001989007E-02,
+    "globals (basic)": 1.06999999843538E-04,
+    "gnatwhy3.schedule_vcs": 8.09399969875813E-03,
+    "gnatwhy3.transformations.prepare_for_counterexmp": 1.53459999710321E-02,
+    "gnatwhy3.save_session": 3.25999991036952E-03,
+    "gnatwhy3.transformations.eliminate_inductive": 1.15109998732805E-02,
+    "gnatwhy3.transformations.split_premise_right": 2.74209994822741E-02,
+    "gnatwhy3.transformations.encoding_smt_if_poly": 3.09999995806720E-05,
+    "gnatwhy3.transformations.eliminate_unused_hypo": 2.36983999609947E-01,
+    "gnatwhy3.transformations.eliminate_builtin": 1.93240009248257E-02,
+    "gnatwhy3.transformations.discriminate_if_poly": 5.60000007681083E-05,
+    "gnatwhy3.init": 2.59173989295959E-01,
+    "gnatwhy3.transformations.introduce_premises": 1.30460001528263E-02
+  }
+}

@@ -1,0 +1,29 @@
+V "GNAT Lib v2020"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_FLOATING_POINT
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U sqrt_test%b		sqrt_test.adb		05b9bc6a NE OO PK
+
+U sqrt_test%s		sqrt_test.ads		d0370ea0 EE NE OO PK
+
+D sqrt_test.ads		20210422073024 d0370ea0 sqrt_test%s
+D sqrt_test.adb		20210422074816 d58eb2ca sqrt_test%b
+D system.ads		20200228061809 4635ec04 system%s
+G a e
+G c Z s b [sqrt sqrt_test 3 13 none]
+X 1 sqrt_test.ads
+1K9*Sqrt_test 11l5 11e14 2|1b14 18l5 18t14
+3V13*Sqrt{float} 3>19 3>30 9r23 2|3b13 17l8 17t12
+3f19 X{float} 5r13 6r10 9r19 9r44 2|3b19 6r19 9r17 9r30 12r18
+3f30 Tolerance{float} 7r10 8r10 9r48 2|3b30 9r34
+X 2 sqrt_test.adb
+5f7 R{float} 9r21 9r25 10m10 10r16 11r13 12r22 16r14
+6f7 H{float} 10r20 12m13
+

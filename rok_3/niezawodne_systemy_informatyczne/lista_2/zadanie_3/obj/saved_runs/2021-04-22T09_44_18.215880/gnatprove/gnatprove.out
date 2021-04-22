@@ -1,0 +1,28 @@
+Summary of SPARK analysis
+=========================
+
+---------------------------------------------------------------------------------------------------------------------------------
+SPARK Analysis results        Total      Flow   CodePeer                                           Provers   Justified   Unproved
+---------------------------------------------------------------------------------------------------------------------------------
+Data Dependencies                 .         .          .                                                 .           .          .
+Flow Dependencies                 .         .          .                                                 .           .          .
+Initialization                    .         .          .                                                 .           .          .
+Non-Aliasing                      .         .          .                                                 .           .          .
+Run-time Checks                  11         .          .    8 (CVC4 40%, Trivial 10%, Z3 20%, altergo 30%)           .          3
+Assertions                        .         .          .                                                 .           .          .
+Functional Contracts              1         .          .                                       1 (altergo)           .          .
+LSP Verification                  .         .          .                                                 .           .          .
+Termination                       .         .          .                                                 .           .          .
+Concurrency                       .         .          .                                                 .           .          .
+---------------------------------------------------------------------------------------------------------------------------------
+Total                            12         .          .                                           9 (75%)           .    3 (25%)
+
+
+max steps used for successful proof: 5741
+
+Analyzed 2 units
+in unit main, 0 subprograms and packages out of 1 analyzed
+  Main at main.adb:4 skipped
+in unit sqrt_test, 2 subprograms and packages out of 2 analyzed
+  Sqrt_test at sqrt_test.ads:1 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  Sqrt_test.Sqrt at sqrt_test.ads:3 flow analyzed (0 errors, 0 checks and 0 warnings) and not proved, 9 checks out of 12 proved
