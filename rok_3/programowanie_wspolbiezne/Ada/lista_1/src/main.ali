@@ -1,0 +1,62 @@
+V "GNAT Lib v2020"
+M P W=b
+P SS ZX
+
+RN
+RV NO_IO
+RV NO_SECONDARY_STACK
+
+U main%b		main.adb		3467f719 NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.command_line%s	a-comlin.adb		a-comlin.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W graph%s		graph.adb		graph.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.val_int%s	s-valint.adb		s-valint.ali
+
+D ada.ads		20200228061809 76789da1 ada%s
+D a-comlin.ads		20200228061809 4aa66568 ada.command_line%s
+D a-except.ads		20200228061809 a7106115 ada.exceptions%s
+D a-ioexce.ads		20200228061809 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20200228061809 119b8fb3 ada.streams%s
+D a-tags.ads		20200228061809 edddc8f0 ada.tags%s
+D a-textio.ads		20200228061809 aef4d56d ada.text_io%s
+D a-unccon.ads		20200228061809 0e9b276f ada.unchecked_conversion%s
+D graph.ads		20210408110017 cba40acf graph%s
+D interfac.ads		20200228061809 5ab55268 interfaces%s
+D i-cstrea.ads		20200228061809 e53d8b8e interfaces.c_streams%s
+D main.adb		20210409164953 1b914dd3 main%b
+D system.ads		20200228061809 4635ec04 system%s
+D s-crtl.ads		20200228061809 0ebbdb71 system.crtl%s
+D s-exctab.ads		20200228061809 54135002 system.exception_table%s
+D s-ficobl.ads		20200228061809 078245e4 system.file_control_block%s
+D s-parame.ads		20200228061809 4752c4cb system.parameters%s
+D s-secsta.ads		20200327060539 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20200228061809 a7318a92 system.soft_links%s
+D s-stache.ads		20200228061809 a37c21ec system.stack_checking%s
+D s-stalib.ads		20200228061809 6b7a13f2 system.standard_library%s
+D s-stoele.ads		20200228061809 2dc34a04 system.storage_elements%s
+D s-traent.ads		20200228061809 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20200319060539 5ecf7212 system.unsigned_types%s
+D s-valint.ads		20200228061809 b5ff6963 system.val_int%s
+D s-wchcon.ads		20200228061809 1b7d22d2 system.wch_con%s
+G a e
+G c Z b b [main standard 8 11 none]
+G r c none [main standard 8 11 none] [simulate graph 3 14 none]
+X 1 ada.ads
+16K9*Ada 20e8 12|3r6 3r28 4r6 15r4
+X 2 a-comlin.ads
+36K13*Command_Line 144e21 12|3w10 3r32
+52V13*Argument{string} 12|11s24 12s24 13s24
+X 7 a-textio.ads
+57K13*Text_IO 727e16 12|4w10 15r8
+264U14*New_Line 12|15s16
+X 9 graph.ads
+1K9*Graph 5e10 12|1w6 2r5 14r4
+3U14*Simulate 12|14s10
+X 12 main.adb
+8U11*Main 8b11 16l5 16t9
+9i4 N{integer} 11m4 14r19
+9i6 D{integer} 12m4 14r22
+9i8 K{integer} 13m4 14r25
+
