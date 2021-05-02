@@ -1,7 +1,7 @@
-20210419165545
+20210428110925
 -c
 -x
 ada
 -gnatA
 -gnatc
--gnates=/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/obj/gnatprove/85a74aac.tmp
+-gnates=/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_2/zadanie_1/obj/gnatprove/85a74aac.tmp

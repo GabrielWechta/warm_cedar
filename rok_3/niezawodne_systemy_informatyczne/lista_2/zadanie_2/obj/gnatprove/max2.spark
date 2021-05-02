@@ -1643,17 +1643,17 @@
     }
   ],
   "timings": {
-    "codepeer results": 3.79999983124435E-05,
-    "init_why_sections": 6.00000028498471E-04,
-    "globals/properties (advanced)": 1.55999994603917E-04,
-    "gnatwhy3.run_vcs": 7.10000022081658E-05,
-    "flow analysis": 1.79999996908009E-03,
-    "marking": 2.41999994614162E-04,
-    "translation of standard": 3.22599988430738E-03,
-    "gnatwhy3.register_vcs": 3.47299990244210E-03,
-    "globals (basic)": 1.44000005093403E-04,
-    "gnatwhy3.schedule_vcs": 2.49999993684469E-05,
-    "gnatwhy3.save_session": 2.93799992650747E-02,
-    "gnatwhy3.init": 4.01387006044388E-01
+    "codepeer results": 8.60000000102445E-05,
+    "init_why_sections": 1.05299998540431E-03,
+    "globals/properties (advanced)": 2.64000002061948E-04,
+    "gnatwhy3.run_vcs": 1.21999997645617E-04,
+    "flow analysis": 3.25699988752604E-03,
+    "marking": 4.45000012405217E-04,
+    "translation of standard": 5.88899990543723E-03,
+    "gnatwhy3.register_vcs": 7.09100021049380E-03,
+    "globals (basic)": 2.58999993093312E-04,
+    "gnatwhy3.schedule_vcs": 4.40000003436580E-05,
+    "gnatwhy3.save_session": 4.97630015015602E-02,
+    "gnatwhy3.init": 7.60446012020111E-01
   }
 }
