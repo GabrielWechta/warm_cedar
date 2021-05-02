@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.PictureFullActivity">
+    tools:context=".activities.PictureFullActivity">
 
     <fragment
         android:id="@+id/picture_full_fragment"
-        android:name="com.example.gallery.Fragments.PictureFullFragment"
+        android:name="com.example.gallery.fragments.PictureFullFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout="@layout/fragment_picture_full" />

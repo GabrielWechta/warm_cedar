@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.MainActivity">
+    tools:context=".activities.MainActivity">
 
     <fragment
         android:id="@+id/main_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:name="com.example.gallery.Fragments.MainFragment"
+        android:name="com.example.gallery.fragments.MainFragment"
         tools:layout="@layout/fragment_main"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
-package com.example.gallery.Activities
+package com.example.gallery.activities
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

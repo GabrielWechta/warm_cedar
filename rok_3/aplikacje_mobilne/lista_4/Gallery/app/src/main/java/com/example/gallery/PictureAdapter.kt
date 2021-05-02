@@ -11,19 +11,19 @@ import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import com.example.gallery.Activities.PictureFullActivity
-import com.example.gallery.Fragments.MainFragment
-import com.example.gallery.Fragments.PictureFullFragment
+import com.example.gallery.activities.PictureFullActivity
+import com.example.gallery.fragments.MainFragment
+import com.example.gallery.fragments.PictureFullFragment
+
+private const val fullPictureRequestCode = 1
 
 class PictureAdapter(
     private var context: Context,
-    private var picturesList: ArrayList<Picture>,
+    var picturesList: ArrayList<Picture>,
     private var fragment: MainFragment,
     private var manager: FragmentManager
 ) :
     RecyclerView.Adapter<PictureAdapter.PictureViewHolder>() {
-
-    private val fullPictureRequestCode = 1
 
     class PictureViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var picture: ImageView? = null
@@ -53,7 +53,8 @@ class PictureAdapter(
 
                 fragment.startActivityForResult(intent, fullPictureRequestCode)
             } else {
-                val frag = manager.findFragmentById(R.id.picture_full_fragment) as PictureFullFragment
+                val frag =
+                    manager.findFragmentById(R.id.picture_full_fragment) as PictureFullFragment
                 frag.display(currentPicture.name!!, currentPicture.path!!, currentPicture.rating!!)
             }
         }
