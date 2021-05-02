@@ -1,0 +1,22 @@
+[MAPPING FILE]
+/tmp/GNAT-TEMP-000003.TMP
+[TOOLCHAIN VERSION]
+ada
+GNAT 2020
+[MAIN BASE NAME]
+random_seeds
+[COMPILER PATH]
+/home/gabriel/opt/GNAT/2020/bin/gcc
+[COMPILER LEADING SWITCHES]
+-c
+-x
+ada
+-gnatA
+[MAIN DEPENDENCY FILE]
+/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/obj/random_seeds.ali
+[DEPENDENCY FILES]
+[BINDING OPTIONS]
+gnatbind_prefix=
+[PROJECT FILES]
+/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/concurent.gpr
+20210407073942 d66008ecfe26d542f74087891207ae77
