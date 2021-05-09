@@ -9,13 +9,29 @@
 <body>
 <header>
     <a href="https://github.com/GabrielWechta" class="logo">GW</a>
-    <div class="toggle" onclick="toggleMenu();"></div>
-    <ul class="menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="programing.html">Programing</a></li>
-        <li><a href="bragging.html">Bragging</a></li>
-        <li><a href="interests.html">Interests</a></li>
-    </ul>
+    <div id="js">
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="programing.html">Programing</a></li>
+            <li><a href="bragging.html">Bragging</a></li>
+            <li><a href="interests.html">Interests</a></li>
+        </ul>
+    </div>
+    <noscript>
+        <ul class="navbar" id="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="programing.html">Programing</a></li>
+            <li><a href="bragging.html">Bragging</a></li>
+            <li><a href="interests.html">Interests</a></li>
+            <a class="close" href="#">
+                <img src="https://ljc-dev.github.io/testing0/ham-close.svg" alt="close">
+            </a>
+        </ul>
+        <a class="hamburger" href="#navbar">
+            <img src="resources/menu.png" alt="menu">
+        </a>
+    </noscript>
 </header>
 
 <section class="programing">
@@ -100,19 +116,8 @@
 
 </section>
 
-<script type="text/javascript">
-    window.addEventListener("scroll", function () {
-        let header = document.querySelector("header");
-        header.classList.toggle("sticky", window.scrollY > 0);
-    });
+<script type="text/javascript" src="menu.js"></script>
 
-    function toggleMenu() {
-        let menuToggle = document.querySelector('.toggle');
-        let menu = document.querySelector('.menu');
-        menuToggle.classList.toggle('active');
-        menu.classList.toggle('active');
-    }
-</script>
 <footer class="footer-basic-black">
     <p class="copyright">Gabriel Wechta © 2021 <br>mail: wechtagabriel@gmail.com </p>
     <ul class="list-inline">

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Picture Puzzle</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js"></script>
+</head>
+
+<body onload="init();">
+<canvas id="canvas"></canvas>
+
+<div class="sliderContainerRows">
+    <input type="range" min="2" max="5" value="4" id="sliderRows">
+    | Rows: <span id="amtOutputRows"> 4 </span>
+</div>
+
+<div class="sliderContainerColumns">
+    <input type="range" min="2" max="5" value="4" id="sliderColumns">
+    | Columns: <span id="amtOutputColumns"> 4 </span>
+</div>
+
+<input type="submit" value="Reset" onclick="reset()"/>
+
+<div class="row">
+    <div class="column">
+        <img src="resources/full/zelda.jpg" alt="img"
+             onclick="loadFull(this);">
+        <img src="resources/compressed/1.jpg" alt="img"
+             onclick="loadFull(this);">
+        <img src="resources/compressed/2.jpg" alt="img"
+             onclick="loadFull(this);">
+        <img src="resources/compressed/3.jpg" alt="img"
+             onclick="loadFull(this);">
+    </div>
+    <div class="column">
+        <img src="resources/compressed/4.jpg" alt="img"
+             onclick="loadFull(this);">
+        <img src="resources/compressed/5.jpg" alt="img"
+             onclick="loadFull(this);">
+        <img src="resources/compressed/6.jpg" alt="img"
+             onclick="loadFull(this);">
+        <img src="resources/compressed/7.jpg" alt="img"
+             onclick="loadFull(this);">
+    </div>
+    <div class="column">
+        <img src="resources/compressed/8.jpg" alt="img"
+             onclick="loadFull(this);">
+        <img src="resources/compressed/9.jpg" alt="img"
+             onclick="loadFull(this);">
+        <img src="resources/compressed/10.jpg" alt="img"
+             onclick="loadFull(this);">
+        <img src="resources/compressed/11.jpg" alt="img"
+             onclick="loadFull(this);">
+    </div>
+    <div class="column">
+        <img src="resources/compressed/12.jpg" alt="img"
+             onclick="loadFull(this);">
+        <img src="resources/compressed/13.jpg" alt="img"
+             onclick="loadFull(this);">
+        <img src="resources/compressed/14.jpg" alt="img"
+             onclick="loadFull(this);">
+        <img src="resources/compressed/15.jpg" alt="img"
+             onclick="loadFull(this);">
+    </div>
+
+</div>
+
+</body>
+
+</html>

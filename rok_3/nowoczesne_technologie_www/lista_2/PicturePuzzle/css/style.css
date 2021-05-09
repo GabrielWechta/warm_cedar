@@ -1,0 +1,44 @@
+body {
+    background-color: #FFF9F0;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+.column {
+    flex: 20%;
+    max-width: 25%;
+    padding: 0 4px;
+    width: 25vh;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.column img:hover {
+    opacity: 1;
+}
+
+@media screen and (max-width: 800px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+        width: 25vh;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+        width: 25vh;
+    }
+}
