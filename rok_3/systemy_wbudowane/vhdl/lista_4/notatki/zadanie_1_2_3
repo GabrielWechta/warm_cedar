@@ -1,0 +1,14 @@
+• Jak jest realizowana tutaj pamięć ROM?
+tablica STD_LOGIC_VECTOR, bajtowa: 
+TYPE rom_t IS ARRAY (0 TO 2 ** ADDRESS_WIDTH - 1) OF STD_LOGIC_VECTOR(DATA_WIDTH - 1 DOWNTO 0);
+
+• Co jest przechowywane w tej pamięci?
+bajt wygenerowanwgo wcześniej CRC. n-ta pozycja daje n-te CRC.
+
+• Co realizują linie 68-72?
+zboczę, nie natytchmiastową zmianę stanu clk.
+
+• Co jest przyczyną generowanych przez testbench ostrzeżeń? Usuń przyczynę.
+adres jest niezdefiniowany.
+
+

@@ -1,0 +1,50 @@
+[*]
+[*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
+[*] Mon May  3 09:28:30 2021
+[*]
+[dumpfile] "/home/gabriel/Desktop/warm_cedar/rok_3/systemy_wbudowane/vhdl/lista_4/wave.ghw"
+[dumpfile_mtime] "Mon May  3 09:27:23 2021"
+[dumpfile_size] 2314790
+[savefile] "/home/gabriel/Desktop/warm_cedar/rok_3/systemy_wbudowane/vhdl/lista_4/crc8_wave.gtkw"
+[timestart] 0
+[size] 1860 1016
+[pos] -931 -1
+*-26.016487 120400000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.crc8_tb.
+[sst_width] 233
+[signals_width] 158
+[sst_expanded] 1
+[sst_vpaned_height] 289
+@28
+[color] 6
+#{top.crc8_tb.address[2:0]} top.crc8_tb.address[2] top.crc8_tb.address[1] top.crc8_tb.address[0]
+top.crc8_tb.clk
+@c00022
+[color] 1
+#{top.crc8_tb.crc_out[7:0]} top.crc8_tb.crc_out[7] top.crc8_tb.crc_out[6] top.crc8_tb.crc_out[5] top.crc8_tb.crc_out[4] top.crc8_tb.crc_out[3] top.crc8_tb.crc_out[2] top.crc8_tb.crc_out[1] top.crc8_tb.crc_out[0]
+@28
+top.crc8_tb.crc_out[7]
+top.crc8_tb.crc_out[6]
+top.crc8_tb.crc_out[5]
+top.crc8_tb.crc_out[4]
+top.crc8_tb.crc_out[3]
+top.crc8_tb.crc_out[2]
+top.crc8_tb.crc_out[1]
+top.crc8_tb.crc_out[0]
+@1401200
+-group_end
+@22
+#{top.crc8_tb.data_in[7:0]} top.crc8_tb.data_in[7] top.crc8_tb.data_in[6] top.crc8_tb.data_in[5] top.crc8_tb.data_in[4] top.crc8_tb.data_in[3] top.crc8_tb.data_in[2] top.crc8_tb.data_in[1] top.crc8_tb.data_in[0]
+@23
+[color] 2
+#{top.crc8_tb.data_out_a0[7:0]} top.crc8_tb.data_out_a0[7] top.crc8_tb.data_out_a0[6] top.crc8_tb.data_out_a0[5] top.crc8_tb.data_out_a0[4] top.crc8_tb.data_out_a0[3] top.crc8_tb.data_out_a0[2] top.crc8_tb.data_out_a0[1] top.crc8_tb.data_out_a0[0]
+[color] 2
+#{top.crc8_tb.data_out_66[7:0]} top.crc8_tb.data_out_66[7] top.crc8_tb.data_out_66[6] top.crc8_tb.data_out_66[5] top.crc8_tb.data_out_66[4] top.crc8_tb.data_out_66[3] top.crc8_tb.data_out_66[2] top.crc8_tb.data_out_66[1] top.crc8_tb.data_out_66[0]
+@28
+[color] 3
+top.crc8_tb.ok_a0
+[color] 3
+top.crc8_tb.ok_66
+[pattern_trace] 1
+[pattern_trace] 0
