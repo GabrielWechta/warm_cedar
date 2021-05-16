@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "42951916802",
+    "project_id": "squeamishchat",
+    "storage_bucket": "squeamishchat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:42951916802:android:4c79b3a89577aa71c4161b",
+        "android_client_info": {
+          "package_name": "com.example.squeamishchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "42951916802-mpm4h70o3lgkb5a0qv0gs1a7l6s4u43n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsaFhrX9sD54950OkEWuRmUTawrFSKofA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "42951916802-mpm4h70o3lgkb5a0qv0gs1a7l6s4u43n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
