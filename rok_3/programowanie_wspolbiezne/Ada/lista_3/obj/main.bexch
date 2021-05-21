@@ -1,0 +1,23 @@
+[GENERATED OBJECT FILE]
+b__main.o
+[PROJECT FILES]
+/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/lista_3/rip.gpr
+20210521091548 a90286d631fccfec2ed44cffb0f8ab26
+[BOUND OBJECT FILES]
+/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/lista_3/obj/graph.o
+/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/lista_3/obj/main.o
+[GENERATED SOURCE FILES]
+b__main.ads
+b__main.adb
+b__main.ali
+[RESULTING OPTIONS]
+-L/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/lista_3/obj/
+-L/home/gabriel/Desktop/warm_cedar/rok_3/programowanie_wspolbiezne/Ada/lista_3/obj/
+-L/home/gabriel/opt/GNAT/2020/lib/gcc/x86_64-pc-linux-gnu/9.3.1/adalib/
+-static
+-static-libgcc
+/home/gabriel/opt/GNAT/2020/lib/gcc/x86_64-pc-linux-gnu/9.3.1/adalib/libgnarl.a
+/home/gabriel/opt/GNAT/2020/lib/gcc/x86_64-pc-linux-gnu/9.3.1/adalib/libgnat.a
+-lrt
+-lpthread
+-ldl

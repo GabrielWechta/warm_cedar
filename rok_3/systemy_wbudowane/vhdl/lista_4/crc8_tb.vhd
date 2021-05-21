@@ -153,8 +153,8 @@ BEGIN
 		ok_a0 <= ok_a0_v;
 		ok_66 <= ok_66_v;
 
-		IF crc_out /= zero AND (ok_a0_v /= '1' OR ok_66_v /= '1') and THEN
-			write(my_line, STRING'("Hello World")); -- formatting
+		IF crc_out = zero AND (ok_a0_v = '1' XOR ok_66_v = '1') THEN
+			write(my_line, STRING'("not ok")); -- formatting
 			writeline(output, my_line);
 		END IF;
 	END PROCESS;
