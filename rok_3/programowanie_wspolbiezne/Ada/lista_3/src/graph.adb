@@ -6,6 +6,8 @@ package body graph is
 
    procedure Simulate(N: in Integer; D: in Integer)
    is
+      MAX_SLEEP: Float := 1.0; -- const for Printer to wait untill he kills all tasks
+      
       -- Random Generator Part
       subtype Random_Range is Integer range 1 .. 10e6;
       
@@ -36,34 +38,7 @@ package body graph is
          Neighbours := Connections_Matrix(Task_Id);
       end SetUpNeighbours;
       --
-      
-      -- Printer Part
-      task Printer is
-         entry Print(Node_Id: in Integer; Package_Id: in Integer);
-         entry Join;
-      end Printer;
-      
-      task body Printer is
-         Node_Prim: Integer;
-         Package_Prim: Integer;
-      begin 
-         loop
-            begin 
-               select
-                  accept Print(Node_Id: in Integer; Package_Id: in Integer) do
-                     Node_Prim := Node_Id;
-                     Package_Prim := Package_Id;
-                  end Print;
-                  Put_Line("pakiet" & Integer'Image(Package_Prim) & " jest w wierzcholku" & Integer'Image(Node_Prim));
-                  accept Join;
-               or 
-                  terminate;
-               end select;
-            end;
-         end loop;
-      end Printer;
-      --
-      
+       
       -- Routing Table Part
       type Routing is record
          Next_Hop : Integer;
@@ -77,14 +52,28 @@ package body graph is
       
       procedure Routing_Table_Print(RT: in Routing_Table_Type) is
       begin
-         for I in RT'First..RT'Last loop
+         for I in RT'First..RT'Last - 1 loop
             Put("(");
             Put(Integer'Image(RT(I).Next_Hop) & ", ");
-            PuT(Integer'Image(RT(I).Cost) & ", ");
+            Put(Integer'Image(RT(I).Cost) & ", ");
             Put(Boolean'Image(RT(I).Changed));
             Put("), ");
          end loop;
-      end Routing_Table_Print;
+         Put("(");
+         Put(Integer'Image(RT(RT'Last).Next_Hop) & ", ");
+         Put(Integer'Image(RT(RT'Last).Cost) & ", ");
+         Put(Boolean'Image(RT(RT'Last).Changed));
+         Put(")");
+      end Routing_Table_Print;    
+            
+      procedure PrintRoutingMatrix is
+      begin
+         for R in 0 .. N-1 loop
+            Put(Integer'Image(R) & " ->");
+            Routing_Table_Print(Routing_Matrix(R));
+            Put_Line("");
+         end loop;
+      end PrintRoutingMatrix;
       --
       
       -- Pack/Pair Part 
@@ -97,14 +86,80 @@ package body graph is
       
       procedure Pack_Print(Pack: in Pack_Type) is
       begin
-         for I in Pack'First..Pack'Last loop
+         for I in Pack'First..Pack'Last - 1 loop
             if Pack(I).Cost /= -1 then
                Put("(" & Integer'Image(Pack(I).Id) & ", ");
                Put(Integer'Image(Pack(I).Cost) & "), ");
             end if;
          end loop;
+         Put("(" & Integer'Image(Pack(Pack'Last).Id) & ", ");
+         Put(Integer'Image(Pack(Pack'Last).Cost) & ")");
          New_Line;
       end Pack_Print;
+      --
+      
+      -- Sender & Writer Definitions
+      task type Sender_Thread(Id: Integer) is
+         entry StartBaby;
+         entry Join;
+      end Sender_Thread;
+      
+      type STAR_Type is array (Integer range <>) of access Sender_Thread;
+      STAR : STAR_Type(0..N-1);
+      
+      task type Writer_Thread(Id: Integer) is
+         entry StartBaby;
+         entry Join;
+         entry ReceiveAndWrite(Pack: in Pack_Type; From_Who: in Integer);
+      end Writer_Thread;
+      
+      type WTAR_Type is array (Integer range <>) of access Writer_Thread;
+      WTAR : WTAR_Type(0..N-1);
+      --
+      
+      -- Printer Part
+      task Printer is
+         entry LookingForChanges(Node_Id: in Integer);
+         entry PrintingChanges(Node_Id: in Integer; Pack: Pack_Type);
+         entry WriteChange(Node_Id: in Integer; Change_Id: in Integer; Next_Hop: in Integer; New_Cost: in Integer);
+      end Printer;
+      
+      task body Printer is
+         Node_Prim: Integer;
+         Package_Prim: Pack_Type(0..N-1);
+      begin 
+         loop
+            select
+               accept LookingForChanges(Node_Id: in Integer) do
+                  Node_Prim := Node_Id;
+               end LookingForChanges;
+               Put_Line("Sender" & Integer'Image(Node_Prim) & " is looking for changes.");
+            or
+               accept PrintingChanges(Node_Id: in Integer; Pack: Pack_Type) do
+                  Node_Prim := Node_Id;
+                  Package_Prim := Pack;
+               end PrintingChanges;
+               Put("Sender" & Integer'Image(Node_Prim) & " is broadcasting: ");
+               Pack_Print(Package_Prim);
+            or
+               accept WriteChange(Node_Id: in Integer; Change_Id: in Integer; Next_Hop: in Integer; New_Cost: in Integer) do
+                  Put_Line("Writer" & Integer'Image(Node_Id) & " changes:" & Integer'Image(Change_Id) & "'s nexst hop to" & Integer'Image(Next_Hop) & " and cost to " & Integer'Image(New_Cost));
+               end WriteChange;
+            or
+               delay Standard.Duration(3.0 * MAX_SLEEP);
+               exit;
+            end select;
+         end loop;
+
+         for I in 0..N-1 loop
+            STAR(I).all.Join;
+            WTAR(I).all.Join;
+         end loop;
+         
+         New_Line;
+         Put_Line("Routing matrix at the end:");
+         PrintRoutingMatrix;
+      end Printer;
       --
       
       -- Observer Part
@@ -116,7 +171,6 @@ package body graph is
       private
          Busy : Boolean := False;
          Node_Id : Integer;
-         --  Changed_Pack : Pack_Type(0..N-1) := (others => (-1, -1));
       end Observer_Type;
       
       protected body Observer_Type is 
@@ -126,10 +180,9 @@ package body graph is
          end Init;
          
          entry ReadChangedPackage(Pack: out Pack_Type)
-           when not Busy is
+         when not Busy is
          begin
             Busy := True;
-            Put_Line("reading");
             for J in 0..N-1 loop
                if Routing_Matrix(Node_Id)(J).Changed = True then
                   Pack(J).Id := J;
@@ -145,7 +198,7 @@ package body graph is
          end ReadChangedPackage;
          
          entry ReadCost(Id: in Integer; Cost: out Integer) 
-           when not Busy is 
+         when not Busy is 
          begin
             Busy := True;
             Cost := Routing_Matrix(Node_Id)(Id).Cost;
@@ -153,7 +206,7 @@ package body graph is
          end ReadCost;
          
          entry WriteNewRouting(Id: in Integer; New_Cost: in Integer; Next_Hop: in Integer)
-           when not Busy is
+         when not Busy is
          begin
             Busy := True;
             Routing_Matrix(Node_Id)(Id).Cost := New_Cost;
@@ -167,15 +220,6 @@ package body graph is
       Observer_Array : Observer_Array_Type(0..N-1);
       
       -- Writer Part
-      task type Writer_Thread(Id: Integer) is
-         entry StartBaby;
-         entry Join;
-         entry ReceiveAndWrite(Pack: in Pack_Type; From_Who: in Integer);
-      end Writer_Thread;
-      
-      type WTAR_Type is array (Integer range <>) of access Writer_Thread;
-      WTAR : WTAR_Type(0..N-1);
-      
       task body Writer_Thread is
          My_Pack: Pack_Type(0..N-1);
          Old_Cost : Integer;
@@ -192,17 +236,26 @@ package body graph is
                   end ReceiveAndWrite;
                   
                   for J in My_Pack'Range loop
+                     if My_Pack(J).Cost = -1 then
+                        goto Continue;
+                     end if;
                      Observer_Array(Id).ReadCost(J, Old_Cost);
                      New_Cost := My_Pack(J).Cost + 1;
                      if New_Cost < Old_Cost then
+                        Printer.WriteChange(Node_Id   => Id,
+                                            Change_Id => Id,
+                                            Next_Hop  => From_Who_Prim,
+                                            New_Cost  => New_Cost);
                         Observer_Array(Id).WriteNewRouting(Id       => J,
                                                            New_Cost => New_Cost,
                                                            Next_Hop => From_Who_Prim);
                      end if;
+                     <<Continue>>
                      
                   end loop;
                or
                   accept Join;
+                  exit;
                or
                   terminate;
                end select;
@@ -212,7 +265,7 @@ package body graph is
       --
       
       -- Sender Part
-      function IsfPackageEmpty (Pack: Pack_Type) return Boolean is
+      function IsPackageEmpty (Pack: Pack_Type) return Boolean is
       begin
          for I in Pack'First..Pack'Last loop
             if Pack(I).Id /= -1 then
@@ -220,15 +273,7 @@ package body graph is
             end if;
          end loop;
          return True;
-      end IsfPackageEmpty;
-      
-      task type Sender_Thread(Id: Integer) is
-         entry StartBaby;
-         entry Join;
-      end Sender_Thread;
-      
-      type STAR_Type is array (Integer range <>) of access Sender_Thread;
-      STAR : STAR_Type(0..N-1);
+      end IsPackageEmpty;
       
       task body Sender_Thread is
          Neighbours : Boolean_Array(0..N-1) := (others => False);
@@ -243,8 +288,11 @@ package body graph is
                   exit;
                or
                   delay Get_Task_Delay * 2;
+                  Put_Line("Sender" & Integer'Image(Id) & " is looking for changes.");
+
                   Observer_Array(Id).ReadChangedPackage(Pack);
-                  if IsfPackageEmpty(Pack) = False then
+                  if IsPackageEmpty(Pack) = False then
+                     Printer.PrintingChanges(Id, Pack);
                      for I in Neighbours'Range loop
                         if Neighbours(I) = True then
                            WTAR(I).ReceiveAndWrite(Pack, Id);
@@ -256,9 +304,6 @@ package body graph is
          end loop;
       end Sender_Thread;
       --
-      
-      Obs: Observer_Type;
-      Changed_Pack : Pack_Type(0..N-1) := (others => (-1, -1));
       
    begin
       
@@ -284,6 +329,7 @@ package body graph is
       
             
       -- Printing Connection_Matrix
+      Put_Line("Connections matrix:");
       for R in 0 .. N-1 loop
          Put(Integer'Image(R) & " ->");
          for C in 0 .. N-1 loop
@@ -321,18 +367,24 @@ package body graph is
          end loop;
       end loop;
       
-      -- Printing Routing_Matrix
-      for R in 0 .. N-1 loop
-         Put(Integer'Image(R) & " ->");
-         Routing_Table_Print(Routing_Matrix(R));
-         Put_Line("");
+      New_Line;
+      Put_Line("Routing matrix at the beginning:");
+      PrintRoutingMatrix;
+      
+      Put_Line("Simulation starts...");
+      
+      -- initializing Observers, Senders, Writers
+      for I in 0..N-1 loop
+         Observer_Array(I).Init(I);
+         STAR(I) := new Sender_Thread(I);
+         WTAR(I) := new Writer_Thread(I);
       end loop;
       
-      Obs.Init(0);
-      Obs.WriteNewRouting(1,420,432);
-
-      Obs.ReadChangedPackage(Changed_Pack);
-      Pack_Print(Changed_Pack);
+      for I in 0..N-1 loop
+         STAR(I).all.StartBaby;
+         WTAR(I).all.StartBaby;
+      end loop;
+            
       
    end Simulate;
       

@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math/rand"
+	"os"
 	"strconv"
 	"sync"
 	"time"
@@ -113,6 +114,18 @@ func intInSlice(x int, array []int) bool {
 	return false
 }
 
+
+func (graph *Graph) printGraph() {
+	for i, node := range graph.nodes {
+		fmt.Print(strconv.Itoa(i) + "->")
+		fmt.Print(node.neighbours)
+		fmt.Print(": ")
+		fmt.Print(node.routingTable)
+		fmt.Print("\n")
+	}
+	fmt.Print("\n")
+}
+
 type Pair struct {
 	id      int
 	cost    int
@@ -216,25 +229,18 @@ type readCostOp struct {
 	resp  chan int
 }
 
-func (graph *Graph) printGraph() {
-	for i, node := range graph.nodes {
-		fmt.Print(strconv.Itoa(i) + "->")
-		fmt.Print(node.neighbours)
-		fmt.Print(": ")
-		fmt.Print(node.routingTable)
-		fmt.Print("\n")
-	}
-	fmt.Print("\n")
-}
 
 func main() {
 	var wg sync.WaitGroup
 
-	n := 10
-	d := 5
+	n, _ := strconv.ParseInt(os.Args[1], 10, 64)
+	d, _ := strconv.ParseInt(os.Args[2], 10, 64)
+	// n = 10
+	// d = 5
 	graph := buildGraph(int(n))
 	graph.addShortcuts(int(n), int(d))
 	graph.addRoutingTable(int(n))
+	println("Graph at the beginning:")
 	graph.printGraph()
 
 	/* this is goroutine for output */
@@ -260,5 +266,6 @@ func main() {
 	}
 
 	wg.Wait()
+	println("\nGraph at the end:")
 	graph.printGraph()
 }
