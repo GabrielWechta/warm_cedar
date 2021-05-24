@@ -1,0 +1,2 @@
+rev.adb:12:59: medium: "Holder" might not be initialized[#0]
+rev.adb:15:09: medium: "Holder" might not be initialized[#1]

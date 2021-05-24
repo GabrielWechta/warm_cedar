@@ -1,0 +1,4 @@
+rev.adb:6:34: medium: postcondition might fail, cannot prove S (I) = S'Old (S'First + S'Last - I) (e.g. when S = (others => -1) and S'First = 1 and S'Last = 1 and S'Old = (1 => 'NUL', others => 'NUL'))[#2]
+rev.adb:12:37: warning: unused variable "J"
+rev.adb:12:53: medium: "Holder" might not be initialized[#0]
+rev.adb:15:09: medium: "Holder" might not be initialized[#1]

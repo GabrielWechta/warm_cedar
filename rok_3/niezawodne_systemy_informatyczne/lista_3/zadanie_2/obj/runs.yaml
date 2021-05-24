@@ -1,0 +1,136 @@
+'2021-05-24T16:03:23.345879':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    rev.adb:6:34: medium: postcondition might fail, cannot prove S (I) = S''Old (S''First
+    + S''Last - I) (e.g. when S = (others => -1) and S''First = 1 and S''Last = 1
+    and S''Old = (1 => ''NUL'', others => ''NUL''))[#2]
+
+    rev.adb:12:37: warning: unused variable "J"
+
+    rev.adb:12:53: medium: "Holder" might not be initialized[#0]
+
+    rev.adb:15:09: medium: "Holder" might not be initialized[#1]
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-05-24T16:03:23.345879'
+'2021-05-24T16:03:35.223750':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    rev.adb:6:34: medium: postcondition might fail, cannot prove S (I) = S''Old (S''First
+    + S''Last - I) (e.g. when S = (others => -1) and S''First = 1 and S''Last = 1
+    and S''Old = (1 => ''NUL'', others => ''NUL''))[#2]
+
+    rev.adb:12:37: warning: unused variable "J"
+
+    rev.adb:12:53: medium: "Holder" might not be initialized[#0]
+
+    rev.adb:15:09: medium: "Holder" might not be initialized[#1]
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-05-24T16:03:35.223750'
+'2021-05-24T16:03:52.009258':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    rev.adb:12:53: medium: "Holder" might not be initialized[#0]
+
+    rev.adb:12:53: medium: loop invariant might fail in first iteration, cannot prove
+    Holder(J) = S(S''First + S''Last - J) (e.g. when Holder = (1 => ''NUL'', 2 =>
+    ''NUL'', others => ''SOH'') and J = 2 and S = (1 => ''SOH'', others => ''NUL'')
+    and S''First = 1 and S''Last = 2)[#2]
+
+    rev.adb:15:09: medium: "Holder" might not be initialized[#1]
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-05-24T16:03:52.009258'
+'2021-05-24T16:04:20.318015':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    rev.adb:12:53: medium: loop invariant might fail in first iteration, cannot prove
+    Holder(J) = S(S''First + S''Last - J) (e.g. when Holder = (1 => ''NUL'', 2 =>
+    ''NUL'', others => ''SOH'') and J = 2 and S = (2 => ''NUL'', others => ''SOH'')
+    and S''First = 1 and S''Last = 2)[#0]
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-05-24T16:04:20.318015'
+'2021-05-24T16:04:51.742995':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-05-24T16:04:51.742995'
+'2021-05-24T16:05:08.057213':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    rev.adb:12:59: medium: "Holder" might not be initialized[#0]
+
+    rev.adb:15:09: medium: "Holder" might not be initialized[#1]
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-05-24T16:05:08.057213'
+'2021-05-24T16:05:19.682627':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_2/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_2/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-05-24T16:05:19.682627'

@@ -1,0 +1,4 @@
+mult_6502.ads:4:09: aspect specifications must come after parenthesized expression
+mult_6502.ads:8:07: expression function must be enclosed in parentheses
+mult_6502.ads:11:04: begin block not allowed in package spec
+mult_6502.ads:20:04: no "begin" for this "end"

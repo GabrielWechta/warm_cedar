@@ -1,0 +1,1 @@
+rev.adb:12:53: medium: loop invariant might fail in first iteration, cannot prove Holder(J) = S(S'First + S'Last - J) (e.g. when Holder = (1 => 'NUL', 2 => 'NUL', others => 'SOH') and J = 2 and S = (2 => 'NUL', others => 'SOH') and S'First = 1 and S'Last = 2)[#0]

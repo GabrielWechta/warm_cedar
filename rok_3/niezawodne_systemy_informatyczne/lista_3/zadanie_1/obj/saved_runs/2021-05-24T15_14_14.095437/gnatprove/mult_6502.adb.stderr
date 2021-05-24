@@ -1,0 +1,3 @@
+mult_6502.adb:11:22: medium: overflow check might fail (e.g. when AA = Natural'Last and AB = 1) [possible explanation: loop at line 9 should mention AA and AB in a loop invariant][#0]
+mult_6502.adb:13:18: medium: overflow check might fail (e.g. when AA = 1073741824) [possible explanation: loop at line 9 should mention AA in a loop invariant][#1]
+mult_6502.ads:6:12: medium: postcondition might fail, cannot prove Mult'Result = A * B (e.g. when A = 1 and B = 1 and Mult'Result = 0)[#2]

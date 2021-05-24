@@ -1,0 +1,138 @@
+'2021-05-24T15:14:14.095437':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_1/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    mult_6502.adb:11:22: medium: overflow check might fail (e.g. when AA = Natural''Last
+    and AB = 1) [possible explanation: loop at line 9 should mention AA and AB in
+    a loop invariant][#0]
+
+    mult_6502.adb:13:18: medium: overflow check might fail (e.g. when AA = 1073741824)
+    [possible explanation: loop at line 9 should mention AA in a loop invariant][#1]
+
+    mult_6502.ads:6:12: medium: postcondition might fail, cannot prove Mult''Result
+    = A * B (e.g. when A = 1 and B = 1 and Mult''Result = 0)[#2]
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_1/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-05-24T15:14:14.095437'
+'2021-05-24T15:30:56.358982':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_1/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    mult_6502.adb:10:32: medium: loop invariant might not be preserved by an arbitrary
+    iteration, cannot prove AB <= A * B (e.g. when A = 1 and AB = 2 and B = 1)[#2]
+
+    mult_6502.adb:12:22: medium: overflow check might fail (e.g. when AA = Natural''Last
+    and AB = 1) [possible explanation: loop invariant at line 10 should mention AA][#0]
+
+    mult_6502.adb:14:18: medium: overflow check might fail (e.g. when AA = 1073741824)
+    [possible explanation: loop invariant at line 10 should mention AA][#1]
+
+    mult_6502.ads:6:12: medium: postcondition might fail, cannot prove Mult''Result
+    = A * B (e.g. when A = 1 and B = 1 and Mult''Result = 0)[#3]
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_1/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-05-24T15:30:56.358982'
+'2021-05-24T15:34:38.707627':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_1/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    mult_6502.adb:12:22: medium: overflow check might fail (e.g. when AA = Natural''Last
+    and AB = 1) [possible explanation: loop invariant at line 10 should mention AA][#0]
+
+    mult_6502.adb:14:18: medium: overflow check might fail (e.g. when AA = 1073741824)
+    [possible explanation: loop invariant at line 10 should mention AA][#1]
+
+    mult_6502.ads:6:12: medium: postcondition might fail, cannot prove Mult''Result
+    = A * B (e.g. when A = 1 and B = 1 and Mult''Result = 0)[#2]
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_1/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-05-24T15:34:38.707627'
+'2021-05-24T15:35:04.332010':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_1/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    mult_6502.adb:12:22: medium: overflow check might fail (e.g. when AA = Natural''Last
+    and AB = 1) [possible explanation: loop invariant at line 10 should mention AA][#0]
+
+    mult_6502.adb:14:18: medium: overflow check might fail (e.g. when AA = 1073741824)
+    [possible explanation: loop invariant at line 10 should mention AA][#1]
+
+    mult_6502.ads:6:12: medium: postcondition might fail, cannot prove Mult''Result
+    = A * B (e.g. when A = 1 and B = 1 and Mult''Result = 0)[#2]
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_1/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-05-24T15:35:04.332010'
+'2021-05-24T15:37:35.165191':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_1/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    mult_6502.adb:10:32: medium: loop invariant might not be preserved by an arbitrary
+    iteration, cannot prove AB <= AA * B1 (e.g. when AA = 4 and AB = 9 and B1 = 2)[#3]
+
+    mult_6502.adb:10:41: medium: overflow check might fail (e.g. when AA = 6 and B1
+    = 7)[#2]
+
+    mult_6502.adb:12:22: medium: overflow check might fail (e.g. when AA = Natural''Last
+    and AB = 1)[#0]
+
+    mult_6502.adb:14:18: medium: overflow check might fail (e.g. when AA = 1073741824)[#1]
+
+    mult_6502.ads:6:12: medium: postcondition might fail, cannot prove Mult''Result
+    = A * B (e.g. when A = 1 and B = 1 and Mult''Result = 0)[#4]
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_1/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-05-24T15:37:35.165191'
+'2021-05-24T15:39:13.728596':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_1/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_1/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-05-24T15:39:13.728596'

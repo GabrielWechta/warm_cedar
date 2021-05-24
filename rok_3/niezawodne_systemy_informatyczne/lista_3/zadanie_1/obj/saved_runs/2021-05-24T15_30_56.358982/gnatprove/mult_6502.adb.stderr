@@ -1,0 +1,4 @@
+mult_6502.adb:10:32: medium: loop invariant might not be preserved by an arbitrary iteration, cannot prove AB <= A * B (e.g. when A = 1 and AB = 2 and B = 1)[#2]
+mult_6502.adb:12:22: medium: overflow check might fail (e.g. when AA = Natural'Last and AB = 1) [possible explanation: loop invariant at line 10 should mention AA][#0]
+mult_6502.adb:14:18: medium: overflow check might fail (e.g. when AA = 1073741824) [possible explanation: loop invariant at line 10 should mention AA][#1]
+mult_6502.ads:6:12: medium: postcondition might fail, cannot prove Mult'Result = A * B (e.g. when A = 1 and B = 1 and Mult'Result = 0)[#3]
