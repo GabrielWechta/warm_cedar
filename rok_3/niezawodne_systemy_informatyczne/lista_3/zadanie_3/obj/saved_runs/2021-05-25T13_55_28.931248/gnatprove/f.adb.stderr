@@ -1,0 +1,1 @@
+f.adb:12:07: medium: loop variant might fail (e.g. when Bin_Rep = 0)[#0]

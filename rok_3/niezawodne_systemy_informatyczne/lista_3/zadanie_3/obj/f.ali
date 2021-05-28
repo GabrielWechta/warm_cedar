@@ -5,21 +5,52 @@ A -march=x86-64
 P ZX
 
 RN
+RV NO_IO
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U f%b			f.adb			92e8c563 NE OO SU
+U f%b			f.adb			07f14787 NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
 W interfaces%s		interfac.ads		interfac.ali
+Z system.img_llu%s	s-imgllu.adb		s-imgllu.ali
+Z system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
 
-D f.adb			20210524201548 c85d970b f%b
+D ada.ads		20200228061809 76789da1 ada%s
+D a-except.ads		20200228061809 a7106115 ada.exceptions%s
+D a-ioexce.ads		20200228061809 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20200228061809 119b8fb3 ada.streams%s
+D a-tags.ads		20200228061809 edddc8f0 ada.tags%s
+D a-textio.ads		20200228061809 aef4d56d ada.text_io%s
+D a-unccon.ads		20200228061809 0e9b276f ada.unchecked_conversion%s
+D f.adb			20210525072721 f3b0c082 f%b
 D interfac.ads		20200228061809 5ab55268 interfaces%s
+D i-cstrea.ads		20200228061809 e53d8b8e interfaces.c_streams%s
 D system.ads		20200228061809 4635ec04 system%s
+D s-crtl.ads		20200228061809 0ebbdb71 system.crtl%s
+D s-exctab.ads		20200228061809 54135002 system.exception_table%s
+D s-ficobl.ads		20200228061809 078245e4 system.file_control_block%s
+D s-imgllu.ads		20200228061809 49c900c3 system.img_llu%s
+D s-parame.ads		20200228061809 4752c4cb system.parameters%s
+D s-secsta.ads		20200327060539 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20200228061809 a7318a92 system.soft_links%s
+D s-stache.ads		20200228061809 a37c21ec system.stack_checking%s
+D s-stalib.ads		20200228061809 6b7a13f2 system.standard_library%s
+D s-stoele.ads		20200228061809 2dc34a04 system.storage_elements%s
+D s-traent.ads		20200228061809 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20200319060539 5ecf7212 system.unsigned_types%s
+D s-wchcon.ads		20200228061809 1b7d22d2 system.wch_con%s
 G a e
-G c Z b b [f standard 3 10 none]
-X 1 f.adb
-3V10*F{2|77M9} 3b10 3>13 10l5 10t6
-3m13 X{2|77M9} 4r23
-4m4 Y{2|77M9} 6r10 7m7 7r17 9r11
-X 2 interfac.ads
-38K9*Interfaces 1|1w6 1r22 2|184e15
-77M9*Unsigned_64 1|3r17 3r37 4r8
+G c Z b b [f standard 5 10 none]
+X 1 ada.ads
+16K9*Ada 20e8 8|2r6 2r23
+X 6 a-textio.ads
+57K13*Text_IO 727e16 8|2w10 2r27
+508U14*Put_Line 8|10s7
+X 8 f.adb
+5V10*F{9|77M9} 5b10 5>13 16l5 16t6
+5m13 X{9|77M9} 6r23
+6m4 Y{9|77M9} 8r10 9m7 9r17 10r17 13r65 15r11
+X 9 interfac.ads
+38K9*Interfaces 8|1w6 1r22 9|184e15
+77M9*Unsigned_64 8|5r17 5r37 6r8 13r41
 

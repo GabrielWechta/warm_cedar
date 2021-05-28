@@ -1,0 +1,2 @@
+f.adb:7:04: warning: initialization of "Bin_Rep" has no effect[#0]
+f.adb:12:07: medium: loop variant might fail (e.g. when Y = 1)[#1]

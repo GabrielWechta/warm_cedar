@@ -1,0 +1,1 @@
+f.adb:13:07: medium: loop variant might fail (e.g. when Y = 85)[#0]

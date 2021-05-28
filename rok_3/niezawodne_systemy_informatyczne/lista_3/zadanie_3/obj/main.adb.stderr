@@ -1,0 +1,6 @@
+f.adb:5:17: "Unsigned_8" is not visible (more references follow)
+f.adb:5:17: multiple use clauses cause hiding
+f.adb:5:17: hidden declaration at interfac.ads:77
+f.adb:5:17: hidden declaration at interfac.ads:63
+interfac.ads:77:09: "Unsigned_8" conflicts with declaration at line 63
+interfac.ads:78:08: "Unsigned_64" is undefined (more references follow)

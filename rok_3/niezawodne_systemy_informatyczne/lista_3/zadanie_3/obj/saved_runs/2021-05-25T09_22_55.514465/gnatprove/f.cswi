@@ -1,0 +1,7 @@
+20210524205041
+-c
+-x
+ada
+-gnatA
+-gnatc
+-gnates=/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/obj/gnatprove/ad468d80.tmp

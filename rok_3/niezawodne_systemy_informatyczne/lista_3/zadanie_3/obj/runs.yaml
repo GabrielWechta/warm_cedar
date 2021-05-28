@@ -1,4 +1,20 @@
-'2021-05-24T22:15:59.486984':
+'2021-05-25T14:02:34.472337':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    f.adb:12:07: medium: loop variant might fail (e.g. when Bin_Rep = 0)[#0]
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-05-25T14:02:34.472337'
+'2021-05-25T14:02:45.173253':
   category: GNATprove
   files:
   - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/obj/gnatprove
@@ -11,8 +27,24 @@
 
     '
   output_parser: GNATprove_Parser
-  timestamp: '2021-05-24T22:15:59.486984'
-'2021-05-24T22:17:02.312399':
+  timestamp: '2021-05-25T14:02:45.173253'
+'2021-05-25T14:03:19.563573':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    f.adb:17:07: medium: loop variant might fail (e.g. when Bin_Rep = 0)[#0]
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-05-25T14:03:19.563573'
+'2021-05-25T14:03:53.362906':
   category: GNATprove
   files:
   - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/obj/gnatprove
@@ -25,8 +57,22 @@
 
     '
   output_parser: GNATprove_Parser
-  timestamp: '2021-05-24T22:17:02.312399'
-'2021-05-24T22:24:58.934955':
+  timestamp: '2021-05-25T14:03:53.362906'
+'2021-05-25T14:05:23.453378':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    f.adb:17:10: ghost entity cannot appear in this context
+
+    gnatprove: error during generation of Global contracts
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-05-25T14:05:23.453378'
+'2021-05-25T14:05:50.766181':
   category: GNATprove
   files:
   - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/obj/gnatprove
@@ -35,14 +81,28 @@
 
     Phase 2 of 2: flow analysis and proof ...
 
-    f.adb:8:07: medium: loop variant might fail (e.g. when Y = 9241245697875902493)[#0]
+    f.adb:12:07: medium: loop variant might fail (e.g. when Bin_Rep = 0)[#0]
 
     Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/obj/gnatprove/gnatprove.out
 
     '
   output_parser: GNATprove_Parser
-  timestamp: '2021-05-24T22:24:58.934955'
-'2021-05-24T22:27:02.011073':
+  timestamp: '2021-05-25T14:05:50.766181'
+'2021-05-25T14:06:41.194872':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    f.adb:13:07: pragma "Loop_Variant" must appear next to pragma at line 10
+
+    gnatprove: error during generation of Global contracts
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-05-25T14:06:41.194872'
+'2021-05-25T14:06:58.652445':
   category: GNATprove
   files:
   - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/obj/gnatprove
@@ -51,218 +111,10 @@
 
     Phase 2 of 2: flow analysis and proof ...
 
-    f.adb:8:07: medium: loop variant might fail (e.g. when Y = 6546862215427784703)[#0]
+    f.adb:14:07: medium: loop variant might fail (e.g. when Bin_Rep = 0)[#0]
 
     Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/obj/gnatprove/gnatprove.out
 
     '
   output_parser: GNATprove_Parser
-  timestamp: '2021-05-24T22:27:02.011073'
-'2021-05-24T22:27:49.242074':
-  category: GNATprove
-  files:
-  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/obj/gnatprove
-  label: Basic Prove All
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    Phase 2 of 2: flow analysis and proof ...
-
-    f.adb:8:07: medium: loop variant might fail (e.g. when Y = 8070738879172313089)[#0]
-
-    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/obj/gnatprove/gnatprove.out
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2021-05-24T22:27:49.242074'
-'2021-05-24T22:28:08.500287':
-  category: GNATprove
-  files:
-  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/obj/gnatprove
-  label: Basic Prove All
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    Phase 2 of 2: flow analysis and proof ...
-
-    f.adb:8:07: medium: loop variant might fail (e.g. when Y = 8070738879172313089)[#0]
-
-    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/obj/gnatprove/gnatprove.out
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2021-05-24T22:28:08.500287'
-'2021-05-24T22:29:11.978165':
-  category: GNATprove
-  files:
-  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/obj/gnatprove
-  label: Basic Prove All
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    Phase 2 of 2: flow analysis and proof ...
-
-    f.adb:7:07: medium: loop variant might fail (e.g. when Y = 2882736281903693829)[#0]
-
-    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/obj/gnatprove/gnatprove.out
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2021-05-24T22:29:11.978165'
-'2021-05-24T22:34:28.265079':
-  category: GNATprove
-  files:
-  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/obj/gnatprove
-  label: Basic Prove All
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    Phase 2 of 2: flow analysis and proof ...
-
-    f.adb:7:07: medium: loop variant might fail (e.g. when Y = 37817427559448575)[#0]
-
-    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/obj/gnatprove/gnatprove.out
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2021-05-24T22:34:28.265079'
-'2021-05-24T22:35:19.416198':
-  category: GNATprove
-  files:
-  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/obj/gnatprove
-  label: Basic Prove All
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    Phase 2 of 2: flow analysis and proof ...
-
-    f.adb:7:07: medium: loop variant might fail (e.g. when Y = 7686143364045646509)[#0]
-
-    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/obj/gnatprove/gnatprove.out
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2021-05-24T22:35:19.416198'
-'2021-05-24T22:37:06.936923':
-  category: GNATprove
-  files:
-  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/obj/gnatprove
-  label: Basic Prove All
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    Phase 2 of 2: flow analysis and proof ...
-
-    f.adb:7:07: medium: loop variant might fail (e.g. when Y = 702777870782562303)[#0]
-
-    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/obj/gnatprove/gnatprove.out
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2021-05-24T22:37:06.936923'
-'2021-05-24T22:38:16.675200':
-  category: GNATprove
-  files:
-  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/obj/gnatprove
-  label: Basic Prove All
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    Phase 2 of 2: flow analysis and proof ...
-
-    f.adb:7:07: medium: loop variant might fail (e.g. when Y = 702777870782562303)[#0]
-
-    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/obj/gnatprove/gnatprove.out
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2021-05-24T22:38:16.675200'
-'2021-05-24T22:40:19.249466':
-  category: GNATprove
-  files:
-  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/obj/gnatprove
-  label: Basic Prove All
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    Phase 2 of 2: flow analysis and proof ...
-
-    f.adb:7:07: medium: loop variant might fail (e.g. when Y = 2882736281903693829)[#0]
-
-    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/obj/gnatprove/gnatprove.out
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2021-05-24T22:40:19.249466'
-'2021-05-24T22:41:40.093330':
-  category: GNATprove
-  files:
-  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/obj/gnatprove
-  label: Basic Prove All
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    Phase 2 of 2: flow analysis and proof ...
-
-    f.adb:7:07: medium: loop variant might fail (e.g. when Y = 4684953350133776383)[#0]
-
-    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/obj/gnatprove/gnatprove.out
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2021-05-24T22:41:40.093330'
-'2021-05-24T22:46:04.049753':
-  category: GNATprove
-  files:
-  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/obj/gnatprove
-  label: Basic Prove All
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    Phase 2 of 2: flow analysis and proof ...
-
-    f.adb:8:07: medium: loop variant might fail (e.g. when Y = 1)[#0]
-
-    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/obj/gnatprove/gnatprove.out
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2021-05-24T22:46:04.049753'
-'2021-05-24T22:46:57.980803':
-  category: GNATprove
-  files:
-  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/obj/gnatprove
-  label: Basic Prove All
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    Phase 2 of 2: flow analysis and proof ...
-
-    f.adb:8:07: medium: loop variant might fail (e.g. when Y = 2882736281903694015)[#0]
-
-    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/obj/gnatprove/gnatprove.out
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2021-05-24T22:46:57.980803'
-'2021-05-24T22:47:31.194986':
-  category: GNATprove
-  files:
-  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/obj/gnatprove
-  label: Basic Prove All
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    Phase 2 of 2: flow analysis and proof ...
-
-    f.adb:9:07: medium: loop variant might fail (e.g. when Y = 6148914691236517205)[#0]
-
-    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/obj/gnatprove/gnatprove.out
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2021-05-24T22:47:31.194986'
-'2021-05-24T22:50:41.349673':
-  category: GNATprove
-  files:
-  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/obj/gnatprove
-  label: Basic Prove All
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    Phase 2 of 2: flow analysis and proof ...
-
-    f.adb:9:07: medium: loop variant might fail (e.g. when Y = 6148914691236517205)[#0]
-
-    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/obj/gnatprove/gnatprove.out
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2021-05-24T22:50:41.349673'
+  timestamp: '2021-05-25T14:06:58.652445'

@@ -1,0 +1,2 @@
+f.adb:11:14: warning: unrecognized pragma "Loop_Invariantt"
+f.adb:11:14: warning: possible misspelling of "Loop_Invariant"

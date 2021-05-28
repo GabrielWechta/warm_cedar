@@ -1,0 +1,1 @@
+f.adb:5:10: function with output global "Text_IO.File_System" is not allowed in SPARK[#0]

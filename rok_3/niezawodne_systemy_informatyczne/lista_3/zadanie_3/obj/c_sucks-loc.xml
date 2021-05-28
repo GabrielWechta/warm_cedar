@@ -3,72 +3,92 @@
   <Project>
     <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/c_sucks.gpr</vfs_file>
     <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_2/src/main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 11" >
+      <vfs_project />
+      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_2/src/main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_2/src/reverser.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 4" >
+      <vfs_project />
+      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_2/src/reverser.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_2/src/main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 11" line=" 3" >
+      <vfs_project />
+      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_2/src/reverser.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_2/src/main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_2/src/reverser.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_2/src/rev.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_2/src/main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 3" line=" 10" >
+      <vfs_project />
+      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_2/src/rev.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 3" >
+      <vfs_project />
+      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_2/src/rev.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 3" line=" 10" >
+      <vfs_project />
+      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_2/src/rev.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 8" >
+      <vfs_project />
+      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_2/src/rev.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 17" >
+      <vfs_project />
+      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_2/src/rev.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 34" line=" 6" >
+      <vfs_project />
+      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_2/src/rev.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 95" line=" 12" >
+      <vfs_project />
+      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_2/src/rev.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 9" >
+      <vfs_project />
+      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_2/src/rev.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 59" line=" 12" >
+      <vfs_project />
+      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_2/src/rev.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 29" line=" 8" >
+      <vfs_project />
+      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_2/src/rev.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 59" line=" 12" >
+      <vfs_project />
+      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_2/src/rev.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 14" line=" 6" >
       <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/c_sucks.gpr</vfs_project>
       <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/src/main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 23" line=" 6" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/c_sucks.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/src/main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 12" line=" 10" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/c_sucks.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/src/f.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 10" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/c_sucks.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/src/f.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 28" line=" 7" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/c_sucks.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/src/f.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 10" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/c_sucks.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/src/f.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 7" line=" 12" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/c_sucks.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/src/f.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 27" line=" 6" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/c_sucks.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/src/f.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 7" line=" 12" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/c_sucks.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/src/f.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 27" line=" 6" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/c_sucks.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/src/f.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 9" line=" 77" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/c_sucks.gpr</vfs_project>
-      <vfs_file>/home/gabriel/opt/GNAT/2020/lib/gcc/x86_64-pc-linux-gnu/9.3.1/rts-native/adainclude/interfac.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 17" line=" 11" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/c_sucks.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/src/f.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 27" line=" 6" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/c_sucks.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/src/f.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 27" line=" 6" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/c_sucks.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/src/f.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 27" line=" 6" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/c_sucks.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/src/f.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 25" line=" 4" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/c_sucks.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/src/f.adb</vfs_file>
-    </file_marker>
-    <file_marker current="true" column=" 7" line=" 9" >
-      <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/c_sucks.gpr</vfs_project>
-      <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_3/zadanie_3/src/f.adb</vfs_file>
     </file_marker>
   </Project>
 </Locations>
