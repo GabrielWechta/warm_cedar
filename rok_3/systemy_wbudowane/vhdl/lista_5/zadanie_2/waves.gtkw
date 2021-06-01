@@ -1,0 +1,35 @@
+[*]
+[*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
+[*] Sat May 29 10:01:11 2021
+[*]
+[dumpfile] "/home/gabriel/Desktop/warm_cedar/rok_3/systemy_wbudowane/vhdl/lista_5/zadanie_2/new.ghw"
+[dumpfile_mtime] "Sat May 29 10:00:26 2021"
+[dumpfile_size] 2248594
+[savefile] "/home/gabriel/Desktop/warm_cedar/rok_3/systemy_wbudowane/vhdl/lista_5/zadanie_2/waves.gtkw"
+[timestart] 495820000000
+[size] 1000 600
+[pos] -1 -1
+*-31.332067 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.n_clock_div_tb.
+[sst_width] 233
+[signals_width] 134
+[sst_expanded] 1
+[sst_vpaned_height] 144
+@28
+top.n_clock_div_tb.clk_in
+@800023
+#{top.n_clock_div_tb.clks_out[7:0]} top.n_clock_div_tb.clks_out[7] top.n_clock_div_tb.clks_out[6] top.n_clock_div_tb.clks_out[5] top.n_clock_div_tb.clks_out[4] top.n_clock_div_tb.clks_out[3] top.n_clock_div_tb.clks_out[2] top.n_clock_div_tb.clks_out[1] top.n_clock_div_tb.clks_out[0]
+@29
+top.n_clock_div_tb.clks_out[7]
+top.n_clock_div_tb.clks_out[6]
+top.n_clock_div_tb.clks_out[5]
+top.n_clock_div_tb.clks_out[4]
+top.n_clock_div_tb.clks_out[3]
+top.n_clock_div_tb.clks_out[2]
+top.n_clock_div_tb.clks_out[1]
+top.n_clock_div_tb.clks_out[0]
+@1001201
+-group_end
+[pattern_trace] 1
+[pattern_trace] 0

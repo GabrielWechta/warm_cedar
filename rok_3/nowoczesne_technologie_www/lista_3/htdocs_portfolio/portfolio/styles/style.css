@@ -1,0 +1,710 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Cabin", sans-serif;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.hamburger,
+.close {
+  border: none;
+  cursor: pointer;
+  /* position absolute position the icons relative to the body because they have no position relative parents*/
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 36px;
+  height: 36px;
+  background: transparent;
+}
+
+.hamburger img,
+.close img {
+  width: 120%;
+  height: 120%;
+}
+
+.navbar {
+  position: absolute;
+  /* a higher z-index put navbar above hamburger */
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  /* basic menu styling*/
+  list-style: none;
+  background: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* animate slide up/down */
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+
+/* :target is called when its anchor id #navbar is called by clicking on the hamburger which has href="#navbar" */
+.navbar:target {
+  /* show navbar */
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.navbar a {
+  color: white;
+}
+
+#js {
+  visibility: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 50px;
+}
+
+main {
+  padding: 50px;
+}
+
+.banner {
+  position: relative;
+  /*min-height: 140vh; */
+  min-height: 100vh;
+  background-image: url("../resources/gabi_2.JPG");
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.banner h2 {
+  font-size: 3em;
+  color: lightsalmon;
+  line-height: 1.5em;
+  text-shadow: 0 5px 20px black;
+}
+
+.btn {
+  position: relative;
+  background: lightsalmon;
+  display: inline-block;
+  color: #fff;
+  margin-top: 20px;
+  padding: 10px 30px;
+  font-size: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+header .logo {
+  color: azure;
+  font-size: 35px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+header ul {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header ul li {
+  position: relative;
+  list-style: none;
+}
+
+header ul li a {
+  position: relative;
+  display: inline-block;
+  margin: 0 15px;
+  color: azure;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+header ul li a:hover {
+  opacity: 0.9;
+}
+
+/* State sticky */
+header.sticky {
+  background: azure;
+  padding: 20px 100px;
+  -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+header.sticky .logo {
+  color: #000;
+}
+
+header.sticky ul li a {
+  color: #000;
+}
+
+header.sticky ul li a:hover {
+  opacity: 0.7;
+}
+
+footer-basic {
+  padding: 40px 40px;
+  background-color: #ffffff;
+  color: #4b4c4d;
+}
+
+.footer-basic-black {
+  padding: 40px 40px;
+  background-color: #242423;
+  color: #929292;
+}
+
+.footer-basic ul,
+.footer-basic-black ul {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.footer-basic li,
+.footer-basic-black li {
+  padding: 5px 15px;
+  text-align: inherit;
+  text-justify: none;
+}
+
+.footer-basic ul a,
+.footer-basic-black ul a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.footer-basic ul a:hover,
+.footer-basic-black ul a:hover {
+  opacity: 1;
+}
+
+.footer-basic .social,
+.footer-basic-black .social {
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.footer-basic .social > a,
+.footer-basic-black .social > a {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #cccccc;
+  margin: 0 8px;
+  color: inherit;
+  opacity: 0.75;
+}
+
+.footer-basic .social > a:hover,
+.footer-basic-black .social > a:hover {
+  opacity: 0.9;
+}
+
+.footer-basic .copyright,
+.footer-basic-black .copyright {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: dimgray;
+  margin-bottom: 0;
+}
+
+.about {
+  font-size: 35px;
+  background-color: azure;
+}
+
+.about hr {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  height: 12px;
+  border: 0;
+  -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.about h2 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.programing {
+  font-size: 35px;
+  background-color: #242423;
+}
+
+.programing h4 {
+  margin-top: 7vh;
+  font-size: 35px;
+  color: #cccccc;
+}
+
+.programing img {
+  margin-top: 50px;
+  max-width: 100%;
+  max-height: 100%;
+  opacity: 0.8;
+  -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  /* Animation */
+}
+
+.programing:hover {
+  -webkit-transform: scale(1.015);
+          transform: scale(1.015);
+}
+
+.programing p {
+  font-size: 35px;
+  color: #cccccc;
+}
+
+.programing a {
+  color: lightsalmon;
+}
+
+.color-with-marker {
+  list-style-position: inside;
+}
+
+.color-with-marker li {
+  color: #cccccc;
+  font-family: "Cabin", sans-serif;
+  opacity: 0.6;
+}
+
+.column-list {
+  color: #cccccc;
+  font-family: "Cabin", sans-serif;
+  opacity: 0.6;
+  -webkit-column-count: 2;
+          column-count: 2;
+  list-style-type: none;
+}
+
+.parallax_gabi {
+  background-image: url("../resources/gabi.JPG");
+  min-height: 80vh;
+  max-width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+  padding: 40px;
+}
+
+.parallax_chess {
+  background-image: url("../resources/chess.png");
+  min-height: 60vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+  padding: 40px;
+}
+
+.parallax_visual_art {
+  background-image: url("../resources/street_art.JPG");
+  min-height: 60vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+  padding: 40px;
+}
+
+.parallax_movies {
+  background-image: url("../resources/tea.JPG");
+  min-height: 60vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+  padding: 40px;
+}
+
+.parallax_photography {
+  background-image: url("../resources/fire.JPG");
+  min-height: 60vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+  padding: 40px;
+}
+
+.parallax_photography_2 {
+  background-image: url("../resources/banana.JPG");
+  min-height: 60vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+  padding: 40px;
+}
+
+.parallax_photography_3 {
+  background-image: url("../resources/wojtek_2.JPG");
+  min-height: 60vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+  padding: 40px;
+}
+
+.parallax_photography_4 {
+  background-image: url("../resources/time.JPG");
+  min-height: 60vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+  padding: 40px;
+}
+
+.parallax_photography_5 {
+  background-image: url("../resources/bomb.JPG");
+  min-height: 60vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+  padding: 40px;
+}
+
+.parallax_photography_6 {
+  background-image: url("../resources/waterfall.JPG");
+  min-height: 60vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+  padding: 40px;
+}
+
+.parallax_photography_7 {
+  background-image: url("../resources/alaram.JPG");
+  min-height: 60vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+  padding: 40px;
+}
+
+.parallax_photography_8 {
+  background-image: url("../resources/shoes.JPG");
+  min-height: 60vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+  padding: 40px;
+}
+
+.bragging {
+  font-size: 35px;
+  background-color: #242423;
+}
+
+.bragging h4 {
+  margin-top: 7vh;
+  font-size: 35px;
+  color: #cccccc;
+}
+
+.bragging h5 {
+  font-size: 30px;
+  color: #cccccc;
+  text-align: center;
+}
+
+.bragging p {
+  font-size: 35px;
+  color: #cccccc;
+}
+
+.bragging a {
+  text-decoration: none;
+  color: lightsalmon;
+}
+
+.bragging hr {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  height: 12px;
+  border: 0;
+  -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.bragging section {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.bragging img {
+  width: 100%;
+  height: 100%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.bragging section article {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+.bragging .container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+  width: 100%;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.bragging .container:hover .overlay {
+  opacity: 0.4;
+}
+
+.bragging .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: 0.8s ease;
+  transition: 0.8s ease;
+  background-color: #fff;
+}
+
+.bragging .text {
+  color: black;
+  font-size: 2vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+  p {
+    font-size: 5vw;
+  }
+  .programing p,
+  .bragging p {
+    font-size: 5vw;
+  }
+  .programing ul li {
+    font-size: 5vw;
+  }
+  h4 {
+    font-size: 8vw;
+  }
+  header,
+  header.sticky {
+    padding: 20px;
+    z-index: 1000;
+  }
+  header ul li a {
+    color: #111;
+    font-size: 30px;
+    margin: 10px;
+  }
+  .menu {
+    position: fixed;
+    top: 75px;
+    left: -100%;
+    display: block;
+    padding: 20px 50px;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    z-index: 999;
+    border-top: 3px solid rgba(0, 0, 0, 0.2);
+  }
+  .menu.active {
+    left: 0;
+  }
+  .toggle {
+    width: 40px;
+    height: 40px;
+    background: url("../resources/menu.png") no-repeat center;
+    background-size: 35px;
+    cursor: pointer;
+  }
+  .toggle.active {
+    background: url(".//resources/close.png") no-repeat center;
+    background-size: 30px;
+    cursor: pointer;
+  }
+  header.sticky .toggle {
+    -webkit-filter: invert(1);
+            filter: invert(1);
+  }
+  header.sticky .toggle.active {
+    -webkit-filter: invert(1);
+            filter: invert(1);
+  }
+  .parallax_gabi {
+    background-attachment: scroll;
+  }
+  .parallax_chess {
+    background-attachment: scroll;
+  }
+  .parallax_visual_art {
+    background-attachment: scroll;
+  }
+  .parallax_movies {
+    background-attachment: scroll;
+  }
+  .parallax_photography {
+    background-attachment: scroll;
+  }
+  .parallax_photography_2 {
+    background-attachment: scroll;
+  }
+  .parallax_photography_3 {
+    background-attachment: scroll;
+  }
+  .parallax_photography_4 {
+    background-attachment: scroll;
+  }
+  .parallax_photography_5 {
+    background-attachment: scroll;
+  }
+  .parallax_photography_6 {
+    background-attachment: scroll;
+  }
+  .parallax_photography_7 {
+    background-attachment: scroll;
+  }
+  .parallax_photography_8 {
+    background-attachment: scroll;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .bragging p {
+    font-size: 3vw;
+  }
+  .bragging .container {
+    width: 100%;
+    height: 100%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .bragging section {
+    display: block;
+  }
+  .bragging .container {
+    margin: 20px 0 0 0;
+  }
+  .bragging .container:hover .overlay {
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */
