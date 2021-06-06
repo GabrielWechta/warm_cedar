@@ -1,0 +1,239 @@
+'2021-06-06T18:26:57.707064':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_4/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    warning: no bodies have been analyzed by GNATprove
+
+    enable analysis of a non-generic body using SPARK_Mode
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-06-06T18:26:57.707064'
+'2021-06-06T18:42:25.848999':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_4/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    railway.ads:72:32: medium: postcondition might fail, cannot prove (Correct_Segments)
+    (e.g. when Segment_State = (Left => Reserved_Moving_From_Left, Middle => Free,
+    Right => Free) and Signal_State = (Left_Middle => Red, Middle_Left => Red, Middle_Right
+    => Red, Right_Middle => Red))[#0]
+
+    railway.ads:79:32: medium: postcondition might fail, cannot prove (Correct_Segments)
+    (e.g. when Segment_State = (Left => Occupied_Standing, Middle => Reserved_Moving_From_Left,
+    Right => Reserved_Moving_From_Left) and Signal_State = (Left_Middle => Red, Middle_Left
+    => Red, Middle_Right => Red, Right_Middle => Red))[#1]
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_4/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-06-06T18:42:25.848999'
+'2021-06-06T18:43:05.183420':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_4/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    railway.ads:72:32: medium: postcondition might fail, cannot prove (Correct_Segments)
+    (e.g. when Segment_State = (Left => Reserved_Moving_From_Left, Middle => Occupied_Standing,
+    Right => Occupied_Standing) and Signal_State = (Left_Middle => Green, Middle_Left
+    => Green, Middle_Right => Green, Right_Middle => Green))[#0]
+
+    railway.ads:79:12: medium: postcondition might fail, cannot prove (Correct_Signals)
+    (e.g. when Segment_State = (Left => Occupied_Standing, Middle => Occupied_Standing,
+    Right => Occupied_Standing) and Signal_State = (Left_Middle => Green, Middle_Left
+    => Green, Middle_Right => Green, Right_Middle => Green))[#1]
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_4/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-06-06T18:43:05.183420'
+'2021-06-06T18:43:29.724984':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_4/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    railway.adb:9:32: "Reserverd_Moving_From_Left" is undefined (more references follow)
+
+    railway.adb:9:32: possible misspelling of "Reserved_Moving_From_Left"
+
+    railway.adb:35:33: "Reserverd_Moving_From_Right" is undefined (more references
+    follow)
+
+    railway.adb:35:33: possible misspelling of "Reserved_Moving_From_Right"
+
+    gnatprove: error during generation of Global contracts
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-06-06T18:43:29.724984'
+'2021-06-06T18:44:11.308149':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_4/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    railway.adb:16:32: "Reserverd_Moving_From_Left" is undefined (more references
+    follow)
+
+    railway.adb:16:32: possible misspelling of "Reserved_Moving_From_Left"
+
+    railway.adb:40:33: "Reserverd_Moving_From_Right" is undefined (more references
+    follow)
+
+    railway.adb:40:33: possible misspelling of "Reserved_Moving_From_Right"
+
+    gnatprove: error during generation of Global contracts
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-06-06T18:44:11.308149'
+'2021-06-06T18:45:17.708519':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_4/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    railway.adb:18:32: "Reserverd_Moving_From_Left" is undefined (more references
+    follow)
+
+    railway.adb:18:32: possible misspelling of "Reserved_Moving_From_Left"
+
+    railway.adb:54:33: "Reserverd_Moving_From_Right" is undefined (more references
+    follow)
+
+    railway.adb:54:33: possible misspelling of "Reserved_Moving_From_Right"
+
+    gnatprove: error during generation of Global contracts
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-06-06T18:45:17.708519'
+'2021-06-06T18:46:19.027916':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_4/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    railway.adb:18:32: "Reserverd_Moving_From_Left" is undefined (more references
+    follow)
+
+    railway.adb:18:32: possible misspelling of "Reserved_Moving_From_Left"
+
+    railway.adb:54:33: "Reserverd_Moving_From_Right" is undefined (more references
+    follow)
+
+    railway.adb:54:33: possible misspelling of "Reserved_Moving_From_Right"
+
+    gnatprove: error during generation of Global contracts
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-06-06T18:46:19.027916'
+'2021-06-06T18:46:46.770076':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_4/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    railway.adb:18:32: "Reserverd_Moving_From_Left" is undefined (more references
+    follow)
+
+    railway.adb:18:32: possible misspelling of "Reserved_Moving_From_Left"
+
+    railway.adb:54:33: "Reserverd_Moving_From_Right" is undefined (more references
+    follow)
+
+    railway.adb:54:33: possible misspelling of "Reserved_Moving_From_Right"
+
+    gnatprove: error during generation of Global contracts
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-06-06T18:46:46.770076'
+'2021-06-06T18:48:41.042818':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_4/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    railway.adb:54:33: "Reserverd_Moving_From_Right" is undefined (more references
+    follow)
+
+    railway.adb:54:33: possible misspelling of "Reserved_Moving_From_Right"
+
+    gnatprove: error during generation of Global contracts
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-06-06T18:48:41.042818'
+'2021-06-06T18:49:24.117617':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_4/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    railway.ads:72:12: medium: postcondition might fail, cannot prove (Correct_Signals)
+    (e.g. when Segment_State = (Left => Reserved_Moving_From_Left, Middle => Free,
+    Right => Free) and Signal_State = (Left_Middle => Red, Middle_Left => Red, Middle_Right
+    => Red, Right_Middle => Red))[#0]
+
+    railway.ads:79:12: medium: postcondition might fail, cannot prove (Correct_Signals)[#1]
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_4/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-06-06T18:49:24.117617'
+'2021-06-06T18:50:10.763916':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_4/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_4/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-06-06T18:50:10.763916'
+'2021-06-06T18:56:23.500704':
+  category: GNATprove
+  files:
+  - /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_4/obj/gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    Summary logged in /home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_4/obj/gnatprove/gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-06-06T18:56:23.500704'

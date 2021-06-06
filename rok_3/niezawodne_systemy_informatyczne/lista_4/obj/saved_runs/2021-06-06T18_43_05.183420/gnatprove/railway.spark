@@ -1,0 +1,737 @@
+{
+  "spark": [
+    {
+      "name": "Railway",
+      "sloc": [
+        {
+          "file": "railway.ads",
+          "line": 1
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "Railway.Correct_Signals",
+      "sloc": [
+        {
+          "file": "railway.ads",
+          "line": 39
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "Railway.Correct_Segments",
+      "sloc": [
+        {
+          "file": "railway.ads",
+          "line": 55
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "Railway.Open_Route",
+      "sloc": [
+        {
+          "file": "railway.ads",
+          "line": 67
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "Railway.Move_Train",
+      "sloc": [
+        {
+          "file": "railway.ads",
+          "line": 74
+        }
+      ],
+      "spark": "all"
+    }
+  ],
+  "flow": [
+    {
+      "file": "railway.ads",
+      "line": 67,
+      "col": 49,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "Railway.Open_Route",
+        "sloc": [
+          {
+            "file": "railway.ads",
+            "line": 67
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "railway.ads",
+      "line": 69,
+      "col": 4,
+      "rule": "GLOBAL_WRONG",
+      "severity": "info",
+      "entity": {
+        "name": "Railway.Open_Route",
+        "sloc": [
+          {
+            "file": "railway.ads",
+            "line": 67
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "railway.ads",
+      "line": 70,
+      "col": 4,
+      "rule": "DEPENDS_WRONG",
+      "severity": "info",
+      "entity": {
+        "name": "Railway.Open_Route",
+        "sloc": [
+          {
+            "file": "railway.ads",
+            "line": 67
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "railway.ads",
+      "line": 74,
+      "col": 49,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "Railway.Move_Train",
+        "sloc": [
+          {
+            "file": "railway.ads",
+            "line": 74
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "railway.ads",
+      "line": 76,
+      "col": 4,
+      "rule": "GLOBAL_WRONG",
+      "severity": "info",
+      "entity": {
+        "name": "Railway.Move_Train",
+        "sloc": [
+          {
+            "file": "railway.ads",
+            "line": 74
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "railway.ads",
+      "line": 77,
+      "col": 4,
+      "rule": "DEPENDS_WRONG",
+      "severity": "info",
+      "entity": {
+        "name": "Railway.Move_Train",
+        "sloc": [
+          {
+            "file": "railway.ads",
+            "line": 74
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    }
+  ],
+  "session_map": {
+    " 1": "/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_4/obj/gnatprove/railway__open_route",
+    " 2": "/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_4/obj/gnatprove/railway__move_train"
+  },
+  "proof": [
+    {
+      "file": "railway.ads",
+      "line": 72,
+      "col": 32,
+      "rule": "VC_POSTCONDITION",
+      "severity": "medium",
+      "entity": {
+        "name": "Railway.Open_Route",
+        "sloc": [
+          {
+            "file": "railway.ads",
+            "line": 67
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Unknown (unknown)",
+              "steps": 711,
+              "time": 0
+            },
+            "CVC4_CE": {
+              "result": "Unknown (unknown)",
+              "steps": 390108,
+              "time": 2.50000000000000E+00
+            },
+            "Z3": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 5
+            },
+            "altergo": {
+              "result": "Unknown ()",
+              "steps": -1,
+              "time": 8.00000000000000E-01
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Unknown (unknown)",
+              "steps": 678,
+              "time": 0
+            },
+            "Z3": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 5
+            },
+            "altergo": {
+              "result": "Unknown ()",
+              "steps": -1,
+              "time": 7.70000000000000E-01
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "railway.ads",
+      "check_line": 72,
+      "check_col": 12,
+      "cntexmp": {
+        "railway.adb": {
+          "previous": {
+          },
+          "current": {
+            "8": [
+              {
+                "name": "Segment_State",
+                "value": "(Left => Free, Middle => Occupied_Standing, Right => Occupied_Standing)",
+                "kind": "variable"
+              }
+            ],
+            "9": [
+              {
+                "name": "Segment_State",
+                "value": "(Left => Reserved_Moving_From_Left, Middle => Occupied_Standing, Right => Occupied_Standing)",
+                "kind": "variable"
+              }
+            ],
+            "13": [
+              {
+                "name": "Route",
+                "value": "Route_Enter_Left",
+                "kind": "variable"
+              }
+            ],
+            "20": [
+              {
+                "name": "Route",
+                "value": "Route_Enter_Left",
+                "kind": "variable"
+              }
+            ],
+            "27": [
+              {
+                "name": "Route",
+                "value": "Route_Enter_Left",
+                "kind": "variable"
+              }
+            ],
+            "34": [
+              {
+                "name": "Route",
+                "value": "Route_Enter_Left",
+                "kind": "variable"
+              }
+            ],
+            "39": [
+              {
+                "name": "Route",
+                "value": "Route_Enter_Left",
+                "kind": "variable"
+              }
+            ],
+            "46": [
+              {
+                "name": "Route",
+                "value": "Route_Enter_Left",
+                "kind": "variable"
+              }
+            ],
+            "53": [
+              {
+                "name": "Route",
+                "value": "Route_Enter_Left",
+                "kind": "variable"
+              }
+            ]
+          }
+        },
+        "railway.ads": {
+          "previous": {
+          },
+          "current": {
+            "36": [
+              {
+                "name": "Segment_State",
+                "value": "(Left => Free, Middle => Occupied_Standing, Right => Occupied_Standing)",
+                "kind": "variable"
+              }
+            ],
+            "37": [
+              {
+                "name": "Signal_State",
+                "value": "(Left_Middle => Green, Middle_Left => Green, Middle_Right => Green, Right_Middle => Green)",
+                "kind": "variable"
+              }
+            ],
+            "67": [
+              {
+                "name": "Route",
+                "value": "Route_Enter_Left",
+                "kind": "variable"
+              }
+            ],
+            "72": [
+              {
+                "name": "Segment_State",
+                "value": "(Left => Reserved_Moving_From_Left, Middle => Occupied_Standing, Right => Occupied_Standing)",
+                "kind": "variable"
+              },
+              {
+                "name": "Signal_State",
+                "value": "(Left_Middle => Green, Middle_Left => Green, Middle_Right => Green, Right_Middle => Green)",
+                "kind": "variable"
+              }
+            ]
+          }
+        }
+      },
+      "msg_id": 0,
+      "session_dir": 1,
+      "how_proved": "prover"
+    },
+    {
+      "file": "railway.ads",
+      "line": 79,
+      "col": 12,
+      "rule": "VC_POSTCONDITION",
+      "severity": "medium",
+      "entity": {
+        "name": "Railway.Move_Train",
+        "sloc": [
+          {
+            "file": "railway.ads",
+            "line": 74
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Unknown (unknown)",
+              "steps": 717,
+              "time": 0
+            },
+            "CVC4_CE": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 0
+            },
+            "Z3": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 5
+            },
+            "altergo": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 5
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Unknown (unknown)",
+              "steps": 684,
+              "time": 0
+            },
+            "CVC4_CE": {
+              "result": "Unknown (unknown)",
+              "steps": 100935,
+              "time": 1.57000000000000E+00
+            },
+            "Z3": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 5
+            },
+            "altergo": {
+              "result": "Unknown ()",
+              "steps": -1,
+              "time": 1.03000000000000E+00
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "railway.ads",
+      "check_line": 79,
+      "check_col": 12,
+      "cntexmp": {
+        "railway.adb": {
+          "previous": {
+          },
+          "current": {
+            "66": [
+              {
+                "name": "Segment_State",
+                "value": "(Left => Reserved_Moving_From_Left, Middle => Occupied_Standing, Right => Occupied_Standing)",
+                "kind": "variable"
+              }
+            ],
+            "67": [
+              {
+                "name": "Segment_State",
+                "value": "(Left => Occupied_Standing, Middle => Occupied_Standing, Right => Occupied_Standing)",
+                "kind": "variable"
+              }
+            ],
+            "71": [
+              {
+                "name": "Route",
+                "value": "Route_Enter_Left",
+                "kind": "variable"
+              }
+            ],
+            "78": [
+              {
+                "name": "Route",
+                "value": "Route_Enter_Left",
+                "kind": "variable"
+              }
+            ],
+            "85": [
+              {
+                "name": "Route",
+                "value": "Route_Enter_Left",
+                "kind": "variable"
+              }
+            ],
+            "92": [
+              {
+                "name": "Route",
+                "value": "Route_Enter_Left",
+                "kind": "variable"
+              }
+            ],
+            "97": [
+              {
+                "name": "Route",
+                "value": "Route_Enter_Left",
+                "kind": "variable"
+              }
+            ],
+            "104": [
+              {
+                "name": "Route",
+                "value": "Route_Enter_Left",
+                "kind": "variable"
+              }
+            ],
+            "111": [
+              {
+                "name": "Route",
+                "value": "Route_Enter_Left",
+                "kind": "variable"
+              }
+            ]
+          }
+        },
+        "railway.ads": {
+          "previous": {
+          },
+          "current": {
+            "36": [
+              {
+                "name": "Segment_State",
+                "value": "(Left => Reserved_Moving_From_Left, Middle => Occupied_Standing, Right => Occupied_Standing)",
+                "kind": "variable"
+              }
+            ],
+            "37": [
+              {
+                "name": "Signal_State",
+                "value": "(Left_Middle => Green, Middle_Left => Green, Middle_Right => Green, Right_Middle => Green)",
+                "kind": "variable"
+              }
+            ],
+            "74": [
+              {
+                "name": "Route",
+                "value": "Route_Enter_Left",
+                "kind": "variable"
+              }
+            ],
+            "79": [
+              {
+                "name": "Segment_State",
+                "value": "(Left => Occupied_Standing, Middle => Occupied_Standing, Right => Occupied_Standing)",
+                "kind": "variable"
+              },
+              {
+                "name": "Signal_State",
+                "value": "(Left_Middle => Green, Middle_Left => Green, Middle_Right => Green, Right_Middle => Green)",
+                "kind": "variable"
+              }
+            ]
+          }
+        }
+      },
+      "msg_id": 1,
+      "session_dir": 2,
+      "how_proved": "prover"
+    }
+  ],
+  "assumptions": [
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Railway.Correct_Signals",
+          "sloc": [
+            {
+              "file": "railway.ads",
+              "line": 39
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Railway.Correct_Signals",
+          "sloc": [
+            {
+              "file": "railway.ads",
+              "line": 39
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Railway.Correct_Segments",
+            "sloc": [
+              {
+                "file": "railway.ads",
+                "line": 55
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Railway.Correct_Signals",
+            "sloc": [
+              {
+                "file": "railway.ads",
+                "line": 39
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Railway.Move_Train",
+          "sloc": [
+            {
+              "file": "railway.ads",
+              "line": 74
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Railway.Correct_Segments",
+          "sloc": [
+            {
+              "file": "railway.ads",
+              "line": 55
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Railway.Correct_Segments",
+          "sloc": [
+            {
+              "file": "railway.ads",
+              "line": 55
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Railway",
+          "sloc": [
+            {
+              "file": "railway.ads",
+              "line": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Railway.Correct_Segments",
+            "sloc": [
+              {
+                "file": "railway.ads",
+                "line": 55
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Railway.Correct_Signals",
+            "sloc": [
+              {
+                "file": "railway.ads",
+                "line": 39
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Railway.Open_Route",
+          "sloc": [
+            {
+              "file": "railway.ads",
+              "line": 67
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "timings": {
+    "gnatwhy3.transformations.eliminate_algebraic": 2.33640000224113E-02,
+    "gnatwhy3.transformations.inline_trivial": 1.26965498924255E+00,
+    "codepeer results": 2.43999995291233E-04,
+    "init_why_sections": 6.78999989759177E-04,
+    "gnatwhy3.transformations.eliminate_let_term": 9.40100010484457E-03,
+    "gnatwhy3.transformations.detect_polymorphism": 2.82899988815188E-03,
+    "globals/properties (advanced)": 3.49999987520278E-04,
+    "gnatwhy3.transformations.eliminate_literal": 1.28730004653335E-02,
+    "gnatwhy3.run_vcs": 5.18904983997345E-01,
+    "gnatwhy3.transformations.eliminate_algebraic_if_poly": 5.82299986854196E-03,
+    "gnatwhy3.transformations.eliminate_definition_if_poly": 4.24000015482306E-03,
+    "flow analysis": 1.12749999389052E-02,
+    "gnatwhy3.transformations.simplify_formula": 1.63059998303652E-02,
+    "marking": 3.61000013072044E-04,
+    "translation of standard": 3.01799993030727E-03,
+    "gnatwhy3.transformations.eliminate_recursion": 6.38499995693564E-03,
+    "gnatwhy3.register_vcs": 2.26800004020333E-03,
+    "gnatwhy3.transformations.eliminate_epsilon": 1.33279999718070E-02,
+    "globals (basic)": 1.40000003739260E-04,
+    "gnatwhy3.schedule_vcs": 6.05600001290441E-03,
+    "gnatwhy3.transformations.prepare_for_counterexmp": 5.41500002145767E-03,
+    "gnatwhy3.save_session": 1.03580001741648E-02,
+    "gnatwhy3.transformations.eliminate_inductive": 9.29400045424700E-03,
+    "gnatwhy3.transformations.split_premise_right": 1.27109996974468E-02,
+    "gnatwhy3.transformations.encoding_smt_if_poly": 1.89999991562217E-05,
+    "gnatwhy3.transformations.eliminate_unused_hypo": 1.10539998859167E-02,
+    "gnatwhy3.transformations.eliminate_builtin": 1.16349998861551E-02,
+    "gnatwhy3.transformations.discriminate_if_poly": 3.99999989895150E-05,
+    "gnatwhy3.init": 5.92316985130310E-01,
+    "gnatwhy3.transformations.introduce_premises": 2.88000004366040E-03
+  }
+}

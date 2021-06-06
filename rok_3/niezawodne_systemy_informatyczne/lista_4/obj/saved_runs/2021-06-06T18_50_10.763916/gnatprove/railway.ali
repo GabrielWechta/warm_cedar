@@ -1,0 +1,100 @@
+V "GNAT Lib v2020"
+A -x
+A ada
+A -gnatA
+A -gnatc
+P GP FX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+
+U railway%b		railway.adb		884c4fc4 OO PK
+
+U railway%s		railway.ads		574c7265 OO PK
+
+D railway.ads		20210606165006 574c7265 railway%s
+D railway.adb		20210606164917 df003da1 railway%b
+D system.ads		20200228061809 4635ec04 system%s
+G a Z
+X 1 railway.ads
+1K9*Railway 83l5 83e12 2|1b14 190l5 190t12
+3E9*One_Signal_State 3e41 33r25
+3n30*Red{3E9} 59r36 61r36 63r37 65r37 2|113r38 125r39 155r39 167r38
+3n35*Green{3E9} 37r51 42r36 45r36 48r37 51r37 2|28r38 39r39 65r39 76r38
+5E9*Route_Type 12e41 67r37 75r37 2|11r37 94r37
+5n24*Route_Left_Middle{5E9} 2|23r21 109r21
+6n24*Route_Middle_Right{5E9} 2|33r21 121r21
+7n24*Route_Right_Middle{5E9} 2|59r21 151r21
+8n24*Route_Middle_Left{5E9} 2|70r21 163r21
+9n24*Route_Enter_Left{5E9} 2|16r18 100r18
+10n24*Route_Leave_Right{5E9} 2|44r21 133r21
+11n24*Route_Enter_Right{5E9} 2|52r21 142r21
+12n24*Route_Leave_Left{5E9} 2|81r21 175r21
+14E9*One_Segment_State 19e36 25r18
+14n31*Occupied_Standing{14E9} 2|23r64 34r32 45r31 60r31 71r32 82r30 103r32
+. 115r34 127r33 145r33 157r34 169r32
+15n31*Occupied_Moving_Left{14E9} 46r32 52r31 2|63r33 74r34 84r32 152r31 164r32
+. 176r30
+16n31*Occupied_Moving_Right{14E9} 43r30 49r32 2|26r32 37r34 47r33 110r30
+. 122r32 134r31
+17n31*Reserved_Moving_From_Left{14E9} 44r32 50r31 60r33 64r32 2|18r32 27r34
+. 38r33 101r30 111r32 123r31
+18n31*Reserved_Moving_From_Right{14E9} 47r30 53r32 58r31 62r33 2|54r33 64r34
+. 75r32 143r31 153r32 165r30
+19n31*Free{14E9} 36r53 2|16r60 24r36 35r31 52r65 61r32 72r30 114r32 126r34
+. 136r33 156r33 168r34 178r32
+21R9*Segment_State_Type 26e17 36r20
+23e10*Left{14E9} 43r23 47r23 58r23 2|16r53 18m24 23r57 26m24 72r23 75m24
+. 82r23 84m24 101r23 103m24 110r23 114m24 165r23 169m24 176r23 178m24
+24e10*Middle{14E9} 44r23 46r23 49r23 53r23 60r23 62r23 2|24r27 27m24 34r23
+. 37m24 61r23 64m24 71r23 74m24 111r23 115m24 122r23 126m24 153r23 157m24
+. 164r23 168m24
+25e10*Right{14E9} 50r23 52r23 64r23 2|35r23 38m24 45r23 47m24 52r57 54m24
+. 60r23 63m24 123r23 127m24 134r23 136m24 143r23 145m24 152r23 156m24
+28R9*Signal_State_Type 34e17 37r19
+30e10*Left_Middle{3E9} 42r22 61r22 2|28m23 113m23
+31e10*Middle_Left{3E9} 45r22 59r22 2|76m23 167m23
+32e10*Middle_Right{3E9} 48r22 65r22 2|39m23 125m23
+33e10*Right_Middle{3E9} 51r22 63r22 2|65m23 155m23
+36r4*Segment_State{21R9} 43r9 44r9 46r9 47r9 49r9 50r9 52r9 53r9 58r9 60r9
+. 62r9 64r9 70r26 71r17 71r52 72r45 78r26 79r17 79r52 80r45 2|16r39 18m10
+. 23r43 24r13 26m10 27m10 34r9 35r9 37m10 38m10 45r9 47m10 52r43 54m10 60r9
+. 61r9 63m10 64m10 71r9 72r9 74m10 75m10 82r9 84m10 101r9 103m10 110r9 111r9
+. 114m10 115m10 122r9 123r9 126m10 127m10 134r9 136m10 143r9 145m10 152r9
+. 153r9 156m10 157m10 164r9 165r9 168m10 169m10 176r9 178m10
+37r4*Signal_State{28R9} 42r9 45r9 48r9 51r9 59r9 61r9 63r9 65r9 70r41 72r16
+. 72r67 78r41 80r16 80r67 2|28m10 39m10 65m10 76m10 113m10 125m10 155m10
+. 167m10
+39V13*Correct_Signals{boolean} 69s11 73s12 77s11 81s12
+55V13*Correct_Segments{boolean} 69s31 73s32 77s31 81s32
+67U14*Open_Route 67>26 67<49 2|11b14 92l8 92t18
+67e26 Route{5E9} 71r45 72r60 2|11b26 16r10 23r13 33r13 44r13 52r13 59r13
+. 70r13 81r13
+67b49 Success{boolean} 71r32 2|11b49 19m10 29m10 40m10 48m10 55m10 66m10
+. 77m10 85m10 90m10
+75U14*Move_Train 75>26 75<49 2|94b14 187l8 187t18
+75e26 Route{5E9} 79r45 80r60 2|94b26 100r10 109r13 121r13 133r13 142r13 151r13
+. 163r13 175r13
+75b49 Success{boolean} 79r32 2|94b49 104m10 116m10 128m10 137m10 146m10 158m10
+. 170m10 179m10 184m10
+
+QQ SPARKVERSION SPARK Community 2020 (20200429)
+GG EK_DIRECT_CALLS railway__correct_signals 0
+GG EK_GLOBALS railway__correct_signals local FALSE E_FUNCTION FALSE ORIGIN_FLOW 1 railway proper_proof_in 0 proper_input 2 railway__segment_state railway__signal_state proper_output 0 refined_proof_in 0 refined_input 2 railway__segment_state railway__signal_state refined_output 0 calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 2 railway__segment_state railway__signal_state LOCKS 0
+GG EK_DIRECT_CALLS railway__correct_segments 0
+GG EK_GLOBALS railway__correct_segments local FALSE E_FUNCTION FALSE ORIGIN_FLOW 1 railway proper_proof_in 0 proper_input 2 railway__segment_state railway__signal_state proper_output 0 refined_proof_in 0 refined_input 2 railway__segment_state railway__signal_state refined_output 0 calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 2 railway__segment_state railway__signal_state LOCKS 0
+GG EK_DIRECT_CALLS railway__open_route 2 railway__correct_signals railway__correct_segments
+GG EK_GLOBALS railway__open_route local FALSE E_PROCEDURE FALSE ORIGIN_FLOW 1 railway proper_proof_in 0 proper_input 2 railway__segment_state railway__signal_state proper_output 2 railway__segment_state railway__signal_state refined_proof_in 0 refined_input 2 railway__segment_state railway__signal_state refined_output 2 railway__segment_state railway__signal_state calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 2 railway__segment_state railway__signal_state LOCKS 0
+GG EK_DIRECT_CALLS railway__move_train 2 railway__correct_signals railway__correct_segments
+GG EK_GLOBALS railway__move_train local FALSE E_PROCEDURE FALSE ORIGIN_FLOW 1 railway proper_proof_in 0 proper_input 2 railway__segment_state railway__signal_state proper_output 2 railway__segment_state railway__signal_state refined_proof_in 0 refined_input 2 railway__segment_state railway__signal_state refined_output 2 railway__segment_state railway__signal_state calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 2 railway__segment_state railway__signal_state LOCKS 0
+GG EK_DIRECT_CALLS railway 0
+GG EK_GLOBALS railway local FALSE E_PACKAGE TRUE ORIGIN_FLOW 0 proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 initializes 2 railway__segment_state railway__signal_state calls_proof 0 calls 0 calls_conditional 0 local_var 2 railway__segment_state railway__signal_state FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_FLOW_SCOPE railway__correct_signals FALSE FALSE FALSE FALSE TRUE railway VISIBLE_PART
+GG EK_FLOW_SCOPE railway__correct_segments FALSE FALSE FALSE FALSE TRUE railway VISIBLE_PART
+GG EK_FLOW_SCOPE railway__open_route FALSE FALSE FALSE FALSE TRUE railway VISIBLE_PART
+GG EK_FLOW_SCOPE railway TRUE FALSE FALSE FALSE FALSE __standard
+GG EK_FLOW_SCOPE railway__move_train FALSE FALSE FALSE FALSE TRUE railway VISIBLE_PART
+GG EK_END_MARKER

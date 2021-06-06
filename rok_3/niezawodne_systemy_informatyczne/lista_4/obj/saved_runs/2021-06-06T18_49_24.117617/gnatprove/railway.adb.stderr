@@ -1,0 +1,2 @@
+railway.ads:72:12: medium: postcondition might fail, cannot prove (Correct_Signals) (e.g. when Segment_State = (Left => Reserved_Moving_From_Left, Middle => Free, Right => Free) and Signal_State = (Left_Middle => Red, Middle_Left => Red, Middle_Right => Red, Right_Middle => Red))[#0]
+railway.ads:79:12: medium: postcondition might fail, cannot prove (Correct_Signals)[#1]

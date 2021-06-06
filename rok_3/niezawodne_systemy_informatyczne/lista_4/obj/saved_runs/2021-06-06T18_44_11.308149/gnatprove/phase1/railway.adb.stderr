@@ -1,0 +1,4 @@
+railway.adb:16:32: "Reserverd_Moving_From_Left" is undefined (more references follow)
+railway.adb:16:32: possible misspelling of "Reserved_Moving_From_Left"
+railway.adb:40:33: "Reserverd_Moving_From_Right" is undefined (more references follow)
+railway.adb:40:33: possible misspelling of "Reserved_Moving_From_Right"

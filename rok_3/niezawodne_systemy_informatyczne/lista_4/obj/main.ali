@@ -1,0 +1,69 @@
+V "GNAT Lib v2020"
+M P W=b
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_IO
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U main%b		main.adb		829d4040 NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W railway%s		railway.adb		railway.ali
+Z system.concat_2%s	s-conca2.adb		s-conca2.ali
+Z system.img_bool%s	s-imgboo.adb		s-imgboo.ali
+
+D ada.ads		20200228061809 76789da1 ada%s
+D a-except.ads		20200228061809 a7106115 ada.exceptions%s
+D a-ioexce.ads		20200228061809 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20200228061809 119b8fb3 ada.streams%s
+D a-tags.ads		20200228061809 edddc8f0 ada.tags%s
+D a-textio.ads		20200228061809 aef4d56d ada.text_io%s
+D a-unccon.ads		20200228061809 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20210525120613 5ab55268 interfaces%s
+D i-cstrea.ads		20200228061809 e53d8b8e interfaces.c_streams%s
+D main.adb		20210606165906 7b25e748 main%b
+D railway.ads		20210606165026 574c7265 railway%s
+D system.ads		20200228061809 4635ec04 system%s
+D s-conca2.ads		20200228061809 02a0d7d0 system.concat_2%s
+D s-crtl.ads		20200228061809 0ebbdb71 system.crtl%s
+D s-exctab.ads		20200228061809 54135002 system.exception_table%s
+D s-ficobl.ads		20200228061809 078245e4 system.file_control_block%s
+D s-imgboo.ads		20200228061809 f5d971eb system.img_bool%s
+D s-parame.ads		20200228061809 4752c4cb system.parameters%s
+D s-secsta.ads		20200327060539 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20200228061809 a7318a92 system.soft_links%s
+D s-stache.ads		20200228061809 a37c21ec system.stack_checking%s
+D s-stalib.ads		20200228061809 6b7a13f2 system.standard_library%s
+D s-stoele.ads		20200228061809 2dc34a04 system.storage_elements%s
+D s-traent.ads		20200228061809 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20200319060539 5ecf7212 system.unsigned_types%s
+D s-wchcon.ads		20200228061809 1b7d22d2 system.wch_con%s
+G a e
+G c Z b b [main standard 4 11 none]
+G r c none [main standard 4 11 none] [open_route railway 67 14 none]
+G r c none [main standard 4 11 none] [move_train railway 75 14 none]
+X 1 ada.ads
+16K9*Ada 20e8 10|1r6 1r23
+X 6 a-textio.ads
+57K13*Text_IO 727e16 10|1w10 1r27
+508U14*Put_Line 10|8s4 10s4 13s4 15s4 18s4 20s4 23s4 25s4 27s4 30s4 32s4
+. 35s4 37s4
+X 10 main.adb
+4U11*Main 4b11 40l5 40t9
+5b4 Success{boolean} 7m34 8r38 9m34 10r38 12m35 13r38 14m35 15r38 17m36 18r38
+. 19m36 20r38 22m35 23r38 24m35 25r38 29m34 30r38 31m34 32r38 34m36 35r38
+. 36m36 37r38
+X 11 railway.ads
+1K9*Railway 10|2w6 2r19 11|83e12
+5n24*Route_Left_Middle{5E9} 10|12r16 14r16
+6n24*Route_Middle_Right{5E9} 10|17r16 19r16 34r16 36r16
+9n24*Route_Enter_Left{5E9} 10|7r16 9r16 29r16 31r16
+10n24*Route_Leave_Right{5E9} 10|22r16 24r16
+67U14*Open_Route 10|7s4 12s4 17s4 22s4 29s4 34s4
+75U14*Move_Train 10|9s4 14s4 19s4 24s4 31s4 36s4
+

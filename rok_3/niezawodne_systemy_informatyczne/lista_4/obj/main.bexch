@@ -1,0 +1,20 @@
+[GENERATED OBJECT FILE]
+b__main.o
+[PROJECT FILES]
+/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_4/rails.gpr
+20210606161305 4d4e66f8cb28c5709407aa815d195a91
+[BOUND OBJECT FILES]
+/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_4/obj/railway.o
+/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_4/obj/main.o
+[GENERATED SOURCE FILES]
+b__main.ads
+b__main.adb
+b__main.ali
+[RESULTING OPTIONS]
+-L/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_4/obj/
+-L/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_4/obj/
+-L/home/gabriel/opt/GNAT/2020/lib/gcc/x86_64-pc-linux-gnu/9.3.1/adalib/
+-static
+-static-libgcc
+/home/gabriel/opt/GNAT/2020/lib/gcc/x86_64-pc-linux-gnu/9.3.1/adalib/libgnat.a
+-ldl
