@@ -28,6 +28,14 @@ ARCHITECTURE behavior OF lossy_channel_tb IS
       );
    END COMPONENT;
 
+   COMPONENT decoder
+      PORT (
+         clk : IN STD_LOGIC;
+         lossiedIn : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+         decoded : OUT STD_LOGIC_VECTOR(15 DOWNTO 0) := (OTHERS => '0')
+      );
+   END COMPONENT;
+
    CONSTANT WIDTH : POSITIVE := 16;
    CONSTANT ASCII_WIDTH : POSITIVE := 8;
    SIGNAL clk : STD_LOGIC := '0';
@@ -36,6 +44,8 @@ ARCHITECTURE behavior OF lossy_channel_tb IS
 
    SIGNAL coded_in : STD_LOGIC_VECTOR(WIDTH - 1 DOWNTO 0) := (OTHERS => '0');
    SIGNAL coded_out : STD_LOGIC_VECTOR(WIDTH - 1 DOWNTO 0) := (OTHERS => '0');
+   SIGNAL lossied_out : STD_LOGIC_VECTOR(WIDTH - 1 DOWNTO 0) := (OTHERS => '0');
+   SIGNAL lossied_in : STD_LOGIC_VECTOR(WIDTH - 1 DOWNTO 0) := (OTHERS => '0');
 
    SIGNAL data_out : STD_LOGIC_VECTOR(WIDTH - 1 DOWNTO 0);
 
@@ -55,7 +65,14 @@ BEGIN
    PORT MAP(
       data_in => coded_in,
       clk => clk,
-      data_out => data_out
+      data_out => lossied_out
+   );
+
+   uut_decoder : decoder
+   PORT MAP(
+      clk => clk,
+      lossiedIn => lossied_in,
+      decoded => data_out
    );
 
    clk_process : PROCESS
@@ -68,7 +85,6 @@ BEGIN
 
    stim_proc : PROCESS IS
       VARIABLE my_line : line;
-
    BEGIN
       WAIT FOR 100 ns;
 
@@ -88,6 +104,13 @@ BEGIN
             writeline(output, my_line);
 
             coded_in <= coded_out;
+
+            WAIT FOR clk_period;
+
+            write(my_line, lossied_out);
+            writeline(output, my_line);
+
+            lossied_in <= lossied_out;
 
             WAIT FOR clk_period;
 
