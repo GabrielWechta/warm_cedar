@@ -1,0 +1,23 @@
+[*]
+[*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
+[*] Fri May 28 17:10:36 2021
+[*]
+[dumpfile] "/home/gabriel/Desktop/warm_cedar/rok_3/systemy_wbudowane/vhdl/lista_5/new.ghw"
+[dumpfile_mtime] "Fri May 28 17:09:59 2021"
+[dumpfile_size] 175000429
+[savefile] "/home/gabriel/Desktop/warm_cedar/rok_3/systemy_wbudowane/vhdl/lista_5/wave_100Hz.gtkw"
+[timestart] 0
+[size] 1860 1016
+[pos] -1 -1
+*-41.709980 1380000000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.clock_div_tb.
+[sst_width] 233
+[signals_width] 86
+[sst_expanded] 1
+[sst_vpaned_height] 289
+@28
+top.clock_div_tb.clk_in
+top.clock_div_tb.clk_out
+[pattern_trace] 1
+[pattern_trace] 0

@@ -1,0 +1,13 @@
+v 4
+file . "encoder.vhd" "539c48c8daf4f0ba690bbf4afa69e371cee0f798" "20210606113036.459":
+  entity encoder at 1( 0) + 0 on 359;
+  architecture behavioral of encoder at 15( 306) + 0 on 360;
+file . "lfsr.vhd" "9d21907d18121a13d1be7a488878062a48e3dd83" "20210606113036.450":
+  entity lfsr at 1( 0) + 0 on 353;
+  architecture behavioral of lfsr at 11( 171) + 0 on 354;
+file . "lossy_channel_tb.vhd" "c3afdcbf07ee3d0142314e48b87034c97fcb709f" "20210606113036.455":
+  entity lossy_channel_tb at 2( 1) + 0 on 355;
+  architecture behavior of lossy_channel_tb at 12( 185) + 0 on 356;
+file . "lossy_channel.vhd" "e1f7cda13d8a357401c251bfb532e0d28a71dc6f" "20210606113036.457":
+  entity lossy_channel at 6( 209) + 0 on 357;
+  architecture behavioral of lossy_channel at 18( 486) + 0 on 358;
