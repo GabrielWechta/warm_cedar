@@ -11,7 +11,7 @@ RV NO_IO
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 
-U main%b		main.adb		075083dc OO SU
+U main%b		main.adb		5fddd69f OO SU
 W ada%s			ada.ads			ada.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W railway%s		railway.adb		railway.ali
@@ -23,7 +23,7 @@ D a-stream.ads		20200228061809 119b8fb3 ada.streams%s
 D a-textio.ads		20200228061809 aef4d56d ada.text_io%s
 D interfac.ads		20200228061809 5ab55268 interfaces%s
 D i-cstrea.ads		20200228061809 e53d8b8e interfaces.c_streams%s
-D main.adb		20210606163752 fee824d4 main%b
+D main.adb		20210609113411 a6657197 main%b
 D railway.ads		20210606165026 574c7265 railway%s
 D system.ads		20200228061809 4635ec04 system%s
 D s-crtl.ads		20200228061809 0ebbdb71 system.crtl%s
@@ -35,20 +35,21 @@ X 1 ada.ads
 16K9*Ada 20e8 7|1r6 1r23
 X 4 a-textio.ads
 57K13*Text_IO 727e16 7|1w10 1r27
-508U14*Put_Line 7|7s4 8s4 10s4 12s4 13s4 14s4 16s4 17s4 19s4 21s4 22s4 23s4
-. 25s4 26s4 28s4 30s4 31s4 32s4 34s4 35s4 37s4 39s4 40s4 41s4
+508U14*Put_Line 7|8s4 10s4 13s4 15s4 18s4 20s4 23s4 25s4 27s4 30s4 32s4 35s4
+. 37s4
 X 7 main.adb
-4U11*Main 4b11 43l5 43t9
-5b4 Success{boolean} 9m34 10r38 11m34 12r38 18m35 19r38 20m35 21r38 27m36
-. 28r38 29m36 30r38 36m35 37r38 38m35 39r38
+4U11*Main 4b11 40l5 40t9
+5b4 Success{boolean} 7m34 8r38 9m34 10r38 12m35 13r38 14m35 15r38 17m36 18r38
+. 19m36 20r38 22m35 23r38 24m35 25r38 29m34 30r38 31m34 32r38 34m36 35r38
+. 36m35 37r38
 X 8 railway.ads
 1K9*Railway 7|2w6 2r19 8|83e12
-5n24*Route_Left_Middle{5E9} 7|18r16 20r16
-6n24*Route_Middle_Right{5E9} 7|27r16 29r16
-9n24*Route_Enter_Left{5E9} 7|9r16 11r16
-10n24*Route_Leave_Right{5E9} 7|36r16 38r16
-67U14*Open_Route 7|9s4 18s4 27s4 36s4
-75U14*Move_Train 7|11s4 20s4 29s4 38s4
+5n24*Route_Left_Middle{5E9} 7|12r16 14r16 36r16
+6n24*Route_Middle_Right{5E9} 7|17r16 19r16 34r16
+9n24*Route_Enter_Left{5E9} 7|7r16 9r16 29r16 31r16
+10n24*Route_Leave_Right{5E9} 7|22r16 24r16
+67U14*Open_Route 7|7s4 12s4 17s4 22s4 29s4 34s4
+75U14*Move_Train 7|9s4 14s4 19s4 24s4 31s4 36s4
 
 QQ SPARKVERSION SPARK Community 2020 (20200429)
 GG EK_DIRECT_CALLS main 0
@@ -151,8 +152,8 @@ GG EK_FLOW_SCOPE ada___ada__text_io__set_page_length FALSE FALSE FALSE FALSE TRU
 GG EK_FLOW_SCOPE ada___ada__text_io__page__2 FALSE FALSE FALSE FALSE TRUE ada___ada__text_io VISIBLE_PART
 GG EK_FLOW_SCOPE ada___system__crtl__tmpnam FALSE FALSE FALSE FALSE TRUE ada___system__crtl VISIBLE_PART
 GG EK_FLOW_SCOPE ada___ada__text_io__close FALSE FALSE FALSE FALSE TRUE ada___ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE ada___system__crtl__clearerr FALSE FALSE FALSE FALSE TRUE ada___system__crtl VISIBLE_PART
 GG EK_FLOW_SCOPE ada___ada__text_io__standard_input FALSE FALSE FALSE FALSE TRUE ada___ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ada___system__crtl__clearerr FALSE FALSE FALSE FALSE TRUE ada___system__crtl VISIBLE_PART
 GG EK_FLOW_SCOPE ada___ada__text_io__get_line__2 FALSE FALSE FALSE FALSE TRUE ada___ada__text_io VISIBLE_PART
 GG EK_FLOW_SCOPE ada___ada__text_io__get_immediate__3 FALSE FALSE FALSE FALSE TRUE ada___ada__text_io VISIBLE_PART
 GG EK_FLOW_SCOPE ada___ada__text_io__get FALSE FALSE FALSE FALSE TRUE ada___ada__text_io VISIBLE_PART
@@ -242,9 +243,9 @@ GG EK_FLOW_SCOPE ada___ada__streams TRUE FALSE FALSE FALSE FALSE ada
 GG EK_FLOW_SCOPE ada___ada__text_io__page_length__2 FALSE FALSE FALSE FALSE TRUE ada___ada__text_io VISIBLE_PART
 GG EK_FLOW_SCOPE ada___ada__text_io__put_line__2 FALSE FALSE FALSE FALSE TRUE ada___ada__text_io VISIBLE_PART
 GG EK_FLOW_SCOPE ada___ada__text_io__create FALSE FALSE FALSE FALSE TRUE ada___ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE main FALSE FALSE FALSE FALSE FALSE __standard
 GG EK_FLOW_SCOPE ada___interfaces__c_streams__set_mode FALSE FALSE FALSE FALSE TRUE ada___interfaces__c_streams VISIBLE_PART
 GG EK_FLOW_SCOPE ada___ada__text_io__set_line__2 FALSE FALSE FALSE FALSE TRUE ada___ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE main FALSE FALSE FALSE FALSE FALSE __standard
 GG EK_FLOW_SCOPE ada___system__crtl__fgets FALSE FALSE FALSE FALSE TRUE ada___system__crtl VISIBLE_PART
 GG EK_FLOW_SCOPE ada___ada__text_io__put__3 FALSE FALSE FALSE FALSE TRUE ada___ada__text_io VISIBLE_PART
 GG EK_FLOW_SCOPE ada___ada__text_io__afcb_allocate__2 FALSE FALSE FALSE FALSE TRUE ada___ada__text_io PRIVATE_PART

@@ -31,7 +31,7 @@ begin
    Move_Train (Route_Enter_Left, Success);
    Put_Line ("Move train result: " & Success'Image);
 
-   Open_Route (Route_Middle_Right, Success);
+   Open_Route (Route_Left_Middle, Success);
    Put_Line ("Open route result: " & Success'Image);
    Move_Train (Route_Middle_Right, Success);
    Put_Line ("Move train result: " & Success'Image);

@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <Locations >
-  <Project>
-    <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_4/rails.gpr</vfs_file>
+  <Project >
     <file_marker column=" 1" line=" 1" >
       <vfs_project>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_4/rails.gpr</vfs_project>
       <vfs_file>/home/gabriel/Desktop/warm_cedar/rok_3/niezawodne_systemy_informatyczne/lista_4/src/main.adb</vfs_file>

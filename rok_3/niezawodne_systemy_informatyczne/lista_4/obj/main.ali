@@ -10,7 +10,7 @@ RV NO_IO
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U main%b		main.adb		829d4040 NE OO SU
+U main%b		main.adb		db12b235 NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W railway%s		railway.adb		railway.ali
@@ -26,7 +26,7 @@ D a-textio.ads		20200228061809 aef4d56d ada.text_io%s
 D a-unccon.ads		20200228061809 0e9b276f ada.unchecked_conversion%s
 D interfac.ads		20210525120613 5ab55268 interfaces%s
 D i-cstrea.ads		20200228061809 e53d8b8e interfaces.c_streams%s
-D main.adb		20210606165906 7b25e748 main%b
+D main.adb		20210609114752 22aa153d main%b
 D railway.ads		20210606165026 574c7265 railway%s
 D system.ads		20200228061809 4635ec04 system%s
 D s-conca2.ads		20200228061809 02a0d7d0 system.concat_2%s
@@ -56,12 +56,12 @@ X 6 a-textio.ads
 X 10 main.adb
 4U11*Main 4b11 40l5 40t9
 5b4 Success{boolean} 7m34 8r38 9m34 10r38 12m35 13r38 14m35 15r38 17m36 18r38
-. 19m36 20r38 22m35 23r38 24m35 25r38 29m34 30r38 31m34 32r38 34m36 35r38
+. 19m36 20r38 22m35 23r38 24m35 25r38 29m34 30r38 31m34 32r38 34m35 35r38
 . 36m36 37r38
 X 11 railway.ads
 1K9*Railway 10|2w6 2r19 11|83e12
-5n24*Route_Left_Middle{5E9} 10|12r16 14r16
-6n24*Route_Middle_Right{5E9} 10|17r16 19r16 34r16 36r16
+5n24*Route_Left_Middle{5E9} 10|12r16 14r16 34r16
+6n24*Route_Middle_Right{5E9} 10|17r16 19r16 36r16
 9n24*Route_Enter_Left{5E9} 10|7r16 9r16 29r16 31r16
 10n24*Route_Leave_Right{5E9} 10|22r16 24r16
 67U14*Open_Route 10|7s4 12s4 17s4 22s4 29s4 34s4
