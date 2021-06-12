@@ -1,18 +1,15 @@
 V "GNAT Lib v2020"
 M P W=b
-P SS ZX
+P ZX
 
 RN
 RV NO_IO
-RV NO_SECONDARY_STACK
 
-U main%b		main.adb		7d868b74 NE OO SU
+U main%b		main.adb		66cb9a98 NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.command_line%s	a-comlin.adb		a-comlin.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W graph%s		graph.adb		graph.ali
-Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
-Z system.val_int%s	s-valint.adb		s-valint.ali
 
 D ada.ads		20200228061809 76789da1 ada%s
 D a-comlin.ads		20200228061809 4aa66568 ada.command_line%s
@@ -22,10 +19,10 @@ D a-stream.ads		20200228061809 119b8fb3 ada.streams%s
 D a-tags.ads		20200228061809 edddc8f0 ada.tags%s
 D a-textio.ads		20200228061809 aef4d56d ada.text_io%s
 D a-unccon.ads		20200228061809 0e9b276f ada.unchecked_conversion%s
-D graph.ads		20210521092135 35e69c25 graph%s
-D interfac.ads		20200228061809 5ab55268 interfaces%s
+D graph.ads		20210611114712 7830270c graph%s
+D interfac.ads		20210525120613 5ab55268 interfaces%s
 D i-cstrea.ads		20200228061809 e53d8b8e interfaces.c_streams%s
-D main.adb		20210522102246 ac32a754 main%b
+D main.adb		20210611153514 faa90d91 main%b
 D system.ads		20200228061809 4635ec04 system%s
 D s-crtl.ads		20200228061809 0ebbdb71 system.crtl%s
 D s-exctab.ads		20200228061809 54135002 system.exception_table%s
@@ -38,24 +35,23 @@ D s-stalib.ads		20200228061809 6b7a13f2 system.standard_library%s
 D s-stoele.ads		20200228061809 2dc34a04 system.storage_elements%s
 D s-traent.ads		20200228061809 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20200319060539 5ecf7212 system.unsigned_types%s
-D s-valint.ads		20200228061809 b5ff6963 system.val_int%s
 D s-wchcon.ads		20200228061809 1b7d22d2 system.wch_con%s
 G a e
 G c Z b b [main standard 6 11 none]
-G r c none [main standard 6 11 none] [simulate graph 3 17 none]
+G r c none [main standard 6 11 none] [simulate graph 3 14 none]
 X 1 ada.ads
-16K9*Ada 20e8 12|3r6 3r28 4r6 17r4
+16K9*Ada 20e8 12|3r6 3r28 4r6 20r4
 X 2 a-comlin.ads
 36K13*Command_Line 144e21 12|3w10 3r32
-52V13*Argument{string} 12|10s24 11s24
 X 7 a-textio.ads
-57K13*Text_IO 727e16 12|4w10 17r8
-264U14*New_Line 12|17s16
+57K13*Text_IO 727e16 12|4w10 20r8
+264U14*New_Line 12|20s16
 X 9 graph.ads
-1K9*graph 5e10 12|1w6 2r5 16r4
-3U17*Simulate 12|16s10
+1K9*graph 5e10 12|1w6 2r5 19r4
+3U14*Simulate 12|19s10
 X 12 main.adb
-6U11*Main 6b11 18l5 18t9
-7i4 N{integer} 10m4 16r19
-7i7 D{integer} 11m4 16r22
+6U11*Main 6b11 21l5 21t9
+7i4 N{integer} 15m4 19r20
+7i7 D{integer} 16m4 19r23
+7i10 H{integer} 17m4 19r26
 

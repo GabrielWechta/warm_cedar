@@ -3,10 +3,12 @@ P SS ZX
 
 RN
 RV SIMPLE_BARRIERS
+RV PURE_BARRIERS
 RV NO_ALLOCATORS
 RV NO_ANONYMOUS_ALLOCATORS
 RV NO_DELAY
 RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_DISPATCHING_CALLS
 RV NO_EXCEPTION_HANDLERS
 RV NO_EXCEPTION_PROPAGATION
 RV NO_EXCEPTIONS
@@ -25,29 +27,39 @@ RV NO_TASK_ALLOCATORS
 RV NO_TASK_HIERARCHY
 RV NO_TASKING
 RV NO_TERMINATE_ALTERNATIVES
+RV STATIC_PRIORITIES
 RV NO_DEFAULT_INITIALIZATION
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_IMPLICIT_LOOPS
+RV STATIC_DISPATCH_TABLES
 RV MAX_PROTECTED_ENTRIES=3
-RV MAX_SELECT_ALTERNATIVES=4
+RV MAX_SELECT_ALTERNATIVES=2
 RV MAX_TASK_ENTRIES=2
 RV MAX_TASKS=1+
 RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U graph%b		graph.adb		a6c60b64 NE OO PK IL
+U graph%b		graph.adb		02218aaa NE OO PK IL
 W ada%s			ada.ads			ada.ali
+W ada.containers%s	a-contai.ads		a-contai.ali
+W ada.containers.synchronized_queue_interfaces%s
+W ada.containers.unbounded_synchronized_queues%s
 Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.finalization%s	a-finali.ads		a-finali.ali
 W ada.numerics%s	a-numeri.ads		a-numeri.ali
 W ada.numerics.discrete_random%s
 W ada.numerics.float_random%s  a-nuflra.adb	a-nuflra.ali
 Z ada.real_time%s	a-reatim.adb		a-reatim.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
+Z ada.unchecked_deallocation%s
 W system%s		system.ads		system.ali
+Z system.address_image%s  s-addima.adb		s-addima.ali
 Z system.concat_2%s	s-conca2.adb		s-conca2.ali
 Z system.concat_3%s	s-conca3.adb		s-conca3.ali
+Z system.concat_5%s	s-conca5.adb		s-conca5.ali
 Z system.concat_8%s	s-conca8.adb		s-conca8.ali
+Z system.concat_9%s	s-conca9.adb		s-conca9.ali
 Z system.finalization_masters%s  s-finmas.adb	s-finmas.ali
 Z system.img_bool%s	s-imgboo.adb		s-imgboo.ali
 Z system.img_int%s	s-imgint.adb		s-imgint.ali
@@ -65,9 +77,13 @@ Z system.tasking.protected_objects.operations%s  s-tpobop.adb  s-tpobop.ali
 Z system.tasking.rendezvous%s  s-tasren.adb	s-tasren.ali
 Z system.tasking.stages%s  s-tassta.adb		s-tassta.ali
 
-U graph%s		graph.ads		35e69c25 EE NE OO PK IL
+U graph%s		graph.ads		7830270c EE NE OO PK IL
 
 D ada.ads		20200228061809 76789da1 ada%s
+D a-contai.ads		20200228061809 61e5e089 ada.containers%s
+D a-csquin.ads		20200228061809 8c71856d ada.containers.synchronized_queue_interfaces%s
+D a-cusyqu.ads		20200228061809 c768ec18 ada.containers.unbounded_synchronized_queues%s
+D a-cusyqu.adb		20200228061809 bdf5fca2 ada.containers.unbounded_synchronized_queues%b
 D a-except.ads		20200228061809 a7106115 ada.exceptions%s
 D a-finali.ads		20200228061809 bf4f806b ada.finalization%s
 D a-ioexce.ads		20200228061809 e4a01f64 ada.io_exceptions%s
@@ -80,16 +96,20 @@ D a-stream.ads		20200228061809 119b8fb3 ada.streams%s
 D a-tags.ads		20200228061809 edddc8f0 ada.tags%s
 D a-textio.ads		20200228061809 aef4d56d ada.text_io%s
 D a-unccon.ads		20200228061809 0e9b276f ada.unchecked_conversion%s
-D graph.ads		20210521092135 35e69c25 graph%s
-D graph.adb		20210522102323 240636a5 graph%b
-D interfac.ads		20200228061809 5ab55268 interfaces%s
+D a-uncdea.ads		20200228061809 eff36322 ada.unchecked_deallocation%s
+D graph.ads		20210611114712 7830270c graph%s
+D graph.adb		20210611153640 862e6537 graph%b
+D interfac.ads		20210525120613 5ab55268 interfaces%s
 D i-c.ads		20200228061809 c624fa43 interfaces.c%s
 D i-cstrea.ads		20200228061809 e53d8b8e interfaces.c_streams%s
 D system.ads		20200228061809 4635ec04 system%s
+D s-addima.ads		20200228061809 a1ec9d3a system.address_image%s
 D s-atacco.ads		20200228061809 4c36d12f system.address_to_access_conversions%s
 D s-conca2.ads		20200228061809 02a0d7d0 system.concat_2%s
 D s-conca3.ads		20200228061809 0b705ca5 system.concat_3%s
+D s-conca5.ads		20200228061809 875e432e system.concat_5%s
 D s-conca8.ads		20200228061809 e3074dd7 system.concat_8%s
+D s-conca9.ads		20200228061809 dc4a3424 system.concat_9%s
 D s-crtl.ads		20200228061809 0ebbdb71 system.crtl%s
 D s-exctab.ads		20200228061809 54135002 system.exception_table%s
 D s-ficobl.ads		20200228061809 078245e4 system.file_control_block%s
@@ -114,6 +134,7 @@ D s-stausa.ads		20200228061809 017a0a05 system.stack_usage%s
 D s-stalib.ads		20200228061809 6b7a13f2 system.standard_library%s
 D s-stalib.adb		20200228061809 f2fe2716 system.standard_library%b
 D s-stoele.ads		20200228061809 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20200228061809 ed88f8fb system.storage_elements%b
 D s-stopoo.ads		20200313060446 e9fa2dd8 system.storage_pools%s
 D s-tasinf.ads		20200228061809 2b3f8252 system.task_info%s
 D s-taspri.ads		20200228061809 f40ac08d system.task_primitives%s
@@ -129,178 +150,286 @@ D s-unstyp.ads		20200319060539 5ecf7212 system.unsigned_types%s
 D s-valuns.ads		20200228061809 35067db9 system.val_uns%s
 D s-wchcon.ads		20200228061809 1b7d22d2 system.wch_con%s
 G a e
-G c Z s b [simulate graph 3 17 none]
+G c Z s b [simulate graph 3 14 none]
 X 1 ada.ads
-16K9*Ada 20e8 15|1r6 2r5 3r6 4r6 14r24 20r26 23r10 24r20
-X 5 a-numeri.ads
-16K13*Numerics 32e17 15|3r10 4r10 14r28 20r30 23r14 24r24
-X 6 a-nudira.ads
-44k22*Discrete_Random 81e33 15|3w19 14r37
-50R9 Generator<38|63R9> 15|17r11[14]
-52V13 Random{integer} 15|320s19[14] 321s20[14]
-61U14 Reset<38|100p14> 15|317s7[14]
-X 7 a-nudira.adb
-53V16 Random[38|83]{integer} 39|393b13[15|14]
-65V16 Random[38|83]{integer} 39|393b13[15|14]
-X 8 a-nuflra.ads
-41K22*Float_Random 74e30 15|4w19 20r39 23r23 24r33
-47R9*Generator<38|63R9> 15|20r52
+16K9*Ada 20e8 20|1r6 2r5 3r6 4r6 5r6 6r6 16r24 22r26 25r10 26r20 387r11 391r11
+X 2 a-contai.ads
+16K13*Containers 28e19 20|5r10 6r10 387r15 391r15
+X 3 a-csquin.ads
+35+9 Element_Type 20|388r8
+37k24*Synchronized_Queue_Interfaces 56e49 20|5w21 387r26
+X 4 a-cusyqu.ads
+39K17 Queue_Interfaces 20|392r8
+44k24*Unbounded_Synchronized_Queues 106e49 20|6w21 391r26
+88W19 Queue<3|40R9[20|386]> 20|394r82[390]
+94Y24 Enqueue 20|523s40[390]
+94r33 New_Item{20|130R12} 20|523r49[390]
+96Y24 Dequeue 20|547s40[390]
+96r33 Element{20|130R12} 20|547r49[390]
+X 9 a-numeri.ads
+16K13*Numerics 32e17 20|3r10 4r10 16r28 22r30 25r14 26r24
+X 10 a-nudira.ads
+44k22*Discrete_Random 81e33 20|3w19 16r37
+50R9 Generator<46|63R9> 20|19r19[16]
+52V13 Random{integer} 20|453s18[16] 572s23[16] 586s19[16] 587s20[16]
+61U14 Reset<46|100p14> 20|583s7[16]
+X 11 a-nudira.adb
+53V16 Random[46|83]{integer} 47|393b13[20|16]
+65V16 Random[46|83]{integer} 47|393b13[20|16]
+X 12 a-nuflra.ads
+41K22*Float_Random 74e30 20|4w19 22r39 25r23 26r33
+47R9*Generator<46|63R9> 20|22r52
 49F12*Uniformly_Distributed{float}
-51V13*Random{49F12}<38|71p13> 15|24s46
-53U14*Reset<38|100p14> 15|23s36
-X 12 a-textio.ads
-57K13*Text_IO 727e16 15|1w10 2r9
-264U14*New_Line 15|97s10 159s10 370s7
-465U14*Put 15|56s13 57s13 58s13 59s13 60s13 62s10 63s10 64s10 65s10 66s10
-. 72s13 91s16 92s16 95s10 96s10 142s16 334s10 337s16
-508U14*Put_Line 15|74s13 136s16 146s19 160s10 291s19 332s7 340s10 371s7 374s7
-X 14 graph.ads
-1K9*graph 5l5 5e10 15|5b14 391l5 391t10
-3U17*Simulate 3>26 3>41 15|7b14 389l8 389t16
-3i26 N{integer} 15|7b23 31r66 32r38 50r85 51r47 71r24 108r27 117r27 129r37
-. 154r22 186r25 220r47 224r32 279r40 280r29 311r21 312r44 313r44 320r33 321r34
-. 333r21 335r24 344r19 345r22 377r19 383r19
-3i41 D{integer} 15|7b38 319r37
-X 15 graph.adb
-9f7 MAX_SLEEP{float} 149r46
-12I15 Random_Range{integer} 14r54
-14K15 R[6|44] 15r11
-17r7 G{6|50R9[14]} 317r13 320r26 321r27
-19V16 Get_Task_Delay{duration} 19b16 26l11 26t25 290s25
-20r10 Second_G{8|47R9} 23r43 24r54
-21f10 Result{float} 24m10 25r27
-30A12 Boolean_Array(boolean)<integer> 31r49 36r73 279r23
-31A12 Matrix(30A12)<integer> 32r28
-32a7 Connections_Matrix{31A12} 38r24 312m10 313m10 323r33 325m13 326m13 336r16
-. 352r16
-34i7 Good_Shortcuts_Number{integer} 318m7 319r13 324m13 324r38
-34i30 Start{integer} 320m10 323r13 323r52 325r32 326r40
-34i37 Target{integer} 321m10 323r22 323r59 325r39 326r32
-36U17 SetUpNeighbours 36b17 36>33 36=54 39l11 39t26 283s10
-36i33 Task_Id{integer} 38r43
-36a54 Neighbours{30A12} 38m10
-43R12 Routing 47e17 49r62
-44i10 Next_Hop{integer} 57r37 63r40 213m41 348m37 353m37 358m40 361m40
-45i10 Cost{integer} 58r37 64r40 189r62 204r49 212m41 347m37 354m37 356m37
-46b10 Changed{boolean} 59r37 65r40 187r46 190m46 214m41 365m34
-49A12 Routing_Table_Type(43R12)<integer> 50r63 53r44
-50A12 Routing_Matrix_Type(49A12)<integer> 51r24
-51a7 Routing_Matrix{50A12} 73r33 187r19 189r35 190m19 204r21 212m13 213m13
-. 214m13 347m16 348m16 353m16 354m16 356m16 358m19 361m19 365m13
-53U17 Routing_Table_Print 53b17 53>37 67l11 67t30 73s13
-53a37 RT{49A12} 55r19 55r29 57r31 58r31 59r31 63r28 63r31 64r28 64r31 65r28
-. 65r31
-55i14 I{integer} 57r34 58r34 59r34
-69U17 PrintRoutingMatrix 69b17 76l11 76t29 161s10 372s7
-71i14 R{integer} 72r31 73r48
-80R12 Pair 83e17 85r53
-81i10 Id{integer} 91r48 95r50 188m27 192m27 271r24
-82i10 Cost{integer} 90r24 92r42 96r44 189m27 193m27 239r36 243r45
-85A12 Pack_Type(80R12)<integer> 87r37 113r41 123r59 129r24 138r66 168r45
-. 182r45 224r19 233r52 268r38 280r16
-87U17 Pack_Print 87b17 87>28 98l11 98t21 143s16
-87a28 Pack{85A12} 89r19 89r31 90r16 91r40 92r34 95r34 95r39 96r28 96r33
-89i14 I{integer} 90r21 91r45 92r39
-102T17 Sender_Thread 102d31 105l11 105e24 107r60 278b17 305l11 305t24 379r25
-102i31 Id{integer} 283r26 291r53 293r34 295r46 298r58
-103Y16 StartBaby 282b17 384s22
-104Y16 Join 155s25 287b26
-107A12 STAR_Type(102T17)<integer> 108r14
-108a7 STAR{107A12} 155r13 379m10 384r10
-110T17 Writer_Thread 110d31 114l11 114e24 116r60 223b17 264l11 264t24 380r25
-110i31 Id{integer} 242r37 245r58 246r58 249r40
-111Y16 StartBaby 229b17 385s22
-112Y16 Join 156s25 257b26
-113Y16 ReceiveAndWrite 113>32 113>52 233b26 236l23 236t38 298s36
-113a32 Pack{85A12} 234r33
-113i52 From_Who{integer} 235r39
-116A12 WTAR_Type(110T17)<integer> 117r14
-117a7 WTAR{116A12} 156r13 298r28 380m10 385r10
-121t12 Printer 127b17 162l11 162t18 245r25 295r22
-122Y16 LookingForChanges 122>34 133b23 135l20 135t37
-122i34 Node_Id{integer} 134r32
-123Y16 PrintingChanges 123>32 123>53 138b23 141l20 141t35 295s30
-123i32 Node_Id{integer} 139r32
-123a53 Pack{85A12} 140r35
-124Y16 WriteChange 124>28 124>49 124>72 124>94 145b23 147l20 147t31 245s33
-124i28 Node_Id{integer} 146r53 245r45
-124i49 Change_Id{integer} 146r92 246r45
-124i72 Next_Hop{integer} 146r139 247r45
-124i94 New_Cost{integer} 146r183 248r45
-128i10 Node_Prim{integer} 134m19 136r50 139m19 142r45
-129a10 Package_Prim{85A12} 140m19 143r27
-133i41 Node_Id{integer}
-138i39 Node_Id{integer}
-138a60 Pack{85A12}
-145i35 Node_Id{integer}
-145i56 Change_Id{integer}
-145i79 Next_Hop{integer}
-145i101 New_Cost{integer}
-154i14 I{integer} 155r18 156r18
-166W22 Observer_Type 172E10 174l11 174e24 176b22 217l11 217t24 219r63
-167U20 Init 167>25 177b20 180l14 180t18 378s28
-167i25 Id{integer} 177b25 179r24
-168Y16 ReadChangedPackage 168<35 182b16 198l14 198t32 293s38
-168a35 Pack{85A12}
-169Y16 ReadCost 169>25 169<41 200b16 206l14 206t22 242s41
-169i25 Id{integer} 204r45
-169i41 Cost{integer} 204m13
-170Y16 WriteNewRouting 170>32 170>48 170>70 208b16 216l14 216t29 249s44
-170i32 Id{integer} 212r37 213r37 214r37 249r60
-170i48 New_Cost{integer} 212r49 250r60
-170i70 Next_Hop{integer} 213r53 251r60
-172b10 Busy{boolean} 183r19 185r13 197r13 201r19 203r13 205r13 209r19 211r13
-. 215r13
-173i10 Node_Id{integer} 179r13 187r34 189r50 190r34 204r36 212r28 213r28
-. 214r28
-182a35 Pack{85A12}
-186i17 J{integer} 187r43 188r24 188r33 189r24 189r59 190r43 192r24 193r24
-200i25 Id{integer}
-200i41 Cost{integer}
-208i32 Id{integer}
-208i48 New_Cost{integer}
-208i70 Next_Hop{integer}
-219A12 Observer_Array_Type(166W22)<integer> 220r24
-220a7 Observer_Array{219A12} 242r22 249r25 293r19 378r10
-224a10 My_Pack{85A12} 234m22 238r28 239r25 243r34
-225i10 Old_Cost{integer} 242m53 244r36
-226i10 New_Cost{integer} 243m22 244r25 248r58 250r72
-227i10 From_Who_Prim{integer} 235m22 247r58 251r72
-233a43 Pack{85A12}
-233i63 From_Who{integer}
-238i23 J{integer} 239r33 242r50 243r42 249r72
-253L24 Continue 240r30
-268V16 IsPackageEmpty{boolean} 268b16 268>32 276l11 276t25 294s22
-268a32 Pack{85A12} 270r19 270r31 271r16
-270i14 I{integer} 271r21
-279a10 Neighbours{30A12} 283m30 283r30 296r31 297r28
-280a10 Pack{85A12} 293m57 294r37 295r50 298r52
-296i26 I{integer} 297r39 298r33
-311i11 R{integer} 312r29 312r33 313r29 313r33
-333i11 R{integer} 334r28 336r35
-335i14 C{integer} 336r38 337r34
-344i11 R{integer} 346r16 347r31 348r31 352r35 353r31 354r31 356r31 356r49
-. 357r20 358r34 358r52 360r19 361r34 361r52 365r28
-345i14 C{integer} 346r20 347r34 348r34 352r38 353r34 353r49 354r34 356r34
-. 356r53 357r24 358r37 360r23 361r37 365r31
-366L15 Continue 349r21
-377i11 I{integer} 378r25 378r33 379r15 379r39 380r15 380r39
-383i11 I{integer} 384r15 385r15
-X 16 interfac.ads
+51V13*Random{49F12}<46|71p13> 20|26s46
+53U14*Reset<46|100p14> 20|25s36
+X 16 a-textio.ads
+57K13*Text_IO 727e16 20|1w10 2r9
+264U14*New_Line 20|99s10 194s10 223s10 636s7
+465U14*Put 20|58s13 59s13 60s13 61s13 62s13 64s10 65s10 66s10 67s10 68s10
+. 74s13 93s16 94s16 97s10 98s10 184s10 185s10 186s10 187s10 190s16 193s10
+. 427s13 430s19 600s10 603s16
+508U14*Put_Line 20|76s13 209s19 224s10 415s22 425s10 433s13 598s7 606s10
+. 637s7 640s7
+X 19 graph.ads
+1K9*graph 5l5 5e10 20|7b14 679l5 679t10
+3U14*Simulate 3>24 3>40 3>56 20|9b14 677l8 677t16
+3i24 N{integer} 20|9b24 33r70 34r41 52r88 53r50 73r24 110r35 119r35 133r48
+. 166r50 172r36 173r36 178r46 217r24 227r24 235r24 264r27 298r50 302r42 357r43
+. 358r39 396r46 426r24 454r24 476r52 565r21 566r46 567r46 572r38 586r34 587r35
+. 599r21 601r24 610r21 611r24 643r21 652r21 661r21 669r21
+3i40 D{integer} 20|9b40 585r37
+3i56 H{integer} 20|9b56 165r97 177r86 228r27 428r27 453r33 455r27 571r27
+. 653r24 670r24
+X 20 graph.adb
+11f7 MAX_SLEEP{float} 212r47
+14I15 Random_Range{integer} 16r54
+16K15 R[10|44] 17r11
+19r7 G{10|50R9[16]} 453r26 572r31 583r14 586r27 587r28
+21V16 Get_Task_Delay{duration} 21b16 28l11 28t25 368s25 545s25
+22r10 Second_G{12|47R9} 25r43 26r54
+23f10 Result{float} 26m10 27r27
+32A12 Boolean_Array(boolean)<integer> 33r50 38r76 357r23
+33A12 Matrix(32A12)<integer> 34r28
+34a7 Connections_Matrix{33A12} 40r24 566m10 567m10 589r33 591m13 592m13 602r16
+. 618r16
+36i7 Good_Shortcuts_Number{integer} 584m7 585r13 590m13 590r38
+36i30 Start{integer} 586m10 589r13 589r53 591r33 592r42
+36i37 Target{integer} 587m10 589r22 589r61 591r41 592r33
+38U17 SetUpNeighbours 38b17 38>34 38=56 41l11 41t26 361s10
+38i34 Task_Id{integer} 40r44
+38a56 Neighbours{32A12} 40m10
+45R12 Routing 49e17 51r62
+46i10 Next_Hop{integer} 59r40 65r43 291m43 552r96 614m39 619m39 624m42 627m42
+47i10 Cost{integer} 60r40 66r43 267r65 282r51 290m43 613m39 620m39 622m39
+48b10 Changed{boolean} 61r40 67r43 265r48 268m48 292m43 631m36
+51A12 Routing_Table_Type(45R12)<integer> 52r63 55r46
+52A12 Routing_Matrix_Type(51A12)<integer> 53r24
+53a7 Routing_Matrix{52A12} 75r34 265r19 267r36 268m19 282r21 290m13 291m13
+. 292m13 552r34 613m16 614m16 619m16 620m16 622m16 624m19 627m19 631m13
+55U17 Routing_Table_Print 55b17 55>38 69l11 69t30 75s13
+55a38 RT{51A12} 57r19 57r31 59r33 60r33 61r33 65r30 65r34 66r30 66r34 67r30
+. 67r34
+57i14 I{integer} 59r37 60r37 61r37
+71U17 PrintRoutingMatrix 71b17 78l11 78t29 225s10 638s7
+73i14 R{integer} 74r33 75r50
+82R12 Pair 85e17 87r53
+83i10 Id{integer} 93r51 97r53 266m28 270m28 349r25
+84i10 Cost{integer} 92r25 94r45 98r47 267m28 271m28 317r37 321r46
+87A12 Pack_Type(82R12)<integer> 89r39 115r43 246r47 260r47 302r26 311r53
+. 346r39 358r23
+89U17 Pack_Print 89b17 89>29 100l11 100t21
+89a29 Pack{87A12} 91r19 91r33 92r16 93r42 94r36 97r36 97r42 98r30 98r36
+91i14 I{integer} 92r22 93r48 94r42
+104T17 Sender_Thread 104d32 107l11 107e24 109r60 356b17 382l11 382t24 645r26
+104i32 Id{integer} 361r27 371r35 375r60
+105Y16 StartBaby 360b17 662s23
+106Y16 Join 218s26 365b26
+109A12 STAR_Type(104T17)<integer> 110r19
+110a7 STAR{109A12} 218r13 645m10 662r10
+112T17 Writer_Thread 112d32 116l11 116e24 118r60 301b17 342l11 342t24 646r26
+112i32 Id{integer} 320r38 323r59 324r59 327r41
+113Y16 StartBaby 307b17 663s23
+114Y16 Join 219s26 335b26
+115Y16 ReceiveAndWrite 115>33 115>54 311b26 314l23 314t38 375s37
+115a33 Pack{87A12} 312r33
+115i54 From_Who{integer} 313r39
+118A12 WTAR_Type(112T17)<integer> 119r19
+119a7 WTAR{118A12} 219r13 375r28 646m10 663r10
+123R12 Address 126e17 131r28 132r28 402r39 402r55 414r49 414r65 448r38 451r20
+. 473r32 474r32
+124i10 RouterId{integer} 184r62 186r45 415r45 415r107 458m29 481m21 549r50
+. 552r86
+125i10 HostId{integer} 184r108 186r92 415r70 415r132 459m29 482m21 550r64
+128A12 Standard_Path(integer)<integer> 133r28 476r32
+130R12 Standard_Pack 134e17 136r54 150r38 156r38 182r49 388r24 401r43 410r54
+. 471r32 472r32 475r32 494r48 513r24 519r48 535r24
+131r10 SenderAddress{123R12} 184r48 184r94 484m30 498m35 499r66
+132r10 ReceiverAddress{123R12} 186r29 186r76 485m30 498r64 499m35 549r34
+. 550r48 552r70
+133a10 Path{128A12} 139r24 142m18 188r27 188r49 189r24 190r44 486m30 500m35
+136U17 StandardPackAppend 136b17 136=37 136>69 143l11 143t29 522s19
+136r37 StdPack{130R12} 139r16 142m10
+136i69 Appendix{integer} 142r30
+137i10 I{integer} 139r30 140m13 140r18 142r24
+147T17 Host_Thread 147d30 147d54 151l11 151e22 164r73 470b17 510l11 510t22
+. 655r36
+147i30 My_Router_Id{integer} 481r33 488r17 501r26
+147i54 My_Id{integer} 482r31
+148Y16 Join 230s36 503b26
+149Y16 ChooseLover 478b17 672s33
+150Y16 Deliver 150>25 494b26 496l23 496t30 550s72
+150r25 StdPack{130R12} 495r37
+153T17 Forwarder_Receiver_Thread 153d44 157l11 157e36 169r61 512b17 532t10
+. 647r27
+153i44 My_Id{integer} 522r52 523r33
+154Y16 StartBaby 515b17 664s24
+155Y16 Join 236s27 525b26
+156Y16 Receive 156>25 488s31 501s40 519b26 521l23 521t30 553s39
+156r25 StdPack{130R12} 520r37
+159T17 Forwarder_Sender_Thread 159d42 162l11 162e34 170r61 534b17 558t10
+. 648r27
+159i42 My_Id{integer} 547r33 549r61 550r28 552r50
+160Y16 StartBaby 538b17 665s24
+161Y16 Join 237s27 542b26
+164A12 Host_Thread_Array_Type(147T17)<integer> 165r68
+165A12 Hosts_Thread_Matrix_Type(164A12)<integer> 166r19
+166a7 HTAR{165A12} 230r19 550r22 655m16 672r16
+169A12 FRTAR_Type(153T17)<integer> 172r19
+170A12 FSTAR_Type(159T17)<integer> 173r19
+172a7 FRTAR{169A12} 236r13 488r10 501r19 553r22 647m10 664r10
+173a7 FSTAR{170A12} 237r13 648m10 665r10
+176A12 Integer_Array_Type(integer)<integer> 177r61 437r40
+177A12 Hosts_Matrix_Type(176A12)<integer> 178r22 423r43
+178a7 Hosts_Matrix{177A12} 229r19 429r19 430r24 456r19 573r19 574r16 575m16
+. 600r50 654r16 671r16
+182U17 PrintStandardPack 182b17 182>36 195l11 195t28 411s22
+182r36 StdPack{130R12} 184r40 184r86 186r21 186r68 188r19 188r41 189r16 190r36
+188i14 I{integer} 189r30 190r50
+200t12 Printer 204b17 240l11 240t18 323r25
+201Y16 WriteChange 201>29 201>51 201>75 201>98 208b23 210l20 210t31 323s33
+201i29 Node_Id{integer} 209r55 323r46
+201i51 Change_Id{integer} 209r95 324r46
+201i75 Next_Hop{integer} 209r143 325r46
+201i98 New_Cost{integer} 209r188 326r46
+208i36 Node_Id{integer}
+208i58 Change_Id{integer}
+208i82 Next_Hop{integer}
+208i105 New_Cost{integer}
+217i14 I{integer} 218r19 219r19
+227i14 I{integer} 229r33 230r25
+228i17 C{integer} 229r37 230r29
+235i14 I{integer} 236r20 237r20
+244W22 Observer_Type 250E10 252l11 252e24 254b22 295l11 295t24 297r63
+245U20 Init 245>26 255b20 258l14 258t18 644s29
+245i26 Id{integer} 255b26 257r24
+246Y16 ReadChangedPackage 246<36 260b16 276l14 276t32 371s39
+246a36 Pack{87A12}
+247Y16 ReadCost 247>26 247<43 278b16 284l14 284t22 320s42
+247i26 Id{integer} 282r47
+247i43 Cost{integer} 282m13
+248Y16 WriteNewRouting 248>33 248>50 248>73 286b16 294l14 294t29 327s45
+248i33 Id{integer} 290r39 291r39 292r39 327r62
+248i50 New_Cost{integer} 290r51 328r62
+248i73 Next_Hop{integer} 291r55 329r62
+250b10 Busy{boolean} 261r19 263r13 275r13 279r19 281r13 283r13 287r19 289r13
+. 293r13
+251i10 Node_Id{integer} 257r13 265r35 267r52 268r35 282r37 290r29 291r29
+. 292r29
+260a36 Pack{87A12}
+264i17 J{integer} 265r45 266r25 266r34 267r25 267r62 268r45 270r25 271r25
+278i26 Id{integer}
+278i43 Cost{integer}
+286i33 Id{integer}
+286i50 New_Cost{integer}
+286i73 Next_Hop{integer}
+297A12 Observer_Array_Type(244W22)<integer> 298r24
+298a7 Observer_Array{297A12} 320r22 327r25 371r19 644r10
+302a10 My_Pack{87A12} 312m22 316r28 317r25 321r34
+303i10 Old_Cost{integer} 320m55 322r36
+304i10 New_Cost{integer} 321m22 322r25 326r59 328r74
+305i10 From_Who_Prim{integer} 313m22 325r59 329r74
+311a43 Pack{87A12}
+311i64 From_Who{integer}
+316i23 J{integer} 317r34 320r52 321r43 327r74
+331L24 Continue 318r30
+346V16 IsPackageEmpty{boolean} 346b16 346>32 354l11 354t25 372s22
+346a32 Pack{87A12} 348r19 348r33 349r16
+348i14 I{integer} 349r22
+357a10 Neighbours{32A12} 361m31 361r31 373r31 374r28
+358a10 Pack{87A12} 371m59 372r38 375r54
+373i26 I{integer} 374r40 375r34
+386K15 Standard_Pack_Queue_Interfaces[3|37] 392r28
+390K15 Standard_Pack_Queues[4|44] 394r61
+394A12 Queues_Array_Type(4|88W19[390])<integer> 396r22
+396a7 Queues_Array{394A12} 523r19 547r19
+400t12 Standard_Printer 405b17 420l11 420t27 490r10 497r19
+401Y16 WriteDeliver 401>30 410b26 412l23 412t35 497s36
+401r30 StdPack{130R12} 411r41
+402Y16 DescribeLovers 402>32 402>48 414b26 416l23 416t37 490s27
+402r32 S{123R12} 415r43 415r68
+402r48 R{123R12} 415r105 415r130
+410r41 StdPack{130R12}
+414r42 S{123R12}
+414r58 R{123R12}
+423U17 PrintHostsMatrix 423b17 423>35 435l11 435t27
+423a35 HM{177A12}
+426i14 R{integer} 427r33 429r33 430r38
+428i17 C{integer} 429r37 430r42
+437V16 HowMany{integer} 437b16 437>25 446l11 446t18 600s41
+437a25 Hosts_Row{176A12} 440r19 441r16
+438i10 Counter{integer} 442m16 442r27 445r17
+440i14 I{integer} 441r27
+448V16 GetRandomLover{123R12} 448b16 467l11 467t25 479s26
+449i10 Pick{integer} 453m10 457r22
+450i10 Counter{integer} 457r29 462m19 462r30
+451r10 Picked{123R12} 458m22 459m22 460r29 466r17
+454i14 R{integer} 456r33 458r41
+455i17 C{integer} 456r37 459r39
+471r10 My_Std_Pack{130R12} 495m22 497r50 498r52 499r54
+472r10 Mirror_Std_Pack{130R12} 498m19 499m19 500m19 501r49
+473r10 LoverAddress{123R12} 479m10 485r49 490r55
+474r10 My_Address{123R12} 481m10 482m10 484r47 490r43
+475r10 InitialStandardPack{130R12} 484m10 485m10 486m10 488r40
+476a10 Fresh{128A12} 486r38
+494r35 StdPack{130R12}
+513r10 My_Std_Pack{130R12} 520m22 522m39 522r39 523r61
+519r35 StdPack{130R12}
+535r10 My_Std_Pack{130R12} 547m60 549r22 550r36 550r81 552r58 553r48
+536i10 Next_Hop{integer} 552m22 553r29
+561i7 Router_Id{integer} 572m10 573r33 574r30 575r30
+565i11 R{integer} 566r30 566r35 567r30 567r35
+571i11 Counter{integer}
+573i14 I{integer} 574r42 575r42 575r48
+579L12 Break 576r21
+599i11 R{integer} 600r30 600r64 602r36
+601i14 C{integer} 602r40 603r36
+610i11 R{integer} 612r16 613r32 614r32 618r36 619r32 620r32 622r32 622r52
+. 623r20 624r35 624r54 626r19 627r35 627r54 631r29
+611i14 C{integer} 612r20 613r36 614r36 618r40 619r36 619r51 620r36 622r36
+. 622r56 623r24 624r39 626r23 627r39 631r33
+632L15 Continue 615r21
+643i11 I{integer} 644r26 644r35 645r16 645r41 646r16 646r41 647r17 647r54
+. 648r17 648r52
+652i11 R{integer} 654r30 655r22 655r49
+653i14 C{integer} 654r34 655r26 655r52
+661i11 I{integer} 662r16 663r16 664r17 665r17
+669i11 R{integer} 671r30 672r22
+670i14 C{integer} 671r34 672r26
+X 21 interfac.ads
 74M9*Unsigned_32
 77M9*Unsigned_64
-X 19 system.ads
+X 24 system.ads
 67M9*Address
-X 33 s-memory.ads
-53V13*Alloc{19|67M9} 103i<c,__gnat_malloc>22
+X 41 s-memory.ads
+53V13*Alloc{24|67M9} 103i<c,__gnat_malloc>22
 68U14*Free 104i<c,__gnat_free>22
-76V13*Realloc{19|67M9} 105i<c,__gnat_realloc>22
-X 38 s-rannum.ads
-75V13*Random{16|74M9} 39|221i21
-76V13*Random{16|77M9} 39|221i21
-X 44 s-stausa.ads
+76V13*Realloc{24|67M9} 105i<c,__gnat_realloc>22
+X 46 s-rannum.ads
+75V13*Random{21|74M9} 47|221i21
+76V13*Random{21|77M9} 47|221i21
+X 52 s-stausa.ads
 208U14*Initialize 209i<c,__gnat_stack_usage_initialize>22
 273U14*Output_Results 277i<c,__gnat_stack_usage_output_results>22
-X 46 s-stalib.adb
+X 54 s-stalib.adb
 93U14 Break_Start 94i<c,__gnat_break_start>22
 

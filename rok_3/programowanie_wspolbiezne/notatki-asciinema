@@ -3,6 +3,7 @@ asciinema rec -i 0.2 lista#.cast
 # Gabriel Wechta
 # 250111
 # Programowanie wspolbienze, lista #
+# notatki
 svn export http://repo.cs.pwr.edu.pl/250111/programowanie_wspolbiezne/lista_#/
 cd lista_#
 # kod zrodlowy

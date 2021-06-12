@@ -1,0 +1,4 @@
+1. Zamiast wyświetlania tablicy routingu jest wyświetlana zmiana konkretnej wartości w routing table.
+2. Rozbice Forwardera na Sendera i Receivera.
+3. Liczba hostów przy jednym routerze jest zapisana pomiędzy () przy indexie node'a.
+4. Ze względu na to, że używam Ada.Containers.Unbounded_Synchronized_Queues do komunikacji między Forward Receiver i Forward Senderem występuje sytuacja, w której wątki typu Forward Sender czekają na input do Synchronized_Queue, przez co nie mogę im zrobić joinującego rendezvous.
