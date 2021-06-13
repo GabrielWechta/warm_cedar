@@ -1,0 +1,20 @@
+$touch_color: lightsalmon;
+$bright_text_color: #fff;
+$greyish_text_color: #cccccc;
+$bright_menus_color: azure;
+$dark_menus_color: #000;
+$shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+
+@mixin parallax_mixin($address) {
+    background-image: url($address);
+
+    min-height: 60vh;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+
+    padding: 40px;
+}
