@@ -1,0 +1,149 @@
+[*]
+[*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
+[*] Sat Jun 12 16:22:42 2021
+[*]
+[dumpfile] "/home/gabriel/Desktop/warm_cedar/rok_3/systemy_wbudowane/vhdl/lista_6/lossy_channel/new.ghw"
+[dumpfile_mtime] "Sat Jun 12 16:17:20 2021"
+[dumpfile_size] 68606
+[savefile] "/home/gabriel/Desktop/warm_cedar/rok_3/systemy_wbudowane/vhdl/lista_6/lossy_channel/dear_God.gtkw"
+[timestart] 0
+[size] 1860 1016
+[pos] -89 -89
+*-30.397572 3140000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.lossy_channel_tb.
+[treeopen] top.lossy_channel_tb.uut_decoder.
+[treeopen] top.lossy_channel_tb.uut_encoder.
+[sst_width] 233
+[signals_width] 158
+[sst_expanded] 1
+[sst_vpaned_height] 289
+@800022
+#{top.lossy_channel_tb.uut_encoder.wordin[7:0]} top.lossy_channel_tb.uut_encoder.wordin[7] top.lossy_channel_tb.uut_encoder.wordin[6] top.lossy_channel_tb.uut_encoder.wordin[5] top.lossy_channel_tb.uut_encoder.wordin[4] top.lossy_channel_tb.uut_encoder.wordin[3] top.lossy_channel_tb.uut_encoder.wordin[2] top.lossy_channel_tb.uut_encoder.wordin[1] top.lossy_channel_tb.uut_encoder.wordin[0]
+@28
+top.lossy_channel_tb.uut_encoder.wordin[7]
+top.lossy_channel_tb.uut_encoder.wordin[6]
+top.lossy_channel_tb.uut_encoder.wordin[5]
+top.lossy_channel_tb.uut_encoder.wordin[4]
+top.lossy_channel_tb.uut_encoder.wordin[3]
+top.lossy_channel_tb.uut_encoder.wordin[2]
+top.lossy_channel_tb.uut_encoder.wordin[1]
+top.lossy_channel_tb.uut_encoder.wordin[0]
+@1001200
+-group_end
+@800022
+[color] 6
+#{top.lossy_channel_tb.uut_decoder.decoded[7:0]} top.lossy_channel_tb.uut_decoder.decoded[7] top.lossy_channel_tb.uut_decoder.decoded[6] top.lossy_channel_tb.uut_decoder.decoded[5] top.lossy_channel_tb.uut_decoder.decoded[4] top.lossy_channel_tb.uut_decoder.decoded[3] top.lossy_channel_tb.uut_decoder.decoded[2] top.lossy_channel_tb.uut_decoder.decoded[1] top.lossy_channel_tb.uut_decoder.decoded[0]
+@28
+[color] 6
+top.lossy_channel_tb.uut_decoder.decoded[7]
+[color] 6
+top.lossy_channel_tb.uut_decoder.decoded[6]
+[color] 6
+top.lossy_channel_tb.uut_decoder.decoded[5]
+[color] 6
+top.lossy_channel_tb.uut_decoder.decoded[4]
+[color] 6
+top.lossy_channel_tb.uut_decoder.decoded[3]
+[color] 6
+top.lossy_channel_tb.uut_decoder.decoded[2]
+[color] 6
+top.lossy_channel_tb.uut_decoder.decoded[1]
+[color] 6
+top.lossy_channel_tb.uut_decoder.decoded[0]
+@1001200
+-group_end
+@800022
+[color] 1
+#{top.lossy_channel_tb.uut_decoder.lossied_in[15:0]} top.lossy_channel_tb.uut_decoder.lossied_in[15] top.lossy_channel_tb.uut_decoder.lossied_in[14] top.lossy_channel_tb.uut_decoder.lossied_in[13] top.lossy_channel_tb.uut_decoder.lossied_in[12] top.lossy_channel_tb.uut_decoder.lossied_in[11] top.lossy_channel_tb.uut_decoder.lossied_in[10] top.lossy_channel_tb.uut_decoder.lossied_in[9] top.lossy_channel_tb.uut_decoder.lossied_in[8] top.lossy_channel_tb.uut_decoder.lossied_in[7] top.lossy_channel_tb.uut_decoder.lossied_in[6] top.lossy_channel_tb.uut_decoder.lossied_in[5] top.lossy_channel_tb.uut_decoder.lossied_in[4] top.lossy_channel_tb.uut_decoder.lossied_in[3] top.lossy_channel_tb.uut_decoder.lossied_in[2] top.lossy_channel_tb.uut_decoder.lossied_in[1] top.lossy_channel_tb.uut_decoder.lossied_in[0]
+@28
+[color] 1
+top.lossy_channel_tb.uut_decoder.lossied_in[15]
+[color] 1
+top.lossy_channel_tb.uut_decoder.lossied_in[14]
+[color] 1
+top.lossy_channel_tb.uut_decoder.lossied_in[13]
+[color] 1
+top.lossy_channel_tb.uut_decoder.lossied_in[12]
+[color] 1
+top.lossy_channel_tb.uut_decoder.lossied_in[11]
+[color] 1
+top.lossy_channel_tb.uut_decoder.lossied_in[10]
+[color] 1
+top.lossy_channel_tb.uut_decoder.lossied_in[9]
+[color] 1
+top.lossy_channel_tb.uut_decoder.lossied_in[8]
+[color] 1
+top.lossy_channel_tb.uut_decoder.lossied_in[7]
+[color] 1
+top.lossy_channel_tb.uut_decoder.lossied_in[6]
+[color] 1
+top.lossy_channel_tb.uut_decoder.lossied_in[5]
+[color] 1
+top.lossy_channel_tb.uut_decoder.lossied_in[4]
+[color] 1
+top.lossy_channel_tb.uut_decoder.lossied_in[3]
+[color] 1
+top.lossy_channel_tb.uut_decoder.lossied_in[2]
+[color] 1
+top.lossy_channel_tb.uut_decoder.lossied_in[1]
+[color] 1
+top.lossy_channel_tb.uut_decoder.lossied_in[0]
+@1001200
+-group_end
+@800022
+[color] 2
+#{top.lossy_channel_tb.uut_encoder.hamout[15:0]} top.lossy_channel_tb.uut_encoder.hamout[15] top.lossy_channel_tb.uut_encoder.hamout[14] top.lossy_channel_tb.uut_encoder.hamout[13] top.lossy_channel_tb.uut_encoder.hamout[12] top.lossy_channel_tb.uut_encoder.hamout[11] top.lossy_channel_tb.uut_encoder.hamout[10] top.lossy_channel_tb.uut_encoder.hamout[9] top.lossy_channel_tb.uut_encoder.hamout[8] top.lossy_channel_tb.uut_encoder.hamout[7] top.lossy_channel_tb.uut_encoder.hamout[6] top.lossy_channel_tb.uut_encoder.hamout[5] top.lossy_channel_tb.uut_encoder.hamout[4] top.lossy_channel_tb.uut_encoder.hamout[3] top.lossy_channel_tb.uut_encoder.hamout[2] top.lossy_channel_tb.uut_encoder.hamout[1] top.lossy_channel_tb.uut_encoder.hamout[0]
+@28
+[color] 2
+top.lossy_channel_tb.uut_encoder.hamout[15]
+[color] 2
+top.lossy_channel_tb.uut_encoder.hamout[14]
+[color] 2
+top.lossy_channel_tb.uut_encoder.hamout[13]
+[color] 2
+top.lossy_channel_tb.uut_encoder.hamout[12]
+[color] 2
+top.lossy_channel_tb.uut_encoder.hamout[11]
+[color] 2
+top.lossy_channel_tb.uut_encoder.hamout[10]
+[color] 2
+top.lossy_channel_tb.uut_encoder.hamout[9]
+[color] 2
+top.lossy_channel_tb.uut_encoder.hamout[8]
+[color] 2
+top.lossy_channel_tb.uut_encoder.hamout[7]
+[color] 2
+top.lossy_channel_tb.uut_encoder.hamout[6]
+[color] 2
+top.lossy_channel_tb.uut_encoder.hamout[5]
+[color] 2
+top.lossy_channel_tb.uut_encoder.hamout[4]
+[color] 2
+top.lossy_channel_tb.uut_encoder.hamout[3]
+[color] 2
+top.lossy_channel_tb.uut_encoder.hamout[2]
+[color] 2
+top.lossy_channel_tb.uut_encoder.hamout[1]
+[color] 2
+top.lossy_channel_tb.uut_encoder.hamout[0]
+@1001200
+-group_end
+@800022
+[color] 3
+#{top.lossy_channel_tb.uut_decoder.debugger[4:0]} top.lossy_channel_tb.uut_decoder.debugger[4] top.lossy_channel_tb.uut_decoder.debugger[3] top.lossy_channel_tb.uut_decoder.debugger[2] top.lossy_channel_tb.uut_decoder.debugger[1] top.lossy_channel_tb.uut_decoder.debugger[0]
+@29
+[color] 3
+top.lossy_channel_tb.uut_decoder.debugger[4]
+[color] 3
+top.lossy_channel_tb.uut_decoder.debugger[3]
+[color] 3
+top.lossy_channel_tb.uut_decoder.debugger[2]
+[color] 3
+top.lossy_channel_tb.uut_decoder.debugger[1]
+[color] 3
+top.lossy_channel_tb.uut_decoder.debugger[0]
+@1001200
+-group_end
+[pattern_trace] 1
+[pattern_trace] 0
