@@ -1,9 +1,9 @@
-# Repositories
-apt update
-apt upgrade
+!#/bin/bash
+# Run with root privileges.
 
-# Basic Software
-snap install git
+# Repositories
+apt-get update
+apt-get upgrade -y
 
 # Python
 apt install python3-pip
@@ -20,6 +20,7 @@ snap install notepad-plus-plus
 # Media
 snap install gimp
 snap install vlc
+
 
 # Social
 snap install rambox
@@ -39,3 +40,7 @@ add-apt-repository ppa:gerardpuig/ppa
 apt-get update
 apt-get install ubuntu-cleaner
 
+# Repositories again
+apt-get update
+apt-get upgrade -y
+apt-get dist-upgrade -y
