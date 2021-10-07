@@ -1,4 +1,4 @@
-!#/bin/bash
+#!/bin/bash
 # Run with root privileges.
 
 # Repositories
@@ -6,12 +6,12 @@ apt-get update
 apt-get upgrade -y
 
 # Python
-apt install python3-pip
+apt install python3-pip -y
 snap install jupyter
-snap install pycharm-professional
+snap install pycharm-professional --classic
 
 # Java
-apt install openjdk-18-jre
+apt install default-jre -y
 
 # Editors
 snap install code --classic
@@ -21,7 +21,6 @@ snap install notepad-plus-plus
 snap install gimp
 snap install vlc
 
-
 # Social
 snap install rambox
 snap install slack
@@ -30,7 +29,7 @@ apt-get install mendeleydesktop
 
 # Gnome
 add-apt-repository universe
-apt install gnome-tweak-tool
+apt install gnome-tweak-tool -y
 
 # Firewall
 apt install gufw -y
@@ -38,7 +37,7 @@ apt install gufw -y
 # Cleaner
 add-apt-repository ppa:gerardpuig/ppa
 apt-get update
-apt-get install ubuntu-cleaner
+apt-get install ubuntu-cleaner -y
 
 # Repositories again
 apt-get update
