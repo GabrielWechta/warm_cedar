@@ -6,6 +6,7 @@ apt-get update
 apt-get upgrade -y
 
 # Python
+apt install python3 -y
 apt install python3-pip -y
 snap install jupyter
 snap install pycharm-professional --classic
@@ -34,7 +35,10 @@ apt-get install nomacs -y
 snap install rambox
 snap install slack
 snap install spotify
-apt-get install mendeleydesktop
+
+# Mendeley
+# visit this site: https://www.mendeley.com/guides/download-mendeley-desktop/ubuntu/instructions
+# then: dpkg -i mendeleydesktop_1.19.8-stable_amd64.deb 
 
 # Gnome
 add-apt-repository universe
