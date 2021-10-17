@@ -14,9 +14,22 @@ snap install pycharm-professional --classic
 # Java
 apt install default-jre -y
 
+# Virtual Box
+apt install virtualbox -y
+
 # Web Browser - Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -P /tmp
 dpkg -i /tmp/google-chrome-stable_current_amd64.deb
+
+# Wireless config utils
+apt install net-tools -y
+apt install nmap -y
+snap install curl
+# Wireshark
+echo | add-apt-repository ppa:wireshark-dev/stable
+apt-get update
+apt-get install wireshark
+adduser $USER wireshark
 
 # Microsoft Teams
 wget https://packages.microsoft.com/repos/ms-teams/pool/main/t/teams/teams_1.3.00.5153_amd64.deb -P /tmp
