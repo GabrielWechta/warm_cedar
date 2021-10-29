@@ -5,6 +5,10 @@
 apt-get update
 apt-get upgrade -y
 
+# CLI utils
+apt install tree -y
+apt-get install tshark -y
+
 # Python
 apt install python3 -y
 apt install python3-pip -y

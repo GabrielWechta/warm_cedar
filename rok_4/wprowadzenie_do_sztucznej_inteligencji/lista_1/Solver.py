@@ -1,45 +1,66 @@
 from Fifteen import Fifteen
 
 
+
+def calculate_total_manhattan_distances(fifteen: Fifteen):
+    manhattan = 0
+    for y in range(fifteen.rows_num):
+        for x in range(fifteen.columns_num):
+            right_y, right_x = fifteen.find_tile(fifteen.position[y][x], fifteen.finish_position)
+            manhattan += abs(right_x - x)
+            manhattan += abs(right_y - y)
+    return manhattan
+
+
+def flat_tuple(position):
+    flat = [item for sublist in position for item in sublist]
+    return tuple(flat)
+
+
 class Solver:
-    def __init__(self, start_position):
+    def __init__(self, start_position, heuristic):
         self.start_position = start_position
-        self.num_expanded_nodes = 0
+        self.heuristic = heuristic
+        self.number_of_examined_nodes = 0
         self.solution = []
 
-    @staticmethod
-    def calculate_distances(move_position: Fifteen, end_position: Fifteen):
-        return move_position.calculate_total_manhattan_distances() - end_position.calculate_total_manhattan_distances()
+    def distance(self, move_fifteen: Fifteen):
+        return self.heuristic(move_fifteen)
 
     def solve(self):
-        queue = [[self.start_position.calculate_total_manhattan_distances(), self.start_position]]
-        expanded = []
-        num_expanded_nodes = 0
+        solutions_to_check = [(self.heuristic(self.start_position), self.start_position)]
+        examined = set()
+        number_of_examined_nodes = 0
         path = None
 
-        while queue:
+        while solutions_to_check:
             i = 0
-            for j in range(1, len(queue)):
-                if queue[i][0] > queue[j][0]:  # minimum
+            for j in range(1, len(solutions_to_check)):
+                if solutions_to_check[i][0] > solutions_to_check[j][0]:  # minimum
                     i = j
 
-            path = queue[i]
-            queue = queue[:i] + queue[i + 1:]
+            cost = solutions_to_check[i][0]
+            path = solutions_to_check[i][1:]
+            solutions_to_check = solutions_to_check[:i] + solutions_to_check[i + 1:]
             end_node = path[-1]
+            print(cost, end_node)
 
             if end_node.position == end_node.finish_position:
                 break
-            if end_node.position in expanded:
+            if flat_tuple(end_node.position) in examined:
                 continue
 
             for move in end_node.get_possible_moves():
-                if move.position in expanded:
+                if flat_tuple(move.position) in examined:
                     continue
-                new_path = [path[0] + self.calculate_distances(move, end_node)] + path[1:] + [move]
-                queue.append(new_path)
-                expanded.append(end_node.position)
+                path_list = list(path)
+                g_cost = len(path_list)
+                h_cost = self.heuristic(move)
+                path_list.append(move)
+                solutions_to_check.append(tuple([g_cost + h_cost] + path_list))
+                examined.add(flat_tuple(end_node.position))
 
-            num_expanded_nodes += 1
+            number_of_examined_nodes += 1
 
-        self.num_expanded_nodes = num_expanded_nodes
+        self.number_of_examined_nodes = number_of_examined_nodes
         self.solution = path[1:]
