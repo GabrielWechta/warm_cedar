@@ -1,5 +1,5 @@
 from Fifteen import Fifteen
-
+from heapdict import heapdict
 
 
 def calculate_total_manhattan_distances(fifteen: Fifteen):
@@ -18,8 +18,8 @@ def flat_tuple(position):
 
 
 class Solver:
-    def __init__(self, start_position, heuristic):
-        self.start_position = start_position
+    def __init__(self, start_fifteen, heuristic):
+        self.start_fifteen = start_fifteen
         self.heuristic = heuristic
         self.number_of_examined_nodes = 0
         self.solution = []
@@ -28,39 +28,30 @@ class Solver:
         return self.heuristic(move_fifteen)
 
     def solve(self):
-        solutions_to_check = [(self.heuristic(self.start_position), self.start_position)]
+        heap_dict = heapdict()
+        heap_dict[self.start_fifteen] = self.heuristic(self.start_fifteen)
         examined = set()
         number_of_examined_nodes = 0
         path = None
 
-        while solutions_to_check:
-            i = 0
-            for j in range(1, len(solutions_to_check)):
-                if solutions_to_check[i][0] > solutions_to_check[j][0]:  # minimum
-                    i = j
+        while heap_dict:
+            current_fifteen, _ = heap_dict.popitem()
+            # print(cost, end_node)
 
-            cost = solutions_to_check[i][0]
-            path = solutions_to_check[i][1:]
-            solutions_to_check = solutions_to_check[:i] + solutions_to_check[i + 1:]
-            end_node = path[-1]
-            print(cost, end_node)
-
-            if end_node.position == end_node.finish_position:
-                break
-            if flat_tuple(end_node.position) in examined:
+            if current_fifteen.position == current_fifteen.finish_position:
+                return list(current_fifteen.path_to_me), number_of_examined_nodes
+            if flat_tuple(current_fifteen.position) in examined:
                 continue
+            examined.add(flat_tuple(current_fifteen.position))
 
-            for move in end_node.get_possible_moves():
+            for move in current_fifteen.get_possible_moves():
                 if flat_tuple(move.position) in examined:
                     continue
-                path_list = list(path)
+                path_list = move.path_to_me
                 g_cost = len(path_list)
                 h_cost = self.heuristic(move)
-                path_list.append(move)
-                solutions_to_check.append(tuple([g_cost + h_cost] + path_list))
-                examined.add(flat_tuple(end_node.position))
+                heap_dict[move] = g_cost + h_cost
 
             number_of_examined_nodes += 1
 
         self.number_of_examined_nodes = number_of_examined_nodes
-        self.solution = path[1:]

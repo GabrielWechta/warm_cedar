@@ -1,5 +1,6 @@
 import copy
 from random import shuffle
+from copy import deepcopy
 
 
 class Fifteen:
@@ -8,6 +9,7 @@ class Fifteen:
         self.finish_position = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 0]]
         self.rows_num = 4
         self.columns_num = 4
+        self.path_to_me = []
 
     def __str__(self):
         row_band = "—" * 13 + "\n"
@@ -54,13 +56,25 @@ class Fifteen:
         y, x = self.find_tile(0)
 
         if y > 0:
-            moves.append(Fifteen(self.swap_elements(y, x, y - 1, x)))
+            fifteen = Fifteen(self.swap_elements(y, x, y - 1, x))
+            fifteen.path_to_me = deepcopy(self.path_to_me)
+            fifteen.path_to_me.append(fifteen.position)
+            moves.append(fifteen)
         if y < self.rows_num - 1:
-            moves.append(Fifteen(self.swap_elements(y, x, y + 1, x)))
+            fifteen = Fifteen(self.swap_elements(y, x, y + 1, x))
+            fifteen.path_to_me = deepcopy(self.path_to_me)
+            fifteen.path_to_me.append(fifteen.position)
+            moves.append(fifteen)
         if x < self.rows_num - 1:
-            moves.append(Fifteen(self.swap_elements(y, x, y, x + 1)))
+            fifteen = Fifteen(self.swap_elements(y, x, y, x + 1))
+            fifteen.path_to_me = deepcopy(self.path_to_me)
+            fifteen.path_to_me.append(fifteen.position)
+            moves.append(fifteen)
         if x > 0:
-            moves.append(Fifteen(self.swap_elements(y, x, y, x - 1)))
+            fifteen = Fifteen(self.swap_elements(y, x, y, x - 1))
+            fifteen.path_to_me = deepcopy(self.path_to_me)
+            fifteen.path_to_me.append(fifteen.position)
+            moves.append(fifteen)
         return moves
 
     def how_many_wrong(self):
