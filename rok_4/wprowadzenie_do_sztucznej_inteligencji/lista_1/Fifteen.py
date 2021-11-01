@@ -1,6 +1,8 @@
 import copy
+import random
 from random import shuffle
 from copy import deepcopy
+from typing import Tuple
 
 
 class Fifteen:
@@ -40,9 +42,25 @@ class Fifteen:
                 if position[y][x] == tile:
                     return y, x
 
-    def _get_inversions_count(self):
+    def get_inversions_count(self):
         inversion_count = 0
         puzzle_flat = [number for row in self.position for number in row if number != 0]
+
+        for i in range(len(puzzle_flat)):
+            for j in range(i + 1, len(puzzle_flat)):
+                if puzzle_flat[i] > puzzle_flat[j]:
+                    inversion_count += 1
+
+        return inversion_count
+
+    def get_horizontal_inversions_count(self):
+        inversion_count = 0
+        puzzle_flat = []
+
+        for index in range(self.rows_num):
+            for row in self.position:
+                if row[index] != 0:
+                    puzzle_flat.append(row[index])
 
         for i in range(len(puzzle_flat)):
             for j in range(i + 1, len(puzzle_flat)):
@@ -88,8 +106,8 @@ class Fifteen:
     def is_solvable(self):
         y, _ = self.find_tile(0)
         zero_position = (self.rows_num - y) - 1
-        return True if (self._get_inversions_count() % 2 == 0 and zero_position % 2 == 0) or (
-                self._get_inversions_count() % 2 == 1 and zero_position % 2 == 1) else False
+        return True if (self.get_inversions_count() % 2 == 0 and zero_position % 2 == 0) or (
+                self.get_inversions_count() % 2 == 1 and zero_position % 2 == 1) else False
 
     def _get_blank_space_row_counting_from_bottom(self):
         zero_row, _ = self.find_tile(0)  # blank space
@@ -104,7 +122,7 @@ class Fifteen:
         return num % 2 == 0
 
     def his(self):
-        inversions_count = self._get_inversions_count()
+        inversions_count = self.get_inversions_count()
         blank_position = self._get_blank_space_row_counting_from_bottom()
 
         if self._is_odd(self.rows_num) and self._is_even(inversions_count):
@@ -117,7 +135,7 @@ class Fifteen:
             return False
 
 
-def get_random_solvable_fifteen():
+def get_random_solvable_fifteen() -> Fifteen:
     basic_list = [i for i in range(1, 16)]
     shuffle(basic_list)
     fifteen_list = []
@@ -128,4 +146,38 @@ def get_random_solvable_fifteen():
     if not fifteen.is_solvable():
         fifteen = Fifteen(fifteen.swap_elements(x1=0, y1=0, x2=0, y2=1))
         assert fifteen.is_solvable()
+    assert fifteen.is_solvable()
     return fifteen
+
+
+def get_shuffled_by(number_of_shuffles) -> Tuple[Fifteen, int]:
+    fifteen = Fifteen([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 0]])
+    true_shuffles = 0
+    while True:
+        y, x = fifteen.find_tile(0)
+        if y > 0:
+            if random.random() < 0.25:
+                fifteen = Fifteen(fifteen.swap_elements(y, x, y - 1, x))
+                true_shuffles += 1
+
+        y, x = fifteen.find_tile(0)
+        if y < fifteen.rows_num - 1:
+            if random.random() < 0.25:
+                fifteen = Fifteen(fifteen.swap_elements(y, x, y + 1, x))
+                true_shuffles += 1
+
+        y, x = fifteen.find_tile(0)
+        if x < fifteen.rows_num - 1:
+            if random.random() < 0.25:
+                fifteen = Fifteen(fifteen.swap_elements(y, x, y, x + 1))
+                true_shuffles += 1
+
+        y, x = fifteen.find_tile(0)
+        if x > 0:
+            if random.random() < 0.25:
+                fifteen = Fifteen(fifteen.swap_elements(y, x, y, x - 1))
+                true_shuffles += 1
+
+        y, x = fifteen.find_tile(0)
+        if y == 3 and x == 3 and number_of_shuffles <= true_shuffles:
+            return fifteen, true_shuffles
