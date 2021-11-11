@@ -1,8 +1,0 @@
-INDEX VERSION 1.131+/home/gabriel/Desktop/studia/rok 2/technologie_programowania/maventraining workspace/.metadata/.plugins/org.eclipse.jdt.core
-1773554611.index
-4276144954.index
-334580505.index
-4171179919.index
-880864057.index
-3830464875.index
-1214065306.index
