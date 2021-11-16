@@ -5,6 +5,8 @@ from matplotlib import pyplot as plt
 import seaborn as sn
 import pandas as pd
 
+import parse_my_mnist
+
 print("TensorFlow version:", tf.__version__)
 
 
@@ -52,5 +54,14 @@ if __name__ == "__main__":
     y_pred = model.predict(x_test)
     y_pred_classes = np.argmax(y_pred, axis=1)
     confusion_matrix = tf.math.confusion_matrix(y_test, y_pred_classes)
+
+    show_heatmap(confusion_matrix=confusion_matrix)
+
+    # Then mine
+    x_my_mnist, y_my_mnist = parse_my_mnist.get_parsed_my_mnist()
+    x_my_mnist = x_my_mnist / 255.0
+    y_my_mnist_pred = model.predict(x_my_mnist)
+    y_my_mnist_pred_classes = np.argmax(y_my_mnist_pred, axis=1)
+    confusion_matrix = tf.math.confusion_matrix(y_my_mnist, y_my_mnist_pred_classes)
 
     show_heatmap(confusion_matrix=confusion_matrix)
