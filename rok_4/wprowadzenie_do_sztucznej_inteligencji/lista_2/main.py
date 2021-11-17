@@ -32,12 +32,12 @@ def load_model():
     return keras.models.load_model("mnist_model.h5")
 
 
-def show_heatmap(confusion_matrix):
+def show_heatmap(confusion_matrix, title):
     df_cm = pd.DataFrame(np.array(confusion_matrix),
                          index=[i for i in range(10)],
                          columns=[i for i in range(10)])
     plt.figure(figsize=(10, 7))
-    sn.heatmap(df_cm, annot=True, cmap="YlGnBu")
+    sn.heatmap(df_cm, annot=True, cmap="YlGnBu").set_title(title)
 
     plt.show()
 
@@ -55,7 +55,7 @@ if __name__ == "__main__":
     y_pred_classes = np.argmax(y_pred, axis=1)
     confusion_matrix = tf.math.confusion_matrix(y_test, y_pred_classes)
 
-    show_heatmap(confusion_matrix=confusion_matrix)
+    show_heatmap(confusion_matrix=confusion_matrix, title="org")
 
     # Then mine
     x_my_mnist, y_my_mnist = parse_my_mnist.get_parsed_my_mnist()
@@ -64,4 +64,14 @@ if __name__ == "__main__":
     y_my_mnist_pred_classes = np.argmax(y_my_mnist_pred, axis=1)
     confusion_matrix = tf.math.confusion_matrix(y_my_mnist, y_my_mnist_pred_classes)
 
-    show_heatmap(confusion_matrix=confusion_matrix)
+    show_heatmap(confusion_matrix=confusion_matrix, title="gabi")
+
+    # Then Patryk's
+    x_patryk_mnist = np.load('my_mnist/patryk_mnist.npy')
+    x_patryk_mnist = x_patryk_mnist / 255.0
+    y_patryk_mnist = np.array([[i] for i in range(10)] * 3).reshape(-1)
+    y_patryk_mnist_pred = model.predict(x_patryk_mnist)
+    y_patryk_mnist_pred_classes = np.argmax(y_patryk_mnist_pred, axis=1)
+    confusion_matrix = tf.math.confusion_matrix(y_patryk_mnist, y_patryk_mnist_pred_classes)
+
+    show_heatmap(confusion_matrix=confusion_matrix, title="pati")

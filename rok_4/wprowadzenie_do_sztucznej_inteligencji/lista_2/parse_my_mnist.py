@@ -34,12 +34,15 @@ def center_image(sample, target_size=28):
     return ImageOps.expand(crop, padding)
 
 
+def save_binary_samples_to_file(binary_samples, file_name):
+    np.save(file_name, binary_samples)
+
+
 def get_parsed_my_mnist():
     my_mnist_img = Image.open("my_mnist/my_MNIST.png")
     show(my_mnist_img)
 
     bw_my_mnist_img = my_mnist_img.convert(mode="L")
-    show(bw_my_mnist_img)
 
     samples = get_samples(image=bw_my_mnist_img)
 
@@ -55,5 +58,6 @@ def get_parsed_my_mnist():
     print(f'X shape: {binary_samples.shape}')
     print(f'y shape: {classes.shape}')
 
+    save_binary_samples_to_file(binary_samples, "gabi_mnist.npy")
 
     return binary_samples, classes
