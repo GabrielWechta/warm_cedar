@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "c1404096988b3aa56daa220273199e34386fd44cf54d26df4614c1ff3fcb2baf"
+            "sha256": "f873ba3fa484875c625b130f80248e523953e25fa4042aefce557c012a64486b"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -572,11 +572,11 @@
         },
         "rsa": {
             "hashes": [
-                "sha256:78f9a9bf4e7be0c5ded4583326e7461e3a3c5aae24073648b4bdfa797d78c9d2",
-                "sha256:9d689e6ca1b3038bc82bf8d23e944b6b6037bc02301a574935b2dd946e0353b9"
+                "sha256:5c6bd9dc7a543b7fe4304a631f8a8a3b674e2bbfc49c2ae96200cdbe55df6b17",
+                "sha256:95c5d300c4e879ee69708c428ba566c59478fd653cc3a22243eeb8ed846950bb"
             ],
             "markers": "python_version >= '3.6'",
-            "version": "==4.7.2"
+            "version": "==4.8"
         },
         "scikit-learn": {
             "hashes": [
@@ -638,6 +638,14 @@
             ],
             "markers": "python_version < '3.11' and python_version >= '3.7'",
             "version": "==1.7.2"
+        },
+        "seaborn": {
+            "hashes": [
+                "sha256:85a6baa9b55f81a0623abddc4a26b334653ff4c6b18c418361de19dbba0ef283",
+                "sha256:cf45e9286d40826864be0e3c066f98536982baf701a7caa386511792d61ff4f6"
+            ],
+            "index": "pypi",
+            "version": "==0.11.2"
         },
         "setuptools-scm": {
             "hashes": [
